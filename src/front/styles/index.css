@@ -1,3 +1,26 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+.carouselContainer {
+    width: 100%;
+    
+
+}
+
+.carouselContent {
+    width: 900px;
+}
+
+.swal-overlay {
+    background-color: rgba(223, 186, 22, 0.377);
+}
+
+.fondoCuerpo {
+    background: linear-gradient(to right, #000000, #313131);
+    margin: 0;
+    min-height:60vh;
+}
+.spinner{
+    /* margin-top: 500px; */
+    min-height:max-content;
+}
