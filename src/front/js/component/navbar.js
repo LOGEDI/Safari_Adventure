@@ -17,38 +17,119 @@ export const Navbar = () => {
 				</div>
 			</nav>
 
-{/*------------------------------------------------- Segundo NAV ---------------------------------------------------------*/}
+{/*------------------------------------------------------- Segundo NAV --------------------------------------------------------------*/}
 			
 			<div className="sticky-top">
 				<nav className="navBar2 navbar  ">
 				<div className="container-fluid  d-flex justify-content-center">
-					<li className="me-3 nav-item  ">
+
+{/*------------------------------------------------------- SAFARI TAB --------------------------------------------------------------*/}
+
+					<a className="nav2Button me-3 nav-item">
 					<Link   
 						to="/Safari"
-						className="linkToView">
-						Safari
+						className="nav2Button">
+						SAFARI
 					</Link>
-					</li>
-					<li className="me-3 nav-item ">
-					<Link className="linkToView" to="/Camp">
-						Camp
-					</Link>
-					</li>
-					<li className="me-3 nav-item ">
-					<Link className="linkToView" to="/Experience">
-						Experience
-					</Link>
-					</li>
-					<li className="me-3 nav-item ">
-					<Link className="linkToView" to="/TravelPlan">
-						TravelPlan
-					</Link>
-					</li>
-					<li className="me-3 nav-item ">
-					<Link className="linkToView" to="/AboutUs">
-						AboutUs
-					</Link>
-					</li>
+					</a>
+
+{/*--------------------------------------------------- CAMP DROPDOWN TAB --------------------------------------------------------------*/}
+
+					<div className="dropdown">
+							<button className="dropbtn">THE CAMP</button>
+							<div className="dropdown-content">
+							<a className="dropdown-item">
+									<Link className="linkToView" to="/Eat">
+										EAT
+									</Link> 
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/Sleep">
+										SLEEP
+									</Link> 
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/Relax">
+										RELAX
+									</Link> 
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/OtherServices">
+										OTHER SERVICES
+									</Link> 
+								</a>
+							</div>
+						</div>
+
+{/*----------------------------------------------- EXPERIENCE DROPDOWN TAB ---------------------------------------------------------*/}
+
+					<div className="dropdown">
+							<button className="dropbtn">EXPERIENCE</button>
+							<div className="dropdown-content">
+							<a className="dropdown-item">
+									<Link className="linkToView" to="/Maasai">
+										MASAI
+									</Link> 
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/Sundowners">
+										SUNDOWNERS
+									</Link>
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/BalloonSafari">
+										BALLOON SAFARI
+									</Link>
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/PhotoSafari">
+										PHOTO SAFARI
+									</Link>
+								</a>
+							</div>
+						</div>
+
+{/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
+
+						<div className="dropdown">
+							<button className="dropbtn">ABOUT US</button>
+							<div className="dropdown-content">
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/PhotoGallery">
+										PHOTO GALLERY
+									</Link> 
+								</a>
+								<a className="dropdown-item">
+									<Link className="linkToView" to="/CommunityProjects">
+										COMMUNITY PROJECTS
+									</Link> 
+								</a>
+							</div>
+						</div>
+
+{/*----------------------------------------------------TRAVEL PLANNING DROPDOWN TAB --------------------------------------------------*/}
+
+						<div className="dropdown">
+							<button className="dropbtn">TRAVEL PLANNING</button>
+							<div className="dropdown-content">
+									<a className="dropdown-item">
+										<Link className="linkToView" to="/Packages">
+											PACKAGES
+										</Link> 
+									</a>
+								</div>
+						</div>
+
+{/*-----------------------------------------------------------CONTACT TAB -------------------------------------------------------------*/}
+						
+						<button className="nav2Button me-3 nav-item  ">
+							<Link   
+								to="/Contact"
+								className="nav2Button">
+								CONTACT
+							</Link>
+						</button>
+
 				</div>
 				</nav>
 			</div>

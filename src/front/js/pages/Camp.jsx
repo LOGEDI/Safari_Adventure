@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Camp = () => {
   return (
-    <div>Camp</div>
+    <div>Camp
+      
+    </div>
   )
 }
 
