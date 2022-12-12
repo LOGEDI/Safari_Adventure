@@ -40,9 +40,11 @@ const Eat = () => {
                 memories.
               </p>
 
-              <button type="button" class="btn btn-primary">
-                Book With Us
-              </button>
+              <button type="button" class="btn btn-warning btn-lg">
+                <Link to="/signup">
+                  BOOK WITH US
+                </Link>
+            </button>
             </div>
           </div>
         </div>
