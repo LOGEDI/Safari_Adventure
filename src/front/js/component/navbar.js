@@ -5,16 +5,19 @@ export const Navbar = () => {
 	return (
 		<div className="sticky-top">
 			<nav className="navbar navbar-light bg-light">
-				<div className="container">
-					<Link to="/">
-						<span className="navbar-brand mb-0 h1">Safary Adventure</span>
+			<div className="container">
+				<Link to="/">
+					<span className="navbar-brand mb-0 h1">Safari Adventure</span>
+				</Link>
+				<div className="ml-auto">
+					<Link to="/signup">
+						<button className="btn btn-primary m-2">Sign Up</button>
 					</Link>
-					<div className="ml-auto">
-						<Link to="/demo">
-							<button className="btn btn-primary">Check the Context in action</button>
-						</Link>
-					</div>
+					<Link to="/login">
+						<button className="btn btn-primary m-2">Login</button>
+					</Link>
 				</div>
+			</div>
 			</nav>
 
 {/*------------------------------------------------------- Segundo NAV --------------------------------------------------------------*/}

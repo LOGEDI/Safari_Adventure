@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 const BalloonSafari = () => {
   return (
     <div className="container">
-      {/* <img className='col-12 black-rock' src='https://www.enkewa.com/wp-content/uploads/2022/01/Black-Rock-Cabecera--scaled.jpg'/> */}
+
+{/* ------------------------------------------PAGE TITLE------------------------------------------------------- */}
 
       <div className="page-header">
         <div className="head-image">
           <img
-            className="col-12 m-0 black-rock"
+            className="col-12 m-0"
             src="https://www.enkewa.com/wp-content/uploads/2021/11/balloon-1.jpg"
-            alt="Freedom Blog"
+            alt="Ballon image"
           />
         </div>
         <div className="text-on-image">
@@ -22,7 +23,10 @@ const BalloonSafari = () => {
         </div>
       </div>
 
-      <div className="row row-cols-2 g-3 mt-5">
+      <div className="row row-cols-2 g-3 mt-5">{/* --this div wraps the 2 colums layout-- */}
+
+{/* ------------------------------------------PHOTO CAROUSEL------------------------------------------------------- */}
+
         <div className="col-6 justify-content-center">
           <div className="card m-3 border-light">
             <div className="carouselContainer container-fluid home">
@@ -91,7 +95,9 @@ const BalloonSafari = () => {
           </div>
         </div>
 
-        <div className="col-6">
+{/* ------------------------------------------DESCRIPTION------------------------------------------------------- */}
+
+        <div className="col-6"> {/* --This div wraps description and button-- */}
           <div className="card m-3 border-light">
             <h2 className="description-title">FLOAT OVER THE MARA</h2>
             <div className="description-content">
@@ -108,12 +114,20 @@ const BalloonSafari = () => {
               </p>
             </div>
 
+{/* -------------------------------------SIGNIN/LOGIN BUTTON------------------------------------------------------- */}
+            
             <button type="button" class="btn btn-warning btn-lg">
-              BOOK WITH US
+                <Link to="/signup">
+                  BOOK WITH US
+                </Link>
             </button>
+            
           </div>
-        </div>
-      </div>
+        </div>{/* --Here ends the Wrapper for the description and button-- */}
+
+      </div>{/* --Here ends the Wrapper for the 2 colums layout-- */}
+
+{/* -------------------------------PICTURE LINKS CODE JUST IN CASE--------------------------------------------------- */}
 
       {/* <div className='row row-cols-4 g-3 mt-5'>
         <div >
@@ -160,9 +174,9 @@ const BalloonSafari = () => {
             <p className='text-center'>Get the best view</p>
           </Link>
         </div>
-
-
     </div> */}
+
+
     </div>
   );
 };

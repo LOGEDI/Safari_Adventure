@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 const PhotoSafari = () => {
   return (
     <div className="container">
+
+{/* ------------------------------------------PAGE TITLE------------------------------------------------------- */}
+
       <div className="page-header">
         <div className="head-image">
           <img
-            className="col-12 m-0 black-rock"
+            className="col-12 m-0"
             src="https://www.enkewa.com/wp-content/uploads/2022/01/Masai-Cabecera-2.jpg"
-            alt="Freedom Blog"
+            alt="Photo safari image"
           />
         </div>
         <div className="text-on-image">
@@ -17,9 +20,12 @@ const PhotoSafari = () => {
           <span className="page-subtitle">Capture de moment</span>
         </div>
       </div>
+      
+      <div className="row row-cols-2 g-3 mt-5">{/* --this div wraps the 2 colums layout-- */}
 
-      <div className="row row-cols-2 g-3 mt-5">
-        <div className="col-6">
+{/* ------------------------------------------DESCRIPTION------------------------------------------------------- */}
+
+        <div className="col-6">{/* --This div wraps description and button-- */}
           <div className="card m-3 border-light">
             <h2 className="description-title">CAPTURE THE MOMENT</h2>
             <div className="description-content">
@@ -39,11 +45,18 @@ const PhotoSafari = () => {
               </p>
             </div>
 
-            <button type="button" class="btn btn-warning btn-lg">
-              BOOK WITH US
+{/* ------------------------------------------SIGNIN/LOGIN BUTTON------------------------------------------------------- */}
+
+              <button type="button" class="btn btn-warning btn-lg">
+                <Link to="/signup">
+                  BOOK WITH US
+                </Link>
             </button>
+
           </div>
-        </div>
+        </div>{/* --Here ends the Wrapper for the description and button-- */}
+
+{/* ------------------------------------------PHOTO CAROUSEL------------------------------------------------------- */}
 
         <div className="col-6 justify-content-center">
           <div className="card m-3 border-light">
@@ -112,7 +125,10 @@ const PhotoSafari = () => {
             </div>
           </div>
         </div>
-      </div>
+        
+      </div>{/* --Here ends the Wrapper for the 2 colums layout-- */}
+
+{/* -------------------------------PICTURE LINKS CODE JUST IN CASE--------------------------------------------------- */}
 
       {/* <div className='row row-cols-4 g-3 mt-5'>
         <div >
@@ -159,9 +175,9 @@ const PhotoSafari = () => {
             <p className='text-center'>Get the best view</p>
           </Link>
         </div>
-
-
     </div> */}
+
+    
     </div>
   );
 };
