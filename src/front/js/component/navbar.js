@@ -28,13 +28,13 @@ export const Navbar = () => {
 
 {/*------------------------------------------------------- SAFARI TAB --------------------------------------------------------------*/}
 
-					<a className="nav2Button me-3 nav-item">
+					<span className="nav2Button me-3 nav-item">
 					<Link   
 						to="/Safari"
 						className="nav2Button">
 						SAFARI
 					</Link>
-					</a>
+					</span>
 
 {/*--------------------------------------------------- CAMP DROPDOWN TAB --------------------------------------------------------------*/}
 

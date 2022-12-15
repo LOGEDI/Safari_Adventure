@@ -48,7 +48,7 @@ const PhotoSafari = () => {
 {/* ------------------------------------------SIGNIN/LOGIN BUTTON------------------------------------------------------- */}
 
               <button type="button" class="btn btn-warning btn-lg">
-                <Link to="/signup">
+                <Link to="/login">
                   BOOK WITH US
                 </Link>
             </button>

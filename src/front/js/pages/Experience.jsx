@@ -5,6 +5,7 @@ const Experience = () => {
   return (
     <div className="container">
       {/* <img className='col-12 black-rock' src='https://www.enkewa.com/wp-content/uploads/2022/01/Black-Rock-Cabecera--scaled.jpg'/> */}
+{/* ------------------------------------------PAGE TITLE------------------------------------------------------- */}
 
       <div className="page-header">
         <div className="head-image">
@@ -22,7 +23,10 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="row row-cols-2 g-3 mt-5">
+      <div className="row row-cols-2 g-3 mt-5"> {/* --this div wraps the 2 colums layout-- */}
+
+{/* ------------------------------------------DESCRIPTION------------------------------------------------------- */}
+
         <div className="col-6">
           <div className="card m-3 border-light">
             <h2 className="description-title">FEEL THE ADVENTURE</h2>
@@ -47,6 +51,8 @@ const Experience = () => {
             </div>
           </div>
         </div>
+
+{/* ------------------------------------------PHOTO CARROUSEL------------------------------------------------------- */}
 
         <div className="col-6 justify-content-center">
           <div className="card m-3 border-light">
@@ -115,7 +121,9 @@ const Experience = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> {/* --Here ends the Wrapper for the 2 colums layout-- */}
+
+{/* -----------------------------------PICTURE LINKS ----------------------------------------------- */}      
 
       <div className="row row-cols-4 g-3 mt-5">
         <div>

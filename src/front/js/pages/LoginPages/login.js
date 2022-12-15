@@ -1,152 +1,122 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
 
 const Login = () => {
   const { store, actions } = useContext(Context);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (store.auth === true) {
-      navigate("/private");
-    }
-  }, [store.auth]);
+ // --reference for user and errors.
+ const userRef = useRef();
+ const errRef = useRef();
 
-  return (
-    <div className="container">
-      <h1>Login</h1>
-        <div className="row row-cols-2 g-3 mt-5">{/* --this div wraps the 2 colums layout-- */}
+ //-- state for email, password, errors and success
+ const [email, setEmail] = useState("");
+ const [password, setPassword] = useState("");
+ const [errMsg, setErrMsg] = useState("");
+ const [success, setSuccess] = useState(false);
 
-            <div className="col-6">{/* --this div wraps the left colum layout-- */}
+ const navigate = useNavigate();
 
-{/* ----------------------------------------------EMAIL INPUT----------------------------------------------------- */}         
+ //--if authentication is correct send you to private page
+ useEffect(() => {
+   if (store.auth === true) {
+     navigate("/private");
+   }
+ }, [store.auth]);
 
-                <div className="card m-3 border-light">{/* --this div wraps the left Card-- */}
-                    <div className="d-grid gap-2">
-                        <label className="form-label mt-4">
-                            <h3>Email</h3>
-                        </label>
-                        <div className="d-grid gap-2">
-                            <input
-                                type="email"
-                                className="form-control"
-                                placeholder="Escriba su correo electrónico"
-                                value={email}
-                                onChange={(e) => {
-                                    setEmail(e.target.value);
-                                }}
-                            />
-                        </div>
-                    </div>
+ //--set the focus on the username input when the componen loads
+ useEffect(() => {
+   userRef.current.focus();
+ }, []);
 
-{/* ----------------------------------------------PASSWORD INPUT----------------------------------------------------- */}
+ //--clear error message when the inputs are properly done
+ useEffect(() => {
+   setErrMsg("");
+ }, [email, password]);
 
-                        <label className="form-label mt-4">
-                            <h3>Password</h3>
-                        </label>
-                        <div className="d-grid gap-2">
-                            <input
-                                type="password"
-                                className="form-control"
-                                placeholder="Por favor, escriba su contraseña"
-                                value={password}
-                                onChange={(e) => {
-                                    setPassword(e.target.value);
-                                }}
-                            />
-                        </div>
+ //--this handle the submit button behavior and clear the inputs
+ const handleSubmit = async (e) => {
+   e.preventDefault();
+   await actions.login({
+     email: email,
+     password: password,
+   });
+   console, log(email, password);
+   setEmail("");
+   setPassword("");
+   setSuccess(true);
+ };
 
-{/* ----------------------------------------------LOGIN BUTTON----------------------------------------------------- */}
+ return (
+   <div className="App">
+     <>
+       {success ? (
+         <section>
+           <h1>You are logged in!</h1>
+           <br />
+           <span className="line">
+             <Link to="/">
+               <a href="#">Go to Home</a>
+             </Link>
+           </span>
+         </section>
+       ) : (
+         <section>
+           <p
+             ref={errRef}
+             className={errMsg ? "errmsg" : "offscreen"}
+             aria-live="assertive"
+           >
+             {errMsg}
+           </p>
+           <h1>Sign In</h1>
+           <form onSubmit={handleSubmit}>
+             <label htmlFor="useremail">Email:</label>
 
-                        <button
-                          className="loginbtn btn btn-primary text-center mt-4"
-                          onClick={() => {
-                            actions.login({
-                              email: email,
-                              password: password,
-                            });
-                          }}
-                        >
-                          Login
-                        </button>
+{/*--------------------------------------------EMAIL input---------------------------------------------------------*/}
 
-                </div>{/* --The end of the left Card Wrapper-- */}
+             <input
+               type="email"
+               id="useremail"
+               ref={userRef}
+               autoComplete="off"
+               onChange={(e) => setEmail(e.target.value)}
+               value={email}
+               required
+             />
 
-            </div>{/* --The end of the left columm wrapper-- */}
+             <label htmlFor="password">Password:</label>
 
-        </div>{/* --The end of the 2 columms wrapper-- */}
+{/*--------------------------------------------PASSWORD input---------------------------------------------------------*/}
 
-    </div>
+             <input
+               type="password"
+               id="password"
+               onChange={(e) => setPassword(e.target.value)}
+               value={password}
+               required
+             />
+             <button className="signButton">Sign In</button>
+           </form>
+           <p>
+             Need an Account?
+             <br />
 
+{/*-------------link to the SIGNUP page in case the user dont have an account----------------------------------- */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // <div>
-    //   <h1 className="mt-4 mb-4 text-center">Login</h1>
-    //   <form className="formulario col-6 text-center">
-    //     <div className="d-grid gap-2">
-    //       <label className="form-label ml-4">
-    //         <h3>Email</h3>
-    //       </label>
-    //       <div className="d-grid gap-2">
-    //         <input
-    //           type="email"
-    //           className="form-control"
-    //           placeholder="Escriba su correo electrónico"
-    //           value={email}
-    //           onChange={(e) => {
-    //             setEmail(e.target.value);
-    //           }}
-    //         />
-    //       </div>
-    //     </div>
-
-    //     <div className="mb-3">
-    //       <label className="col-sm-2 col-form-label mt-3">
-    //         <h3>Password</h3>
-    //       </label>
-    //       <div className="d-grid gap-2">
-    //         <input
-    //           type="password"
-    //           className="form-control"
-    //           placeholder="Por favor, escriba su contraseña"
-    //           value={password}
-    //           onChange={(e) => {
-    //             setPassword(e.target.value);
-    //           }}
-    //         />
-    //       </div>
-    //     </div>
-    //   </form>
-
-    //   <button
-    //     className="loginbtn btn btn-primary text-center"
-    //     onClick={() => {
-    //       actions.login({
-    //         email: email,
-    //         password: password,
-    //       });
-    //     }}
-    //   >
-    //     Login
-    //   </button>
-    // </div>
-  );
+             <span className="line">
+               <Link to="/signup">
+                 {/*put router link here*/}
+                 <a href="#">Sign Up</a>
+               </Link>
+             </span>
+           </p>
+         </section>
+       )}
+     </>
+   </div>
+ );
 };
 
 export default Login;

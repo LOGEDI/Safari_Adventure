@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   
 		signup: async (signupData) => {
 		  await fetch(
-			"https://3001-kamiwey-42finalprojects-oh2ac6jqm74.ws-eu78.gitpod.io/signup",
+			"https://3001-logedi-safariadventure-u9k8s7w2btq.ws-eu79.gitpod.io/signup",
 			{
 			  method: "POST",
 			  body: JSON.stringify(signupData),
@@ -32,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		login: (loginInfo) => {
 		  const response = fetch(
-			"https://3001-kamiwey-42finalprojects-oh2ac6jqm74.ws-eu78.gitpod.io/token",
+			"https://3001-logedi-safariadventure-u9k8s7w2btq.ws-eu79.gitpod.io/token",
 			{
 			  //mode: 'no-cors',
 			  method: "POST",
@@ -73,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		  
 		  //if (tok == getStore().token) {
 			await fetch(
-			  "https://3001-kamiwey-42finalprojects-oh2ac6jqm74.ws-eu78.gitpod.io/private",
+			  "https://3001-logedi-safariadventure-u9k8s7w2btq.ws-eu79.gitpod.io/private",
 			  {
 				method: "GET",
 				headers: {
