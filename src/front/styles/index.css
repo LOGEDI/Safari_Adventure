@@ -1,82 +1,133 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
-.carouselContainer {
-    width: 100%;
-    
+/*--------------------------------------------------PHOTO CAROUSEL---------------------------------------------------------------------------*/
 
+.carouselContainer {
+  width: 100%;
 }
 
 .carouselContent {
-    width: 900px;
+  width: 900px;
+}
+
+.carouselContent2 {
+  width: 600px;
 }
 
 .swal-overlay {
-    background-color: rgba(223, 186, 22, 0.377);
+  background-color: rgba(223, 186, 22, 0.377);
 }
 
 .fondoCuerpo {
-    background: linear-gradient(to right, #000000, #313131);
-    margin: 0;
-    min-height:60vh;
+  background: linear-gradient(to right, #000000, #313131);
+  margin: 0;
+  min-height: 60vh;
 }
-.spinner{
-    /* margin-top: 500px; */
-    min-height:max-content;
+.spinner {
+  min-height: max-content;
 }
+
+/*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: transparent;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  background-color: transparent;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
-  .nav2Button a:hover {
-    background-color: #3e8e41;
-    color: black;
-    
-  }
-  .nav2Button {
-    background-color: transparent;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    text-decoration: none;
-  }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/*------------------------------------------------------NAVBAR2 BUTTONS----------------------------------------------------------------------*/
+
+.navBar2 {
+  background-color: white;
+}
+
+.nav2Button a:hover {
+  background-color: #3e8e41;
+  color: black;
+}
+
+.nav2Button {
+  background-color: transparent;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+}
+
+/*---------------------------------------------------PAGE HEADER SETTINGS---------------------------------------------------------------------------*/
+
+.page-header {
+  position: relative;
+}
+
+.page-title {
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+.text-on-image {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  left: 05%;
+  bottom: 75%;
+}
+
+/*---------------------------------------------------PAGE DESCRIPTION SETTINGS---------------------------------------------------------------------------*/
+
+.description-title{
+font-family: 'Roboto', sans-serif;
+font-weight:bolder;
+font-size: 48px;
+}
+
+.description-content {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
