@@ -447,8 +447,8 @@ export const Home = () => {
               </div>
               
        </div>{/* --Here ends the Wrapper for the SECOND 2 colums layout-- */}
-
-
+                      
+          <img src={rigoImageUrl}></img>
 
   </div>
 

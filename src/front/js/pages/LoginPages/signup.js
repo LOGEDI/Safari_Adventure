@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Context } from "../../store/appContext";
 
+import lionImageUrl from "../../../img/lion.jpg";
+
+
 //--------- REGEX stablish the conditions for the valids usernames and passwords-------------------------------
 
 // email should have a min of 3 character and max of 23 and @, capital, -_, and numbers aloud.
@@ -93,7 +96,7 @@ const Signup = () => {
   
     return (
       <div className="container">
-      <div className="App row row-cols-2 g-3 mt-5">
+      <div className="App row row-cols-2 g-3 mt-5" style={{backgroundImage:`url("${lionImageUrl}")`}}>
         <div className="col-6">
         <>
   
