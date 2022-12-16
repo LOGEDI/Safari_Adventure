@@ -3,40 +3,49 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<div>
+		<div className="sticky-top">
 			<nav className="navbar navbar-light bg-light">
-				<div className="container">
-					<Link to="/">
-						<span className="navbar-brand mb-0 h1">Safary Adventure</span>
+			<div className="container">
+				<Link to="/">
+					<span className="navbar-brand mb-0 h1">Safari Adventure</span>
+				</Link>
+				<div className="ml-auto">
+					<Link to="/signup">
+						<button className="btn btn-primary m-2">Sign Up</button>
 					</Link>
-					<div className="ml-auto">
-						<Link to="/demo">
-							<button className="btn btn-primary">Check the Context in action</button>
-						</Link>
-					</div>
+					<Link to="/login">
+						<button className="btn btn-primary m-2">Login</button>
+					</Link>
 				</div>
+			</div>
 			</nav>
 
 {/*------------------------------------------------------- Segundo NAV --------------------------------------------------------------*/}
 			
-			<div className="sticky-top">
-				<nav className="navBar2 navbar  ">
+			<div className="navBar2">
+				<nav className="navbar">
 				<div className="container-fluid  d-flex justify-content-center">
 
 {/*------------------------------------------------------- SAFARI TAB --------------------------------------------------------------*/}
 
-					<a className="nav2Button me-3 nav-item">
+					<span className="nav2Button me-3 nav-item">
 					<Link   
 						to="/Safari"
 						className="nav2Button">
 						SAFARI
 					</Link>
-					</a>
+					</span>
 
 {/*--------------------------------------------------- CAMP DROPDOWN TAB --------------------------------------------------------------*/}
 
 					<div className="dropdown">
-							<button className="dropbtn">THE CAMP</button>
+							<button className="dropbtn">
+								<Link   
+									to="/Camp"
+									className="nav2Button">
+										THE CAMP
+								</Link>
+								</button>
 							<div className="dropdown-content">
 							<a className="dropdown-item">
 									<Link className="linkToView" to="/Eat">
@@ -64,8 +73,14 @@ export const Navbar = () => {
 {/*----------------------------------------------- EXPERIENCE DROPDOWN TAB ---------------------------------------------------------*/}
 
 					<div className="dropdown">
-							<button className="dropbtn">EXPERIENCE</button>
-							<div className="dropdown-content">
+						<button className="dropbtn">
+							<Link   
+								to="/Experience"
+								className="nav2Button">
+									EXPERIENCE
+							</Link>
+						</button>
+						<div className="dropdown-content">
 							<a className="dropdown-item">
 									<Link className="linkToView" to="/Maasai">
 										MASAI
@@ -86,13 +101,19 @@ export const Navbar = () => {
 										PHOTO SAFARI
 									</Link>
 								</a>
-							</div>
 						</div>
+					</div>
 
 {/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
 
 						<div className="dropdown">
-							<button className="dropbtn">ABOUT US</button>
+							<button className="dropbtn">
+								<Link   
+									to="/AboutUs"
+									className="nav2Button">
+										ABOUT US
+								</Link>
+							</button>
 							<div className="dropdown-content">
 								<a className="dropdown-item">
 									<Link className="linkToView" to="/PhotoGallery">
@@ -110,7 +131,13 @@ export const Navbar = () => {
 {/*----------------------------------------------------TRAVEL PLANNING DROPDOWN TAB --------------------------------------------------*/}
 
 						<div className="dropdown">
-							<button className="dropbtn">TRAVEL PLANNING</button>
+							<button className="dropbtn">
+								<Link   
+									to="/TravelPlan"
+									className="nav2Button">
+										TRAVEL PLANNING
+								</Link>
+							</button>
 							<div className="dropdown-content">
 									<a className="dropdown-item">
 										<Link className="linkToView" to="/Packages">

@@ -1,82 +1,242 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
-.carouselContainer {
-    width: 100%;
-    
+/*--------------------------------------------------PHOTO CAROUSEL---------------------------------------------------------------------------*/
 
+.carouselContainer {
+  width: 100%;
 }
 
 .carouselContent {
-    width: 900px;
+  width: 100%;
+}
+
+.carouselContent2 {
+  width: 100%;
 }
 
 .swal-overlay {
-    background-color: rgba(223, 186, 22, 0.377);
+  background-color: rgba(223, 186, 22, 0.377);
 }
 
 .fondoCuerpo {
-    background: linear-gradient(to right, #000000, #313131);
-    margin: 0;
-    min-height:60vh;
+  background: linear-gradient(to right, #000000, #313131);
+  margin: 0;
+  min-height: 60vh;
 }
-.spinner{
-    /* margin-top: 500px; */
-    min-height:max-content;
+.spinner {
+  min-height: max-content;
 }
+
+/*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: transparent;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  background-color: transparent;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
-  .nav2Button a:hover {
-    background-color: #3e8e41;
-    color: black;
-    
-  }
-  .nav2Button {
-    background-color: transparent;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    text-decoration: none;
-  }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/*------------------------------------------------------NAVBAR2 BUTTONS----------------------------------------------------------------------*/
+
+.navBar2 {
+  background-color: white;
+}
+
+.nav2Button a:hover {
+  background-color: #3e8e41;
+  color: black;
+}
+
+.nav2Button {
+  background-color: transparent;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+}
+
+/*---------------------------------------------------PAGE HEADER SETTINGS---------------------------------------------------------------------------*/
+
+.page-header {
+  position: relative;
+  
+}
+
+.page-title {
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+}
+
+.text-on-image {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  left: 05%;
+  bottom: 75%;
+}
+
+/*---------------------------------------------------PAGE DESCRIPTION SETTINGS---------------------------------------------------------------------------*/
+
+.description-title{
+font-family: 'Roboto', sans-serif;
+font-weight:bolder;
+font-size: 48px;
+}
+
+.description-content {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/*-----------------------------------------------LOGIN AND SIGNUP PAGES SETTINGS--------------------------------------------------------------------------*/
+
+.App {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/57/Maasai_Mara_National_Reserve_Kenya.jpg");
+  /* background-image: url("../img/Black-Rock.jpg"); */
+  /* align-items: center; */
+  /* min-height: 50vh;  */
+  padding: 1rem 0.5rem;
+}
+
+section {
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  /* background-color:white; */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding-bottom: 1rem;
+  
+}
+
+/* a, a:visited {
+  color: red;
+} */
+
+input[type="email"],
+input[type="password"],
+textarea {
+font-family: 'Nunito', sans-serif;
+font-size: 22px;
+padding: 0.25rem;
+border-radius: 0.5rem;
+}
+
+label{
+margin-top: 1rem;
+}
+
+.signButton {
+  padding: 0.5rem;
+  background-color: aqua;
+  margin-top: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
+}
