@@ -49,30 +49,32 @@ const Login = () => {
  };
 
  return (
-   <div className="App">
-     <>
-       {success ? (
-         <section>
-           <h1>You are logged in!</h1>
-           <br />
-           <span className="line">
-             <Link to="/">
-               <a href="#">Go to Home</a>
-             </Link>
-           </span>
-         </section>
-       ) : (
-         <section>
-           <p
-             ref={errRef}
-             className={errMsg ? "errmsg" : "offscreen"}
-             aria-live="assertive"
-           >
-             {errMsg}
-           </p>
-           <h1>Sign In</h1>
-           <form onSubmit={handleSubmit}>
-             <label htmlFor="useremail">Email:</label>
+  <div className="container">
+    <div className="App row row-cols-2 g-3 mt-5">
+      <div className="col-6">
+        <>
+          {success ? (
+            <section>
+              <h1>You are logged in!</h1>
+              <br />
+              <span className="line">
+                <Link to="/">
+                  <a href="#">Go to Home</a>
+                </Link>
+              </span>
+            </section>
+          ) : (
+            <section>
+              <p
+                ref={errRef}
+                className={errMsg ? "errmsg" : "offscreen"}
+                aria-live="assertive"
+              >
+                {errMsg}
+              </p>
+              <h1>Sign In</h1>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="useremail">Email:</label>
 
 {/*--------------------------------------------EMAIL input---------------------------------------------------------*/}
 
@@ -105,17 +107,19 @@ const Login = () => {
 
 {/*-------------link to the SIGNUP page in case the user dont have an account----------------------------------- */}
 
-             <span className="line">
-               <Link to="/signup">
-                 {/*put router link here*/}
-                 <a href="#">Sign Up</a>
-               </Link>
-             </span>
-           </p>
-         </section>
-       )}
-     </>
-   </div>
+                <span className="line">
+                  <Link to="/signup">
+                    {/*put router link here*/}
+                    <a href="#">Sign Up</a>
+                  </Link>
+                </span>
+              </p>
+            </section>
+          )}
+        </>
+      </div>
+    </div>
+  </div>
  );
 };
 

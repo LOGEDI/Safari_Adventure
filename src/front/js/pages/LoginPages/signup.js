@@ -92,7 +92,9 @@ const Signup = () => {
     };
   
     return (
-      <div className="App">
+      <div className="container">
+      <div className="App row row-cols-2 g-3 mt-5">
+        <div className="col-6">
         <>
   
   {/*-------------show if registration status and if user is registered already link to login page------------------------- */}
@@ -287,6 +289,8 @@ const Signup = () => {
             </section>
           )}
         </>
+      </div>
+      </div>
       </div>
     );
   };
