@@ -4,7 +4,8 @@ export const Footer = () => (
 	<footer class="bg-dark text-center text-white">
 	<div class="container p-4 pb-0">
 	 <section class="mb-4">
-	   <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+
+	   <a class="btn btn-outline-light btn-floating m-1" href="http://facebook.com/" role="button"
 		  ><i class="fab fa-facebook-f"></i
 		></a>
    
@@ -16,7 +17,7 @@ export const Footer = () => (
 		  ><i class="fab fa-google"></i
 		></a>
    
-		<a class="btn btn-outline-light btn-floating m-1" href="http://facebook.com/" role="button"
+		<a class="btn btn-outline-light btn-floating m-1" href="http://instagram.com/" role="button"
 		 ><i class="fab fa-instagram"></i
 		></a>
    
