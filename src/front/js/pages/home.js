@@ -10,137 +10,188 @@ export const Home = () => {
 	return (
     <div className="container">
 
-{/* ---------------------------------PAGE TITLE CAROUSEL-------------------------------------------------- */}
+{/* ----------------------------PAGE TITLE CAROUSEL TYPE 2------------------------------------------------- */}
 
-      <div className="page-header">
-        <div className="head-image">
 
-          <div className="carouselContainer col-12 home">
-            <div
-              id="carouselExampleFade"
-              className=" carousel slide carousel-fade"
-              data-bs-ride="carousel"
-            >
-            <div className=" carousel-inner">
-              <div className="container-fluid carouselContent">
-                <div className="carousel-item active">
-                  <img
-                    src="https://media.istockphoto.com/id/636870490/photo/kilimanjaro-with-elephants.jpg?s=612x612&w=0&k=20&c=XLMQxWXqcBRmwx1GhsjUzF9Ex3IqWgUcyiYb2rzLdcw="
-                    className="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/39.jpg"
-                    className="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/40.jpg"
-                    className="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev"
+
+<div className="carousel2">
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+        rel="stylesheet"
+      />
+
+      <div
+        className="carousel slide"
+        data-bs-ride="carousel"
+        id="carouselExampleIndicators"
+      >
+        <div className="carousel-indicators">
+          <button
+            aria-label="Slide 1"
+            className="active"
+            data-bs-slide-to={0}
+            data-bs-target="#carouselExampleIndicators"
+            type="button"
+          />{" "}
+          <button
+            aria-label="Slide 2"
+            data-bs-slide-to={1}
+            data-bs-target="#carouselExampleIndicators"
+            type="button"
+          />{" "}
+          <button
+            aria-label="Slide 3"
+            data-bs-slide-to={2}
+            data-bs-target="#carouselExampleIndicators"
+            type="button"
+          />
+        </div>
+        <div className="carousel-inner">
+          <div className="carousel2Item carousel-item active">
+            <img
+              alt="..."
+              className="d-block w-100"
+              src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/40.jpg"
+            />
+            <div className="carousel2Caption carousel-caption">
+              <h5
+                className="carousel2CaptionH5 animated bounceInUp"
+                style={{ animationDelay: "1s" }}
               >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleFade"
-                data-bs-slide="next"
+                SAFARI ADVENTURE
+              </h5>
+              <p
+                className="carousel2CaptionP animated bounceInLeft d-none d-md-block"
+                style={{ animationDelay: "2s" }}
               >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                
+              </p>
+              <p
+                className="animated bounceInRight"
+                style={{ animationDelay: "3s" }}
+              >
+                {/* <a className="carousel2CaptionA" href="#">Learn More</a> */}
+              </p>
+            </div>
+          </div>
+          <div className="carousel2Item carousel-item">
+            <img
+              alt="..."
+              className="d-block w-100"
+              src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/39.jpg"
+            />
+            <div className="carousel2Caption carousel-caption">
+              <h5
+                className="carousel2CaptionH5 animated bounceInUp"
+                style={{ animationDelay: "1s" }}
+              >
+                SAFARI ADVENTURE
+              </h5>
+              <p
+                className="carousel2CaptionP animated bounceInLeft d-none d-md-block"
+                style={{ animationDelay: "2s" }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                
+              </p>
+              <p
+                className="animated bounceInRight"
+                style={{ animationDelay: "3s" }}
+              >
+                {/* <a className="carousel2CaptionA" href="#">Learn More</a> */}
+              </p>
+            </div>
+          </div>
+          <div className="carousel2Item carousel-item">
+            <img
+              alt="..."
+              className="d-block w-100"
+              src="https://media.istockphoto.com/id/636870490/photo/kilimanjaro-with-elephants.jpg?s=612x612&w=0&k=20&c=XLMQxWXqcBRmwx1GhsjUzF9Ex3IqWgUcyiYb2rzLdcw="
+            />
+            <div className="carousel2Caption carousel-caption">
+              <h5
+                className="carousel2CaptionH5 animated bounceInUp"
+                style={{ animationDelay: "1s" }}
+              >
+                SAFARI ADVENTURE
+              </h5>
+              <p
+                className="carousel2CaptionP animated bounceInLeft d-none d-md-block"
+                style={{ animationDelay: "2s" }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+               
+              </p>
+              <p
+                className="animated bounceInRight"
+                style={{ animationDelay: "3s" }}
+              >
+                {/* <a className="carousel2CaptionA" href="#">Learn More</a> */}
+              </p>
             </div>
           </div>
         </div>
-
-
-{/* ------------------------------------------PAGE TITLE------------------------------------------------------- */}
-
-
-            {/* <img
-              className="col-12 m-0 black-rock"
-              src="https://media.istockphoto.com/id/636870490/photo/kilimanjaro-with-elephants.jpg?s=612x612&w=0&k=20&c=XLMQxWXqcBRmwx1GhsjUzF9Ex3IqWgUcyiYb2rzLdcw="
-              alt="Freedom Blog"
-            /> */}
-          </div>
-          <div className="text-on-image">
-            <h2 className="page-title">SAFARI</h2>
-            <span className="page-subtitle">
-            In the most private location away from the crowds inside the Masai Mara
-            </span>
-       </div>
-     </div>
+        <button
+          className="carousel-control-prev"
+          data-bs-slide="prev"
+          data-bs-target="#carouselExampleIndicators"
+          type="button"
+        >
+          <span aria-hidden="true" className="carousel-control-prev-icon" />{" "}
+          <span className="visually-hidden">Previous</span>
+        </button>{" "}
+        <button
+          className="carousel-control-next"
+          data-bs-slide="next"
+          data-bs-target="#carouselExampleIndicators"
+          type="button"
+        >
+          <span aria-hidden="true" className="carousel-control-next-icon" />{" "}
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
 {/* -----------------------------------PICTURE LINKS ----------------------------------------------- */}
 
-     <div className="row row-cols-3 g-3 m-5">
-        <div>
-          <Link to="/Maasai">
-            <h4 className="text-center">
-              <br />
-              MAASAI CULTURAL VISITS
-            </h4>
-            <img
-              className="col-12"
-              src="https://www.enkewa.com/wp-content/uploads/2022/01/An%CC%83adir-en-Cultura-Masai.jpg"
-              alt="example"
-            />
-            <p className="text-center">Approach the reality</p>
-          </Link>
-        </div>
+     <div className="row row-cols-3 g-3 m-4">
 
-        <div>
-          <Link to="/Sundowners">
-            <h4 className="text-center">
-              <br />
-              SUNDOWNERS
-            </h4>
-            <img
-              className="col-12"
-              src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_8654-web-scaled.jpg"
-              alt="example"
-            />
-            <p className="text-center">Enjoy the Sun</p>
-          </Link>
-        </div>
+     <Link to="/Experience">
+        <figure className="snip0016">
+          <img src="https://www.enkewa.com/wp-content/uploads/2022/01/An%CC%83adir-en-Cultura-Masai.jpg" alt="sample41" />
+          <figcaption>
+            <h2>Camp <span>Masai Mara</span> oasis</h2>
+            <p>Visit our unique eco camp and meet our team</p>            
+          </figcaption>			
+        </figure>
+        </Link>
 
-        <div>
-          <Link to="/PhotoSafari">
-            <h4 className="text-center">PROFESSIONAL SAFARI PHOTOGRAPHIC</h4>
-            <img
-              className="col-12"
-              src="https://www.enkewa.com/wp-content/uploads/2021/11/safari-23424.jpg"
-              alt="example"
-            />
-            <p className="text-center">Capture the moment</p>
-          </Link>
-        </div>
+        <Link to="/Safari">
+        <figure className="snip0016">
+          <img src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_8654-web-scaled.jpg" alt="sample41" />
+          <figcaption>
+            <h2>feel <span>Safari ADVENTURE</span></h2>
+            <p>Best safari experience in an unspoiled enviroment</p>            
+          </figcaption>			
+        </figure>
+        </Link>
+
+        <Link to="/Camp">
+        <figure className="snip0016">
+          <img src="https://www.enkewa.com/wp-content/uploads/2021/11/safari-23424.jpg" alt="sample41" />
+          <figcaption>
+            <h2>be <span>Safari Adventure</span> </h2>
+            <p>We offer a variety of activities, check our proposal</p>            
+          </figcaption>			
+        </figure>
+        </Link>
 
       </div>
 
      <div className="row row-cols-2 g-3 mt-5">{/* --this div wraps the 2 colums layout-- */}
        
-{/* --------------------------------------------CAROUSEL----------------------------------------------- */}
+{/* --------------------------------------------CAROUSEL-V1---------------------------------------------- */}
 
        <div className="col-6 justify-content-center">
          <div className="card m-3 border-light">
@@ -349,7 +400,7 @@ export const Home = () => {
                 </div>
               </div>
        
-       {/* --------------------------------------------CAROUSEL----------------------------------------------- */}
+{/* --------------------------------------------CAROUSEL----------------------------------------------- */}
        
               <div className="col-6 justify-content-center">
                 <div className="card m-3 border-light">
@@ -448,7 +499,7 @@ export const Home = () => {
               
        </div>{/* --Here ends the Wrapper for the SECOND 2 colums layout-- */}
                       
-          <img src={rigoImageUrl}></img>
+          {/* <img src={rigoImageUrl}></img> */}
 
   </div>
 

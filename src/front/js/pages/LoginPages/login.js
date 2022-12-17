@@ -54,7 +54,7 @@ const Login = () => {
       <div className="col-6">
         <>
           {success ? (
-            <section>
+            <section className="logSection">
               <h1>You are logged in!</h1>
               <br />
               <span className="line">
@@ -62,9 +62,9 @@ const Login = () => {
                   <a href="#">Go to Home</a>
                 </Link>
               </span>
-            </section>
+            </section >
           ) : (
-            <section>
+            <section className="logSection">
               <p
                 ref={errRef}
                 className={errMsg ? "errmsg" : "offscreen"}

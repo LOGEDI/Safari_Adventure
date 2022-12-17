@@ -95,15 +95,15 @@ const Signup = () => {
     };
   
     return (
-      <div className="container">
-      <div className="App row row-cols-2 g-3 mt-5" style={{backgroundImage:`url("${lionImageUrl}")`}}>
+      <div className="container" style={{backgroundImage:`url("${lionImageUrl}")`, objectFit: "cover" }}>
+      <div className="App row row-cols-2 g-3 mt-5">
         <div className="col-6">
         <>
   
   {/*-------------show if registration status and if user is registered already link to login page------------------------- */}
   
           {success ? (
-            <section>
+            <section className="logSection">
               <h1>Success!</h1>
               <span className="line">
                 <Link to="/login">
@@ -112,7 +112,7 @@ const Signup = () => {
               </span>
             </section>
           ) : (
-            <section>
+            <section className="logSection">
               <p
                 ref={errRef}
                 className={errMsg ? "errmsg" : "offscreen"}
