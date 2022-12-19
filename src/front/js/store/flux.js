@@ -4,6 +4,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		message: null,
 		token: "",
 		auth: false,
+		packages: [],
+		packagesDetails: null,
+		favorites: [],
 	  },
 	  actions: {
 
@@ -13,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   
 		signup: async (signupData) => {
 		  await fetch(
-			"https://3001-logedi-safariadventure-u9k8s7w2btq.ws-eu79.gitpod.io/signup",
+			"https://3001-logedi-safariadventure-4l0suv9vvtj.ws-eu79.gitpod.io/signup",
 			{
 			  method: "POST",
 			  body: JSON.stringify(signupData),
@@ -32,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		login: (loginInfo) => {
 		  const response = fetch(
-			"https://3001-logedi-safariadventure-u9k8s7w2btq.ws-eu79.gitpod.io/token",
+			"https://3001-logedi-safariadventure-4l0suv9vvtj.ws-eu79.gitpod.io/token",
 			{
 			  //mode: 'no-cors',
 			  method: "POST",
@@ -73,7 +76,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		  
 		  //if (tok == getStore().token) {
 			await fetch(
-			  "https://3001-logedi-safariadventure-u9k8s7w2btq.ws-eu79.gitpod.io/private",
+			  "https://3001-logedi-safariadventure-4l0suv9vvtj.ws-eu79.gitpod.io/private",
 			  {
 				method: "GET",
 				headers: {
@@ -92,6 +95,64 @@ const getState = ({ getStore, getActions, setStore }) => {
 			});
 		},
   
+//-----------------------------------------------------------------------------------------------------------------------------
+//											PACKAGES FUNCTION
+//-----------------------------------------------------------------------------------------------------------------------------
+
+		getPackages: async () => {
+			try {
+				return fetch("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20", {
+					method: "GET",
+					redirect: "follow"
+				})
+					.then(response => response.json())
+					.then(data => setStore({ packages: data.results}));
+			} catch (error) {
+				return [];
+			}
+		},
+
+//-----------------------------------------------------------------------------------------------------------------------------
+//											PACKAGES DETAILS FUNCTION
+//-----------------------------------------------------------------------------------------------------------------------------
+
+		getPackagesDetails: id => {
+			try {
+				return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
+					method: "GET",
+					redirect: "follow"
+				})
+					.then(response => response.json())
+					.then(data => 
+						setStore({ packagesDetails: data.result}));
+			} catch (error) {
+				return [];
+			}
+		},
+
+//-----------------------------------------------------------------------------------------------------------------------------
+//											ADD FAVOURITE PACKAGE FUNCTION
+//-----------------------------------------------------------------------------------------------------------------------------
+
+		addFavorites: itemName => {
+			const {favorites} = getStore();
+			if (!favorites.find(i => i == itemName )){
+				favorites.push(itemName)
+			}
+			console.log(favorites)
+			setStore({favorites})
+		}, 
+
+//-----------------------------------------------------------------------------------------------------------------------------
+//											ADD FAVOURITE PACKAGE FUNCTION
+//-----------------------------------------------------------------------------------------------------------------------------
+
+		deleteFavorites: itemIndex => {
+			const {favorites} = getStore();
+			const newFav = [...favorites]
+			newFav.splice(itemIndex,1)
+			setStore({favorites: newFav})
+		},
 
 //-----------------------------------------------------------------------------------------------------------------------------
 //											EXAMPLE FUNCTION

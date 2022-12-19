@@ -21,6 +21,7 @@ import OtherServices from "./pages/Camp/OtherServices.jsx";
 import CommunityProjects from "./pages/AboutUs/CommunityProjects.jsx";
 import PhotoGallery from "./pages/AboutUs/PhotoGallery.jsx";
 import Packages from "./pages/TravelPlaning/Packages.jsx";
+import PackagesDetails from "./pages/TravelPlaning/PackagesDetails.jsx";
 import Contact from "./pages/Contact.jsx";
 import Signup from "./pages/LoginPages/signup";
 import Login from "./pages/LoginPages/login";
@@ -64,6 +65,7 @@ const Layout = () => {
 
             <Route element={<TravelPlan />} path="/TravelPlan" />
             <Route element={<Packages />} path="/Packages" />
+            <Route element={<PackagesDetails />} path="/PackagesDetails/:id" />
 
             <Route element={<Contact />} path="/Contact" />
 

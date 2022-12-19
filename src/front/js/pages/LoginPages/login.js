@@ -42,7 +42,7 @@ const Login = () => {
      email: email,
      password: password,
    });
-   console, log(email, password);
+  //  console, log(email, password);
    setEmail("");
    setPassword("");
    setSuccess(true);
