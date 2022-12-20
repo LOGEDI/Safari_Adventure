@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   
 		signup: async (signupData) => {
 		  await fetch(
-			"https://3001-logedi-safariadventure-q3h8uczxhuw.ws-eu79.gitpod.io/signup",
+			"https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/signup",
 			{
 			  method: "POST",
 			  body: JSON.stringify(signupData),
@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		login: (loginInfo) => {
 		  const response = fetch(
-			"https://3001-logedi-safariadventure-q3h8uczxhuw.ws-eu79.gitpod.io/token",
+			"https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/token",
 			{
 			  //mode: 'no-cors',
 			  method: "POST",
@@ -76,7 +76,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		  
 		  //if (tok == getStore().token) {
 			await fetch(
-			  "https://3001-logedi-safariadventure-q3h8uczxhuw.ws-eu79.gitpod.io/private",
+			  "https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/private",
 			  {
 				method: "GET",
 				headers: {
