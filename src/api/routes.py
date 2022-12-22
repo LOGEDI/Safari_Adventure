@@ -60,9 +60,11 @@ def protected():
 
     # Access to user_id with get_jwt_identity
     current_user_id = get_jwt_identity()
-    user = User.query.get(current_user_id)
+    user = User.query.filter_by(email=current_user_id).first()
+    return jsonify(user.serialize()), 200
+    # user = User.query.get(current_user_id)
     
-    return jsonify({"id": user.id, "email": user.email }), 200
+    # return jsonify({"id": user.id, "email": user.email }), 200
 #===================================================================================================
 #================================ USERS queries ================================================
 #---------------------------------------------------------------------------------------------------
@@ -72,11 +74,13 @@ def protected():
 @api.route('/users', methods=['GET'])
 def handle_users():
     # get all the people
-    users = User.query.all()
-    all_users = list(map(lambda x: x.serialize(), users))
-    return jsonify({
-        "result": all_users
-    }), 200
+    get_users = User.query.all()
+    all_users = list(map(lambda x: x.serialize(), get_users))
+
+    return jsonify(all_users), 200
+    # return jsonify({
+    #     "result": all_users
+    # }), 200
 
 #---------------------------------------------------------------------------------------------------
 #                                USERS DELETE

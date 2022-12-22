@@ -12,7 +12,7 @@ const Packages = () => {
       <div className="container">
           <h1 className="text-dark">Packages</h1>
           <div className="row row-cols-1 g-3 justify-content-center">
-
+          
           {store.packages.map((item) => (
             <div key={item.id} className="col">
               <div className="card m-3  border-dark">
@@ -27,9 +27,9 @@ const Packages = () => {
                       </button>
                     </Link>
 
-                    {/* <button type="button" className="btn btn-outline-warning" onClick={() => actions.addFavorites(item.name)}>
-                      {store.favorites.includes(item.name) ? <i key={i} className="fa-solid fa fa-heart"></i> : <i key={i} className="far fa-heart"></i>}
-                    </button> */}
+                    <button type="button" className="btn btn-outline-warning" onClick={() => actions.addFavorites(item.name)}>
+                      {store.favorites.includes(item.name) ? <i key={item} className="fa-solid fa fa-heart"></i> : <i key={item} className="far fa-heart"></i>}
+                    </button>
                   </div>
                 </div>
               </div>

@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 	  store: {
@@ -7,6 +9,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		packages: [],
 		packagesDetails: null,
 		favorites: [],
+		user: [],
+		private: [],
 	  },
 	  actions: {
 
@@ -68,36 +72,68 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
   
 //-----------------------------------------------------------------------------------------------------------------------------
-//											PRIVATE
+//											PRIVATE - user info
 //-----------------------------------------------------------------------------------------------------------------------------
 
-		private: async () => {
-		  let myToken = localStorage.getItem("token");
-		  
-		  //if (tok == getStore().token) {
-			await fetch(
-			  "https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/private",
-			  {
-				method: "GET",
-				headers: {
-				  "Content-Type": "application/json",
-				  Authorization: "Bearer " + myToken,
-				},
-			  }
-			).then((res) => {
-			  if (res.status == 200) {
-				console.log("OK");
-				const { auth } = getStore();
-				setStore({ auth: true });
-			  } else {
-				console.log("Error");
-			  }
+		private: () => {
+			const myToken = localStorage.getItem("token");
+			console.log(myToken);
+			fetch(process.env.BACKEND_URL + "/private", {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: "Bearer " + myToken,
+			},
+			})
+			.then((response) => response.json())
+			.then((data) => {
+				setStore({
+				private: data,
+				});
+				// sessionStorage.setItem("groupName", data.name);
+				// .catch((err) => console.error(err));
 			});
 		},
+
+
+
+
+		// private: async () => {
+		//   let myToken = localStorage.getItem("token");
+		  
+		//   //if (tok == getStore().token) {
+		// 	await fetch(
+		// 	  "https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/private",
+		// 	  {
+		// 		method: "GET",
+		// 		headers: {
+		// 		  "Content-Type": "application/json",
+		// 		  Authorization: "Bearer " + myToken,
+		// 		},
+		// 	  }
+		// 	).then((res) => {
+		// 	  if (res.status == 200) {
+		// 		console.log("OK");
+		// 		const { auth } = getStore();
+		// 		setStore({ auth: true });
+		// 	  } else {
+		// 		console.log("Error");
+		// 	  }
+		// 	});
+		// },
   
+
+//-----------------------------------------------------------------------------------------------------------------------------
+//											PRIVATE - user info
+//-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 //-----------------------------------------------------------------------------------------------------------------------------
 //											PACKAGES FUNCTION
 //-----------------------------------------------------------------------------------------------------------------------------
+
 		getPackages: async () => {
 			try {
 				const response = await fetch(
@@ -133,26 +169,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 			}
 		},
 
+//-----------------------------------------------------------------------------------------------------------------------------
+//											USER FUNCTION
+//-----------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-		// getPackagesDetails: id => {
-		// 	try {
-		// 		return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
-		// 			method: "GET",
-		// 			redirect: "follow"
-		// 		})
-		// 			.then(response => response.json())
-		// 			.then(data => 
-		// 				setStore({ packagesDetails: data.result}));
-		// 	} catch (error) {
-		// 		return [];
-		// 	}
-		// },
+		getUsers: async () => {
+			try {
+				const response = await fetch(
+					process.env.BACKEND_URL + "/users"
+				);
+				const data = await response.json();
+				setStore({
+					user: data,
+				});
+			} catch (err) {
+				console.log(err);
+			}
+		},
 
 //-----------------------------------------------------------------------------------------------------------------------------
 //											ADD FAVOURITE PACKAGE FUNCTION
@@ -168,7 +201,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		}, 
 
 //-----------------------------------------------------------------------------------------------------------------------------
-//											ADD FAVOURITE PACKAGE FUNCTION
+//											del FAVOURITE PACKAGE FUNCTION
 //-----------------------------------------------------------------------------------------------------------------------------
 
 		deleteFavorites: itemIndex => {

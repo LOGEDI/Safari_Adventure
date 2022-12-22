@@ -8,7 +8,7 @@ class User(db.Model):
     __tablename__="user"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True, nullable=True)
-    email = db.Column(db.String(120), unique=True, nullable=False)
+    email = db.Column(db.String(320), unique=True, nullable=False)
     password = db.Column(db.String(80), unique=False, nullable=False)
     name = db.Column(db.String(120), unique=False, nullable=True)
     last_name = db.Column(db.String(120), unique=False, nullable=True)
@@ -123,6 +123,7 @@ class Favorites(db.Model):
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.String(250))
+    # date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     id_user = db.Column(db.Integer,  db.ForeignKey('user.id'), nullable=False )
     id_packages = db.Column(db.Integer, db.ForeignKey('packages.id') , nullable=True)
     # score = db.Column(db.Integer, nullable=True)
@@ -134,9 +135,11 @@ class Review(db.Model):
     def serialize(self):
         return {
             "id": self.id,
+            "comment": self.comment,
+            "date": self.date,
             "id_user": self.id_user,
             "id_packages": self.id_packages,
-            "comment": self.comment,
+            
             # "score": self.score
         }
         

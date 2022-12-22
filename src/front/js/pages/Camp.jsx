@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 const Camp = () => {
+  const {store, actions} = useContext(Context);
+
   return (
     <div className="container">
       <div className="carousel2">
@@ -157,6 +160,23 @@ const Camp = () => {
        
       </div>
 
+      {store.packages.map((item) => (
+        <div key={item.id} className="col">
+          <h5 className="card-title">{item.package_name}</h5>
+
+         
+        </div>        
+
+      ))}
+
+      {store.user.map((item) => (
+        <div key={item.id} className="col">
+          <h5 className="card-title">{item.name}</h5>
+          <h5 className="card-title">{item.country}</h5>
+         
+        </div>        
+
+      ))}
 
 
     
