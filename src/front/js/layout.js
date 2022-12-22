@@ -22,9 +22,9 @@ import CommunityProjects from "./pages/AboutUs/CommunityProjects.jsx";
 import PhotoGallery from "./pages/AboutUs/PhotoGallery.jsx";
 import Packages from "./pages/TravelPlaning/Packages.jsx";
 import Contact from "./pages/Contact.jsx";
-import Signup from "./pages/LoginPages/signup";
+import Register from "./pages/LoginPages/register";
 import Login from "./pages/LoginPages/login";
-import Private from "./pages/LoginPages/private";
+import Profile from "./pages/LoginPages/Profile.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -67,9 +67,9 @@ const Layout = () => {
 
             <Route element={<Contact />} path="/Contact" />
 
-            <Route element={<Signup />} path="/signup" />
+            <Route element={<Register />} path="/register" />
             <Route element={<Login />} path="/login" />
-            <Route element={<Private />} path="/private" />
+            <Route element={<Profile />} path="/profile" />
 
             <Route element={<Demo />} path="/demo" />
             <Route element={<Single />} path="/single/:theid" />

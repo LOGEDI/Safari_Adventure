@@ -10,7 +10,7 @@ export const Navbar = () => {
 					<span className="navbar-brand mb-0 h1">Safari Adventure</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/signup">
+					<Link to="/register">
 						<button className="btn btn-primary m-2">Sign Up</button>
 					</Link>
 					<Link to="/login">

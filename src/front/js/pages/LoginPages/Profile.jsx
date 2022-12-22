@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import { Context } from "../../store/appContext";
 
-const Private = () => {
+const Profile = () => {
   const { store, actions } = useContext(Context);
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
@@ -36,4 +36,4 @@ const Private = () => {
   );
 };
 
-export default Private;
+export default Profile;

@@ -21,7 +21,7 @@ const Login = () => {
  //--if authentication is correct send you to private page
  useEffect(() => {
    if (store.auth === true) {
-     navigate("/private");
+     navigate("/profile");
    }
  }, [store.auth]);
 

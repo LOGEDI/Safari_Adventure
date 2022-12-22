@@ -17,7 +17,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_](?=.*[@]).{3,23}$/;
 // password showld have min of 8 and max of 24, should contain a capital leter, a number and a especial character.
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
-const Signup = () => {
+const Register = () => {
   const { store, actions } = useContext(Context);
 
   // --reference for user and errors.
@@ -298,4 +298,4 @@ const Signup = () => {
     );
   };
   
-  export default Signup;
+  export default Register;
