@@ -20,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   
 		signup: async (signupData) => {
 		  await fetch(
-			"https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/signup",
+			"https://3001-logedi-safariadventure-e3qkaob8jhn.ws-eu80.gitpod.io/signup",
 			{
 			  method: "POST",
 			  body: JSON.stringify(signupData),
@@ -39,7 +39,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		login: (loginInfo) => {
 		  const response = fetch(
-			"https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/token",
+			"https://3001-logedi-safariadventure-e3qkaob8jhn.ws-eu80.gitpod.io/token",
 			{
 			  //mode: 'no-cors',
 			  method: "POST",
@@ -98,29 +98,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-		// private: async () => {
-		//   let myToken = localStorage.getItem("token");
+		private: async () => {
+		  let myToken = localStorage.getItem("token");
 		  
-		//   //if (tok == getStore().token) {
-		// 	await fetch(
-		// 	  "https://3001-logedi-safariadventure-1rcdg1yv4sk.ws-eu79.gitpod.io/private",
-		// 	  {
-		// 		method: "GET",
-		// 		headers: {
-		// 		  "Content-Type": "application/json",
-		// 		  Authorization: "Bearer " + myToken,
-		// 		},
-		// 	  }
-		// 	).then((res) => {
-		// 	  if (res.status == 200) {
-		// 		console.log("OK");
-		// 		const { auth } = getStore();
-		// 		setStore({ auth: true });
-		// 	  } else {
-		// 		console.log("Error");
-		// 	  }
-		// 	});
-		// },
+		  //if (tok == getStore().token) {
+			await fetch(
+			  "https://3001-logedi-safariadventure-e3qkaob8jhn.ws-eu80.gitpod.io/private",
+			  {
+				method: "GET",
+				headers: {
+				  "Content-Type": "application/json",
+				  Authorization: "Bearer " + myToken,
+				},
+			  }
+			).then((res) => {
+			  if (res.status == 200) {
+				console.log("OK");
+				const { auth } = getStore();
+				setStore({ auth: true });
+			  } else {
+				console.log("Error");
+			  }
+			});
+		},
   
 
 //-----------------------------------------------------------------------------------------------------------------------------

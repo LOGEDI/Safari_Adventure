@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
+	const token = localStorage.getItem("token");
+
+	useEffect(() => {
+		actions.private();
+	}, [store.auth]);
+
 	return (
 		<div className="sticky-top">
 			<nav className="navbar navbar-light bg-light">
@@ -156,6 +164,17 @@ export const Navbar = () => {
 								CONTACT
 							</Link>
 						</button>
+
+						{store.auth ? (
+							<button className="nav2Button me-3 nav-item  ">
+
+								<Link to="/Camp" className="nav2Button">
+                 				 Prueba
+                				</Link>
+							</button>
+                
+              ) : null}{" "}
+
 
 				</div>
 				</nav>
