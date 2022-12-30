@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
+// import { Demo } from "./pages/demo";
+// import { Single } from "./pages/single";
 import Safari from "./pages/Safari.jsx";
 import Camp from "./pages/Camp.jsx";
 import Experience from "./pages/Experience.jsx";
@@ -21,11 +21,19 @@ import OtherServices from "./pages/Camp/OtherServices.jsx";
 import CommunityProjects from "./pages/AboutUs/CommunityProjects.jsx";
 import PhotoGallery from "./pages/AboutUs/PhotoGallery.jsx";
 import Packages from "./pages/TravelPlaning/Packages.jsx";
+import PackagesDetails from "./pages/TravelPlaning/PackagesDetails.jsx";
+import AddPackages from "./pages/TravelPlaning/AddPackages.jsx";
 import Contact from "./pages/Contact.jsx";
+
+import Login from "./pages/LoginPages/login.jsx";
+import SignUp from "./pages/LoginPages/signup.jsx";
+import Profile from "./pages/Profile/Profile.jsx";
+import EditProfile from "./pages/Profile/EditProfile.jsx";
+import ChangePassword from "./pages/Profile/changePassword.jsx";
 
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { NavbarPrincipal } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -38,7 +46,7 @@ const Layout = () => {
         <div>
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
-                    <Navbar />
+                    <NavbarPrincipal />
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<Safari />} path="/Safari" />
@@ -61,11 +69,19 @@ const Layout = () => {
 
                         <Route element={<TravelPlan />} path="/TravelPlan" />
                         <Route element={<Packages />} path="/Packages" />
+                        <Route element={<PackagesDetails />} path="/PackagesDetails/:id" />
+                        <Route element={<AddPackages />} path="/AddPackages" />
                         
                         <Route element={<Contact />} path="/Contact" />
+
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<SignUp />} path="/signup" />
+                        <Route element={<Profile />} path="/Profile" />
+                        <Route element={<EditProfile />} path="/EditProfile" />
+                        <Route element={<ChangePassword />} path="/changePassword" />
                         
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
+                        {/* <Route element={<Demo />} path="/demo" />
+                        <Route element={<Single />} path="/single/:theid" /> */}
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />

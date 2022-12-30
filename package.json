@@ -73,10 +73,22 @@
 		]
 	},
 	"dependencies": {
+		"axios": "^1.2.1",
+		"bcrypt": "^5.1.0",
+		"bootstrap": "^5.2.3",
+		"formik": "^2.2.9",
+		"jwt-decode": "^3.1.2",
 		"prop-types": "^15.6.1",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
+		"react": "^16.14.0",
+		"react-bootstrap": "^2.7.0",
+		"react-dom": "^16.14.0",
+		"react-icons": "^4.7.1",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^6.3.0"
+		"react-router-dom": "^6.3.0",
+		"react-share": "^4.4.1",
+		"reactstrap": "^9.1.5",
+		"sweetalert": "^2.1.2",
+		"sweetalert2": "^11.6.16",
+		"yup": "^0.32.11"
 	}
 }
