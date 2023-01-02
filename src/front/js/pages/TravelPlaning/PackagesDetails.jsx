@@ -14,20 +14,122 @@ const PackagesDetails = () => {
 
       if (store.packageDetail) {
 		return (
-			<div className="jumbotron ">
-				<div className="card" style={{ maxWidth: "60%", margin: "auto"}}>
-					<div className="row g-0">
-						<div className="col-md-3">
+
+			<div>
+
+
+
+
+
+
+
 						<img
                     		src={store.packageDetail.url}
                     		className="img-fluid rounded p-1 "
                     		alt="..."
                     		style={{
-                      			maxHeight: "24rem",
+                      			// maxHeight: "54rem",
                       			borderColor: "#b2a97e",
-                      			maxWidth: "24rem",
+                      			// maxWidth: "24rem",
                     		}}
                   		/>
+
+			<div className="container ">
+
+			<div className='row row-cols-2 g-3 mt-5' >
+              <div className='col-3'>
+                <h3>Destinations</h3>
+                <p>Discover Story-worthy places</p>
+              </div>              
+              <div className='col-9'>               
+                <div className='row row-cols-6'>
+                  <div className='col-2'>
+                    <button className='btn-alert btn-l'> all</button>
+                  </div>
+                  <div className='col-2'>
+                    <button className='btn-alert btn-l'>all</button>
+                  </div>
+                  <div className='col-2'>
+                    <button className='btn-alert btn-l'>all</button>
+                  </div>
+                  <div className='col-2'>
+                    <button className='btn-alert btn-l'>all</button>
+                  </div>
+                  <div className='col-2'>
+                    <button className='btn-alert btn-l'>all</button>
+                  </div>
+                  <div className='col-2'>
+                    <button className='btn-alert btn-l'>all</button>
+                  </div>
+                </div>             
+              </div>
+            </div>
+
+			<div className='row row-cols-5 mt-5'>
+				<div className='col text-center'>
+					<h5>Tour duration</h5>
+				</div>
+				<div className='col text-center'>
+					<h5>Destinations included</h5>
+				</div>
+				<div className='col text-center'>
+					<h5>Activities</h5>
+				</div>
+				<div className='col text-center'>
+					<h5>Transpor mode</h5>
+				</div>
+				<div className='col text-center'>
+					<h5>lodging</h5>
+				</div>
+			</div>
+
+				<div className='row row-cols-2 mt-5'>
+					<div className='col-2'>
+						<h3>Overview</h3>
+						<h4>Day 1: Arrival</h4>
+						<h6>overnigth....</h6>
+
+					</div>
+					<div className='col-10'>
+						<p>Welcome to Kenya. On arrival in Nairobi, 
+							after clearing customs and immigration, you are met by a representative of Wild Images Africa Safaris and transferred to Nairobi Hemingway’s Hotel. 
+							Hemingway’s Nairobi is a brand-new luxury boutique hotel located in the suburb of Karen featuring 45 suites overlooking the Ngong Hills.
+						</p>												
+					</div>
+				</div>
+
+				<div className='row row-cols-2 mt-5'>
+					<img src={store.packageDetail.url}></img>
+					<img src={store.packageDetail.url}></img>
+				</div>
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div>
+					<div className="row g-0">
+						<div className="col-12">
+						
 						</div>
 						<div className="col-md-8">
 							<div className="card-body">
@@ -50,6 +152,11 @@ const PackagesDetails = () => {
 					</div>
 				</div>
 			
+		</div>
+		
+		
+		
+		
 		</div>
 	)}
 	else {

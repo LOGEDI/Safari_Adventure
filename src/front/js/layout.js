@@ -23,6 +23,13 @@ import PhotoGallery from "./pages/AboutUs/PhotoGallery.jsx";
 import Packages from "./pages/TravelPlaning/Packages.jsx";
 import PackagesDetails from "./pages/TravelPlaning/PackagesDetails.jsx";
 import AddPackages from "./pages/TravelPlaning/AddPackages.jsx";
+import Destinations from "./pages/Destinations/Destinations.jsx";
+import Kenya from "./pages/Destinations/Kenya.jsx";
+import Ethiopia from "./pages/Destinations/Ethiopia.jsx";
+import Uganda from "./pages/Destinations/Uganda.jsx";
+import Rwanda from "./pages/Destinations/Rwanda.jsx";
+import Tanzania from "./pages/Destinations/Tanzania.jsx";
+
 import Contact from "./pages/Contact.jsx";
 
 import Login from "./pages/LoginPages/login.jsx";
@@ -41,6 +48,8 @@ const Layout = () => {
     //the basename is used when your project is published in a subdirectory and not in the root of the domain
     // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
     const basename = process.env.BASENAME || "";
+    const loggedIn = window.localStorage.getItem("isLoggedIn");
+    console.log(loggedIn, "login");
 
     return (
         <div>
@@ -48,6 +57,7 @@ const Layout = () => {
                 <ScrollToTop>
                     <NavbarPrincipal />
                     <Routes>
+                        {/* <Route path="/" exact component={loggedIn ? Profile : Home} /> */}
                         <Route element={<Home />} path="/" />
                         <Route element={<Safari />} path="/Safari" />
 
@@ -71,6 +81,12 @@ const Layout = () => {
                         <Route element={<Packages />} path="/Packages" />
                         <Route element={<PackagesDetails />} path="/PackagesDetails/:id" />
                         <Route element={<AddPackages />} path="/AddPackages" />
+                        <Route element={<Destinations />} path="/Destinations" />
+                        <Route element={<Kenya />} path="/Kenya" />
+                        <Route element={<Ethiopia />} path="/Ethiopia" />
+                        <Route element={<Uganda />} path="/Uganda" />
+                        <Route element={<Rwanda />} path="/Rwanda" />
+                        <Route element={<Tanzania />} path="/Tanzania" />
                         
                         <Route element={<Contact />} path="/Contact" />
 

@@ -283,7 +283,7 @@ margin-top: 1rem;
 	margin-top: 15px;
 }
 
-/*--------------------------------------------------------------------*/
+/*-------------------------------HOME PAGE PICTURE BUTTONS-------------------------------------*/
 
 figure.snip0016 {
   font-family: 'Raleway', Arial, sans-serif;
@@ -392,20 +392,135 @@ figure.snip0016:hover figcaption::before {
   transition-delay: 0s;
 }
 
-
-/* Demo purposes only */
-/* html {
-  height: 100%;
+/*---------------------------DESTINATIONS--------------------------------------*/
+.destimg{
+  height: 200px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0 0 2px 0 rgba(41, 54, 47, .08);
+  background-position: 100% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
-body {
-  background-color: #212121;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  height: 100%;
-} */
 
+.destinations-title{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  color: #d2ae6d;
+}
 
-/*-----------------------------------------------------------------*/
+.destinations-subtitle{
+  font-family: 'Lato', sans-serif;
+  color: #29362f;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 20px;
+}
 
+.destinations-main-title{
+  color: #2f503e;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+.destinations-p{
+  color: #2f503e;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.destinations-h4{
+  color: #d2ae6d;
+}
+
+.destinations-card-title{
+  font-family: Lato, sans-serif;
+  color: #29362f;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.destinations-card-text{
+  font-family: Lato, sans-serif;
+  color: #848688;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.destinationicon{
+  height: 15px;
+  width: 15px;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.destinationthumb{
+  box-shadow: 20px, 20px, 20px;
+}
+
+.destinationbtn-on{
+  background-color: #d2ae6d;
+  color: white;
+  border-radius: 5px;
+  min-width: 85px;
+  min-height: 45px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
+  border-color: #d2ae6d;
+}
+
+.destinationbtn{
+  background-color: transparent;
+  color: #2f503e;
+  border-radius: 5px;
+  min-width: 85px;
+  min-height: 45px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 600;
+  border-color: #d2ae6d;
+  border-width: 1px;
+  border-bottom-color: #d2ae6d;
+}
+
+.iconsdestinations{
+  height: 45px;
+}
+
+.desticontitle{
+  color: #29362f;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  margin-top: 7px;
+}
+
+.desticoncontent{
+  color: #2f503e;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: -15px;
+  font-weight: 600;
+}
+
+.destinationanimation *[data-ix="fadeinup"]{
+  opacity: 0;
+  -webkit-transform: translate(0px, 20px);
+  -ms-transform: translate(0px, 20px);
+  transform: translate(0px, 20px);
+}

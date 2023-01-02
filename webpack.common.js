@@ -19,6 +19,12 @@ module.exports = {
           exclude: /node_modules/,
           use: ['babel-loader']
         },
+
+        {
+          test: /\.svg$/,
+          use: ['@svgr/webpack'],
+        },
+
         {
           test: /\.(css|scss)$/, use: [{
               loader: "style-loader" // creates style nodes from JS strings

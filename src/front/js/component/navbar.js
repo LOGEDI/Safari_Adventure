@@ -16,7 +16,7 @@ export const NavbarPrincipal = () => {
   const [search, setSearch] = useState("");
 
   let navigate = useNavigate();
-  // Controla el logout de usuario, simplemente llama a logout de flux
+  // Calls flux logout
   const doLogout = () => {
     //false
     let onLogged = actions.logout();
@@ -55,7 +55,7 @@ export const NavbarPrincipal = () => {
           </div>
         </nav>
 
-  {/*------------------------------------------------------- Segundo NAV --------------------------------------------------------------*/}        
+  {/*------------------------------------------------------- SECOND NAV --------------------------------------------------------------*/}        
 
   <div className="navBar2">
         <nav className="navbar">
@@ -157,6 +157,11 @@ export const NavbarPrincipal = () => {
                 <a className="dropdown-item">
                   <Link className="linkToView" to="/Packages">
                     PACKAGES
+                  </Link>
+                </a>
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/Destinations">
+                    DESTINATIONS
                   </Link>
                 </a>
                 {store.admin ? (

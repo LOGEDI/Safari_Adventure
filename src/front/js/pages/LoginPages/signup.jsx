@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Swal from "sweetalert2";
+import destinationBackground from "../../../img/destinations_background.jpg";
 
 const SignUp = () => {
   const { actions } = useContext(Context);
@@ -28,109 +29,125 @@ const SignUp = () => {
       .required("Password required"),
   });
   return (
-    <Formik
-      //initial values
-      initialValues={{ username: "", email: "", password: "" }}
-      validationSchema={SignupSchema}
-      // declare onSubmit and get the login values 
-      onSubmit={async (values) => {
-        let onSignUp = await actions.signup(
-          values.username,
-          values.email,
-          values.password
-        );
-        if (onSignUp === "User exists") {
-          Swal.fire({
-            text: "User email already exists, redirecting to login",
-            confirmButtonColor: "#000000",
-          });
-          navigate("/login");
-        } else if (onSignUp === "New user created") {
-          navigate("/");
-        }
-      }}
-    >
-      {({ errors, touched }) => (
-        <Form>
-          <div className="container-fluid text-center">
-            <div className="row d-flex justify-content-center align-items-center h-100">
-              <div col="12">
-                <div
-                  className="bg-ligth my-5 mx-auto"
-                  style={{ borderRadius: "1rem", maxWidth: "400px" }}
-                >
-                  <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
-                    <h2
-                      className="fw-bold mb-2 text-uppercase"
-                      style={{ color: "#bdb284" }}
+    <div>
+      <div
+        className="destinationsBackground"
+        style={{
+          backgroundImage: `url(${destinationBackground})`,
+        }}
+      >
+        <Formik
+          //initial values
+          initialValues={{ username: "", email: "", password: "" }}
+          validationSchema={SignupSchema}
+          // declare onSubmit and get the login values
+          onSubmit={async (values) => {
+            let onSignUp = await actions.signup(
+              values.username,
+              values.email,
+              values.password
+            );
+            if (onSignUp === "User exists") {
+              Swal.fire({
+                text: "User email already exists, redirecting to login",
+                confirmButtonColor: "#000000",
+              });
+              navigate("/login");
+            } else if (onSignUp === "New user created") {
+              navigate("/");
+            }
+          }}
+        >
+          {({ errors, touched }) => (
+            <Form>
+              <div className="container-fluid text-center">
+                <div className="row d-flex justify-content-center align-items-center h-100">
+                  <div col="12">
+                    <div
+                      className="bg-ligth my-5 mx-auto"
+                      style={{ borderRadius: "1rem", maxWidth: "400px" }}
                     >
-                      Register
-                    </h2>
-                    <p className="mt-3 mb-3" style={{ color: "#bdb284" }}>
-                      Already registered?{" "}
-                      <Link to="/login" className="text-black-50 fw-bold">
-                        Login
-                      </Link>
-                    </p>
+                      <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
+                        <h2
+                          className="fw-bold mb-2 text-uppercase"
+                          style={{ color: "#bdb284" }}
+                        >
+                          Register
+                        </h2>
+                        <p className="mt-3 mb-3" style={{ color: "#bdb284" }}>
+                          Already registered?{" "}
+                          <Link to="/login" className="text-black-50 fw-bold">
+                            Login
+                          </Link>
+                        </p>
 
-                    <div className="col-12 ">
-                      <Field
-                        type="text"
-                        name="username"
-                        placeholder="Username"
-                        className="form-control"
-                      />
-                      {errors.username && touched.username && errors.username}
-                      <label
-                        className="form-label"
-                        htmlFor="form1Example2"
-                      ></label>
-                    </div>
-                    <div className="col-12 ">
-                      <Field
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        className="form-control"
-                      />
-                      {errors.email && touched.email && errors.email}
-                      <label
-                        className="form-label"
-                        htmlFor="form1Example2"
-                      ></label>
-                    </div>
-                    <div className="col-12 ">
-                      <Field
-                        type="password"
-                        name="password"
-                        className="form-control"
-                        placeholder="Password"
-                      />
-                      {errors.password && touched.password && errors.password}
-                    </div>
-                    <p className="small mb-3 pb-lg-2">
-                      <br />
-                      <Link className="text-black-50" to={"/changePassword"}>
-                        Forgot password?
-                      </Link>
-                    </p>
+                        <div className="col-12 ">
+                          <Field
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            className="form-control"
+                          />
+                          {errors.username &&
+                            touched.username &&
+                            errors.username}
+                          <label
+                            className="form-label"
+                            htmlFor="form1Example2"
+                          ></label>
+                        </div>
+                        <div className="col-12 ">
+                          <Field
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            className="form-control"
+                          />
+                          {errors.email && touched.email && errors.email}
+                          <label
+                            className="form-label"
+                            htmlFor="form1Example2"
+                          ></label>
+                        </div>
+                        <div className="col-12 ">
+                          <Field
+                            type="password"
+                            name="password"
+                            className="form-control"
+                            placeholder="Password"
+                          />
+                          {errors.password &&
+                            touched.password &&
+                            errors.password}
+                        </div>
+                        <p className="small mb-3 pb-lg-2">
+                          <br />
+                          <Link
+                            className="text-black-50"
+                            to={"/changePassword"}
+                          >
+                            Forgot password?
+                          </Link>
+                        </p>
 
-                    <button
-                      type="submit "
-                      className="btn btn-outline-light btn-lg mx-2 px-5"
-                      style={{ color: "#bdb284" }}
-                      color="white"
-                    >
-                      Signup
-                    </button>
+                        <button
+                          type="submit "
+                          className="btn btn-outline-light btn-lg mx-2 px-5"
+                          style={{ color: "#bdb284" }}
+                          color="white"
+                        >
+                          Signup
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </Form>
-      )}
-    </Formik>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </div>
   );
 };
 

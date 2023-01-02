@@ -5,6 +5,7 @@ import { Context } from "../../store/appContext";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import destinationBackground from "../../../img/destinations_background.jpg"
 
 const Login = () => {
 
@@ -27,6 +28,15 @@ const Login = () => {
     
   
   return (
+    <div className="">
+
+        <div className='destinationsBackground'
+              style={{
+                backgroundImage: `url(${destinationBackground})`,
+              }}
+         >
+         
+
     <Formik
       //initial values
       initialValues={{ email: "", password: "" }}
@@ -47,7 +57,9 @@ const Login = () => {
     >
       {({ errors, touched }) => (
         <Form>
+          
           <div className="container-fluid text-center">
+            
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div col="12">
                 <div
@@ -120,6 +132,9 @@ const Login = () => {
         </Form>
       )}
     </Formik>
+    </div>
+    </div>
+
   )
 }
 
