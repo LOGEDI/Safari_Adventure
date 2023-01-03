@@ -39,72 +39,65 @@ const Packages = () => {
               }}
          ></div> */}
 
-{/* ---------------------------------------------------PACKAGE CARD------------------------------------------- */}
+{/* ---------------------------------------------------PACKAGE CARD-1----------------------------------------- */}
 
       {store.package.map((item) => (
         <div key={item.id}>
 
           {/* --this prints the post if the package id is odd-- */}
           {item.id % 2 == 1 ? (
-            <div className="post">
-              <img className="post_img" src={item.url} alt="Nakuru"></img>
-
+            <div className="post"  >
+             <div className="post_img" >
+              <img className="imageone" src={item.url} alt="Nakuru"></img>
+              {/* <p className="post_date2">20 Jan, 2021</p> */}
+             </div>
+                          
               <div
-                className="post_text"
+                className="post_text text-center"
                 style={{
                   backgroundImage: `url(${backgroundtest})`,
                 }}
               >
-                <p className="post_date">20 Jan, 2021</p>
                 <h3 className="post_title">{item.name}</h3>
+                <p className="post_subtitle">{item.category}</p>
+                
                 {/* <a href="#" className="post_tag">article</a> */}
 
                 <div className="row row-cols-5 justify-content-center text-center m-4">
                 <div className="">
                     <img className="iconsdestinations" src={tripdays}></img>
-                    <p className="desticontitle">INCLUDED IN:</p>
-                    <p className="desticoncontent">CLASSSIC KENYAN SAFARI</p>
+                    <p className="desticontitle">TOUR DURATION</p>
+                    <p className="desticoncontent">{item.tour_duration}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={destinationsicon}></img>
-                    <p className="desticontitle">PLACES TO VISIT</p>
-                    <p className="desticoncontent">5 Locations</p>
+                    <p className="desticontitle">DESTINATIONS INCLUDED</p>
+                    <p className="desticoncontent">{item.destinations}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={activity}></img>
-                    <p className="desticontitle">EXPERIENCES</p>
-                    <p className="desticoncontent">
-                      City Tour, Trekking, Animal Tracking, Cultural Visits
-                    </p>
+                    <p className="desticontitle">ACTIVITIES</p>
+                    <p className="desticoncontent">{item.activities}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={transport}></img>
                     <p className="desticontitle">TRANSPORT MODE</p>
-                    <p className="desticoncontent">
-                      City Tour, Trekking, Animal Tracking, Cultural Visits
-                    </p>
+                    <p className="desticoncontent">{item.transport}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={lodging}></img>
                     <p className="desticontitle">LODGING</p>
-                    <p className="desticoncontent">
-                      City Tour, Trekking, Animal Tracking, Cultural Visits
-                    </p>
+                    <p className="desticoncontent">{item.lodging}</p>
                   </div>
                   <img className='separator mr-3' src={separator}></img>
                 </div>
-
-                <p className="post_description">
-                  Duis tortor mi, iaculis in arcu vel, aliquam accumsan dui.
-                  Morbi non bibendum diam. Ut fermentum rutrum diam, vitae
-                  tincidunt metus tristique eu. Aliquam a fringilla justo.
-                </p>
+                <p className="post_description">{item.description}</p>
                 <Link to={"/PackagesDetails/" + item.id}>
-                  <button href="#" className="btn btn-outline-dark">
+                  <button href="#" className="btn justify btn-outline-dark">
                     Learn More
                   </button>
                 </Link>
@@ -114,75 +107,73 @@ const Packages = () => {
         </div>
       ))}
 
+{/* ---------------------------------------------------PACKAGE CARD-2----------------------------------------- */}
+    
+
       {store.package.map((item) => (
         <div key={item.id}>
 
            {/* --this prints the post if the package id is odd-- */}
           {item.id % 2 == 0 ? (
-            <div className="post1">
+            <div className="post2">
               <div
-                className="post1_text"
+                className="post_text text-center"
                 style={{
                   backgroundImage: `url(${backgroundtest})`,
                 }}
               >
-                <p className="post_date">20 Jan, 2021</p>
-                <h3 className="post_title">{item.name}</h3>
+                <h3 className="post2_title">{item.name}</h3>
+                <p className="post2_subtitle">{item.category}</p>
                 {/* <a href="#" className="post_tag">article</a> */}
 
                 <div className="row row-cols-5 justify-content-center text-center m-4">
 
                   <div className="">
                     <img className="iconsdestinations" src={tripdays}></img>
-                    <p className="desticontitle">INCLUDED IN:</p>
-                    <p className="desticoncontent">CLASSSIC KENYAN SAFARI</p>
+                    <p className="desticontitle">TOUR DURATION</p>
+                    <p className="desticoncontent">{item.tour_duration}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={destinationsicon}></img>
-                    <p className="desticontitle">PLACES TO VISIT</p>
-                    <p className="desticoncontent">5 Locations</p>
+                    <p className="desticontitle">DESTINATIONS INCLUDED</p>
+                    <p className="desticoncontent">{item.destinations}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={activity}></img>
-                    <p className="desticontitle">EXPERIENCES</p>
-                    <p className="desticoncontent">
-                      City Tour, Trekking, Animal Tracking, Cultural Visits
-                    </p>
+                    <p className="desticontitle">ACTIVITIES</p>
+                    <p className="desticoncontent">{item.activities}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={transport}></img>
                     <p className="desticontitle">TRANSPORT MODE</p>
-                    <p className="desticoncontent">
-                      City Tour, Trekking, Animal Tracking, Cultural Visits
-                    </p>
+                    <p className="desticoncontent">{item.transport}</p>
                   </div>
 
                   <div className="">
                     <img className="iconsdestinations" src={lodging}></img>
                     <p className="desticontitle">LODGING</p>
-                    <p className="desticoncontent">
-                      City Tour, Trekking, Animal Tracking, Cultural Visits
-                    </p>
+                    <p className="desticoncontent">{item.lodging}</p>
                   </div>
                   <img className='separator mr-3' src={separator}></img>
                   
                 </div>
 
-                <p className="post_description">
-                  Duis tortor mi, iaculis in arcu vel, aliquam accumsan dui.
-                  Morbi non bibendum diam. Ut fermentum rutrum diam, vitae
-                  tincidunt metus tristique eu. Aliquam a fringilla justo.
-                </p>
+                <p className="post_description">{item.description}</p>
                 <Link to={"/PackagesDetails/" + item.id}>
-                  <button href="#" className="btn btn-outline-dark">
+                  <button href="#" className="btn justify btn-outline-dark">
                     Learn More
                   </button>
                 </Link>
               </div>
-              <img className="post1_img" src={item.url} alt="Nakuru"></img>
+
+                <div className="post2_img">
+                  <img className="imagetwo" src={item.url} alt="Nakuru"></img>
+                </div>
+
+              
             </div>
           ) : null}{" "}
         </div>

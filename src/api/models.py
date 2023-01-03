@@ -34,7 +34,7 @@ class Packages(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), nullable=False)
     category = db.Column(db.String(120), nullable=True)
-    description = db.Column(db.String(50), nullable=True)
+    description = db.Column(db.String(950), nullable=True)
     title = db.Column(db.String(120), nullable=True)
     tour_duration = db.Column(db.String(120), nullable=True)
     destinations = db.Column(db.String(120), nullable=True)

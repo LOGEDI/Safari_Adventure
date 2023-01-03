@@ -122,6 +122,7 @@
   bottom: 75%;
 }
 
+
 /*---------------------------------------------------PAGE DESCRIPTION SETTINGS---------------------------------------------------------------------------*/
 
 .description-title{
@@ -530,7 +531,7 @@ figure.snip0016:hover figcaption::before {
 .post {
   font-family: "Saira", sans-serif;
   max-width: 80%;
-  max-height: 450px;
+  max-height: 400px;
   display: flex;
   flex-direction: row;
   margin: 2em auto;
@@ -540,7 +541,7 @@ figure.snip0016:hover figcaption::before {
   overflow: hidden;
 }
 
-.post1 {
+.post2 {
   font-family: "Saira", sans-serif;
   max-width: 80%;
   max-height: 400px;
@@ -554,33 +555,46 @@ figure.snip0016:hover figcaption::before {
 }
 
 .post:hover .post_img {
-  transform: scale(1.1) rotate(-2deg);
+  transform: scale(1.1) rotate(2deg);
 }
 
-.post1:hover .post1_img {
+.post2:hover .post2_img {
   transform: scale(1.1) rotate(-2deg);
 }
 
 .post_img {
   flex-basis: 40%;
-  max-height: 450px;
-  min-height: 450px;
-  width: 40%;
-  z-index: 0;
-  background-size: cover;
-  background-position: left;
-  transition: all ease-in-out 0.4s;
-}
-
-.post1_img {
-  flex-basis: 40%;
   max-height: 400px;
   min-height: 400px;
   width: 40%;
   z-index: 0;
-  background-size: cover;
+  background-position: right;
+  transition: all ease-in-out 0.4s;
+}
+
+.post2_img {
+  flex-basis: 40%;
+  max-height: 400px;
+  min-height: 400px;
+  width: 40%;
+  z-index: 0;  
   background-position: left;
   transition: all ease-in-out 0.4s;
+}
+.imageone {   
+  overflow: hidden;
+  max-height: 450px;
+  min-height: 450px;
+  float:right;
+  z-index: 0;
+}
+
+.imagetwo {
+  overflow: hidden;
+  max-height: 450px;
+  min-height: 450px;
+  float:right;
+  z-index: 0;
 }
 
 .post_text {
@@ -590,37 +604,60 @@ figure.snip0016:hover figcaption::before {
   padding: 1em;
 }
 
-.post1_text {
-  z-index: 1;
-  background-color: var(--beta-color);
-  flex-basis: 60%;
-  padding: 1em;
-}
-
-.post_date {
-  font-size: var(--step--3);
-  color: var(--alpha-color);
-  margin-bottom: -1em;
-}
-
-.post1_date {
-  font-size: var(--step--3);
-  color: var(--alpha-color);
-  margin-bottom: -1em;
-}
-
 .post_title {
-  margin-bottom: 0.8em;
-  font-size: var(--step-2);
-  color: var(--alpha-color);
+  
+  color: #d2ae6d;
   line-height: 1;
+  position: relative;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 35px;
+  line-height: 36px;
+  text-align: left;
+  right: 65%;
+  top: 80%;
 }
 
-.post1_title {
-  margin-bottom: 0.8em;
-  font-size: var(--step-2);
-  color: var(--alpha-color);
+.post2_title {
+  
+  color: #d2ae6d;
   line-height: 1;
+  position: relative;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 35px;
+  line-height: 36px;
+  text-align: left;
+  left: 108%;
+  top: 80%;
+}
+
+.post_subtitle {
+  
+  color: white;
+  margin-bottom: -3em;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: left;
+  right: 65%;
+  top: 74%;
+
+}
+
+.post2_subtitle {
+  
+  color: white;
+  margin-bottom: -3em;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: left;
+  left: 108%;
+  top: 74%;
+
 }
 
 .post_tag {
@@ -634,7 +671,7 @@ figure.snip0016:hover figcaption::before {
   transition: all ease-in-out 0.2s;
 }
 
-.post1_tag {
+.post2_tag {
   text-decoration: none;
   font-size: var(--step--1);
   margin-bottom: 0.8em;
@@ -650,9 +687,14 @@ figure.snip0016:hover figcaption::before {
 }
 
 .post_description {
-  margin-bottom: 1em;
-  font-size: var(--step-0);
-  color: var(--alpha-color);
+  margin-left: 60px;
+  margin-right: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #2f503e;
+  font-family: Lato, sans-serif;
+  line-height: 24px;
 }
 
 .readMore {
@@ -680,4 +722,12 @@ figure.snip0016:hover figcaption::before {
   .post {
     flex-direction: column;
   }
+}
+
+.text-on-picture-packages {
+  color: orange;
+  font-size: 30px;
+  position: absolute;
+  left: -21%;
+  bottom: 20%;
 }
