@@ -175,12 +175,17 @@ export const NavbarPrincipal = () => {
 
               </div>
             </div>
+
             {/*-----------------------------------------------------------CONTACT TAB -------------------------------------------------------------*/}
+
             <button className="nav2Button me-3 nav-item  ">
               <Link to="/Contact" className="nav2Button">
                 CONTACT
               </Link>
             </button>
+
+{/*-----------------------------------------------------------PROFILE HIDE TAB -------------------------------------------------------------*/}
+
             {store.auth ? (
               <button className="nav2Button me-3 nav-item  ">
                 <Link to="/Profile" className="nav2Button">

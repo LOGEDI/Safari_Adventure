@@ -524,3 +524,160 @@ figure.snip0016:hover figcaption::before {
   -ms-transform: translate(0px, 20px);
   transform: translate(0px, 20px);
 }
+
+/*-------------------------------------------PACKAGES--------------------------------------*/
+
+.post {
+  font-family: "Saira", sans-serif;
+  max-width: 80%;
+  max-height: 450px;
+  display: flex;
+  flex-direction: row;
+  margin: 2em auto;
+  line-height: 1.4;
+  box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post1 {
+  font-family: "Saira", sans-serif;
+  max-width: 80%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: row;
+  margin: 2em auto;
+  line-height: 1.4;
+  box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post:hover .post_img {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.post1:hover .post1_img {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.post_img {
+  flex-basis: 40%;
+  max-height: 450px;
+  min-height: 450px;
+  width: 40%;
+  z-index: 0;
+  background-size: cover;
+  background-position: left;
+  transition: all ease-in-out 0.4s;
+}
+
+.post1_img {
+  flex-basis: 40%;
+  max-height: 400px;
+  min-height: 400px;
+  width: 40%;
+  z-index: 0;
+  background-size: cover;
+  background-position: left;
+  transition: all ease-in-out 0.4s;
+}
+
+.post_text {
+  z-index: 1;
+  background-color: var(--beta-color);
+  flex-basis: 60%;
+  padding: 1em;
+}
+
+.post1_text {
+  z-index: 1;
+  background-color: var(--beta-color);
+  flex-basis: 60%;
+  padding: 1em;
+}
+
+.post_date {
+  font-size: var(--step--3);
+  color: var(--alpha-color);
+  margin-bottom: -1em;
+}
+
+.post1_date {
+  font-size: var(--step--3);
+  color: var(--alpha-color);
+  margin-bottom: -1em;
+}
+
+.post_title {
+  margin-bottom: 0.8em;
+  font-size: var(--step-2);
+  color: var(--alpha-color);
+  line-height: 1;
+}
+
+.post1_title {
+  margin-bottom: 0.8em;
+  font-size: var(--step-2);
+  color: var(--alpha-color);
+  line-height: 1;
+}
+
+.post_tag {
+  text-decoration: none;
+  font-size: var(--step--1);
+  margin-bottom: 0.8em;
+  padding: 0 5px;
+  border: 2px solid;
+  border-radius: 5px;
+  color: var(--alpha-color);
+  transition: all ease-in-out 0.2s;
+}
+
+.post1_tag {
+  text-decoration: none;
+  font-size: var(--step--1);
+  margin-bottom: 0.8em;
+  padding: 0 5px;
+  border: 2px solid;
+  border-radius: 5px;
+  color: var(--alpha-color);
+  transition: all ease-in-out 0.2s;
+}
+
+.post_tag:hover {
+  color: var(--primary-color);
+}
+
+.post_description {
+  margin-bottom: 1em;
+  font-size: var(--step-0);
+  color: var(--alpha-color);
+}
+
+.readMore {
+  text-decoration: none;
+  padding: 0 0.5em;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--alpha-color);
+  background: var(--beta-color);
+  font-weight: 700;
+  vertical-align: middle;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+}
+.readMore a {
+  font: inherit;
+}
+
+.readMore:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .post {
+    flex-direction: column;
+  }
+}
