@@ -454,7 +454,7 @@ def get_comment():
 def get_comment_by_user(id_user):
   
     comment = Comment.query.filter_by(id_user=id_user).all()
-    print(favorites)
+    print(comment)
     results = list(map(lambda x: x.serialize2(), comment))
 
     if (results == []):

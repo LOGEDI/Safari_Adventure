@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import { Link } from "react-router-dom";
 // need to make text go over image this will be done when it is merged
 // need to add footer
