@@ -86,3 +86,22 @@ class Favorites(db.Model):
     def serialize2(self):
         package = Packages.query.filter_by(id=self.id_packages).first()
         return package.serialize()
+
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    id_user = db.Column(db.Integer,  db.ForeignKey('user.id'), nullable=False )
+    id_packages = db.Column(db.Integer, db.ForeignKey('packages.id') , nullable=True)
+
+    def __repr__(self):
+        return f'<Comment {self.id}>'
+
+    def serialize(self):
+        return {
+            # "id": self.id,
+            "id_user": self.id_user,
+            "id_packages": self.id_packages
+        }
+
+    def serialize2(self):
+        package = Packages.query.filter_by(id=self.id_packages).first()
+        return package.serialize()

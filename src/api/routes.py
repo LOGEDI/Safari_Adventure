@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint, json, current_app
-from api.models import db, User, Packages, Favorites
+from api.models import db, User, Packages, Favorites, Comment
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
 
@@ -433,6 +433,92 @@ def delete_favorites():
             db.session.delete(package_query)
             db.session.commit()
             return jsonify({"msg": "Favorite deleted successfully"}), 200
+
+        elif package is None:
+            return jsonify(({"msg":'Package not found'}), 404)   
+
+@api.route('/comment', methods=['GET'])
+def get_comment():
+   
+    comment = Comment.query.all()
+    print(comment)
+    results = list(map(lambda x: x.serialize(), comment))
+    print(results)
+    return jsonify(results), 200
+
+#---------------------------------------------------------------------------------------------------
+#                       GET USER COMMENT
+#--------------------------------------------------------------------------------------------------- 
+
+@api.route('/user/<int:id_user>/comment', methods=['GET'])
+def get_comment_by_user(id_user):
+  
+    comment = Comment.query.filter_by(id_user=id_user).all()
+    print(favorites)
+    results = list(map(lambda x: x.serialize2(), comment))
+
+    if (results == []):
+      return  jsonify({"msg": "You don't have comments"}), 404
+    print(results)
+    return jsonify({"user_id": comment[0].id_user, "results": results}), 200
+
+#---------------------------------------------------------------------------------------------------
+#                       POST COMMENT
+#---------------------------------------------------------------------------------------------------
+
+@api.route('/comment', methods=['POST'])
+def create_comment():
+    
+    body = json.loads(request.data)
+    print(body)
+    user = request.json['id_user']
+    package = request.json['id_packages']
+    print(user, package)
+    user_query = User.query.filter_by(id=body["id_user"]).first()
+    
+    print(user_query)
+    if user_query:
+        package_query = Comment.query.filter_by(id_user=body["id_user"]).filter_by(id_packages=body["id_packages"]).first()
+        if package_query:
+            print(package_query)
+            return jsonify({"msg": "Package exists in that list"}), 404
+        else:    
+            new_comment = Comment(
+            id_user=body["id_user"],
+            id_packages=body["id_packages"])
+            # Flask command to add a new entry
+            db.session.add(new_comment)
+            # Flask command to commit the database, saving the changes
+            db.session.commit()
+            # Standard response to request with error code 200 (success)
+            return jsonify({"msg": "New Comment list created"}), 200
+
+    return jsonify({"msg":"User is not logged in"}), 400
+
+#---------------------------------------------------------------------------------------------------
+#                       DELETE COMMENT
+#---------------------------------------------------------------------------------------------------
+
+@api.route('/Comment', methods=['DELETE'])
+def delete_Comment():
+    
+    body = json.loads(request.data)
+    print(body)
+    
+    user = request.json['id_user']
+    package = request.json['id_packages']
+    print(user, package)
+    
+    user_query = User.query.filter_by(id=body["id_user"]).first()
+    
+    print(user_query)
+    if user_query:
+        package_query = Comment.query.filter_by(id_user=body["id_user"]).filter_by(id_packages=body["id_packages"]).first()
+        if package_query:
+            
+            db.session.delete(package_query)
+            db.session.commit()
+            return jsonify({"msg": "Comment deleted successfully"}), 200
 
         elif package is None:
             return jsonify(({"msg":'Package not found'}), 404)   
