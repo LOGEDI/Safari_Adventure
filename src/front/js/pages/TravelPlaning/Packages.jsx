@@ -12,6 +12,7 @@ import tripdays from "../../../img/trip-days.png";
 import lodging from "../../../img/lodging-icon.png";
 import transport from "../../../img/transport-icon.png";
 import separator from "../../../img/heading-separator.png"
+import lion from "../../../img/lion.jpg"
 
 const Packages = () => {
   const { store, actions } = useContext(Context);
@@ -26,10 +27,10 @@ const Packages = () => {
       <div
         className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
         style={{
-          minHeight: "400px",
+          minHeight: "500px",
           backgroundImage: `url(${destinationsHero})`,
           backgroundSize: "cover",
-          backgroundPosition: "center top",
+          backgroundPosition: "center ",
         }}
       ></div>
 
@@ -38,6 +39,14 @@ const Packages = () => {
                 backgroundImage: `url(${destinationBackground})`,
               }}
          ></div> */}
+
+
+<div className="text-on-image">
+          <h2 className="page-title">EXPERIENCE</h2>
+          <span className="page-subtitle">
+            we offer a variety of activities
+          </span>
+        </div>
 
 {/* ---------------------------------------------------PACKAGE CARD-1----------------------------------------- */}
 
@@ -119,7 +128,7 @@ const Packages = () => {
               <div
                 className="post_text text-center"
                 style={{
-                  backgroundImage: `url(${backgroundtest})`,
+                  backgroundImage: `url(${lion})`,
                 }}
               >
                 <h3 className="post2_title">{item.name}</h3>

@@ -1,6 +1,13 @@
 import React, { useEffect, useContext} from 'react'
 import { Context } from "../../store/appContext";
 import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import activity from "../../../img/activity-icon.png";
+import destinationsicon from "../../../img/destination-icon.png";
+import tripdays from "../../../img/trip-days.png";
+import lodging from "../../../img/lodging-icon.png";
+import transport from "../../../img/transport-icon.png";
+import separator from "../../../img/heading-separator.png"
 
 const PackagesDetails = () => {
     const {store, actions} = useContext(Context);
@@ -17,32 +24,36 @@ const PackagesDetails = () => {
 
 			<div>
 
+				<div
+					className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+					style={{
+					minHeight: "500px",
+					backgroundImage: `url(${store.packageDetail.url})`,
+					backgroundSize: "cover",
+					backgroundPosition: "center ",
+					}}
+				></div>
 
-
-
-
-
-
-						<img
+						{/* <img
                     		src={store.packageDetail.url}
                     		className="img-fluid rounded p-1 "
                     		alt="..."
                     		style={{
-                      			// maxHeight: "54rem",
-                      			borderColor: "#b2a97e",
-                      			// maxWidth: "24rem",
+                      			
+                      			borderColor: "#b2a97e",      			
                     		}}
-                  		/>
+                  		/> */}
 
 			<div className="container ">
 
 			<div className='row row-cols-2 g-3 mt-5' >
-              <div className='col-3'>
-                <h3>Destinations</h3>
-                <p>Discover Story-worthy places</p>
+              <div className='col-7'>
+                <h3 className="package-detail-title">{store.packageDetail.name}</h3>
+                <p className="package-detail-subtitle">{store.packageDetail.category}</p>
+				<img className='separator mr-3' src={separator}></img>
               </div>              
-              <div className='col-9'>               
-                <div className='row row-cols-6'>
+              <div className='col-5'>               
+                <div className='row row-cols-5 justify-content-center'>
                   <div className='col-2'>
                     <button className='btn-alert btn-l'> all</button>
                   </div>
@@ -55,43 +66,58 @@ const PackagesDetails = () => {
                   <div className='col-2'>
                     <button className='btn-alert btn-l'>all</button>
                   </div>
-                  <div className='col-2'>
-                    <button className='btn-alert btn-l'>all</button>
-                  </div>
-                  <div className='col-2'>
-                    <button className='btn-alert btn-l'>all</button>
-                  </div>
+                  
                 </div>             
               </div>
             </div>
 
-			<div className='row row-cols-5 mt-5'>
-				<div className='col text-center'>
-					<h5>Tour duration</h5>
-				</div>
-				<div className='col text-center'>
-					<h5>Destinations included</h5>
-				</div>
-				<div className='col text-center'>
-					<h5>Activities</h5>
-				</div>
-				<div className='col text-center'>
-					<h5>Transpor mode</h5>
-				</div>
-				<div className='col text-center'>
-					<h5>lodging</h5>
-				</div>
+			<div className='packages-details-icons row row-cols-6 mt-5 ml-5 mr-5 justify-content-center text-center'>
+
+				<div className="">
+                    <img className="iconsdestinations" src={tripdays}></img>
+                    <p className="desticontitle">TOUR DURATION</p>
+                    <p className="desticoncontent">{store.packageDetail.tour_duration}</p>
+                  </div>
+
+				<div className="">
+                    <img className="iconsdestinations" src={destinationsicon}></img>
+                    <p className="desticontitle">DESTINATIONS INCLUDED</p>
+                    <p className="desticoncontent">{store.packageDetail.destinations}</p>
+                  </div>
+
+				<div className="">
+                    <img className="iconsdestinations" src={activity}></img>
+                    <p className="desticontitle">ACTIVITIES</p>
+                    <p className="desticoncontent">{store.packageDetail.activities}</p>
+                  </div>
+
+				<div className="">
+                    <img className="iconsdestinations" src={transport}></img>
+                    <p className="desticontitle">TRANSPORT MODE</p>
+                    <p className="desticoncontent">{store.packageDetail.transport}</p>
+                  </div>
+
+				<div className="">
+                    <img className="iconsdestinations" src={lodging}></img>
+                    <p className="desticontitle">LODGING</p>
+                    <p className="desticoncontent">{store.packageDetail.lodging}</p>
+                  </div>
 			</div>
 
-				<div className='row row-cols-2 mt-5'>
-					<div className='col-2'>
-						<h3>Overview</h3>
-						<h4>Day 1: Arrival</h4>
-						<h6>overnigth....</h6>
+				<div>
+					<h3 className='ov-title'>OVERVIEW</h3>
+				</div>
+
+				<div className='details-overview row row-cols-2'>
+					
+					<div className='details-overview-title col-2'>
+						
+						<h4 className='overview-title'>{store.packageDetail.overview_title}</h4>
+						<h6 className='overview-acomodation'>{store.packageDetail.overview_acomodation}</h6>
 
 					</div>
-					<div className='col-10'>
-						<p>Welcome to Kenya. On arrival in Nairobi, 
+					<div className='details-overview-description col-10'>
+						<p className='details-overview-description'>Welcome to Kenya. On arrival in Nairobi, 
 							after clearing customs and immigration, you are met by a representative of Wild Images Africa Safaris and transferred to Nairobi Hemingway’s Hotel. 
 							Hemingway’s Nairobi is a brand-new luxury boutique hotel located in the suburb of Karen featuring 45 suites overlooking the Ngong Hills.
 						</p>												
