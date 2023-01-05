@@ -46,10 +46,10 @@ const EditProfile = () => {
 
   return (
     <div>
-      <h1 className="text-center">Profile</h1>
+      {/* <h1 className="text-center">Profile</h1>
       <h1 className="text-center">Name: {profile.username}</h1>
       <h1 className="text-center">Last Name: {profile.email}</h1>
-      <h1 className="text-center">Country: {profile.country}</h1>
+      <h1 className="text-center">Country: {profile.country}</h1> */}
       {auth ? (
         <div>
           <div>

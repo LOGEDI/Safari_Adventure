@@ -2,24 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import destinationsHero from  "../../../img/ngorongoro.jpg"
 import addis from  "../../../img/addiscity_thumb.jpg"
-import amboseli from "../../../img/amboseli_thumb.jpg"
 import axum from "../../../img/axum_thumb.jpg"
 import bahir from "../../../img/bahirdar_thumb.jpg"
-import batwa from "../../../img/batwatribe_thumb.jpg"
 import gondar from "../../../img/gondar_thumb.jpg"
-import bwindi from "../../../img/uganda_thumb.jpg"
 import hawzen from "../../../img/hawzen_thumb.jpg"
-import iby from "../../../img/iby-iwacu_thumb.jpg"
-import kigali from "../../../img/kigali_thumb.jpg"
 import lalibela from "../../../img/Lalibela_thumb.jpg"
-import maasai from "../../../img/maasaimara_thumb.jpg"
-import nairobi from "../../../img/nairobi_thumb.jpg"
-import nakuru from "../../../img/lakenakuru_thumb.jpg"
-import ngorongoro from "../../../img/ngorongoro_thumb.jpg"
-import samburu from "../../../img/samburu_thumb.jpg"
-import serengeti from "../../../img/serengeti_thumb.jpg"
-import tarangire from "../../../img/tarangire_thumb.jpg"
-import rwanda from "../../../img/rwanda_thumb.jpg"
 import destinationBackground from "../../../img/destinations_background.jpg"
 import locationicon from "../../../img/location-icon.png"
 import separator from "../../../img/heading-separator.png"
@@ -49,50 +36,50 @@ const Ethiopia = () => {
          >
 
           <div className='container'>
-          <div className='row row-cols-2 g-3 mt-5' >
+          <div className='row row-cols-2 g-3' >
               <div className='col-3'>
-                <h1 className='destinations-title' >DESTINATIONS</h1>
+                <h1 className='destinations-title mt-4' >DESTINATIONS</h1>
                 <p className='destinations-subtitle'>Discover Story-worthy Places</p>
                 <img className='separator mr-3' src={separator}></img>
               </div>              
               <div className='col-9'>               
                 <div className='row row-cols-6 m-0 p-0'>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Destinations">
                     <button href="#" className="destinationbtn">
                       All
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Kenya">
                     <button href="#" className="destinationbtn">
                       Kenya
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Ethiopia">
                     <button href="#" className="destinationbtn-on ">
                       Ethiopia
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Uganda">
                     <button href="#" className="destinationbtn ">
                       Uganda
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Rwanda">
                     <button href="#" className="destinationbtn ">
                       Rwanda
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Tanzania">
                     <button href="#" className="destinationbtn ">
                       Tanzania

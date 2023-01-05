@@ -112,7 +112,7 @@ const Maasai = () => {
               </p>
             </div>
 
-            <button type="button" class="btn btn-warning btn-lg">
+            <button type="button" className="btn btn-warning btn-lg">
               BOOK WITH US
             </button>
           </div>

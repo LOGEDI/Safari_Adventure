@@ -32,50 +32,50 @@ const Uganda = () => {
       >
 
           <div className='container'>
-          <div className='row row-cols-2 g-3 mt-5' >
+          <div className='row row-cols-2 g-3' >
               <div className='col-3'>
-                <h1 className='destinations-title' >DESTINATIONS</h1>
+                <h1 className='destinations-title mt-4' >DESTINATIONS</h1>
                 <p className='destinations-subtitle'>Discover Story-worthy Places</p>
                 <img className='separator mr-3' src={separator}></img>
               </div>              
               <div className='col-9'>               
                 <div className='row row-cols-6 m-0 p-0'>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Destinations">
                     <button href="#" className="destinationbtn">
                       All
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Kenya">
                     <button href="#" className="destinationbtn">
                       Kenya
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Ethiopia">
                     <button href="#" className="destinationbtn ">
                       Ethiopia
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Uganda">
                     <button href="#" className="destinationbtn-on ">
                       Uganda
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Rwanda">
                     <button href="#" className="destinationbtn ">
                       Rwanda
                     </button>
                   </Link>
                   </div>
-                  <div className='col-2'>
+                  <div className='col-2 mt-4'>
                   <Link to="/Tanzania">
                     <button href="#" className="destinationbtn ">
                       Tanzania
