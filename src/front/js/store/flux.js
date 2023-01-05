@@ -108,7 +108,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       //											PUT UPDATE USERS
       //-----------------------------------------------------------------------------------------------------------------------------
 
-      updateUser: async (password, name, lastname, country) => {
+      updateUser: async (name, lastname, country, password, user_url) => {
         // bring user data by id
         let store = getStore();
         let user_id = store.userId;
@@ -118,10 +118,12 @@ const getState = ({ getStore, getActions, setStore }) => {
             {
               //   email: email,
               //   username: username,
-              password: password,
+              
               name: name,
               lastname: lastname,
               country: country,
+              password: password,
+              user_url: user_url,
             }
           );
           // Sweet alert

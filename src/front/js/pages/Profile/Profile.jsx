@@ -73,7 +73,11 @@ const Profile = () => {
                       <div className="card-profile-image">
                         <a href="#">
                           <img
-                            src="https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
+                            src={
+                              profile.user_url
+                                ? profile.user_url
+                                : "https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
+                            }
                             className="rounded-circle"
                           />
                         </a>
@@ -115,7 +119,7 @@ const Profile = () => {
                     <div className="text-center">
                       <h2>{profile.username}</h2>
                       <h3>
-                        {profile.name}
+                        {profile.name + " "} 
                         {profile.lastname}
                         <span className="font-weight-light"></span>
                       </h3>

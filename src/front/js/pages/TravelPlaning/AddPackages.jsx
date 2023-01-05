@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 
 const AddPackages = () => {
   const { store, actions } = useContext(Context);
-  const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
@@ -20,8 +19,7 @@ const AddPackages = () => {
   const [overview_title, setOverview_title] = useState("");
   const [overview_acomodation, setOverview_acomodation] = useState("");
   const [overview_description, setOverview_description] = useState("");
-
-  let [url, setUrl] = useState("");
+  const [url, setUrl] = useState("");
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +40,6 @@ const AddPackages = () => {
     );
     // console.log(onUploaded);
 
-    setImage("");
     setName("");
     setCategory("");
     setDescription("");
@@ -76,7 +73,6 @@ const AddPackages = () => {
     );
     const file = await res.json();
     // console.log(res);
-    setImage(file.secure_url);
     setUrl(file.secure_url);
     // console.log(file.secure_url);
     setLoading(false);

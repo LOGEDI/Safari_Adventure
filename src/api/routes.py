@@ -312,7 +312,9 @@ def modify_user(user_id):
     if "lastname" in body:
         user.lastname = body["lastname"]
     if "country" in body:
-        user.country = body["country"]   
+        user.country = body["country"]
+    if "user_url" in body:
+        user.user_url = body["user_url"]   
     if "premium" in body:
         user.premium = body["premium"]   
     if "admin" in body:

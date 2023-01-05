@@ -1,15 +1,18 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import "../../../styles/profile.css";
 
 import { Context } from "../../store/appContext";
 
 const EditProfile = () => {
   const { store, actions } = useContext(Context);
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
   const [country, setCountry] = useState("");
   const [password, setPassword] = useState("");
+  const [user_url, setUser_url] = useState("");
 
   let profile = store.profile;
   let auth = store.auth;
@@ -17,11 +20,13 @@ const EditProfile = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     //-------- this call flux updateUser
-    await actions.updateUser(name, lastname, country, password);
+    await actions.updateUser(name, lastname, country, password, user_url);
     setName("");
     setLastname("");
     setCountry("");
     setPassword("");
+    setUser_url("");
+
   };
 
   const handleSweetAlert = () => {
@@ -42,6 +47,28 @@ const EditProfile = () => {
         console.log(borrar);
       }
     });
+  };
+
+  const uploadImage = async (e) => {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "wluy28lt");
+    setLoading(true);
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/dqw7tpcul/image/upload",
+      //en la url va url-cloudinary/nombrecloud/tipoarchivo/accion
+      {
+        method: "POST",
+        body: data,
+      }
+    );
+    const file = await res.json();
+    // console.log(res);
+    
+    setUser_url(file.secure_url);
+    // console.log(file.secure_url);
+    setLoading(false);
   };
 
   return (
@@ -99,7 +126,11 @@ const EditProfile = () => {
                           <div className="card-profile-image">
                             <a href="#">
                               <img
-                                src="https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
+                                src={
+                                  profile.user_url
+                                    ? profile.user_url
+                                    : "https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
+                                }
                                 className="rounded-circle"
                               />
                             </a>
@@ -164,7 +195,7 @@ const EditProfile = () => {
                             <h3 className="mb-0">My account</h3>
                           </div>
                           <div className="col-4 text-right">
-                            <button
+                            {/* <button
                               type="button"
                               className="btn btn-primary"
                               onClick={() => {
@@ -172,7 +203,7 @@ const EditProfile = () => {
                               }}
                             >
                               Save Changes
-                            </button>
+                            </button> */}
                           </div>
                         </div>
                       </div>
@@ -263,17 +294,56 @@ const EditProfile = () => {
                                 </div>
                               </div>
                             </div>
+
+                            <div className="row">
+                            <div className="col-lg-6">
+                                <div className="form-group focused">
+                                  <label
+                                    className="form-control-label"
+                                    htmlFor="input-first-name"
+                                  >
+                                    Profile Picture
+                                  </label>
+                                  <input                                   
+                                    id="input-user_url"
+                                    name="user_url"
+                                    type="file"
+                                    className="form-control form-control-alternative"
+                                    placeholder="Profile Picture"
+                                    onChange={(e) => {
+                                      uploadImage(e);
+                                      setUser_url(e.target.value);
+                                    }}                                    
+                                  />
+                                </div>
+                              </div>
+
+                              <div className="col-lg-6 text-center">
+                                <br/>
+                                <br/>
+                                <button                                  
+                                  type="submit"                                  
+                                  className="btn btn-primary col-4"
+                                  >
+                                    SAVE CHANGES
+                                </button>
+                                <Link to="/Profile" className="btn btn-primary col-3">
+                                  CANCEL                                  
+                                </Link>
+                                <button
+                                  className="btn btn-danger col-4"                            
+                                  type="button"                                                      
+                                  onClick={() => handleSweetAlert()}
+                                >
+                                  DELETE ACCOUNT
+                                </button>
+                              </div>
+                          
+                            </div>
                           </div>
                           <hr className="my-4" />
 
-                          <button
-                            data-dismiss="form"
-                            type="submit"
-                            color="dark"
-                            className="btn btn-dark border border-white"
-                          >
-                            GUARDA AKI
-                          </button>
+                          
 
                           {/* <hr className="my-4" />
                       <h6 className="heading-small text-muted mb-4">
@@ -294,15 +364,6 @@ const EditProfile = () => {
                       </div> */}
                         </form>
 
-                        <button
-                          className="mt-2 p-2 d-flex"
-                          type="button"
-                          variant="dark"
-                          style={{ color: "#bdb284" }}
-                          onClick={() => handleSweetAlert()}
-                        >
-                          Delete account
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -319,8 +380,8 @@ const EditProfile = () => {
       ) : (
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
           <div>
-            <h1>Not logged in...</h1>
-            <Link className="bg-dark" style={{ color: "#bdb284" }} to="/login">
+            <h1 className="not-logged-h1">Not logged in...</h1>
+            <Link className="not-logged-h2" style={{ color: "#bdb284" }} to="/login">
               Go to login
             </Link>
           </div>

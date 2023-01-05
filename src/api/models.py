@@ -10,6 +10,7 @@ class User(db.Model):
     name = db.Column(db.String(250), nullable=True)
     lastname = db.Column(db.String(250), nullable=True)
     country = db.Column(db.String(120), nullable=True)
+    user_url = db.Column(db.String(250), nullable=True)
     premium = db.Column(db.Boolean, unique=False, default=False)
     admin = db.Column(db.Boolean, unique=False, default=False)
     favorites = db.relationship('Favorites', backref='user', cascade="all, delete-orphan", lazy=True)
@@ -25,6 +26,7 @@ class User(db.Model):
             "name": self.name,
             "lastname": self.lastname,
             "country": self.country,
+            "user_url": self.user_url,
             "premium": self.premium,
             "admin": self.admin,
             # do not serialize the password, its a security breach
