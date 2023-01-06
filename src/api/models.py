@@ -12,8 +12,8 @@ class User(db.Model):
     country = db.Column(db.String(120), nullable=True)
     premium = db.Column(db.Boolean, unique=False, default=False)
     admin = db.Column(db.Boolean, unique=False, default=False)
-    favorites = db.relationship('Favorites','Comment', backref='user', cascade="all, delete-orphan", lazy=True)
-    comment = db.relationship('Favorites','Comment', backref='user', cascade="all, delete-orphan", lazy=True)
+    favorites = db.relationship('Favorites', backref='user', cascade="all, delete-orphan", lazy=True)
+    comment = db.relationship('Comment', backref='user', cascade="all, delete-orphan", lazy=True)
 
 
     def __repr__(self):
@@ -47,7 +47,8 @@ class Packages(db.Model):
     overview_acomodation = db.Column(db.String(120), nullable=True)
     overview_description = db.Column(db.String(999), nullable=True)
     url = db.Column(db.String(250), nullable=True)
-    favorite = db.relationship('Favorites','Comment', backref='packages', cascade="all, delete-orphan", lazy=True)
+    favorite = db.relationship('Favorites', backref='packages', cascade="all, delete-orphan", lazy=True)
+    comment = db.relationship('Comment', backref='user', cascade="all, delete-orphan", lazy=True)
 
     def __repr__(self):
         return f'<Packages {self.id}>'

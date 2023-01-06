@@ -6,6 +6,7 @@ import destinationBackground from "../../img/destinations_background.jpg"
 import destinationsHero from  "../../img/experiences-hero.jpg"
 import fotoprueba from  "../../img/classicKenyanSafariPack.jpg"
 import backgroundtest from "../../img/classicKenyanSafariPromo2.jpg"
+import GMaps from "../component/GMAPS";
 
 const AboutUs = () => {
   const { store, actions } = useContext(Context);
@@ -16,7 +17,9 @@ const AboutUs = () => {
   }, []);
 
   return (
+    
     <div>AboutUs
+      <GMaps/>
       {store.package.map((item) => (
         <div key={item.id} className="post">
               
