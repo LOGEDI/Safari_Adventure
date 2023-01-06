@@ -48,7 +48,7 @@ class Packages(db.Model):
     overview_description = db.Column(db.String(999), nullable=True)
     url = db.Column(db.String(250), nullable=True)
     favorite = db.relationship('Favorites', backref='packages', cascade="all, delete-orphan", lazy=True)
-    comment = db.relationship('Comment', backref='user', cascade="all, delete-orphan", lazy=True)
+    comment = db.relationship('Comment', backref='packages', cascade="all, delete-orphan", lazy=True)
 
     def __repr__(self):
         return f'<Packages {self.id}>'
