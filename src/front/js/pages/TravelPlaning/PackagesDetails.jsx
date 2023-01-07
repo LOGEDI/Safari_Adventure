@@ -124,7 +124,7 @@ const PackagesDetails = () => {
 					</div>
 				</div>
 
-				<div className='row row-cols-2 mt-5'>
+				<div className='row row-cols-2 mt-5 mb-5'>
 					<img src={store.packageDetail.url}></img>
 					<img src={store.packageDetail.url}></img>
 				</div>
@@ -152,7 +152,7 @@ const PackagesDetails = () => {
 
 
 
-				<div>
+				{/* <div>
 					<div className="row g-0">
 						<div className="col-12">
 						
@@ -171,12 +171,10 @@ const PackagesDetails = () => {
 							<div className="spacer col "><h5>Name</h5><h5>{store.packageDetail.name}</h5></div>
 							<div className="spacer col "><h5>Title</h5><h5>{store.packageDetail.description}</h5></div>
 							<div className="spacer col "><h5>Description</h5><h5>{store.packageDetail.category}</h5></div>
-							{/* <div className="spacer col text-light"><h5>Height</h5><h5>{store.packagesDetails.properties.height}</h5></div>
-							<div className="spacer col text-light"><h5>Skin Color</h5><h5>{store.packagesDetails.properties.skin_color}</h5></div>
-							<div className="onlyUp col text-light"><h5>Eye color</h5><h5>{store.packagesDetails.properties.eye_color}</h5></div> */}
+							
 						</div>
 					</div>
-				</div>
+				</div> */}
 			
 		</div>
 		

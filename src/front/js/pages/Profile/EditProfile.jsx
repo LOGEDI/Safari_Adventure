@@ -331,7 +331,7 @@ const EditProfile = () => {
                                   CANCEL                                  
                                 </Link>
                                 <button
-                                  className="btn btn-danger col-4"                            
+                                  className="btn btn-danger col-4 text-center justify-content-center"                            
                                   type="button"                                                      
                                   onClick={() => handleSweetAlert()}
                                 >

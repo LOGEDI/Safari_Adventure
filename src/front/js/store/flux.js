@@ -249,7 +249,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           // save token in local storage
           localStorage.setItem("token", response.data.msg);
 
-          window.localStorage.setItem("isLoggedIn", true) //-------------------------------------
+          window.localStorage.setItem("isLoggedIn", true); //-------------------------------------
 
           return response.data.msg;
         } catch (error) {
