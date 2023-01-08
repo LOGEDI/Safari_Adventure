@@ -117,9 +117,7 @@ const PackagesDetails = () => {
 
 					</div>
 					<div className='details-overview-description col-10'>
-						<p className='details-overview-description'>Welcome to Kenya. On arrival in Nairobi, 
-							after clearing customs and immigration, you are met by a representative of Wild Images Africa Safaris and transferred to Nairobi Hemingway’s Hotel. 
-							Hemingway’s Nairobi is a brand-new luxury boutique hotel located in the suburb of Karen featuring 45 suites overlooking the Ngong Hills.
+						<p className='details-overview-description'>{store.packageDetail.overview_description}
 						</p>												
 					</div>
 				</div>

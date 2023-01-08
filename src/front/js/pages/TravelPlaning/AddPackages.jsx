@@ -73,6 +73,9 @@ const AddPackages = () => {
     );
     const file = await res.json();
     // console.log(res);
+    console.log(res);
+    const url = file.secure_url
+    console.log(url)
     setUrl(file.secure_url);
     // console.log(file.secure_url);
     setLoading(false);

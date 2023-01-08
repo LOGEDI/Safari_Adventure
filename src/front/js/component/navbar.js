@@ -164,6 +164,13 @@ export const NavbarPrincipal = () => {
                     DESTINATIONS
                   </Link>
                 </a>
+
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/PackageTesting">
+                    Package Testing
+                  </Link>
+                </a>
+
                 {store.admin ? (
                 <a className="dropdown-item">
                 <Link className="linkToView" to="/AddPackages">

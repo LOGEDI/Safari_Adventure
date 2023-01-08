@@ -38,6 +38,8 @@ import Profile from "./pages/Profile/Profile.jsx";
 import EditProfile from "./pages/Profile/EditProfile.jsx";
 import ChangePassword from "./pages/Profile/changePassword.jsx";
 
+import PackageTesting from "./pages/TravelPlaning/PackageTesting.jsx";
+
 import injectContext from "./store/appContext";
 
 import { NavbarPrincipal } from "./component/navbar";
@@ -87,6 +89,7 @@ const Layout = () => {
                         <Route element={<Uganda />} path="/Uganda" />
                         <Route element={<Rwanda />} path="/Rwanda" />
                         <Route element={<Tanzania />} path="/Tanzania" />
+                        <Route element={<PackageTesting />} path="/PackageTesting" />
                         
                         <Route element={<Contact />} path="/Contact" />
 

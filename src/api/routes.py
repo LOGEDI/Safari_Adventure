@@ -133,7 +133,68 @@ def create_package():
     overview_title=body["overview_title"],
     overview_acomodation=body["overview_acomodation"],
     overview_description=body["overview_description"],
-    url=body["url"])
+    overview_title1=body["overview_title1"],
+    overview_acomodation1=body["overview_acomodation1"],
+    overview_description1=body["overview_description1"],
+    overview_title2=body["overview_title2"],
+    overview_acomodation2=body["overview_acomodation2"],
+    overview_description2=body["overview_description2"],
+    overview_title3=body["overview_title3"],
+    overview_acomodation3=body["overview_acomodation3"],
+    overview_description3=body["overview_description3"],
+    overview_title4=body["overview_title4"],
+    overview_acomodation4=body["overview_acomodation4"],
+    overview_description4=body["overview_description4"],
+    overview_title5=body["overview_title5"],
+    overview_acomodation5=body["overview_acomodation5"],
+    overview_description5=body["overview_description5"],
+    overview_title6=body["overview_title6"],
+    overview_acomodation6=body["overview_acomodation6"],
+    overview_description6=body["overview_description6"],
+    overview_title7=body["overview_title7"],
+    overview_acomodation7=body["overview_acomodation7"],
+    overview_description7=body["overview_description7"],
+    overview_title8=body["overview_title8"],
+    overview_acomodation8=body["overview_acomodation8"],
+    overview_description8=body["overview_description8"],
+    overview_title9=body["overview_title9"],
+    overview_acomodation9=body["overview_acomodation9"],
+    overview_description9=body["overview_description9"],
+    overview_title10=body["overview_title10"],
+    overview_acomodation10=body["overview_acomodation10"],
+    overview_description10=body["overview_description10"],
+    overview_title11=body["overview_title11"],
+    overview_acomodation11=body["overview_acomodation11"],
+    overview_description11=body["overview_description11"],
+    overview_title12=body["overview_title12"],
+    overview_acomodation12=body["overview_acomodation12"],
+    overview_description12=body["overview_description12"],
+    overview_title13=body["overview_title13"],
+    overview_acomodation13=body["overview_acomodation13"],
+    overview_description13=body["overview_description13"],
+    overview_title14=body["overview_title14"],
+    overview_acomodation14=body["overview_acomodation14"],
+    overview_description14=body["overview_description14"],
+    overview_title15=body["overview_title15"],
+    overview_acomodation15=body["overview_acomodation15"],
+    overview_description15=body["overview_description15"],
+    url=body["url"],
+    url1=body["url1"],
+    url2=body["url2"],
+    url3=body["url3"],
+    url4=body["url4"],
+    url5=body["url5"],
+    url6=body["url6"],
+    url7=body["url7"],
+    url8=body["url8"],
+    url9=body["url9"],
+    url10=body["url10"],
+    url11=body["url11"],
+    url12=body["url12"],
+    url13=body["url13"],
+    url14=body["url14"],
+    url15=body["url15"],
+    )
     print(new_package)
     # Flask command to add a new entry
     db.session.add(new_package)
@@ -196,8 +257,129 @@ def modify_package(package_id):
         package.overview_acomodation = body["overview_acomodation"]
     if "overview_description" in body:
         package.overview_description = body["overview_description"]
+    if "overview_title1" in body:
+        package.overview_title1 = body["overview_title1"]
+    if "overview_acomodation1" in body:
+        package.overview_acomodation1 = body["overview_acomodation1"]
+    if "overview_description1" in body:
+        package.overview_description1 = body["overview_description1"]
+    if "overview_title2" in body:
+        package.overview_title2 = body["overview_title2"]
+    if "overview_acomodation2" in body:
+        package.overview_acomodation2 = body["overview_acomodation2"]
+    if "overview_description2" in body:
+        package.overview_description2 = body["overview_description2"]
+    if "overview_title3" in body:
+        package.overview_title3 = body["overview_title3"]
+    if "overview_acomodation3" in body:
+        package.overview_acomodation3 = body["overview_acomodation3"]
+    if "overview_description3" in body:
+        package.overview_description3 = body["overview_description3"]
+    if "overview_title4" in body:
+        package.overview_title4 = body["overview_title4"]
+    if "overview_acomodation4" in body:
+        package.overview_acomodation4 = body["overview_acomodation4"]
+    if "overview_description4" in body:
+        package.overview_description4 = body["overview_description4"]
+    if "overview_title" in body:
+        package.overview_title5 = body["overview_title5"]
+    if "overview_acomodation5" in body:
+        package.overview_acomodation5 = body["overview_acomodation5"]
+    if "overview_description5" in body:
+        package.overview_description5 = body["overview_description5"]
+    if "overview_title6" in body:
+        package.overview_title6 = body["overview_title6"]
+    if "overview_acomodation6" in body:
+        package.overview_acomodation6 = body["overview_acomodation6"]
+    if "overview_description6" in body:
+        package.overview_description6 = body["overview_description6"]
+    if "overview_title7" in body:
+        package.overview_title7 = body["overview_title7"]
+    if "overview_acomodation7" in body:
+        package.overview_acomodation7 = body["overview_acomodation7"]
+    if "overview_description7" in body:
+        package.overview_description7 = body["overview_description7"]
+    if "overview_title8" in body:
+        package.overview_title8 = body["overview_title8"]
+    if "overview_acomodation8" in body:
+        package.overview_acomodation8 = body["overview_acomodation8"]
+    if "overview_description8" in body:
+        package.overview_description8 = body["overview_description8"]
+    if "overview_title9" in body:
+        package.overview_title9 = body["overview_title9"]
+    if "overview_acomodation9" in body:
+        package.overview_acomodation9 = body["overview_acomodation9"]
+    if "overview_description9" in body:
+        package.overview_description9 = body["overview_description9"]
+    if "overview_title10" in body:
+        package.overview_title10 = body["overview_title10"]
+    if "overview_acomodation10" in body:
+        package.overview_acomodation10 = body["overview_acomodation10"]
+    if "overview_description10" in body:
+        package.overview_description10 = body["overview_description10"]
+    if "overview_title11" in body:
+        package.overview_title11 = body["overview_title11"]
+    if "overview_acomodation11" in body:
+        package.overview_acomodation11 = body["overview_acomodation11"]
+    if "overview_description11" in body:
+        package.overview_description11 = body["overview_description11"]
+    if "overview_title12" in body:
+        package.overview_title12 = body["overview_title12"]
+    if "overview_acomodation12" in body:
+        package.overview_acomodation12 = body["overview_acomodation12"]
+    if "overview_description12" in body:
+        package.overview_description12 = body["overview_description12"]
+    if "overview_title13" in body:
+        package.overview_title13 = body["overview_title13"]
+    if "overview_acomodation13" in body:
+        package.overview_acomodation13 = body["overview_acomodation13"]
+    if "overview_description13" in body:
+        package.overview_description13 = body["overview_description13"]
+    if "overview_title14" in body:
+        package.overview_title14 = body["overview_title14"]
+    if "overview_acomodation14" in body:
+        package.overview_acomodation14 = body["overview_acomodation14"]
+    if "overview_description14" in body:
+        package.overview_description14 = body["overview_description14"]
+    if "overview_title15" in body:
+        package.overview_title15 = body["overview_title15"]
+    if "overview_acomodation15" in body:
+        package.overview_acomodation15 = body["overview_acomodation15"]
+    if "overview_description15" in body:
+        package.overview_description15 = body["overview_description15"]
     if "url" in body:
         package.url = body["url"]
+    if "url1" in body:
+        package.url1 = body["url1"]
+    if "url2" in body:
+        package.url2 = body["url2"]
+    if "url3" in body:
+        package.url3 = body["url3"]
+    if "url4" in body:
+        package.url4 = body["url4"]
+    if "url5" in body:
+        package.url5 = body["url5"]
+    if "url6" in body:
+        package.url6 = body["url6"]
+    if "url7" in body:
+        package.url7 = body["url7"]
+    if "url8" in body:
+        package.url8 = body["url8"]
+    if "url9" in body:
+        package.url9 = body["url9"]
+    if "url10" in body:
+        package.url10 = body["url10"]
+    if "url11" in body:
+        package.url11 = body["url11"]
+    if "url12" in body:
+        package.url12 = body["url12"]
+    if "url13" in body:
+        package.url13 = body["url13"]
+    if "url14" in body:
+        package.url14 = body["url14"]
+    if "url15" in body:
+        package.url15 = body["url15"]
+
     db.session.commit()
     return jsonify({"msg":"Package updated successfully"}), 200
 
