@@ -338,16 +338,16 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().changeColor(0, "green");
       },
 
-      getMessage: async () => {
+      postComment: async () => {
         try {
           // fetching data from the backend
           const resp = await fetch(process.env.BACKEND_URL + "/api/comment");
           const data = await resp.json();
-          setStore({ message: data.message });
+          setStore({ comment: data.comment });
           // don't forget to return something, that is how the async resolves
           return data;
         } catch (error) {
-          console.log("Error loading message from backend", error);
+          console.log("Error loading comment from backend", error);
         }
       },
       changeColor: (index, color) => {

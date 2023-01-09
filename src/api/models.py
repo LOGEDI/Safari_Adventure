@@ -92,7 +92,7 @@ class Favorites(db.Model):
 
 class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    Comment = db.Column(db.String(999), nullable=False)
+    comment = db.Column(db.String(999),nullable=False)
     id_user = db.Column(db.Integer,  db.ForeignKey('user.id'), nullable=False )
     id_packages = db.Column(db.Integer, db.ForeignKey('packages.id') , nullable=True)
 
@@ -103,10 +103,16 @@ class Comment(db.Model):
         return {
             # "id": self.id,
             "id_user": self.id_user,
-            "id_packages": self.id_packages
+            "id_packages": self.id_packages,
+            "comment": self.comment
 
         }
 
     def serialize2(self):
         package = Packages.query.filter_by(id=self.id_packages).first()
         return package.serialize()
+
+    def __init__(self,id_user,id_packages,comment):
+        self.id_user = id_user
+        self.id_packages = id_packages
+        self.comment = comment

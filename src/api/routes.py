@@ -472,6 +472,7 @@ def create_comment():
     body = json.loads(request.data)
     print(body)
     user = request.json['id_user']
+    comment = request.json['comment']
     package = request.json['id_packages']
     print(user, package)
     user_query = User.query.filter_by(id=body["id_user"]).first()
@@ -485,7 +486,8 @@ def create_comment():
         else:    
             new_comment = Comment(
             id_user=body["id_user"],
-            id_packages=body["id_packages"])
+            id_packages=body["id_packages"],
+            comment=body["comment"])
             # Flask command to add a new entry
             db.session.add(new_comment)
             # Flask command to commit the database, saving the changes
