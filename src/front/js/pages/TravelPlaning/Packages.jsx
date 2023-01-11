@@ -64,7 +64,7 @@ const Packages = () => {
               <div
                 className="post_text text-center"
                 style={{
-                  backgroundImage: `url(${backgroundtest})`,
+                  backgroundImage: `url(${item.url1})`,
                 }}
               >
                 <h3 className="post_title">{item.name}</h3>
@@ -128,7 +128,7 @@ const Packages = () => {
               <div
                 className="post_text text-center"
                 style={{
-                  backgroundImage: `url(${lion})`,
+                  backgroundImage: `url(${item.url1})`,
                 }}
               >
                 <h3 className="post2_title">{item.name}</h3>

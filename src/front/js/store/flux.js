@@ -166,6 +166,52 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       //-----------------------------------------------------------------------------------------------------------------------------
+      //											 GET USERS
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      getUsers: async () => {
+        try {
+          const response = await fetch(
+            process.env.BACKEND_URL + "/api/user"
+          ); // search
+          const data = await response.json();
+          // set store with the bringed data
+          setStore({
+            user: data,
+          }); //promise
+        } catch (err) {
+          // standar error log
+          console.log(err);
+        }
+        // details fetch
+      },
+
+       //-----------------------------------------------------------------------------------------------------------------------------
+      //											 GET USERS DETAILS
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      getUserDetail: async (id) => {
+        let store = getStore();
+        try {
+          const response = await fetch(
+            process.env.BACKEND_URL + "/api/user/" + id
+          );
+          const data = await response.json();
+          // console.log(data);
+          setStore({
+            userDetail: data,
+            userId: data.id,
+          });
+          // console.log(store.userDetail);
+          // console.log(store.userId);
+          return store.userId;
+        } catch (err) {
+          console.log(err);
+        }
+      },
+
+
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											 GET PACKAGES
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -173,17 +219,17 @@ const getState = ({ getStore, getActions, setStore }) => {
         try {
           const response = await fetch(
             process.env.BACKEND_URL + "/api/package"
-          ); //ir a buscar
+          ); // search
           const data = await response.json();
-          // Setea store con los datos que trae
+          // set store with the bringed data
           setStore({
             package: data,
-          }); //promesa 2
+          }); //promise
         } catch (err) {
-          // Log de error standard
+           // standar error log
           console.log(err);
         }
-        // fetch de los detalles
+        // details fetch
       },
 
       //-----------------------------------------------------------------------------------------------------------------------------

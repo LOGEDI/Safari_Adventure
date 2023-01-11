@@ -10,6 +10,7 @@ import tripdays from "../../img/trip-days.png";
 import lodgingicon from "../../img/lodging-icon.png";
 import transporticon from "../../img/transport-icon.png";
 import separator from "../../img/heading-separator.png";
+import destinationBackground from "../../img/destinations_background.jpg";
 
 const AboutUs = () => {
   const { store, actions } = useContext(Context);
@@ -240,22 +241,15 @@ const AboutUs = () => {
     setUrl14("");
     setUrl15("");
 
-    Swal.fire({ 
-      text: "Package Created", 
-      confirmButtonColor: "#000000" 
-    }).then(function(result) {
+    Swal.fire({
+      text: "Package Created",
+      confirmButtonColor: "#000000",
+    }).then(function (result) {
       if (result.value) {
-        window.location = "/Packages"
+        window.location = "/Packages";
       }
-    })
+    });
   };
-
- 
-
-
-
-
-
 
   const uploadImage = async (e) => {
     const files = e.target.files;
@@ -275,13 +269,12 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log(url)
+    const url = file.secure_url;
+    console.log(url);
     setUrl(file.secure_url);
-    
+
     // console.log(file.secure_url);
     // setLoading(false);
-
   };
 
   const uploadImage1 = async (e) => {
@@ -301,10 +294,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url1" + url)
+    const url = file.secure_url;
+    console.log("url1" + url);
     setUrl1(file.secure_url);
-    
   };
 
   const uploadImage2 = async (e) => {
@@ -324,10 +316,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url2" + url)    
+    const url = file.secure_url;
+    console.log("url2" + url);
     setUrl2(file.secure_url);
-  
   };
 
   const uploadImage3 = async (e) => {
@@ -347,10 +338,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url3" + url)   
+    const url = file.secure_url;
+    console.log("url3" + url);
     setUrl3(file.secure_url);
-    
   };
 
   const uploadImage4 = async (e) => {
@@ -370,10 +360,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url4" + url)    
+    const url = file.secure_url;
+    console.log("url4" + url);
     setUrl4(file.secure_url);
-   
   };
 
   const uploadImage5 = async (e) => {
@@ -393,10 +382,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url5" + url)
+    const url = file.secure_url;
+    console.log("url5" + url);
     setUrl5(file.secure_url);
-    
   };
 
   const uploadImage6 = async (e) => {
@@ -416,10 +404,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url6" + url) 
+    const url = file.secure_url;
+    console.log("url6" + url);
     setUrl6(file.secure_url);
-   
   };
 
   const uploadImage7 = async (e) => {
@@ -428,7 +415,7 @@ const AboutUs = () => {
     data.append("file", files[0]);
     data.append("tags", `codeinfuse, medium, gist`);
     data.append("upload_preset", "wluy28lt");
-    data.append("timestamp", (Date.now() / 1000) | 0); 
+    data.append("timestamp", (Date.now() / 1000) | 0);
     const res = await fetch(
       "https://api.cloudinary.com/v1_1/dqw7tpcul/image/upload",
       // url-cloudinary/cloudinaryname/file/action
@@ -439,10 +426,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url7" + url)   
+    const url = file.secure_url;
+    console.log("url7" + url);
     setUrl7(file.secure_url);
-   
   };
 
   const uploadImage8 = async (e) => {
@@ -462,10 +448,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url8" + url)   
+    const url = file.secure_url;
+    console.log("url8" + url);
     setUrl8(file.secure_url);
-   
   };
 
   const uploadImage9 = async (e) => {
@@ -485,10 +470,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url9" + url)  
+    const url = file.secure_url;
+    console.log("url9" + url);
     setUrl9(file.secure_url);
-
   };
 
   const uploadImage10 = async (e) => {
@@ -508,10 +492,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url10" + url) 
+    const url = file.secure_url;
+    console.log("url10" + url);
     setUrl10(file.secure_url);
-
   };
 
   const uploadImage11 = async (e) => {
@@ -531,10 +514,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url11" + url)   
+    const url = file.secure_url;
+    console.log("url11" + url);
     setUrl11(file.secure_url);
-
   };
 
   const uploadImage12 = async (e) => {
@@ -554,10 +536,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url12" + url) 
-    setUrl12(file.secure_url);    
-
+    const url = file.secure_url;
+    console.log("url12" + url);
+    setUrl12(file.secure_url);
   };
 
   const uploadImage13 = async (e) => {
@@ -577,10 +558,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url13" + url)  
+    const url = file.secure_url;
+    console.log("url13" + url);
     setUrl13(file.secure_url);
-    
   };
 
   const uploadImage14 = async (e) => {
@@ -600,10 +580,9 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url14" + url) 
+    const url = file.secure_url;
+    console.log("url14" + url);
     setUrl14(file.secure_url);
-   
   };
 
   const uploadImage15 = async (e) => {
@@ -623,21 +602,28 @@ const AboutUs = () => {
     );
     const file = await res.json();
     console.log(res);
-    const url = file.secure_url
-    console.log("url15" + url) 
+    const url = file.secure_url;
+    console.log("url15" + url);
     setUrl15(file.secure_url);
-   
   };
-
 
   return (
     <div>
       AboutUs
+      <div
+        className="destinationsBackground"
+        style={{
+          backgroundImage: `url(${destinationBackground})`,
+        }}
+      >
       {/* {store.auth ? ( */}
+      <h1 className="text-center">PACKAGES CREATOR</h1>
       <div className="container ">
+      <Link to="/AdminPackages">
+          <button className="btn btn-primary">BACK TO PACKAGES</button>
+          </Link>
         <form className="form" onSubmit={handleSubmit}>
-
-        <div className="row row-cols-2 mt-5 mb-5">
+          <div className="row row-cols-2 mt-5 mb-5">
             <label for="packages-main">CARD MAIN</label>
             <label for="packages-second">CARD BACKGROUND</label>
             <input
@@ -649,7 +635,7 @@ const AboutUs = () => {
                 uploadImage(e);
                 setUrl(e.target.value);
               }}
-            ></input>            
+            ></input>
             <input
               id="packages-second"
               type="file"
@@ -665,12 +651,12 @@ const AboutUs = () => {
           <div className="row row-cols-2 mt-5 mb-5">
             <label for="packages-hero">HERO IMG</label>
             <input
-                  className="package-description"
-                  type="text"
-                  placeholder="CARD DESCRIPT"
-                  onChange={(e) => setDescription(e.target.value)}
-                  value={description}
-                ></input>
+              className="package-description"
+              type="text"
+              placeholder="CARD DESCRIPT"
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+            ></input>
             <input
               id="packages-hero"
               type="file"
@@ -681,17 +667,18 @@ const AboutUs = () => {
                 setUrl2(e.target.value);
               }}
             ></input>
-            
-                <input
-                  className="package-detail-title"
-                  type="text"
-                  placeholder="TITLE"
-                  onChange={(e) => setTitle(e.target.value)}
-                  value={title}
-                ></input>
+
+            <input
+              className="package-detail-title"
+              type="text"
+              placeholder="TITLE"
+              onChange={(e) => setTitle(e.target.value)}
+              value={title}
+            ></input>
           </div>
 
-          <div>------------------------------------------------------------------------------BODY-------------------------------------------------------------------------
+          <div>
+            ------------------------------------------------------------------------------BODY-------------------------------------------------------------------------
             <div className="row row-cols-2 g-3 mt-5">
               <div className="col-7">
                 <input
@@ -744,7 +731,6 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-
             <div className=" row row-cols-6 mt-5 ml-5 mr-5 justify-content-center text-center">
               <div className="">
                 <img className="iconsdestinations" src={tripdays}></img>
@@ -811,12 +797,10 @@ const AboutUs = () => {
                 ></input>
               </div>
             </div>
-
             <div>
               <br />
               <h3 className="ov-title">OVERVIEW</h3>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -845,7 +829,6 @@ const AboutUs = () => {
                 value={overview_description}
               ></input>
             </div>
-
             <div className="row row-cols-2 mt-5 mb-5">
               <label for="packages-img5">IMG 4</label>
               <label for="packages-img">IMG 5</label>
@@ -871,7 +854,6 @@ const AboutUs = () => {
                 }}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -900,7 +882,6 @@ const AboutUs = () => {
                 value={overview_description1}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -929,7 +910,6 @@ const AboutUs = () => {
                 value={overview_description2}
               ></input>
             </div>
-
             <div className="row row-cols-1 mt-5 mb-5">
               <label for="packages-img">IMG 6</label>
               <input
@@ -943,7 +923,6 @@ const AboutUs = () => {
                 }}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -972,7 +951,6 @@ const AboutUs = () => {
                 value={overview_description3}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1001,7 +979,6 @@ const AboutUs = () => {
                 value={overview_description4}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1030,7 +1007,6 @@ const AboutUs = () => {
                 value={overview_description5}
               ></input>
             </div>
-
             <div className="row row-cols-3 mt-5 mb-5">
               <label for="packages-img">IMG 7</label>
               <label for="packages-img">IMG 8</label>
@@ -1066,7 +1042,6 @@ const AboutUs = () => {
                 }}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1095,7 +1070,6 @@ const AboutUs = () => {
                 value={overview_description6}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1124,7 +1098,6 @@ const AboutUs = () => {
                 value={overview_description7}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1153,7 +1126,6 @@ const AboutUs = () => {
                 value={overview_description8}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1182,7 +1154,6 @@ const AboutUs = () => {
                 value={overview_description9}
               ></input>
             </div>
-
             <div className="row row-cols-1 mt-5 mb-5">
               <label for="packages-img">IMG 10</label>
               <input
@@ -1196,7 +1167,6 @@ const AboutUs = () => {
                 }}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1225,7 +1195,6 @@ const AboutUs = () => {
                 value={overview_description10}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1254,7 +1223,6 @@ const AboutUs = () => {
                 value={overview_description11}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1283,7 +1251,6 @@ const AboutUs = () => {
                 value={overview_description12}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1312,7 +1279,6 @@ const AboutUs = () => {
                 value={overview_description13}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1341,7 +1307,6 @@ const AboutUs = () => {
                 value={overview_description14}
               ></input>
             </div>
-
             <div className="row row-cols-2 mt-5 mb-5">
               <label for="packages-img">IMG 11</label>
               <label for="packages-img">IMG 12</label>
@@ -1367,7 +1332,6 @@ const AboutUs = () => {
                 }}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1396,7 +1360,6 @@ const AboutUs = () => {
                 value={overview_description15}
               ></input>
             </div>
-
             <div className="details-overview row row-cols-2">
               <div className="details-overview-title col-2">
                 <input
@@ -1425,7 +1388,6 @@ const AboutUs = () => {
                 // value={overview_description}
               ></input>
             </div>
-
             <div className="row row-cols-3 mt-5 mb-5">
               <label for="packages-img">IMG 13</label>
               <label for="packages-img">IMG 14 </label>
@@ -1458,12 +1420,11 @@ const AboutUs = () => {
                 className=""
                 placeholder="Packages img15"
                 onChange={(e) => {
-                	uploadImage15(e);
-                	setUrl15(e.target.value);
-                  }}
+                  uploadImage15(e);
+                  setUrl15(e.target.value);
+                }}
               ></input>
             </div>
-
             <div className="row row-cols-1 mt-5 mb-5 text-center justify-content-center">
               <button
                 className="btn btn-primary btn-lg mx-2 px-5 mt-4"
@@ -1489,6 +1450,7 @@ const AboutUs = () => {
           </div>
         </div>
       )} */}
+      </div>
     </div>
   );
 };

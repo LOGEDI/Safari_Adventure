@@ -55,7 +55,7 @@ const ChangePassword = () => {
                        {errors.email && touched.email && errors.email}
                       <label
                         className="form-label"
-                        htmlFor="form1Example2"
+                        for="form1Example2"
                       ></label>
                     </div>
                   <div className="d-flex flex-row mt-3 mb-5">

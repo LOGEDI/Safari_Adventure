@@ -200,6 +200,14 @@ export const NavbarPrincipal = () => {
                 </Link>
               </button>
             ) : null}{" "}
+
+              
+            <button className="nav2Button me-3 nav-item  ">
+              <Link to="/Admin" className="nav2Button">
+                ADMIN
+              </Link>
+            </button>
+
           </div>
         </nav>
       </div>

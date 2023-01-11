@@ -22,7 +22,7 @@ import CommunityProjects from "./pages/AboutUs/CommunityProjects.jsx";
 import PhotoGallery from "./pages/AboutUs/PhotoGallery.jsx";
 import Packages from "./pages/TravelPlaning/Packages.jsx";
 import PackagesDetails from "./pages/TravelPlaning/PackagesDetails.jsx";
-import AddPackages from "./pages/TravelPlaning/AddPackages.jsx";
+
 import Destinations from "./pages/Destinations/Destinations.jsx";
 import Kenya from "./pages/Destinations/Kenya.jsx";
 import Ethiopia from "./pages/Destinations/Ethiopia.jsx";
@@ -37,6 +37,12 @@ import SignUp from "./pages/LoginPages/signup.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
 import EditProfile from "./pages/Profile/EditProfile.jsx";
 import ChangePassword from "./pages/Profile/changePassword.jsx";
+
+import Admin from "./pages/Admin/Admin.jsx";
+import AdminPackages from "./pages/Admin/AdminPackages.jsx";
+import EditPackages from "./pages/Admin/EditPackages.jsx";
+import AddPackages from "./pages/Admin/AddPackages.jsx";
+import AdminUsers from "./pages/Admin/AdminUsers.jsx";
 
 import PackageTesting from "./pages/TravelPlaning/PackageTesting.jsx";
 
@@ -89,6 +95,12 @@ const Layout = () => {
                         <Route element={<Uganda />} path="/Uganda" />
                         <Route element={<Rwanda />} path="/Rwanda" />
                         <Route element={<Tanzania />} path="/Tanzania" />
+
+                        <Route element={<Admin />} path="/Admin" />
+                        <Route element={<AdminPackages />} path="/AdminPackages" />
+                        <Route element={<EditPackages />} path="/EditPackages/:id" />
+                        <Route element={<AdminUsers />} path="/AdminUsers" />
+
                         <Route element={<PackageTesting />} path="/PackageTesting" />
                         
                         <Route element={<Contact />} path="/Contact" />

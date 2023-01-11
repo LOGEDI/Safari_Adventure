@@ -795,3 +795,18 @@ figure.snip0016:hover figcaption::before {
   padding-left: 10px;
 
 }
+
+.admin-pack-card{ 
+  /* max-width: 300px; */
+  min-width: 300px;
+  /* max-height: 300px; */
+  min-height: 400px;
+  text-align: center;
+  
+}
+
+.admin-pack-img-top{
+  min-width: 300px;
+  min-height: 300px;
+
+}

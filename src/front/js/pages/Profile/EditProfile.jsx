@@ -43,8 +43,8 @@ const EditProfile = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        const borrar = actions.deleteAccount();
-        console.log(borrar);
+        const remove = actions.deleteAccount();
+        console.log(remove);
       }
     });
   };
@@ -219,7 +219,7 @@ const EditProfile = () => {
                                 <div className="form-group focused">
                                   <label
                                     className="form-control-label"
-                                    htmlFor="input-username"
+                                    for="input-username"
                                   >
                                     First name
                                   </label>
@@ -237,7 +237,7 @@ const EditProfile = () => {
                                 <div className="form-group">
                                   <label
                                     className="form-control-label"
-                                    htmlFor="input-email"
+                                    for="input-email"
                                   >
                                     Last name
                                   </label>
@@ -259,7 +259,7 @@ const EditProfile = () => {
                                 <div className="form-group focused">
                                   <label
                                     className="form-control-label"
-                                    htmlFor="input-first-name"
+                                    for="input-first-name"
                                   >
                                     Country
                                   </label>
@@ -277,7 +277,7 @@ const EditProfile = () => {
                                 <div className="form-group focused">
                                   <label
                                     className="form-control-label"
-                                    htmlFor="input-last-name"
+                                    for="input-last-name"
                                   >
                                     Password
                                   </label>
@@ -300,7 +300,7 @@ const EditProfile = () => {
                                 <div className="form-group focused">
                                   <label
                                     className="form-control-label"
-                                    htmlFor="input-first-name"
+                                    for="input-first-name"
                                   >
                                     Profile Picture
                                   </label>

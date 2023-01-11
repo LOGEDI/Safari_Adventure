@@ -97,7 +97,7 @@ const AddPackages = () => {
               style={{ fontFamily: "Rajdhani, sans-serif", fontSize: "1.2rem" }}
             >
               <FormGroup>
-                <Label for="exampleName">Name</Label>
+                <Label htmlFor="exampleName">Name</Label>
                 <Input
                   id="exampleName"
                   name="name"
@@ -106,7 +106,7 @@ const AddPackages = () => {
                   value={name}
                   required
                 />
-                <Label for="exampleCategory">Category</Label>
+                <Label htmlFor="exampleCategory">Category</Label>
                 <Input
                   id="exampleCategory"
                   name="category"
@@ -116,7 +116,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleDescription">Description</Label>
+                <Label htmlFor="exampleDescription">Description</Label>
                 <Input
                   id="exampleDescription"
                   name="description"
@@ -126,7 +126,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleTitle">Title</Label>
+                <Label htmlFor="exampleTitle">Title</Label>
                 <Input
                   id="exampleTitle"
                   name="title"
@@ -136,7 +136,7 @@ const AddPackages = () => {
                   required
                 />
                 
-                <Label for="exampleTour_duration">Tour Duration</Label>
+                <Label htmlFor="exampleTour_duration">Tour Duration</Label>
                 <Input
                   id="exampleTour_duration"
                   name="tour_duration"
@@ -146,7 +146,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleDestinations">Destinations</Label>
+                <Label htmlFor="exampleDestinations">Destinations</Label>
                 <Input
                   id="exampleDestinations"
                   name="destinations"
@@ -156,7 +156,7 @@ const AddPackages = () => {
                   required
                 />
                 
-                <Label for="exampleAvtivities">Activities</Label>
+                <Label forhtmlFor="exampleAvtivities">Activities</Label>
                 <Input
                   id="exampleActivities"
                   name="activities"
@@ -166,7 +166,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleTransport">Transport</Label>
+                <Label htmlFor="exampleTransport">Transport</Label>
                 <Input
                   id="exampleTransport"
                   name="transport"
@@ -176,7 +176,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleLodging">Lodging</Label>
+                <Label htmlFor="exampleLodging">Lodging</Label>
                 <Input
                   id="exampleLodging"
                   name="lodging"
@@ -186,7 +186,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleOverview_title">Overview Title</Label>
+                <Label htmlFor="exampleOverview_title">Overview Title</Label>
                 <Input
                   id="exampleOverview_title"
                   name="overview_title"
@@ -196,7 +196,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleOverview_acomodation">Overview Acomodation</Label>
+                <Label htmlFor="exampleOverview_acomodation">Overview Acomodation</Label>
                 <Input
                   id="exampleOverview_acomodation"
                   name="overview_acomodation"
@@ -206,7 +206,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleOverview_description">Overview Description</Label>
+                <Label htmlFor="exampleOverview_description">Overview Description</Label>
                 <Input
                   id="exampleOverview_description"
                   name="overview_description"
@@ -216,7 +216,7 @@ const AddPackages = () => {
                   required
                 />
 
-                <Label for="exampleFile">File</Label>
+                <Label htmlFor="exampleFile">File</Label>
                 <Input
                   id="exampleFile"
                   name="file"

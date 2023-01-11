@@ -86,7 +86,7 @@ const Login = () => {
                       {errors.email && touched.email && errors.email}
                       <label
                         className="form-label"
-                        htmlFor="form1Example2"
+                        for="form1Example2"
                       ></label>
                     </div>
                     <div className="col-12 ">
