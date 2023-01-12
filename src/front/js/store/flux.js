@@ -22,18 +22,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       package: [],
       packageDetail: {},
-      packages: [],
-      listaFavoritos: [],
-      admin: false,
-      premium: false,
       packageId: null,
+      packagesIds: [],
+      packages: [],  
+      user: [],
+      userDetail: {}, 
+      userId: null,   
+      admin: false,
+      premium: false,      
       userId: null,
       auth: false,
       registered: false,
       profile: {},
       favoriteItem: [], //have the id of the favorites packages
-      packagesIds: [],
-      faved: false,
+      favoritesList: [],
       favoriteHeart: false,
     },
     actions: {
@@ -295,7 +297,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           // save token in local storage
           localStorage.setItem("token", response.data.msg);
 
-          window.localStorage.setItem("isLoggedIn", true); //-------------------------------------
+          // window.localStorage.setItem("isLoggedIn", true); //-------------------------------------
 
           return response.data.msg;
         } catch (error) {
@@ -326,7 +328,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       logout: () => {
         localStorage.removeItem("token");
 
-        window.localStorage.removeItem("isLoggedIn");//-----------------------
+        // window.localStorage.removeItem("isLoggedIn");//-----------------------
 
         setStore({
           auth: false,
@@ -385,7 +387,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         await getActions().getFavorites();
         setStore({
-          favoriteItem: store.listaFavoritos?.map((item) => item.id),
+          favoriteItem: store.favoritesList?.map((item) => item.id),
         });
         // console.log(store.favoriteItem);
       },
@@ -474,12 +476,12 @@ const getState = ({ getStore, getActions, setStore }) => {
             process.env.BACKEND_URL + "/api/user/" + user_id + "/favorites"
           );
           setStore({
-            listaFavoritos: response.data.results,
+            favoritesList: response.data.results,
           });
         } catch (error) {
           if (error.response.status === 404) {
             setStore({
-              listaFavoritos: [],
+              favoritesList: [],
             });
           }
         }
@@ -740,6 +742,28 @@ const getState = ({ getStore, getActions, setStore }) => {
           if (error.response.data.msg === "User email doesn't exist") {
             swal("Your email does not exist");
           }
+        }
+      },
+
+ //-----------------------------------------------------------------------------------------------------------------------------
+      //									ADMIN	USER DELETE
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      deleteUser: async (user_id) => {
+        let store = getStore();
+        try {
+          const response = await axios.delete(
+            process.env.BACKEND_URL + "/api/user/" + user_id,
+            {
+              data: {
+                id_user: user_id,
+              },
+            }
+          );
+          getActions().getUsers();
+          return;
+        } catch (error) {
+          console.log(error);
         }
       },
 

@@ -29,7 +29,7 @@ const injectContext = PassedComponent => {
 			 * store, instead use actions, like this:
 			 **/
 
-			// state.actions.validToken();
+			state.actions.validToken();
 			// state.actions.getPackage();
 			// state.actions.userProfile();
       		// state.actions.comparingFavorites();

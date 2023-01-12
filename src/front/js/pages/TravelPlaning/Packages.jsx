@@ -55,10 +55,10 @@ const Packages = () => {
 
           {/* --this prints the post if the package id is odd-- */}
           {item.id % 2 == 1 ? (
-            <div className="post"  >
-             <div className="post_img" >
+            <div className="post">
+             <div className="post_img">
               <img className="imageone" src={item.url} alt="Nakuru"></img>
-              {/* <p className="post_date2">20 Jan, 2021</p> */}
+              
              </div>
                           
               <div
@@ -70,7 +70,7 @@ const Packages = () => {
                 <h3 className="post_title">{item.name}</h3>
                 <p className="post_subtitle">{item.category}</p>
                 
-                {/* <a href="#" className="post_tag">article</a> */}
+                
 
                 <div className="row row-cols-5 justify-content-center text-center m-4">
                 <div className="">
