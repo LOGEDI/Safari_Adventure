@@ -476,14 +476,17 @@ def create_comment():
     package = request.json['id_packages']
     print(user, package)
     user_query = User.query.filter_by(id=body["id_user"]).first()
+    package_query = Packages.query.filter_by(id=body["id_packages"]).first()
+
     
     print(user_query)
     if user_query:
-        package_query = Comment.query.filter_by(id_user=body["id_user"]).filter_by(id_packages=body["id_packages"]).first()
         if package_query:
-            print(package_query)
-            return jsonify({"msg": "Package exists in that list"}), 404
-        else:    
+    #     package_query = Comment.query.filter_by(id_user=body["id_user"]).filter_by(id_packages=body["id_packages"]).first()
+    #     # if package_query:
+    #     #     print(package_query)
+    #     #     return jsonify({"msg": "Package exists in that list"}), 404
+    # else:    
             new_comment = Comment(
             id_user=body["id_user"],
             id_packages=body["id_packages"],
@@ -495,7 +498,9 @@ def create_comment():
             # Standard response to request with error code 200 (success)
             return jsonify({"msg": "New Comment list created"}), 200
 
-    return jsonify({"msg":"User is not logged in"}), 400
+        return jsonify({"msg":"Package does not exist"}), 404
+    return jsonify({"msg":"User does not exist"}), 404
+
 
 #---------------------------------------------------------------------------------------------------
 #                       DELETE COMMENT
