@@ -335,16 +335,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       createComment: async (
         comment,
-        user,
+        id_user,
+	      id_packages	
+
        
       ) => {
         try {
           const response = await axios.post(
             process.env.BACKEND_URL + "/api/comment",
             {
-              comment: comment,
-              user: user,
-           
+              comment:comment,
+              id_user:id_user,
+              id_packages:id_packages	
             }
           );
         } catch (error) {

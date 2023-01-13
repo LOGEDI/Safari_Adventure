@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { FormGroup, Label, Input, FormText, Form, Button } from "reactstrap";
 //import { Context } from "../../store/appContext";
 import { Context } from "../store/appContext";
@@ -8,26 +8,31 @@ import Swal from "sweetalert2";
 const TravelPlan = () => {
   const {store, actions} = useContext(Context);
   const { comment, setComment } = useState("");
-  const [user, setUser] = useContext("");
-  let profile = store.profile;
+
+ 
 
  // const [package, setPackage] = useState("");
 
 
 
-  
-  const handleSubmit = async (e) => {
+//  useEffect(() => {
+   console.log(store.userId)
+//   actions.userProfile();
+// }, [store.userId]);
+ const handleSubmit = async (e) => {
     e.preventDefault();
     let onUploaded = await actions.createComment(
-      comment,
-      user,
+      "",
+      store.userId,
+      2	
       
-   l
+   
     );
     // console.log(onUploaded);
 
     setComment("");
     setUser("");
+    setPackage
     
     Swal.fire({ text: "Package Created", confirmButtonColor: "#000000" });
   };
