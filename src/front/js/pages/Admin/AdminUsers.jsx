@@ -4,6 +4,8 @@ import { Context } from "../../store/appContext";
 import Swal from "sweetalert2";
 
 import destinationBackground from "../../../img/destinations_background.jpg";
+import userProfileIcon from "../../../img/user-profile-icon.jpg"
+
 const AdminUsers = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
@@ -53,47 +55,50 @@ const AdminUsers = () => {
               <div key={item.id} className="col-12">
                 <div className="row row-cols-2 mb-5">
                 <div className="admin-user-card col-2 card border-light">
-                  <img
-                    src={item.user_url}
-                    className="admin-user-img"
-                    alt="..."
-                  />
+                <img
+                                src={
+                                  item.user_url
+                                    ? item.user_url
+                                    : userProfileIcon
+                                }
+                                className="rounded-circle"
+                              />
                   </div>
                   <div className="admin-user-card-body col-10">
                     <div className="row row-cols-3 ">
                       <div className="col-5">
-                    <h3 className="admin-user-card-title mt-3">{item.username}</h3>
-                    <h3 className="admin-user-card-title mt-3">{item.email}</h3>
-                    <h3 className="admin-user-card-title mt-3">{item.name}</h3>
-                    <h3 className="admin-user-card-title mt-3">{item.lastname}</h3>
-                    <h3 className="admin-user-card-title mt-3">{item.country}</h3>
+                    <h3 className="admin-user-card-title mt-3">USER NAME:{item.username}</h3>
+                    <h3 className="admin-user-card-title mt-3">EMAIL:{item.email}</h3>
+                    {/* <h3 className="admin-user-card-title mt-3">FIRST NAME:{item.name}</h3>
+                    <h3 className="admin-user-card-title mt-3">LAST NAME:{item.lastname}</h3>
+                    <h3 className="admin-user-card-title mt-3">COUNTRY: {item.country}</h3> */}
                     </div>
 
                     <div className="col-5">
                     <h3 className="admin-user-card-title mt-3">{item.id}</h3>
 
                     {item.admin ? (
-                      <h3 className="text-danger">ADMIN</h3>              
+                      <h2 className="text-danger">ADMIN</h2>              
                     ) : null}{" "}
 
                     {item.premium ? (
-                      <h3 className="text-success">PREMIUM</h3>              
+                      <h2 className="text-success">PREMIUM</h2>              
                     ) : null}{" "}
 
-                    <h3 className="admin-user-card-title mt-3">{item.admin}</h3>
+                    {/* <h2 className="admin-user-card-title mt-3">{item.admin}</h2>
 
                     <h3 className="admin-user-card-title mt-3">{item.name}</h3>
-                    <h3 className="admin-user-card-title mt-3">{item.premium}</h3>
-                    <h3 className="admin-user-card-title mt-3">{item.country}</h3>
+                    <h2 className="admin-user-card-title mt-3">{item.premium}</h2>
+                    <h3 className="admin-user-card-title mt-3">{item.country}</h3> */}
                     </div>
 
                     <div className="col-2 justify-content-end">
-                      <Link to={"/PackagesDetails/" + item.id}>
+                      <Link to={"/UsersDetails/" + item.id}>
                         <button href="#" className="btn btn-primary">
                           DETAILS
                         </button>
                       </Link>
-                      <Link to={"/EditPackages/" + item.id}>
+                      <Link to={"/EditUsers/" + item.id}>
                         <button className="btn btn-warning">
                           EDIT
                         </button>

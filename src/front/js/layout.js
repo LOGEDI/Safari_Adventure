@@ -43,6 +43,8 @@ import AdminPackages from "./pages/Admin/AdminPackages.jsx";
 import EditPackages from "./pages/Admin/EditPackages.jsx";
 import AddPackages from "./pages/Admin/AddPackages.jsx";
 import AdminUsers from "./pages/Admin/AdminUsers.jsx";
+import UsersDetails from "./pages/Admin/UsersDetails.jsx";
+import EditUsers from "./pages/Admin/EditUsers.jsx";
 
 import PackageTesting from "./pages/TravelPlaning/PackageTesting.jsx";
 
@@ -100,6 +102,8 @@ const Layout = () => {
                         <Route element={<AdminPackages />} path="/AdminPackages" />
                         <Route element={<EditPackages />} path="/EditPackages/:id" />
                         <Route element={<AdminUsers />} path="/AdminUsers" />
+                        <Route element={<EditUsers />} path="/EditUsers/:id" />
+                        <Route element={<UsersDetails />} path="/UsersDetails/:id" />
 
                         <Route element={<PackageTesting />} path="/PackageTesting" />
                         

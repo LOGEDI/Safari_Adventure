@@ -243,7 +243,7 @@ const EditPackages = () => {
     setUrl15("");
 
     Swal.fire({
-      text: "Package Created",
+      text: "Package Edited",
       confirmButtonColor: "#000000",
     }).then(function (result) {
       if (result.value) {

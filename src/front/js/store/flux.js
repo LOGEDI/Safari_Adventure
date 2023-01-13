@@ -132,7 +132,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           Swal.fire({
             position: "top",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Your profile has been updated",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -814,6 +814,52 @@ const getState = ({ getStore, getActions, setStore }) => {
           return;
         } catch (error) {
           console.log(error);
+        }
+      },
+
+
+//-----------------------------------------------------------------------------------------------------------------------------
+      //											PUT EDIT USERS ADMIN
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      adminUser: async (
+        name, lastname, country, password, user_url, admin, premium, userId) => {
+        
+      
+        let store = getStore();
+        try {
+          const response = await axios.put(
+            process.env.BACKEND_URL + "/api/user/" + userId,
+            {
+              name: name,
+              lastname: lastname,
+              country: country,
+              password: password,
+              user_url: user_url,
+              admin: admin,
+              premium: premium,
+            }
+          );
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "Your profile has been updated",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          console.log(response);
+          
+        } catch (error) {
+          // Log de error
+          console.log(error);
+          if (error.response.status === 404) {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: error.response.data.msg,
+            });
+            return error.response.data.msg;
+          }
         }
       },
 
