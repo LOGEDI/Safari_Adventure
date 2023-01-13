@@ -11,6 +11,7 @@ const Profile = () => {
   let auth = store.auth;
   
   useEffect(() => {
+    console.log(store.userId)
     actions.userProfile();
   }, [store.userId]);
 

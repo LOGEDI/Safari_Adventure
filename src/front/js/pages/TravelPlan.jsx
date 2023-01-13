@@ -6,8 +6,11 @@ import Nav from "react-bootstrap/Nav";
 import Swal from "sweetalert2";
 
 const TravelPlan = () => {
-  const { comment, setComment } = useContext(Context);
-  const [user, setUser] = useState("");
+  const {store, actions} = useContext(Context);
+  const { comment, setComment } = useState("");
+  const [user, setUser] = useContext("");
+  let profile = store.profile;
+
  // const [package, setPackage] = useState("");
 
 
@@ -15,9 +18,9 @@ const TravelPlan = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let onUploaded = await actions.createPackage(
-      user,
+    let onUploaded = await actions.createComment(
       comment,
+      user,
       
    l
     );
@@ -29,26 +32,13 @@ const TravelPlan = () => {
     Swal.fire({ text: "Package Created", confirmButtonColor: "#000000" });
   };
 
-  // const uploadImage = async (e) => {
-  //   const files = e.target.files;
-  //   const data = new FormData();
-  //   data.append("file", files[0]);
-  //   data.append("upload_preset", "wluy28lt");
-  //   setLoading(true);
-  //   const res = await fetch(
-  //     // url-cloudinary/cloudinaryname/file/action
-  //     {
-  //       method: "POST",
-  //       body: data,
-  //     }
-  //   );
-  //   const file = await res.json();
-  //   // console.log(res);
-  //   setImage(file.secure_url);
-  //   setUrl(file.secure_url);
-  //   // console.log(file.secure_url);
-  //   setLoading(false);
-  // };
+  // const res = await fetch(
+  // {
+  //   method: "POST",
+  //   body: data,
+  // }
+  // );
+  
 
   return (
     <>
@@ -67,10 +57,10 @@ const TravelPlan = () => {
             >
               <FormGroup>
 
-                <Label for="exampleName">Comment</Label>
+                <Label for="exampleComment">Comment</Label>
                 <Input
-                  id="exampleName"
-                  name="name"
+                  id="exampleComment"
+                  name="comment"
                   type="text"
                   onChange={(e) => setComment(e.target.value)}
                   value={comment}
@@ -81,10 +71,20 @@ const TravelPlan = () => {
               </FormGroup>
             </Form>
           </div>
+          <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
+          <div>
+          <div d-flex justify-content-center></div>
+                <Button
+                  className="btn btn-outline-light btn-lg mx-2 px-5 mt-4"
+                  type="submit"
+                  style={{ color: "#bdb284" }}
+                  color="white"
+                >
+                  Submit
+                </Button>
         </div>
      
-        <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
-          <div>
+       
        
           </div>
         </div>
@@ -92,5 +92,6 @@ const TravelPlan = () => {
     </>
   );
 };
+
 
 export default TravelPlan;
