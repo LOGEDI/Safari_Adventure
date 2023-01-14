@@ -14,6 +14,7 @@ const SignUp = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   // Yup to validate fields
   const SignupSchema = Yup.object().shape({
     username: Yup.string("Enter your username")

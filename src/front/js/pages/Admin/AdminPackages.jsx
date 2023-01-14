@@ -92,7 +92,7 @@ const AdminPackages = () => {
                 <div className="admin-pack-card-body">
                   <h3 className="admin-pack-card-title mt-3">CREATE PACKAGE</h3>
                   <div className="d-flex justify-content-center">
-                    <Link to="/AboutUs/">
+                    <Link to="/AddPackages">
                       <button className="btn btn-primary">CREATE</button>
                     </Link>
                   </div>

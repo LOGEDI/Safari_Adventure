@@ -2,17 +2,15 @@ import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
-import destinationBackground from "../../../img/destinations_background.jpg";
+
 import destinationsHero from "../../../img/experiences-hero.jpg";
-import fotoprueba from "../../../img/classicKenyanSafariPack.jpg";
-import backgroundtest from "../../../img/classicKenyanSafariPromo2.jpg";
 import activity from "../../../img/activity-icon.png";
 import destinationsicon from "../../../img/destination-icon.png";
 import tripdays from "../../../img/trip-days.png";
 import lodging from "../../../img/lodging-icon.png";
 import transport from "../../../img/transport-icon.png";
 import separator from "../../../img/heading-separator.png"
-import lion from "../../../img/lion.jpg"
+
 
 const Packages = () => {
   const { store, actions } = useContext(Context);

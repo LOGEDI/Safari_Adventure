@@ -5,6 +5,8 @@ from flask import Flask, request, jsonify, url_for, Blueprint, json, current_app
 from api.models import db, User, Packages, Favorites
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
+from flask_mail import Mail, Message
+import random, string
 
 api = Blueprint('api', __name__)
 

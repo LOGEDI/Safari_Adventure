@@ -3,19 +3,13 @@ import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton'
 
 
 export const NavbarPrincipal = () => {
   const { store, actions } = useContext(Context);
-  const [search, setSearch] = useState("");
 
   let navigate = useNavigate();
+  
   // Calls flux logout
   const doLogout = () => {
     //false
@@ -164,22 +158,6 @@ export const NavbarPrincipal = () => {
                     DESTINATIONS
                   </Link>
                 </a>
-
-                <a className="dropdown-item">
-                  <Link className="linkToView" to="/PackageTesting">
-                    Package Testing
-                  </Link>
-                </a>
-
-                {store.admin ? (
-                <a className="dropdown-item">
-                <Link className="linkToView" to="/AddPackages">
-                  ADD PACKAGES
-                </Link>
-              </a>
-              ) : null}{" "}
-
-
               </div>
             </div>
 
@@ -201,12 +179,39 @@ export const NavbarPrincipal = () => {
               </button>
             ) : null}{" "}
 
-              
-            <button className="nav2Button me-3 nav-item  ">
-              <Link to="/Admin" className="nav2Button">
-                ADMIN
-              </Link>
-            </button>
+ {/*-----------------------------------------------------------ADMIN HIDE TAB -------------------------------------------------------------*/}
+
+  {/* {store.admin ? ( */}  
+
+{/* ---admin uth ---- */}
+
+            <div className="dropdown">
+              <button className="dropbtn">
+                <Link to="/Admin" className="nav2Button">
+                  ADMIN
+                </Link>
+              </button>
+              <div className="dropdown-content">
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/AdminPackages">
+                    EDIT PACKAGES
+                  </Link>
+                </a>
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/AdminUsers">
+                    EDIT USERS
+                  </Link>
+                </a>
+
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/Admin">
+                    EDIT COMMENTS
+                  </Link>
+                </a>              
+              </div>
+            </div>
+
+  {/* ) : null}{" "} */}
 
           </div>
         </nav>

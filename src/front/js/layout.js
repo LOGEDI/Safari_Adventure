@@ -46,7 +46,7 @@ import AdminUsers from "./pages/Admin/AdminUsers.jsx";
 import UsersDetails from "./pages/Admin/UsersDetails.jsx";
 import EditUsers from "./pages/Admin/EditUsers.jsx";
 
-import PackageTesting from "./pages/TravelPlaning/PackageTesting.jsx";
+
 
 import injectContext from "./store/appContext";
 
@@ -104,8 +104,6 @@ const Layout = () => {
                         <Route element={<AdminUsers />} path="/AdminUsers" />
                         <Route element={<EditUsers />} path="/EditUsers/:id" />
                         <Route element={<UsersDetails />} path="/UsersDetails/:id" />
-
-                        <Route element={<PackageTesting />} path="/PackageTesting" />
                         
                         <Route element={<Contact />} path="/Contact" />
 
