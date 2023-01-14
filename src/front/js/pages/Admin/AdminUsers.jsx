@@ -39,99 +39,98 @@ const AdminUsers = () => {
 
   return (
     <div>
-      <div className="main-content">
-        <div
-          className="destinationsBackground"
-          style={{
-            backgroundImage: `url(${destinationBackground})`,
-          }}
-        >
-          <div className="container-fluid">
-            <h1 className="text-center">USERS</h1>
-            <Link to="/Admin">
-              <button className="btn btn-primary mb-4">BACK TO ADMIN</button>
-            </Link>
-            <div className="row row-cols-1">
-              {store.user.map((item) => (
-                <div key={item.id} className="col-12">
-                  <div className="row row-cols-2 mb-5">
-                    <div className="admin-user-card col-2 card border-light">
-                      <img
-                        src={item.user_url ? item.user_url : userProfileIcon}
-                        className="rounded-circle"
-                      />
-                    </div>
-                    <div className="admin-user-card-body col-10">
-                      <div className="row row-cols-3 ">
-                        <div className="col-5">
-                          <h3 className="admin-user-card-title mt-3">
-                            USER NAME:{item.username}
-                          </h3>
-                          <h3 className="admin-user-card-title mt-3">
-                            EMAIL:{item.email}
-                          </h3>
-                          {/* <h3 className="admin-user-card-title mt-3">FIRST NAME:{item.name}</h3>
-                    <h3 className="admin-user-card-title mt-3">LAST NAME:{item.lastname}</h3>
-                    <h3 className="admin-user-card-title mt-3">COUNTRY: {item.country}</h3> */}
+      
+
+      {store.user.map((item) => (
+        <div key={item.id} className="col-12">
+          <div className="main-content">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="card mb-3 bg-secondary shadow">
+                  <div className="card-body ">                    
+                    <div>
+                      <div className="row">
+                        <div className="col-lg-2">
+                          <img
+                            src={
+                              item.user_url ? item.user_url : userProfileIcon
+                            }
+                            className="admin-profile-icon"
+                            style={{ maxHeight: "150px" }}
+                          ></img>
                         </div>
 
-                        <div className="col-5">
-                          <h3 className="admin-user-card-title mt-3">
-                            {item.id}
-                          </h3>
-                          {item.admin ? (
-                            <h2 className="text-danger">ADMIN</h2>
-                          ) : null}{" "}
-                          {item.premium ? (
-                            <h2 className="text-success">PREMIUM</h2>
-                          ) : null}{" "}
-                          {/* <h2 className="admin-user-card-title mt-3">{item.admin}</h2>
-
-                    <h3 className="admin-user-card-title mt-3">{item.name}</h3>
-                    <h2 className="admin-user-card-title mt-3">{item.premium}</h2>
-                    <h3 className="admin-user-card-title mt-3">{item.country}</h3> */}
+                        <div className="col-lg-4">
+                          <div className="form-group focused">
+                            <h3 className="package-detail-subtitle">
+                              {" "}
+                              Username{" "}
+                            </h3>
+                            <h3 className="package-detail-title">
+                              {item.username}
+                            </h3>
+                          </div>
+                          <div className="form-group">
+                            <h3 className="package-detail-subtitle">Email </h3>
+                            <h3 className="package-detail-title">
+                              {item.email}
+                            </h3>
+                          </div>
                         </div>
 
-                        <div className="col-2 justify-content-end">
-                          <Link to={"/UsersDetails/" + item.id}>
-                            <button href="#" className="btn btn-primary">
-                              DETAILS
-                            </button>
-                          </Link>
-                          <Link to={"/EditUsers/" + item.id}>
-                            <button className="btn btn-warning">EDIT</button>
-                          </Link>
+                        <div className="col-lg-4">
+                          <div className="form-group focused">
+                            {item.admin ? (
+                              <h2 className="text-danger">ADMIN</h2>
+                            ) : null}{" "}
+                            {item.premium ? (
+                              <h2 className="text-success">PREMIUM</h2>
+                            ) : null}{" "}
+                          </div>
+                          <div className="form-group">
+                            <h3 className="package-detail-subtitle">
+                              Comments{" "}
+                            </h3>
+                            <h3 className="package-detail-title"> </h3>
+                          </div>
+                        </div>
 
-                          <span
-                            className="btn btn-danger"
-                            onClick={() => handleSweetAlert(item.id)}
-                          >
-                            <b>DELETE</b>
-                          </span>
+                        <div className="col-2 text-end">
+                          <div className="pb-2">
+                            <Link to={"/UsersDetails/" + item.id}>
+                              <button href="#" className="btn btn-primary">
+                                DETAILS
+                              </button>
+                            </Link>
+                          </div>
+
+                          <div className="pb-2">
+                            <Link to={"/EditUsers/" + item.id}>
+                              <button className="btn btn-warning">EDIT</button>
+                            </Link>
+                          </div>
+
+                          <div className="form-group">
+                            <span
+                              className="btn btn-danger"
+                              onClick={() => handleSweetAlert(item.id)}
+                            >
+                              <b>DELETE</b>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
-
-              {/* <div className="col-4">
-              <div className="admin-pack-card card m-3 border-light">
-                <img  className="admin-pack-img-top" alt="..." />
-                <div className="admin-pack-card-body">
-                  <h3 className="admin-pack-card-title mt-3">CREATE PACKAGE</h3>
-                  <div className="d-flex justify-content-center">
-                    <Link to="/AboutUs/">
-                      <button className="btn btn-primary">CREATE</button>
-                    </Link>
-                  </div>
-                </div>
               </div>
-            </div> */}
+
+            
+            
             </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
