@@ -10,8 +10,14 @@ const Profile = () => {
   let profile = store.profile;
   let auth = store.auth;
   
+  // useEffect(() => {
+  //   actions.userProfile();
+  // }, [store.userId]);
+
   useEffect(() => {
-    actions.userProfile();
+    if (store.userId != null) {
+      actions.getFavorites();
+    }
   }, [store.userId]);
 
   return (

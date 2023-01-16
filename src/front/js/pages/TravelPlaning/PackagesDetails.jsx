@@ -9,6 +9,8 @@ import lodging from "../../../img/lodging-icon.png";
 import transport from "../../../img/transport-icon.png";
 import separator from "../../../img/heading-separator.png";
 
+import { BsHeart, BsFillHeartFill } from "react-icons/bs";
+
 const PackagesDetails = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
@@ -18,6 +20,15 @@ const PackagesDetails = () => {
     window.scrollTo(0, 0);
     actions.comparingFavorites();
   }, [params.id, store.userId]);
+
+  let handleAddFavorites = async (id) => {
+    //this function prevent a user to add a favorite whitout been loged, is send tthe user to log in page
+    let msj = await actions.createFavorite(id);
+
+    if (msj === "User is not logged in") {
+      navigate("/login");
+    }
+  };
 
   if (store.packageDetail) {
     return (
@@ -62,7 +73,19 @@ const PackagesDetails = () => {
               <div className="col-5">
                 <div className="row row-cols-5 justify-content-center">
                   <div className="col-2">
-                    <button className="btn-alert btn-l"> all</button>
+                  <button
+                          className="btn btn-light"
+                          type="button"
+                          onClick={() => {
+                            handleAddFavorites(store.packageDetail.id);
+                          }}
+                        >
+                          {store.favoriteItem?.includes(parseInt(params.id)) ? (
+                            <BsFillHeartFill />
+                          ) : (
+                            <BsHeart />
+                          )}
+                        </button>
                   </div>
                   <div className="col-2">
                     <button className="btn-alert btn-l">all</button>

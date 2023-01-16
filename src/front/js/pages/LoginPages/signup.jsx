@@ -14,7 +14,7 @@ const SignUp = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   // Yup to validate fields
   const SignupSchema = Yup.object().shape({
     username: Yup.string("Enter your username")
@@ -125,7 +125,7 @@ const SignUp = () => {
                           <br />
                           <Link
                             className="text-black-50"
-                            to={"/changePassword"}
+                            to={"/ChangePassword"}
                           >
                             Forgot password?
                           </Link>

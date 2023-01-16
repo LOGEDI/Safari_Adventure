@@ -10,7 +10,7 @@ import tripdays from "../../../img/trip-days.png";
 import lodging from "../../../img/lodging-icon.png";
 import transport from "../../../img/transport-icon.png";
 import separator from "../../../img/heading-separator.png"
-
+import { BsFillHeartFill, BsHeart } from "react-icons/bs";
 
 const Packages = () => {
   const { store, actions } = useContext(Context);

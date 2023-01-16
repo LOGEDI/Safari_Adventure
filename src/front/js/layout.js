@@ -36,7 +36,7 @@ import Login from "./pages/LoginPages/login.jsx";
 import SignUp from "./pages/LoginPages/signup.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
 import EditProfile from "./pages/Profile/EditProfile.jsx";
-import ChangePassword from "./pages/Profile/changePassword.jsx";
+import ChangePassword from "./pages/Profile/ChangePassword.jsx";
 
 import Admin from "./pages/Admin/Admin.jsx";
 import AdminPackages from "./pages/Admin/AdminPackages.jsx";
@@ -110,7 +110,7 @@ const Layout = () => {
             <Route element={<SignUp />} path="/signup" />
             <Route element={<Profile />} path="/Profile" />
             <Route element={<EditProfile />} path="/EditProfile" />
-            <Route element={<ChangePassword />} path="/changePassword" />
+            <Route element={<ChangePassword />} path="/ChangePassword" />
 
             <Route element={<Favorites />} path="/Favorites" />
 
