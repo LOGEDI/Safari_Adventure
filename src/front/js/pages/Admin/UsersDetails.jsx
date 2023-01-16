@@ -4,6 +4,8 @@ import { useParams, Link } from "react-router-dom";
 
 import userProfileIcon from "../../../img/user-profile-icon.jpg";
 
+import Favorites from "../../component/Favorites.jsx";
+
 const UsersDetails = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
@@ -127,7 +129,7 @@ const UsersDetails = () => {
             </div>
           </div>         
         </div>
-        
+        <Favorites />
         <footer className="footer">
           <div className="row align-items-center justify-content-xl-between">
             <div className="col-xl-6 m-auto text-center"></div>

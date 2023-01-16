@@ -10,15 +10,19 @@ const Profile = () => {
   let profile = store.profile;
   let auth = store.auth;
   
-  // useEffect(() => {
-  //   actions.userProfile();
-  // }, [store.userId]);
-
   useEffect(() => {
+    actions.userProfile();
     if (store.userId != null) {
       actions.getFavorites();
     }
   }, [store.userId]);
+
+
+  // useEffect(() => {
+  //   if (store.userId != null) {
+  //     actions.getFavorites();
+  //   }
+  // }, [store.userId]);
 
   return (
     <div>
@@ -151,11 +155,76 @@ const Profile = () => {
                         <a href="#!" className="btn btn-sm btn-primary">
                           Settings
                         </a>
+
+                        
+
                       </div>
                     </div>
                   </div>
 
                   <div className="card-body"></div>
+
+
+<div
+                        className="container mt-5 vh-100 "
+                        style={{
+                          fontFamily: "Rajdhani, sans-serif",
+                          fontSize: "1.3rem",
+                        }}
+                      >
+                        <div className="col-12 mx-auto my-4 h-75">
+                          <ol className="h-75">
+                            {store.favoritesList?.length > 0 ? (
+                              store.favoritesList?.map((item, id) => (
+                                <li
+                                  className="list-group-item border border-1 border border-dark"
+                                  key={id}
+                                  style={{
+                                    
+                                    color: "#908969",
+                                  }}
+                                >
+                                  <div className="d-flex justify-content-between">
+                                    <div className="d-flex justify-content-start text-left w-25">
+                                      <img
+                                        src={item.url}
+                                        className="img-fluid rounded p-1 w-100 mx-1"
+                                        alt="..."
+                                        style={{
+                                          maxHeight: "3rem",
+                                          maxWidth: "3rem",
+                                          borderColor: "#b2a97e",
+                                        }}
+                                      />
+                                      {item?.name}
+                                    </div>
+                                    <div className="text-left">
+                                      
+                                    </div>
+
+                                    <div className="d-flex justify-content-end">
+                                      <span
+                                        className="btn btn-outline-light"
+                                        onClick={() =>
+                                          actions.deleteFavorites(item.id)
+                                        }
+                                        style={{ color: "#bdb284" }}
+                                      >
+                                        <b>X</b>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </li>
+                              ))
+                            ) : (
+                              <p>No tienes ningun favorito</p>
+                            )}
+                          </ol>
+                        </div>
+                      </div>
+
+
+
                 </div>
               </div>
             </div>

@@ -3,38 +3,26 @@ import { Context } from "../store/appContext";
 import { Nav } from "react-bootstrap";
 
 const Favorites = () => {
-    const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-    useEffect(() => {
-        if (store.userId != null) {
-          actions.getFavorites();
-        }
-      }, [store.userId]);
+  useEffect(() => {
+    if (store.userId != null) {
+      actions.getFavorites();
+    }
+  }, [store.userId]);
 
   return (
-    <div>Favorites
-
-<>
+    <div>
+      Favorites
       {store.auth ? (
-        <div
-          className="container mt-5 vh-100 "
-          style={{
-            fontFamily: "Rajdhani, sans-serif",
-            fontSize: "1.3rem",
-          }}
-        >
-          <div className="w-25">
+        <div className="main-content mt-2">
+          <div className="container-fluid">
             <h1>Favorites </h1>
           </div>
-          <div className="col-12 my-4 h-75">
-            {/* <ol className="h-75 m-0"> */}
+          <div className="container-fluid col-12 my-4">
             {store.favoritesList?.length > 0 ? (
               store.favoritesList?.map((item) => (
-                <li
-                  className="list-group-item border border-1 border border-dark"
-                  key={item.id}
-                  style={{ background: "#212529", color: "#908969" }}
-                >
+                <li className="list-group-item" key={item.id}>
                   <div className="d-flex justify-content-between">
                     <div className="d-flex justify-content-start text-left w-25">
                       <img
@@ -49,18 +37,14 @@ const Favorites = () => {
                       />
                       {item?.name}
                     </div>
-                    <div className="text-left">
-                      
-                    </div>
+                    <div className="text-left"></div>
                     <div className="d-flex justify-content-end">
                       <div className="mx-4">
-                        <p className="card-text">
-                          
-                        </p>
+                        <p className="card-text"></p>
                       </div>
                       <div className="d-flex justify-content-end">
                         <span
-                          className="btn btn-outline-light favoritesList"
+                          className="btn btn-outline-light"
                           onClick={() => actions.deleteFavorites(item.id)}
                           style={{ color: "#bdb284" }}
                         >
@@ -72,7 +56,7 @@ const Favorites = () => {
                 </li>
               ))
             ) : (
-              <p>You dont have any favorite package</p>
+              <p>No favorite package</p>
             )}
             {/* </ol> */}
           </div>
@@ -81,20 +65,14 @@ const Favorites = () => {
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
           <div>
             <h1>Not logged in...</h1>
-            <Nav.Link
-              className="bg-dark"
-              style={{ color: "#bdb284" }}
-              href="/login"
-            >
+            <Nav.Link className="" style={{ color: "#bdb284" }} href="/login">
               Go to login
             </Nav.Link>
           </div>
         </div>
       )}
-    </>
-
     </div>
-  )
-}
+  );
+};
 
 export default Favorites;
