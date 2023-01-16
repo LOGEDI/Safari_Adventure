@@ -173,7 +173,7 @@ const EditProfile = () => {
                         <div className="text-center">
                           <h2>{profile.username}</h2>
                           <h3>
-                            {profile.name}
+                            {profile.name}{" "}
                             {profile.lastname}
                             <span className="font-weight-light"></span>
                           </h3>

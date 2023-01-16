@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
 
-export const NavbarPrincipal = () => {
+export const NavbarMain = () => {
   const { store, actions } = useContext(Context);
 
   let navigate = useNavigate();
@@ -31,17 +31,17 @@ export const NavbarPrincipal = () => {
             </Link>
             <div className="ml-auto">
                 {!store.auth ? (
-                  <Link to="/login" style={{ color: "#bdb284" }}>
+                  <Link to="/login">
                     <button className="btn btn-primary m-2">Login</button>
                   </Link>
                 ) : null}{" "}
                 {store.auth ? (
                   <Link to="/">
-                    <button className="btn btn-primary m-2" type="button" onClick={doLogout} style={{ color: "#bdb284" }}>Log out</button>
+                    <button className="btn btn-primary m-2" type="button" onClick={doLogout} >Log out</button>
                   </Link>
                 ) : null}
                 {!store.auth ? (
-                  <Link to="/signup" style={{ color: "#bdb284" }}>
+                  <Link to="/signup" >
                     <button className="btn btn-primary m-2">Sign Up</button>
                   </Link>
                 ) : null}{" "}

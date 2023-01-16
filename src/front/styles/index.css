@@ -140,35 +140,6 @@ font-size: 48px;
 
 /*-----------------------------------------------LOGIN AND SIGNUP PAGES SETTINGS--------------------------------------------------------------------------*/
 
-/* .App {
-  font-family: 'Nunito', sans-serif;
-  font-size: 22px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/57/Maasai_Mara_National_Reserve_Kenya.jpg"); */
-  /* background-image: url("../img/rigo-baby.jpg"); */
-  /* align-items: center; */
-  /* min-height: 50vh;  */
-  /* padding: 1rem 0.5rem;
-} */
-
-.loginForm{ 
-  border: black;
-}
-
-.logSection {
-  width: 100%;
-  max-width: 420px;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 1rem;
-  /* background-color:white; */
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -177,10 +148,6 @@ form {
   padding-bottom: 1rem;
   
 }
-
-/* a, a:visited {
-  color: red;
-} */
 
 input[type="name"],
 input[type="last_name"],
@@ -198,60 +165,6 @@ label{
 margin-top: 1rem;
 }
 
-.signButton {
-  padding: 0.5rem;
-  background-color: aqua;
-  margin-top: 1rem;
-  font-family: 'Nunito', sans-serif;
-  font-size: 22px;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
-}
-
-.instructions {
-  font-size: 0.75rem;
-  border-radius: 0.5rem;
-  background: #000;
-  color: #fff;
-  padding: 0.25rem;
-  position: relative;
-  bottom: -10px;
-}
-
-.instructions > svg {
-  margin-right: 0.25rem;
-}
-
-.offscreen {
-  position: absolute;
-  left: -9999px;
-}
-
-.hide {
-  display: none;
-}
-
-.valid {
-  color: limegreen;
-  margin-left: 0.25rem;
-}
-
-.invalid {
-  color: red;
-  margin-left: 0.25rem;
-}
-
-.errmsg {
-  background-color: lightpink;
-  color: firebrick;
-  font-weight: bold;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.line {
-  display: inline-block;
-}
 
 /*---------------------------------------NEW CAROUSEL-Version 2------------------------------------------------------------------------*/
 
@@ -795,6 +708,8 @@ figure.snip0016:hover figcaption::before {
   padding-left: 10px;
 
 }
+
+/*---------------------------------ADMIN------------------------------------------*/
 
 .admin-pack-card{ 
   /* max-width: 300px; */
