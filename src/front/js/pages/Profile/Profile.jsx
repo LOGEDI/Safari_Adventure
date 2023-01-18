@@ -5,6 +5,8 @@ import "../../../styles/profile.css";
 
 import { Context } from '../../store/appContext';
 
+import userProfileIcon from "../../../img/user-profile-icon.jpg";
+
 const Profile = () => {
   const {store, actions} = useContext(Context);
   let profile = store.profile;
@@ -26,10 +28,6 @@ const Profile = () => {
 
   return (
     <div>
-      {/* <h1 className="text-center">Profile</h1>
-      <h1 className="text-center">Name: {profile.username}</h1>
-      <h1 className="text-center">Last Name: {profile.email}</h1>
-      <h1 className="text-center">Country: {profile.country}</h1> */}
       {auth ? (
       <div>
         <link
@@ -60,9 +58,7 @@ const Profile = () => {
                     Hello {profile.username}
                   </h1>
                   <p className="text-white mt-0 mb-5">
-                    This is your profile page. You can see the progress you've
-                    made with your work and manage your projects or assigned
-                    tasks
+                    This is your profile page, here you can see your comments , your favorites and update your user data.
                   </p>
                   <Link to="/EditProfile">
                     <button className="btn btn-primary m-2">Edit profile</button>
@@ -86,7 +82,7 @@ const Profile = () => {
                             src={
                               profile.user_url
                                 ? profile.user_url
-                                : "https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
+                                : userProfileIcon
                             }
                             className="rounded-circle"
                           />
@@ -142,7 +138,7 @@ const Profile = () => {
                 </div>
               </div>
 
-{/*---------------------------------------------------- Favorites content--------------------------------------------------- */}
+{/*---------------------------- Favorites content-----------------*/}
 
               <div className="col-xl-8 order-xl-1">
                 <div className="card bg-secondary shadow">
@@ -155,16 +151,79 @@ const Profile = () => {
                         <a href="#!" className="btn btn-sm btn-primary">
                           Settings
                         </a>
-
-                        
-
                       </div>
                     </div>
                   </div>
 
-                  <div className="card-body"></div>
+                  <div className="card-body">
+
+                  {store.favoritesList?.length > 0 ? (
+                    store.favoritesList?.map((item) => (
+                      <div key={item.id}>
+                        <div className="pl-lg-4">
+                          <div className="row">
+                            <div className="col-lg-2">
+                              <img
+                                src={item.url}
+                                className="img-fluid"
+                                alt="..."
+                                style={{
+                                  maxHeight: "250px",
+                                  maxWidth: "150px",
+                                  borderColor: "#b2a97e",
+                                }}
+                              />
+                            </div>
+                            <div className="col-lg-9">
+                              <div className="form-group focused">
+                                <h3 className="package-detail-title mt-4">
+                                  {item?.name}
+                                </h3>
+                              </div>
+                            </div>
+                            <div className="col-lg-1">
+                              <div className="form-group focused">
+                                <div className=" justify-content-end">
+                                  <span
+                                    className="btn btn-outline-light mt-3"
+                                    onClick={() =>
+                                      actions.deleteFavorites(item.id)
+                                    }
+                                    style={{ color: "#d2ae6d" }}
+                                  >
+                                    <b>X</b>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr className="my-4" />
+                      </div>
+                    ))
+                  ) : (
+                    <p>No favorite package</p>
+                  )}
+
+                  </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
 <div
                         className="container mt-5 vh-100 "
                         style={{
@@ -221,7 +280,7 @@ const Profile = () => {
                             )}
                           </ol>
                         </div>
-                      </div>
+                      </div> */}
 
 
 
@@ -241,10 +300,11 @@ const Profile = () => {
 
 <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
   <div>
-    <h1>Not logged in...</h1>
+    <h1 className="package-detail-title mt-5"
+              style={{ color: "black" }}>Not logged in...</h1>
     <Link
-      className="bg-dark"
-      style={{ color: "#bdb284" }}
+      className="package-detail-subtitle"
+      style={{ color: "#d2ae6d" }}
       to="/login"
     >
       Go to login

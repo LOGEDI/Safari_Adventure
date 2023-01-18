@@ -1437,10 +1437,11 @@ const AddPackages = () => {
     {/* ) : (
       <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
         <div>
-          <h1>Not logged in...</h1>
+          <h1 className="package-detail-title mt-5"
+              style={{ color: "black" }}>Not logged in...</h1>
           <Nav.Link
-            className="bg-dark"
-            style={{ color: "#bdb284" }}
+            className="package-detail-subtitle"
+            style={{ color: "#d2ae6d" }}
             href="/login"
           >
             Go to login

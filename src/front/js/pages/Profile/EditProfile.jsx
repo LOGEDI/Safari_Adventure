@@ -381,8 +381,9 @@ const EditProfile = () => {
       ) : (
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
           <div>
-            <h1 className="not-logged-h1">Not logged in...</h1>
-            <Link className="not-logged-h2" style={{ color: "#bdb284" }} to="/login">
+            <h1  className="package-detail-title mt-5"
+              style={{ color: "black" }}>Not logged in...</h1>
+            <Link className="package-detail-subtitle" style={{ color: "#d2ae6d" }} to="/login">
               Go to login
             </Link>
           </div>

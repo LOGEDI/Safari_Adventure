@@ -32,7 +32,7 @@ const Destinations = () => {
         <div
             className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
             style={{
-              minHeight: "400px",
+              minHeight: "500px",
               backgroundImage:
               `url(${destinationsHero})` ,
               backgroundSize: "cover",

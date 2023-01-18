@@ -43,26 +43,16 @@ const PackagesDetails = () => {
           }}
         ></div>
 
-        				{/* <img
-                    		src={store.packageDetail.url3}
-                    		className="img-fluid rounded p-1 "
-                    		alt="..."
-                    		style={{
-                      			
-                      			borderColor: "#b2a97e",      			
-                    		}}
-                  		/> */}
-
         <div
           className="packdetailbkg"
           style={{
             backgroundImage: `url(${store.packageDetail.url3})`,
           }}
         >
-          <div className="container ">
-            <div className="row row-cols-2 g-3 mt-5">
+          <div className="container-page">
+            <div className="row row-cols-2 g-3">
               <div className="col-7">
-                <h3 className="package-detail-title">
+                <h3 className="package-detail-title mt-5">
                   {store.packageDetail.name}
                 </h3>
                 <p className="package-detail-subtitle">
@@ -71,30 +61,30 @@ const PackagesDetails = () => {
                 <img className="separator mr-3" src={separator}></img>
               </div>
               <div className="col-5">
-                <div className="row row-cols-5 justify-content-center">
+                <div className="row row-cols-5 justify-content-center mt-5">
                   <div className="col-2">
-                  <button
-                          className="btn btn-light"
-                          type="button"
-                          onClick={() => {
-                            handleAddFavorites(store.packageDetail.id);
-                          }}
-                        >
-                          {store.favoriteItem?.includes(parseInt(params.id)) ? (
-                            <BsFillHeartFill />
-                          ) : (
-                            <BsHeart />
-                          )}
-                        </button>
+                    <button
+                      className="btn btn-light"
+                      type="button"
+                      onClick={() => {
+                        handleAddFavorites(store.packageDetail.id);
+                      }}
+                    >
+                      {store.favoriteItem?.includes(parseInt(params.id)) ? (
+                        <BsFillHeartFill />
+                      ) : (
+                        <BsHeart />
+                      )}
+                    </button>
                   </div>
                   <div className="col-2">
-                    <button className="btn-alert btn-l">all</button>
+                    <button className="btn btn-primary btn-l">Back</button>
                   </div>
                   <div className="col-2">
-                    <button className="btn-alert btn-l">all</button>
+                    <button className="btn btn-primary btn-l">all</button>
                   </div>
                   <div className="col-2">
-                    <button className="btn-alert btn-l">all</button>
+                    <button className="btn btn-primary btn-l">all</button>
                   </div>
                 </div>
               </div>
@@ -160,7 +150,7 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row row-cols-2 mt-2 mb-2">
+            <div className="row row-cols-2 mt-2 mb-3">
               <img src={store.packageDetail.url4}></img>
               <img src={store.packageDetail.url5}></img>
             </div>
@@ -197,7 +187,7 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row row-cols-1 mt-2 mb-2">
+            <div className="row row-cols-1 mt-2 mb-3">
               <img src={store.packageDetail.url6}></img>
             </div>
 
@@ -249,7 +239,7 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row row-cols-3 mt-2 mb-2">
+            <div className="row row-cols-3 mt-2 mb-3">
               <img src={store.packageDetail.url7}></img>
               <img src={store.packageDetail.url8}></img>
               <img src={store.packageDetail.url9}></img>
@@ -319,7 +309,7 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row row-cols-1 mt-2 mb-2">
+            <div className="row row-cols-1 mt-2 mb-3">
               <img src={store.packageDetail.url10}></img>
             </div>
 
@@ -403,7 +393,7 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row row-cols-2 mt-2 mb-2">
+            <div className="row row-cols-2 mt-2 mb-3">
               <img src={store.packageDetail.url11}></img>
               <img src={store.packageDetail.url12}></img>
             </div>
@@ -440,42 +430,16 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row row-cols-2 mt-2 mb-2">
+            <div className="row row-cols-2 mt-2 mb-3">
               <img src={store.packageDetail.url13}></img>
               <img src={store.packageDetail.url14}></img>
             </div>
-
-            {/* <div>
-					<div className="row g-0">
-						<div className="col-12">
-						
-						</div>
-						<div className="col-md-8">
-							<div className="card-body">
-								<h2 className="card-title "></h2>
-								<p className="textCard card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus lobortis mi ut tempor. Curabitur ultrices dapibus nisl. Sed dictum tempor ligula, eget varius enim dignissim eu. Maecenas ut sapien sagittis odio elementum eleifend convallis sollicitudin erat. Praesent finibus ligula turpis, ac placerat enim euismod ut. Maecenas laoreet dolor leo, ut ultricies ex ultricies vel.</p>
-								<p className="card-text "><small className="text-muted">Last updated 3 mins ago</small></p>							
-							</div>
-						</div>
-					</div>
-
-					<div className="singleViewDetails container text-center">
-						<div className="row row-cols-6">
-							<div className="spacer col "><h5>Name</h5><h5>{store.packageDetail.name}</h5></div>
-							<div className="spacer col "><h5>Title</h5><h5>{store.packageDetail.description}</h5></div>
-							<div className="spacer col "><h5>Description</h5><h5>{store.packageDetail.category}</h5></div>
-							
-						</div>
-					</div>
-				</div> */}
           </div>
         </div>
       </div>
     );
   } else {
-    return (
-      <div className="text-light text-center mt-5">Loading please wait...</div>
-    );
+    return <div className="text-center mt-5">Loading please wait...</div>;
   }
 };
 

@@ -24,25 +24,25 @@ export const NavbarMain = () => {
   return (
 
       <div>
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar" style={{ backgroundColor: "#29362f" }}>
           <div className="container">
-            <Link to="/">
-              <span className="navbar-brand mb-0 h1">Safari Adventure</span>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <div className="navbar__logo mb-0 ">Safari Adventure</div>
             </Link>
             <div className="ml-auto">
                 {!store.auth ? (
                   <Link to="/login">
-                    <button className="btn btn-primary m-2">Login</button>
+                    <button className="btn btn-cream m-2">Login</button>
                   </Link>
                 ) : null}{" "}
                 {store.auth ? (
                   <Link to="/">
-                    <button className="btn btn-primary m-2" type="button" onClick={doLogout} >Log out</button>
+                    <button className="btn btn-cream m-2" type="button" onClick={doLogout} >Log out</button>
                   </Link>
                 ) : null}
                 {!store.auth ? (
                   <Link to="/signup" >
-                    <button className="btn btn-primary m-2">Sign Up</button>
+                    <button className="btn btn-cream m-2">Sign Up</button>
                   </Link>
                 ) : null}{" "}
             </div>
@@ -62,8 +62,8 @@ export const NavbarMain = () => {
             </span>
             {/*--------------------------------------------------- CAMP DROPDOWN TAB --------------------------------------------------------------*/}
             <div className="dropdown">
-              <button className="dropbtn">
-                <Link to="/Camp" className="nav2Button">
+              <button className="nav2Button">
+                <Link to="/Camp" className="nav2Button" >
                   THE CAMP
                 </Link>
               </button>
@@ -92,7 +92,7 @@ export const NavbarMain = () => {
             </div>
             {/*----------------------------------------------- EXPERIENCE DROPDOWN TAB ---------------------------------------------------------*/}
             <div className="dropdown">
-              <button className="dropbtn">
+              <button className="nav2Button">
                 <Link to="/Experience" className="nav2Button">
                   EXPERIENCE
                 </Link>
@@ -122,7 +122,7 @@ export const NavbarMain = () => {
             </div>
             {/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
             <div className="dropdown">
-              <button className="dropbtn">
+              <button className="nav2Button">
                 <Link to="/AboutUs" className="nav2Button">
                   ABOUT US
                 </Link>
@@ -142,7 +142,7 @@ export const NavbarMain = () => {
             </div>
             {/*----------------------------------------------------TRAVEL PLANNING DROPDOWN TAB --------------------------------------------------*/}
             <div className="dropdown">
-              <button className="dropbtn">
+              <button className="nav2Button">
                 <Link to="/TravelPlan" className="nav2Button">
                   TRAVEL PLANNING
                 </Link>
@@ -186,7 +186,7 @@ export const NavbarMain = () => {
 {/* ---admin uth ---- */}
 
             <div className="dropdown">
-              <button className="dropbtn">
+              <button className="nav2Button">
                 <Link to="/Admin" className="nav2Button">
                   ADMIN
                 </Link>

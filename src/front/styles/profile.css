@@ -311,7 +311,7 @@
     vertical-align: middle;
     white-space: nowrap;
     border: 1px solid transparent;
-    border-radius: .375rem;
+    border-radius: 3px;
   }
   
   @media screen and (prefers-reduced-motion: reduce) {

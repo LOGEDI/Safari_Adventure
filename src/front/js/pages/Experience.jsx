@@ -1,33 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import experienceHero from "../../img/Experience-hero.jpg";
 
 const Experience = () => {
   return (
-    <div className="container">
-      {/* <img className='col-12 black-rock' src='https://www.enkewa.com/wp-content/uploads/2022/01/Black-Rock-Cabecera--scaled.jpg'/> */}
-
-      <div className="page-header">
-        <div className="head-image">
-          <img
-            className="col-12 m-0 black-rock"
-            src="https://www.enkewa.com/wp-content/uploads/2022/01/Black-Rock-Cabecera--scaled.jpg"
-            alt="Freedom Blog"
-          />
-        </div>
-        <div className="text-on-image">
+    <div>
+       <div
+        className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+        style={{
+          minHeight: "500px",
+          backgroundImage: `url(${experienceHero})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center ",
+        }}
+      ></div>
+<div className="text-on-image">
           <h2 className="page-title">EXPERIENCE</h2>
           <span className="page-subtitle">
-            we offer a variety of activities
+            We offer a variety of activities
           </span>
         </div>
-      </div>
+
+    <div className="container-page">
 
       <div className="row row-cols-2 g-3 mt-5">
         <div className="col-6">
           <div className="card m-3 border-light">
             <h2 className="description-title">FEEL THE ADVENTURE</h2>
             <div className="description-content">
-              <p>
+              <p className="description-content">
                 At Enkewa Camp we offer a variety of activities. Besides
                 tracking the big 5, enjoying masai mara birdlife and its unique
                 and diverse landscapes, we can also access the waterfalls. A
@@ -36,11 +37,11 @@ const Experience = () => {
                 village guided by one of our staff members as well as a visit to
                 the local market or the community projects we support.
               </p>
-              <p>
+              <p className="description-content">
                 Bush breakfast/lunches as well as sundowners are also part of
                 our itineraries.
               </p>
-              <p>
+              <p className="description-content">
                 Enkewa Camp is children friendly and different programs for
                 children can be arranged.
               </p>
@@ -49,8 +50,8 @@ const Experience = () => {
         </div>
 
         <div className="col-6 justify-content-center">
-          <div className="card m-3 border-light">
-            <div className="carouselContainer container-fluid home">
+          <div className="card m-3">
+            <div className="carouselContainer">
               <div
                 id="carouselExampleFade"
                 className=" carousel slide carousel-fade"
@@ -175,6 +176,7 @@ const Experience = () => {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

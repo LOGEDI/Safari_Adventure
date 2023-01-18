@@ -22,7 +22,7 @@ const UsersDetails = () => {
         <div className="main-content">
           <div className="container-fluid">
             <div className="row">
-              <div className="card bg-secondary shadow">
+              <div className="card bg-secondary shadow mb-2">
                 <div className="card-body">
                   <h6 className="package-detail-subtitle mb-4">
                     USER DETAILS
@@ -95,7 +95,7 @@ const UsersDetails = () => {
                       </div>
                     </div>
                   </div>
-                  <hr className="my-4" />
+                  {/* <hr className="my-4" /> */}
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ const UsersDetails = () => {
 {/* ------------------------------------Comments Section------------------------------------------ */}
 
             <div className="row">
-              <div className="card bg-secondary shadow">
+              <div className="card bg-secondary shadow mb-2">
                 <div className="card-body">
                   <h6 className="package-detail-subtitle mb-4">
                     COMMENTS

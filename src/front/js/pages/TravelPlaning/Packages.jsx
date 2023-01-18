@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
 
-import destinationsHero from "../../../img/experiences-hero.jpg";
+import destinationsHero from "../../../img/packages-hero.jpg";
 import activity from "../../../img/activity-icon.png";
 import destinationsicon from "../../../img/destination-icon.png";
 import tripdays from "../../../img/trip-days.png";
