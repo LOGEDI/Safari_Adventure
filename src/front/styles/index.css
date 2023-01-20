@@ -221,7 +221,10 @@
   position: relative;
   
 }
-
+.page-hero {
+  position: relative;
+  
+}
 .page-title {
   font-size: 50px;
   font-family: 'Alegreya Sans SC', sans-serif;

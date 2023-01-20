@@ -1031,12 +1031,35 @@
     }
   }
    
-  @media (max-width: 1000px) {
-    .test-container {
-      padding: 20px;
+  @media (min-width: 1200px)      
+       {
+    .page-hero {  
+      min-height: 500px;
     }
 
   }
+
+  @media (max-width: 1200px)      
+       {
+    .page-title {  
+      font-size:  25px;
+      position: relative;
+      top: 30px;
+      
+    }
+
+  }
+
+  @media (max-width: 1200px)      
+  {
+.page-subtitle {  
+ font-size:  15px;
+ position: relative;
+ top: 30px;
+ 
+}
+
+}
  
   
   .footer {
@@ -1060,6 +1083,8 @@
   .header {
     position: relative;
   }
+
+
 
   .mask {
     position: absolute;

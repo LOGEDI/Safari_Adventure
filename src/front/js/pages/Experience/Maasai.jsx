@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import maasaiHero from "../../../img/maasai-hero.jpg";
 
 const Maasai = () => {
   return (
     <div className="container">
-      {/* <img className='col-12 black-rock' src='https://www.enkewa.com/wp-content/uploads/2022/01/Black-Rock-Cabecera--scaled.jpg'/> */}
+      
 
       <div className="page-header">
         <div className="head-image">

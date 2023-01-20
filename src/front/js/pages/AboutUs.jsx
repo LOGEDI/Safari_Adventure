@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import experienceHero from "../../img/Experience-hero.jpg";
+import experienceHero from "../../img/maasai-hero2.jpg";
+import carousel1 from "../../img/carousel1-Experience-pic1.jpg";
+import carousel2 from "../../img/carousel1-Experience-pic2.jpg";
+import carousel3 from "../../img/carousel1-Experience-pic3.jpg";
 
 const AboutUs = () => {
   return (
@@ -9,59 +12,61 @@ const AboutUs = () => {
         <div>
           <div className="main-content">
             <div
-              className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+              className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
               style={{
-                minHeight: "500px",
+                // minHeight: "500px",
                 backgroundImage: `url(${experienceHero})`,
-
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "top",
               }}
             >
               <div className="container-fluid d-flex align-items-center">
                 <div className="text-on-image">
-                  <h2 className="page-title">EXPERIENCE</h2>
+                  <h2 className="page-title">MAASAI CULTURAL VISITS</h2>
                   <span className="page-subtitle">
-                    We offer a variety of activities
+                    Traditions, ceremonies and ancient knowledge
                   </span>
                 </div>
               </div>
             </div>
 
-            {/*---------------------------------------------------- Profile content--------------------------------------------------- */}
+            {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
             <div className="container-fluid mt-3">
               <div className="row">
                 <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
                   <div className="card card-profile ">
                     <div className="pageDescriptionContainer  pt-md-4 pb-0 pb-md-4">
-                      <h2 className="description-title">FEEL THE ADVENTURE</h2>
+                      <h2 className="description-title">
+                        APPROACH THE REALITY
+                      </h2>
                       <div className="description-content">
                         <p className="description-content">
-                          At Safari Adventure we offer a variety of activities.
-                          Besides tracking the big 5, enjoying masai mara
-                          birdlife and its unique and diverse landscapes, we can
-                          also access the waterfalls. A hot-air balloon can also
-                          be organized and for those interested in the local
-                          Masai culture we could visit a traditional Masai
-                          village guided by one of our staff members as well as
-                          a visit to the local market or the community projects
-                          we support.
+                          At Safari Adventure we are fascinated with the Maasai
+                          culture and we are concerned about the importance of
+                          having a full comprehension of its traditions and
+                          ceremonies, oral history, rituals and ancient
+                          knowledge. We have a deep respect for the Maasai tribe
+                          and admire how they have proudly kept their customs
+                          and how they coexist with the surrounding nature while
+                          keeping it intact.
                         </p>
                         <p className="description-content">
-                          Bush breakfast/lunches as well as sundowners are also
-                          part of our itineraries.
-                        </p>
-                        <p className="description-content">
-                          Safari Adventure is children friendly and different
-                          programs for children can be arranged.
-                        </p>
+                          During your stay at Safari Adventure you will get as
+                          close to the Maasai culture as you wish, presented by
+                          local people who will share their traditions.
+                        </p>                       
+                      </div>
+                      <div className="row justify-content-center mt-4 p-3">
+                      <button type="button" className="btn btn-cream text-center">
+                        BOOK WITH US
+                      </button>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/*---------------------------------------------------- EDIT PROFILE FORM--------------------------------------------------- */}
+                {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
 
                 <div className="col-xl-6 order-xl-1">
                   <div className="card ">
@@ -77,24 +82,21 @@ const AboutUs = () => {
                               <div className=" carouselContent2">
                                 <div className="carousel-item active">
                                   <img
-                                
-                                    src="https://www.enkewa.com/wp-content/uploads/2021/11/2-2.jpg"
+                                    src={carousel1}
                                     className="d-block w-100"
                                     alt="..."
                                   />
                                 </div>
                                 <div className="carousel-item">
                                   <img
-                                    
-                                    src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/39.jpg"
+                                    src={carousel2}
                                     className="d-block w-100"
                                     alt="..."
                                   />
                                 </div>
                                 <div className="carousel-item">
                                   <img
-                                    
-                                    src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/40.jpg"
+                                    src={carousel3}
                                     className="d-block w-100"
                                     alt="..."
                                   />
@@ -137,11 +139,11 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="experiencePagePicLinks container-fluid">
+          {/* <div className="experiencePagePicLinks container-fluid">
             <div className="row g-3 mt-5">
               <div className="col-xl-3 order-xl-1 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
-                  <br/>
+                  <br />
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     MAASAI CULTURAL VISITS
                   </h4>
@@ -160,7 +162,7 @@ const AboutUs = () => {
 
               <div className="col-xl-3 order-xl-2 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
-                  <br/>
+                  <br />
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     SUNDOWNERS
                   </h4>
@@ -197,7 +199,7 @@ const AboutUs = () => {
 
               <div className="col-xl-3 order-xl-4 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
-                  <br/>
+                  <br />
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     BALLOON
                   </h4>
@@ -214,7 +216,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <footer className="footer">
             <div className="row align-items-center justify-content-xl-between">
