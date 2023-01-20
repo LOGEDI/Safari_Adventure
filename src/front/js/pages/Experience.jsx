@@ -37,7 +37,7 @@ const Experience = () => {
               <div className="row">
                 <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
                   <div className="card card-profile ">
-                    <div className="pageDescriptionContainer  pt-md-4 pb-0 pb-md-4">
+                    <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">
                       <h2 className="description-title">FEEL THE ADVENTURE</h2>
                       <div className="description-content">
                         <p className="description-content">
@@ -70,7 +70,7 @@ const Experience = () => {
                   <div className="card ">
                     <div className="">
                       <div className=" border-0   pb-0 ">
-                        <div className="carouselContainer">
+                        <div className="carouselContainerLeft">
                           <div
                             id="carouselExampleFade"
                             className=" carousel slide carousel-fade"

@@ -1,168 +1,149 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import balloonHero from "../../../img/balloon-hero.jpg";
+import carousel1 from "../../../img/carousel1-balloon-pic1.jpg";
+import carousel2 from "../../../img/carousel1-balloon-pic2.jpg";
+import carousel3 from "../../../img/carousel1-balloon-pic3.jpg";
 
 const BalloonSafari = () => {
   return (
-    <div className="container">
-      {/* <img className='col-12 black-rock' src='https://www.enkewa.com/wp-content/uploads/2022/01/Black-Rock-Cabecera--scaled.jpg'/> */}
+    <div className="pagesBackground">
+      <div>
+        <div>
+          <div className="main-content">
+            <div
+              className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+              style={{
+                backgroundImage: `url(${balloonHero})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="container-fluid d-flex align-items-center">
+                <div className="text-on-image">
+                  <h2 className="page-title">BALLOON SAFARI</h2>
+                  <span className="page-subtitle">
+                    A once-in-a-lifetime magical experience
+                  </span>
+                </div>
+              </div>
+            </div>
 
-      <div className="page-header">
-        <div className="head-image">
-          <img
-            className="col-12 m-0 black-rock"
-            src="https://www.enkewa.com/wp-content/uploads/2021/11/balloon-1.jpg"
-            alt="Freedom Blog"
-          />
-        </div>
-        <div className="text-on-image">
-          <h2 className="page-title">BALLOON SAFARI</h2>
-          <span className="page-subtitle">
-            A once-in-a-lifetime magical experience
-          </span>
-        </div>
-      </div>
+            {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
-      <div className="row row-cols-2 g-3 mt-5">
-        <div className="col-6 justify-content-center">
-          <div className="card m-3 border-light">
-            <div className="carouselContainer container-fluid home">
-              <div
-                id="carouselExampleFade"
-                className=" carousel slide carousel-fade"
-                data-bs-ride="carousel"
-              >
-                <div className=" carousel-inner">
-                  <div className="container-fluid carouselContent2">
-                    <div className="carousel-item active">
-                      <img
-                        width="525px"
-                        height="350px"
-                        src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_6931-scaled.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        width="525px"
-                        height="350px"
-                        src="https://www.enkewa.com/wp-content/uploads/2021/11/ballon-safari.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        width="525px"
-                        height="350px"
-                        src="https://www.enkewa.com/wp-content/uploads/2021/11/masai-4.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
+            <div className="container-fluid mt-3">
+              <div className="row">
+                <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
+                  <div className="card card-profile ">
+                    <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">
+                      <h2 className="description-title">FLOAT OVER THE MARA</h2>
+                      <div className="description-content">
+                        <p className="description-content">
+                          A once-in-a-lifetime magical experience that will be
+                          permanently etched in your travel memories. Give
+                          yourself a treat and feel the immensity of the Mara at
+                          its best while smoothly flying above the Savannah and
+                          its wildlife.
+                        </p>
+                        <p className="description-content">
+                          Float in the sky, drifting with the breeze of the
+                          wind, overlooking the plains, just in time to
+                          experience a breathtaking sunrise and see the reserve
+                          from a bird’s eye view.
+                        </p>
+                      </div>
+                      <div className="row justify-content-center mt-4 p-3">
+                        <button
+                          type="button"
+                          className="btn btn-cream text-center"
+                        >
+                          BOOK WITH US
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
+                </div>
+
+                {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
+
+                <div className="col-xl-6 order-xl-1">
+                  <div className="card ">
+                    <div className="">
+                      <div className=" border-0   pb-0 ">
+                        <div className="carouselContainerLeft">
+                          <div
+                            id="carouselExampleFade"
+                            className=" carousel slide carousel-fade"
+                            data-bs-ride="carousel"
+                          >
+                            <div className=" carousel-inner">
+                              <div className=" carouselContent2">
+                                <div className="carousel-item active">
+                                  <img
+                                    src={carousel1}
+                                    className="d-block w-100"
+                                    alt="..."
+                                  />
+                                </div>
+                                <div className="carousel-item">
+                                  <img
+                                    src={carousel2}
+                                    className="d-block w-100"
+                                    alt="..."
+                                  />
+                                </div>
+                                <div className="carousel-item">
+                                  <img
+                                    src={carousel3}
+                                    className="d-block w-100"
+                                    alt="..."
+                                  />
+                                </div>
+                              </div>
+                              <button
+                                className="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev"
+                              >
+                                <span
+                                  className="carousel-control-prev-icon"
+                                  aria-hidden="true"
+                                ></span>
+                                <span className="visually-hidden">
+                                  Previous
+                                </span>
+                              </button>
+                              <button
+                                className="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next"
+                              >
+                                <span
+                                  className="carousel-control-next-icon"
+                                  aria-hidden="true"
+                                ></span>
+                                <span className="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="col-6">
-          <div className="card m-3 border-light">
-            <h2 className="description-title">FLOAT OVER THE MARA</h2>
-            <div className="description-content">
-              <p>
-                A once-in-a-lifetime magical experience that will be permanently
-                etched in your travel memories. Give yourself a treat and feel
-                the immensity of the Mara at its best while smoothly flying
-                above the Savannah and its wildlife.
-              </p>
-              <p>
-                Float in the sky, drifting with the breeze of the wind,
-                overlooking the plains, just in time to experience a
-                breathtaking sunrise and see the reserve from a bird’s eye view
-              </p>
+          <footer className="footer">
+            <div className="row align-items-center justify-content-xl-between">
+              <div className="col-xl-6 m-auto text-center"></div>
             </div>
-
-            <button type="button" class="btn btn-warning btn-lg">
-              BOOK WITH US
-            </button>
-          </div>
+          </footer>
         </div>
       </div>
-
-      {/* <div className='row row-cols-4 g-3 mt-5'>
-        <div >
-          <Link to="/Maasai">
-            <h4 className='text-center'><br/>MAASAI CULTURAL VISITS</h4>
-            <img className='col-12'
-              src="https://www.enkewa.com/wp-content/uploads/2022/01/An%CC%83adir-en-Cultura-Masai.jpg"
-              alt="example"
-            />
-            <p className='text-center'>Approach the reality</p>
-          </Link>
-        </div>
-
-        <div >
-          <Link to="/Sundowners">
-            <h4 className='text-center'><br/>SUNDOWNERS</h4>
-            <img className='col-12'
-              src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_8654-web-scaled.jpg"
-              alt="example"
-            />
-            <p className='text-center'>Enjoy the Sun</p>
-          </Link>
-        </div>
-
-        <div >
-          <Link to="/PhotoSafari">
-            <h4 className='text-center'>PROFESSIONAL SAFARI PHOTOGRAPHIC</h4>
-            <img className='col-12'
-              src="https://www.enkewa.com/wp-content/uploads/2021/11/safari-23424.jpg"
-              alt="example"
-            />
-            <p className='text-center'>Capture the moment</p>
-          </Link>
-        </div>
-
-
-        <div >
-          <Link to="/BalloonSafari">
-            <h4 className='text-center'><br/>BALLOON</h4>
-            <img className='col-12'
-              src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_6931-scaled.jpg"
-              alt="example"
-            />
-            <p className='text-center'>Get the best view</p>
-          </Link>
-        </div>
-
-
-    </div> */}
     </div>
   );
 };

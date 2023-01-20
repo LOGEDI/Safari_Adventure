@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import experienceHero from "../../img/maasai-hero2.jpg";
-import carousel1 from "../../img/carousel1-Experience-pic1.jpg";
-import carousel2 from "../../img/carousel1-Experience-pic2.jpg";
-import carousel3 from "../../img/carousel1-Experience-pic3.jpg";
+import balloonHero from "../../img/balloon-hero.jpg";
+import carousel1 from "../../img/carousel1-balloon-pic1.jpg";
+import carousel2 from "../../img/carousel1-balloon-pic2.jpg";
+import carousel3 from "../../img/carousel1-balloon-pic3.jpg";
 
 const AboutUs = () => {
   return (
@@ -14,18 +14,17 @@ const AboutUs = () => {
             <div
               className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
               style={{
-                // minHeight: "500px",
-                backgroundImage: `url(${experienceHero})`,
+                backgroundImage: `url(${balloonHero})`,
                 backgroundSize: "cover",
-                backgroundPosition: "top",
+                backgroundPosition: "center",
               }}
             >
               <div className="container-fluid d-flex align-items-center">
                 <div className="text-on-image">
-                  <h2 className="page-title">MAASAI CULTURAL VISITS</h2>
-                  <span className="page-subtitle">
-                    Traditions, ceremonies and ancient knowledge
-                  </span>
+                  <h2 className="page-title">
+                  BALLOON SAFARI
+                  </h2>
+                  <span className="page-subtitle">A once-in-a-lifetime magical experience</span>
                 </div>
               </div>
             </div>
@@ -36,31 +35,29 @@ const AboutUs = () => {
               <div className="row">
                 <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
                   <div className="card card-profile ">
-                    <div className="pageDescriptionContainer  pt-md-4 pb-0 pb-md-4">
-                      <h2 className="description-title">
-                        APPROACH THE REALITY
-                      </h2>
+                    <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">
+                      <h2 className="description-title">FLOAT OVER THE MARA</h2>
                       <div className="description-content">
                         <p className="description-content">
-                          At Safari Adventure we are fascinated with the Maasai
-                          culture and we are concerned about the importance of
-                          having a full comprehension of its traditions and
-                          ceremonies, oral history, rituals and ancient
-                          knowledge. We have a deep respect for the Maasai tribe
-                          and admire how they have proudly kept their customs
-                          and how they coexist with the surrounding nature while
-                          keeping it intact.
+                        A once-in-a-lifetime magical experience that will be permanently
+                etched in your travel memories. Give yourself a treat and feel
+                the immensity of the Mara at its best while smoothly flying
+                above the Savannah and its wildlife.
                         </p>
                         <p className="description-content">
-                          During your stay at Safari Adventure you will get as
-                          close to the Maasai culture as you wish, presented by
-                          local people who will share their traditions.
-                        </p>                       
+                        Float in the sky, drifting with the breeze of the wind,
+                overlooking the plains, just in time to experience a
+                breathtaking sunrise and see the reserve from a bird’s eye view.
+                        </p>
+                        
                       </div>
                       <div className="row justify-content-center mt-4 p-3">
-                      <button type="button" className="btn btn-cream text-center">
-                        BOOK WITH US
-                      </button>
+                        <button
+                          type="button"
+                          className="btn btn-cream text-center"
+                        >
+                          BOOK WITH US
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -72,7 +69,7 @@ const AboutUs = () => {
                   <div className="card ">
                     <div className="">
                       <div className=" border-0   pb-0 ">
-                        <div className="carouselContainer">
+                        <div className="carouselContainerLeft">
                           <div
                             id="carouselExampleFade"
                             className=" carousel slide carousel-fade"
@@ -100,7 +97,7 @@ const AboutUs = () => {
                                     className="d-block w-100"
                                     alt="..."
                                   />
-                                </div>
+                                </div>                              
                               </div>
                               <button
                                 className="carousel-control-prev"

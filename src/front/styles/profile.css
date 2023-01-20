@@ -995,7 +995,7 @@
 
 
   @media (min-width: 1456px) {
-    .carouselContainer {
+    .carouselContainerLeft {
       max-width: 665px;
       justify-content: end;
       margin-left: auto;
@@ -1005,7 +1005,26 @@
   }
 
   @media (min-width: 1456px) {
-    .pageDescriptionContainer {
+    .carouselContainerRigth {
+      max-width: 665px;
+      justify-content: end;
+      margin-right: auto;
+      
+    }
+
+  }
+
+  @media (min-width: 1456px) {
+    .pageDescriptionContainerLeft {
+      max-width: 665px;
+      justify-content: center;
+      margin-left: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .pageDescriptionContainerRigth {
       max-width: 665px;
       justify-content: center;
       margin-right: auto;
