@@ -21,12 +21,12 @@ const Experience = () => {
           </span>
         </div>
 
-    <div className="container-page">
+    <div className="container">
 
       <div className="row row-cols-2 g-3 mt-5">
         <div className="col-6">
           <div className="card m-3 border-light">
-            <h2 className="description-title">FEEL THE ADVENTURE</h2>
+          <h2 className="description-title">FEEL THE ADVENTURE</h2>
             <div className="description-content">
               <p className="description-content">
                 At Enkewa Camp we offer a variety of activities. Besides

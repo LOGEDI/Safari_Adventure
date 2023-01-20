@@ -122,8 +122,8 @@ const Destinations = () => {
             </div>
 
             <div className='row row-cols-4 g-3 mt-4'>
-            
-            <Link to="/Ethiopia">
+            <div className='destination__card'>
+            <Link to="/Ethiopia" >
               <div  className="destinationthumb card border-2" >
               <img className="destimg card-img-top" src={addis} alt="Addis Ababa"></img>
                 <div className="destinations-card-body">
@@ -134,6 +134,7 @@ const Destinations = () => {
                 </div>
               </div>
             </Link>
+            </div>
 
             <Link to="/Kenya">
               <div  className="destinationthumb card border-2" >

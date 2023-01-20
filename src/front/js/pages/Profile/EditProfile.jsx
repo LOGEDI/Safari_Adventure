@@ -74,17 +74,11 @@ const EditProfile = () => {
 
   return (
     <div>
-      {/* <h1 className="text-center">Profile</h1>
-      <h1 className="text-center">Name: {profile.username}</h1>
-      <h1 className="text-center">Last Name: {profile.email}</h1>
-      <h1 className="text-center">Country: {profile.country}</h1> */}
+      
       {auth ? (
         <div>
           <div>
-            <link
-              href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-              rel="stylesheet"
-            />
+           
             <div className="main-content">
               <div
                 className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"

@@ -127,6 +127,11 @@
     max-width: 33.33333%;
     flex: 0 0 33.33333%;
   }
+
+  .col-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
   
   .col-8 {
     max-width: 66.66667%;
@@ -551,9 +556,9 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    border: 1px solid rgba(0, 0, 0, .05);
+    border: none;
     border-radius: .375rem;
-    background-color: #fff;
+    background-color: rgb(255, 254, 243);
     background-clip: border-box;
   }
   
@@ -912,7 +917,7 @@
   }
   
   .btn:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
   }
   
@@ -986,12 +991,57 @@
       padding-left: 39px !important;
     }
   }
-  
+
+
+
+  @media (min-width: 1456px) {
+    .carouselContainer {
+      max-width: 665px;
+      justify-content: end;
+      margin-left: auto;
+      
+    }
+
+  }
+
+  @media (min-width: 1456px) {
+    .pageDescriptionContainer {
+      max-width: 665px;
+      justify-content: center;
+      margin-right: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .experiencePagePicLinks {
+      max-width: 1550px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .experiencePagePicLinksIndividual {
+      max-width: 400px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+   
+  @media (max-width: 1000px) {
+    .test-container {
+      padding: 20px;
+    }
+
+  }
  
   
   .footer {
     padding: 2.5rem 0;
-    background: #f7fafc;
+    background:  rgb(255, 254, 243);
   }
   
   

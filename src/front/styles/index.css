@@ -9,12 +9,12 @@
 
 .carouselContainer {
   width: 100%;
-  min-width: 525px;
+  
 }
 
 .carouselContent {
   width: 100%;
-  min-width: 525px;
+  
 }
 
 .carouselContent2 {
@@ -28,7 +28,7 @@
 .fondoCuerpo {
   background: linear-gradient(to right, #000000, #313131);
   margin: 0;
-  min-height: 60vh;
+  
 }
 .spinner {
   min-height: max-content;
@@ -239,12 +239,14 @@
   
   position: absolute;
   left: 05%;
-  bottom: 75%;
+  bottom: 65%;
 }
 
 
 /*---------------------------------------------------PAGE DESCRIPTION SETTINGS---------------------------------------------------------------------------*/
-
+.pagesBackground {
+  background-color:  rgb(255, 254, 243);
+}
 .description-title{
 font-family: 'Alegreya Sans SC', sans-serif;
 font-weight:bolder;
@@ -259,6 +261,31 @@ color: #d2ae6d;
   color: #2f503e;
   line-height: 28px;
 }
+
+.experiencePagePicLinks { 
+  justify-content: center;
+}
+
+
+
+.experiencePagePicLinksTextTitle {
+  color: #d2ae6d;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight:bolder;
+  font-size: 25px;
+  position: relative;
+  
+}
+
+.experiencePagePicLinksTextSubtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: #2f503e;
+  line-height: 28px;
+  font-style: italic;
+}
+
 
 /*-----------------------------------------------LOGIN AND SIGNUP PAGES SETTINGS--------------------------------------------------------------------------*/
 
@@ -430,6 +457,20 @@ figure.snip0016:hover figcaption::before {
 }
 
 /*---------------------------DESTINATIONS--------------------------------------*/
+
+.destination__card {
+ 
+  transition: all .15s ease;
+  
+  /* transform: translateY(-10px); */
+}
+
+.destination__card:hover {
+  
+  transform: translateY(-10px);
+
+}
+
 .destimg{
   height: 200px;
   border-top-left-radius: 3px;

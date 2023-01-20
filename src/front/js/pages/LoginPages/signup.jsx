@@ -71,11 +71,11 @@ const SignUp = () => {
                       <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
                         <h2
                           className="fw-bold mb-2 text-uppercase"
-                          style={{ color: "#bdb284" }}
+                          style={{ color: "#d2ae6d" }}
                         >
                           Register
                         </h2>
-                        <p className="mt-3 mb-3" style={{ color: "#bdb284" }}>
+                        <p className="mt-3 mb-3" style={{ color: "#d2ae6d" }}>
                           Already registered?{" "}
                           <Link to="/login" className="text-black-50 fw-bold">
                             Login
@@ -133,8 +133,8 @@ const SignUp = () => {
 
                         <button
                           type="submit "
-                          className="btn btn-outline-light btn-lg mx-2 px-5"
-                          style={{ color: "#bdb284" }}
+                          className="btn btn-cream btn-lg mx-2 px-5"
+                          
                           color="white"
                         >
                           Signup

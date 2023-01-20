@@ -63,7 +63,7 @@ const Login = () => {
                       <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
                         <h2
                           className="fw-bold mb-2 text-uppercase"
-                          style={{ color: "#bdb284" }}
+                          style={{ color: "#d2ae6d" }}
                         >
                           Login
                         </h2>
@@ -106,15 +106,15 @@ const Login = () => {
                         <button
                           type="submit"
                           // disabled={isSubmitting}
-                          className="btn btn-outline-light btn-lg mx-2 px-5"
-                          style={{ color: "#bdb284" }}
+                          className="btn btn-cream btn-lg mx-2 px-5"
+                          
                           color="white"
                         >
                           Login
                         </button>
                         <div className="d-flex flex-row mt-3 mb-5"></div>
                         <div>
-                          <p className="mb-0" style={{ color: "#bdb284" }}>
+                          <p className="mb-0" style={{ color: "#d2ae6d" }}>
                             Don't have an account?{" "}
                             <Link
                               to="/signup"
