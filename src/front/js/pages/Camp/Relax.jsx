@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import RelaxMain from "../../../img/RelaxMain.jpeg";
+import RelaxMain from "../../../img/RelaxMain.jpg";
 import Relax1 from "../../../img/Relax1.jpeg";
 import Relax2 from "../../../img/Relax2.jpeg";
 import Relax3 from "../../../img/Relax3.jpeg";
