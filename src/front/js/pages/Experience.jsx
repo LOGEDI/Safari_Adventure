@@ -4,6 +4,10 @@ import experienceHero from "../../img/Experience-hero.jpg";
 import carousel1 from "../../img/carousel1-Experience-pic1.jpg";
 import carousel2 from "../../img/carousel1-Experience-pic2.jpg";
 import carousel3 from "../../img/carousel1-Experience-pic3.jpg";
+import experienceLink1 from "../../img/experiencePicLinks1.jpg";
+import experienceLink2 from "../../img/experiencePicLinks2.jpg";
+import experienceLink3 from "../../img/experiencePicLinks3.jpg";
+import experienceLink4 from "../../img/experiencePicLinks4.jpg";
 
 const Experience = () => {
   return (
@@ -144,7 +148,7 @@ const Experience = () => {
 
           <div className="experiencePagePicLinks container-fluid">
             <div className="row g-3 mt-5">
-              <div className="col-xl-3 order-xl-1 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-1 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
                   <br/>
                   <h4 className="experiencePagePicLinksTextTitle text-center">
@@ -152,8 +156,8 @@ const Experience = () => {
                   </h4>
                   <Link to="/Maasai">
                     <img
-                      className="col-12"
-                      src="https://www.enkewa.com/wp-content/uploads/2022/01/An%CC%83adir-en-Cultura-Masai.jpg"
+                      className="col-12  transition hover-card"
+                      src={experienceLink1}
                       alt="example"
                     />
                   </Link>
@@ -163,7 +167,7 @@ const Experience = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
                   <br/>
                   <h4 className="experiencePagePicLinksTextTitle text-center">
@@ -171,8 +175,8 @@ const Experience = () => {
                   </h4>
                   <Link to="/Sundowners">
                     <img
-                      className="col-12"
-                      src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_8654-web-scaled.jpg"
+                      className="col-12 transition hover-card"
+                      src={experienceLink2}
                       alt="example"
                     />
                   </Link>
@@ -182,15 +186,15 @@ const Experience = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 order-xl-3 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-3 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     PROFESSIONAL SAFARI PHOTOGRAPHIC
                   </h4>
                   <Link to="/PhotoSafari">
                     <img
-                      className="col-12"
-                      src="https://www.enkewa.com/wp-content/uploads/2021/11/safari-23424.jpg"
+                      className="col-12 transition hover-card"
+                      src={experienceLink3}
                       alt="example"
                     />
                   </Link>
@@ -200,7 +204,7 @@ const Experience = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 order-xl-4 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-4 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
                   <br/>
                   <h4 className="experiencePagePicLinksTextTitle text-center">
@@ -208,8 +212,8 @@ const Experience = () => {
                   </h4>
                   <Link to="/BalloonSafari">
                     <img
-                      className="col-12"
-                      src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_6931-scaled.jpg"
+                      className="col-12 transition hover-card"
+                      src={experienceLink4}
                       alt="example"
                     />
                   </Link>

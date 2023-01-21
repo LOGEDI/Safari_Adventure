@@ -307,6 +307,7 @@
     line-height: 1.5;
     display: inline-block;
     padding: .625rem 1.25rem;
+    -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -562,6 +563,18 @@
     background-clip: border-box;
   }
   
+  .cardDestinations {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: none;
+    border-radius: .375rem;
+    background-color: transparent;
+    background-clip: border-box;
+  }
+
   .card>hr {
     margin-right: 0;
     margin-left: 0;
@@ -1033,6 +1046,15 @@
   }
 
   @media (min-width: 1456px) {
+    .pageDescriptionContainerCenter {
+      max-width: 1400px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
     .experiencePagePicLinks {
       max-width: 1550px;
       justify-content: center;
@@ -1043,13 +1065,60 @@
 
   @media (min-width: 1456px) {
     .experiencePagePicLinksIndividual {
-      max-width: 400px;
+      max-width: 500px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .destinationButons {
+      max-width: 665px;
+      justify-content: center;
+      margin-right: auto;
+      
+    }
+  }
+
+  @media (max-width: 1455px) {
+    .destinationButons {
+      /* max-width: 665px; */
+      justify-content: center;
+      margin-right: auto;
+      
+    }
+  }
+
+ 
+
+  @media (min-width: 1456px) {
+    .destinationsCards {
+      max-width:1550px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .destinationsCardsIndividual {
+      max-width: 500px;
       justify-content: center;
       margin: auto;
       
     }
   }
    
+  @media (min-width: 1456px) {
+    .destinationsTitlePos {
+      max-width: 300px;
+      
+      margin: auto;
+      
+    }
+  }
+
   @media (min-width: 1200px)      
        {
     .page-hero {  
@@ -1086,7 +1155,10 @@
     background:  rgb(255, 254, 243);
   }
   
-  
+  .footerDestinations {
+    padding: 2.5rem 0;
+    background:  transparent;
+  }
   .form-control-label {
     font-size: .875rem;
     font-weight: 600;

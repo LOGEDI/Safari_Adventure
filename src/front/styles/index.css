@@ -101,6 +101,74 @@
   box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
 }
 
+.btn-creamD {
+  color: #fff;
+  min-width: 100px;
+  border-color: #d2ae6d;
+  background-color: #d2ae6d;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn-creamD:hover {
+  color: #fff;
+  border-color: #d2ae6d;
+  background-color: #d1a147;
+}
+
+.btn-creamD:focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
+}
+
+.btn-creamD:disabled {
+  color: #fff;
+  border-color: #5e72e4;
+  background-color: #5e72e4;
+}
+
+.btn-creamD:not(:disabled):not(.disabled):active {
+  color: #fff;
+  border-color: #5e72e4;
+  background-color: #324cdd;
+}
+
+.btn-creamD:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
+}
+
+.btn-greenD {
+  color: #fff;
+  min-width: 100px;
+  border-color: #29362f;
+  background-color: #29362f;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn-greenD:hover {
+  color: #fff;
+  border-color: rgb(41, 54, 47);
+  background-color: rgb(78, 110, 93);
+}
+
+.btn-greenD:focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
+}
+
+.btn-greenD:disabled {
+  color: #fff;
+  border-color: #5e72e4;
+  background-color: #5e72e4;
+}
+
+.btn-greenD:not(:disabled):not(.disabled):active {
+  color: #fff;
+  border-color: #5e72e4;
+  background-color: #324cdd;
+}
+
+.btn-greenD:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
+}
+
 .container-page{
   max-width: 80%;  
   margin: auto;
@@ -256,6 +324,13 @@ font-weight:bolder;
 font-size: 48px;
 color: #d2ae6d;
 }
+
+.description-titleD{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight:bolder;
+  font-size: 40px;
+  color: #2f503e;
+  }
 
 .description-content {
   font-family: 'Lato', sans-serif;
@@ -461,21 +536,46 @@ figure.snip0016:hover figcaption::before {
 
 /*---------------------------DESTINATIONS--------------------------------------*/
 
-.destination__card {
+/* .destination__card { */
+ /* max-width: 324px; */
  
-  transition: all .15s ease;
+  /* transition: all .15s ease; */
   
   /* transform: translateY(-10px); */
-}
+/* } */
 
-.destination__card:hover {
+/* .destination__card:hover {
   
   transform: translateY(-10px);
 
+} */
+
+.destination__card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.transition{
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hover-card:hover{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
 .destimg{
-  height: 200px;
+  
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   box-shadow: 0 0 2px 0 rgba(41, 54, 47, .08);
@@ -501,6 +601,21 @@ figure.snip0016:hover figcaption::before {
   line-height: 20px;
 }
 
+.destinations-titleD{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 45px;
+  line-height: 36px;
+  color: #d2ae6d;
+}
+
+.destinations-subtitleD{
+  font-family: 'Lato', sans-serif;
+  color: #29362f;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 20px;
+}
 .destinations-main-title{
   color: #2f503e;
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -522,9 +637,10 @@ figure.snip0016:hover figcaption::before {
 }
 
 .destinations-card-title{
+  
   font-family: 'Lato', sans-serif;
   color: #29362f;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px;
   font-weight: 700;
   margin-top: 15px;
@@ -534,7 +650,7 @@ figure.snip0016:hover figcaption::before {
 .destinations-card-text{
   font-family: 'Lato', sans-serif;
   color: #848688;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 16px;
   margin-right: 0;
