@@ -4,6 +4,7 @@ import experienceHero from "../../img/maasai-hero2.jpg";
 import carousel1 from "../../img/carousel1-Experience-pic1.jpg";
 import carousel2 from "../../img/carousel1-Experience-pic2.jpg";
 import carousel3 from "../../img/carousel1-Experience-pic3.jpg";
+import Denis from "../../img/SafariMain.jpeg";
 
 const AboutUs = () => {
   return (
