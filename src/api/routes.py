@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint, json, current_app
-from api.models import db, User, Packages, Favorites
+from api.models import db, User, Packages, Favorites, Comment
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
 from flask_mail import Mail, Message
@@ -634,3 +634,92 @@ def delete_favorites():
 
         elif package is None:
             return jsonify(({"msg":'Package not found'}), 404)   
+
+#----------------------------------------------------------------------------------
+#                       GET USER COMMENTS
+#----------------------------------------------------------------------------------            
+
+@api.route('/user/<int:id_user>/comments', methods=['GET'])
+def get_comments_by_user(id_user):
+   
+    comments = Comment.query.filter_by(id_user=id_user).all()
+    print(comments)
+    results = list(map(lambda x: x.serialize(), comments))
+
+    if (results == []):
+      return  jsonify({"msg": "User doesn't have any comments yet"}), 404
+
+    print(results)
+    return jsonify({"results": results}), 200
+
+#---------------------------------------------------------------------------------------------------
+#                       GET ALL COMMENTS
+#--------------------------------------------------------------------------------------------------- 
+
+@api.route('/comments', methods=['GET'])
+def get_comments():
+    
+    comments = Comment.query.all()
+    print(comments)
+    results = list(map(lambda x: x.serialize(), comments))
+    print(results)
+    return jsonify(results), 200
+
+#---------------------------------------------------------------------------------------------------
+#                       GET COMMENTS BY PACKAGE
+#--------------------------------------------------------------------------------------------------- 
+
+@api.route('/package/<int:package_id>/comments', methods=['GET'])
+def get_comments_by_package(package_id):
+  
+    comments = Comment.query.filter_by(id_packages=package_id).all()
+    print(comments)
+    results = list(map(lambda x: x.serialize(), comments))
+    print(results)
+    return jsonify(results), 200
+
+#---------------------------------------------------------------------------------------------------
+#                       POST COMMENT
+#---------------------------------------------------------------------------------------------------
+
+@api.route('/comment', methods=['POST'])
+def create_comment():
+    # Load data from postman or input
+    body = json.loads(request.data)
+    print(body)
+    user_query = User.query.filter_by(id=body["id_user"]).first()
+    print(user_query)
+    if user_query: 
+        new_comment = Comment(
+        comment=body["comment"],
+        id_user=body["id_user"],
+        id_packages=body["id_packages"])
+        # Flask command to add a new entry
+        db.session.add(new_comment)
+        # Flask command to commit the database, saving the changes
+        db.session.commit()
+        # Standard response to request with error code 200 (success)
+        return jsonify({"msg": "New comment created for this package"}), 200
+    if user_query is None:
+        return jsonify({"msg": "User doesn't exist"}), 404
+    
+    return jsonify({"msg": "Something went wrong"}), 400
+
+#---------------------------------------------------------------------------------------------------
+#                       DELETE COMMENT
+#---------------------------------------------------------------------------------------------------
+
+@api.route('/comments/<int:id_user>/<int:id_comment>', methods=['DELETE'])
+def delete_comment(id_user, id_comment):
+    # Filters by user id and comment id
+    comment_query= Comment.query.filter_by(id_user=id_user).filter_by(id=id_comment).first()
+    print(comment_query)
+    if comment_query:
+        db.session.delete(comment_query)
+        db.session.commit()
+        return jsonify({"msg": "Comment deleted successfully"}), 200
+            
+    elif comment_query is None:
+        return jsonify({"msg": "Comment not found"}), 404
+
+    return jsonify({"msg": "Something went wrong"}), 400

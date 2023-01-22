@@ -14,6 +14,7 @@ class User(db.Model):
     premium = db.Column(db.Boolean, unique=False, default=False)
     admin = db.Column(db.Boolean, unique=False, default=False)
     favorites = db.relationship('Favorites', backref='user', cascade="all, delete-orphan", lazy=True)
+    comments = db.relationship('Comment', backref='user', cascade="all, delete-orphan", lazy=True)
 
     def __repr__(self):
         return f'<User {self.email}>'
@@ -108,6 +109,7 @@ class Packages(db.Model):
     url14 = db.Column(db.String(250), nullable=True)
     url15 = db.Column(db.String(250), nullable=True)
     favorite = db.relationship('Favorites', backref='packages', cascade="all, delete-orphan", lazy=True)
+    comments = db.relationship('Comment', backref='packages', cascade="all, delete-orphan", lazy=True)
 
     def __repr__(self):
         return f'<Packages {self.id}>'
@@ -208,3 +210,30 @@ class Favorites(db.Model):
     def serialize2(self):
         package = Packages.query.filter_by(id=self.id_packages).first()
         return package.serialize()
+
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    comment = db.Column(db.String(999),nullable=False)
+    id_user = db.Column(db.Integer,  db.ForeignKey('user.id'), nullable=False )
+    id_packages = db.Column(db.Integer, db.ForeignKey('packages.id') , nullable=True)
+
+    def __repr__(self):
+        return f'<Comment {self.id}>'
+
+    def serialize(self):
+        return {
+            # "id": self.id,
+            "id_user": self.id_user,
+            "id_packages": self.id_packages,
+            "comment": self.comment
+
+        }
+
+    def serialize2(self):
+        package = Packages.query.filter_by(id=self.id_packages).first()
+        return package.serialize()
+
+    def __init__(self,id_user,id_packages,comment):
+        self.id_user = id_user
+        self.id_packages = id_packages
+        self.comment = comment

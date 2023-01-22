@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { Context } from "../../store/appContext";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Comments from '../../component/Comments.jsx';
 import activity from "../../../img/activity-icon.png";
 import destinationsicon from "../../../img/destination-icon.png";
 import tripdays from "../../../img/trip-days.png";
@@ -17,6 +18,7 @@ const PackagesDetails = () => {
 
   useEffect(() => {
     actions.getPackageDetail(params.id);
+    actions.getProductComments(params.id);
     window.scrollTo(0, 0);
     actions.comparingFavorites();
   }, [params.id, store.userId]);
@@ -437,6 +439,74 @@ const PackagesDetails = () => {
             </div>
           </div>
         </div>
+
+        {store.auth ? <Comments /> : null}
+		
+
+		<div className="row ">        
+          <div className="col-sm-12 col-md-7 ">
+            <div>
+              <h3
+                className="text-center mt-3"
+                style={{ fontFamily: "Roboto, sans-serif" }}
+              >
+                COMMENTS:
+              </h3>
+              <div className="scrolleable col-10 m-auto">
+                <ul className="list-group">
+                  {" "}
+                  {store.comments.length > 0 ? (
+                    store.comments.map((item, index) => (
+                      <div key={index}>
+                        <li  className="my-3" >
+                          <img
+                            style={{ width: "2rem", height: "2rem" }}
+                            src="https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
+                            alt=""
+                            className="m-2"
+                          />
+                          {item.comment}                         
+                        </li>
+                        <hr style={{ borderTop: "2px #bdb284" }} />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="mt-5">
+                      <hr style={{ borderTop: "2px #bdb284" }} />
+                      <p className="text-muted text-center ">
+                        No comments for this package
+                      </p>
+                      <hr style={{ borderTop: "2px #bdb284" }} />
+                    </div>
+                  )}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-5 ">
+            <h3
+              className="t my-4"
+              style={{ textAlign: "center",}}
+            >
+              Related packagess:
+            </h3>
+            <img
+                  src={store.packageDetail.url}
+                  className="img-fluid rounded-start img-fluid"
+                  alt="..."
+                  style={{
+                    border: "1px solid #ddd",
+                    bordeRadius: "4px",
+                    padding: "20px",
+                    margin: "10px",
+                    width: "100%",
+					maxWidth: "400px"
+                  }}
+                />
+          </div>
+        </div>
+
+
       </div>
     );
   } else {

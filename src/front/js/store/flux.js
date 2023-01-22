@@ -36,6 +36,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       favoriteItem: [], //have the id of the favorites packages
       favoritesList: [],
       favoriteHeart: false,
+      comments: [],
+
     },
     actions: {
       //-----------------------------------------------------------------------------------------------------------------------------
@@ -1038,6 +1040,59 @@ const getState = ({ getStore, getActions, setStore }) => {
           }
         }
       }, 
+
+    //  -----------------------------------------------------------------------------------------------------------------------------
+      //											 COMMENT POST
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      createComment: async (comment, package_id) => {
+       
+        let store = getStore();
+        let user_id = store.userId;
+        // this change into integer the package id.
+        package_id = parseInt(package_id);
+        try {
+          const response = await axios.post(
+            process.env.BACKEND_URL + "/api/comment",
+            {
+              id_packages: package_id,
+              id_user: user_id,
+              comment: comment,
+          
+            }
+          );
+
+          return response;
+        } catch (error) {
+        
+          console.log(error);
+        }
+      },
+
+//-----------------------------------------------------------------------------------------------------------------------------
+      //											 GET COMMENTS  
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+
+      getProductComments: async (id) => {
+        let store = getStore();
+        try {
+          const response = await fetch(
+            process.env.BACKEND_URL + "/api/package/" + id + "/comments"
+          );
+          const data = await response.json();
+       
+          setStore({
+            comments: data.map((item) => item),
+          });
+          return store.comments;
+        } catch (error) {
+          
+          console.log(error);
+        }
+      },
+
+
     },
   };
 };
