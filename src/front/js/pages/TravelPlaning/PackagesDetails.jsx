@@ -50,8 +50,8 @@ const PackagesDetails = () => {
           }}
         >
           <div className="container-page">
-            <div className="row row-cols-2 g-3">
-              <div className="col-7">
+            <div className="row  g-3">
+              <div className="col-xs-12 col-md-7">
                 <h3 className="package-detail-title mt-5">
                   {store.packageDetail.name}
                 </h3>
@@ -60,9 +60,10 @@ const PackagesDetails = () => {
                 </p>
                 <img className="separator mr-3" src={separator}></img>
               </div>
-              <div className="col-5">
-                <div className="row row-cols-5 justify-content-center mt-5">
-                  <div className="col-2">
+              
+              <div className="col-xs-12 col-md-5">
+                <div className="row justify-content-center mt-5">
+                  <div className="col-md-2 col-xs-6">
                     <button
                       className="btn btn-light"
                       type="button"

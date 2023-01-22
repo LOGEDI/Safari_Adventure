@@ -694,12 +694,13 @@ figure.snip0016:hover figcaption::before {
 }
 
 .iconsdestinations{
-  height: 45px;
+  height: 55px;
+  margin: 10px;
 }
 
 .desticontitle{
   color: #29362f;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -708,11 +709,11 @@ figure.snip0016:hover figcaption::before {
 }
 
 .desticoncontent{
-  color: #2f503e;
+  color: #848688;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
-  margin-top: -15px;
+  margin-top: -11px;
   font-weight: 600;
 }
 

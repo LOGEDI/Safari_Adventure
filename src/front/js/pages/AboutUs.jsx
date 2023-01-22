@@ -30,7 +30,7 @@ import carousel3 from "../../img/carousel1-balloon-pic3.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="">
+    <div className="pagesBackground">
         <div className="main-content" >
             <div
               className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
@@ -55,11 +55,11 @@ const AboutUs = () => {
             {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
 
-<div className='destinationsBackground pt-3'
+{/* <div className='destinationsBackground pt-3'
               style={{
                 backgroundImage: `url(${destinationBackground})`,
                 
-              }}>
+              }}> */}
 
             <div className="container-fluid ">
               <div className="row pageDescriptionContainerCenter">
@@ -202,36 +202,30 @@ const AboutUs = () => {
                     <div className="cardDestinations">
                       <div className="pageDescriptionContainerCenter  pt-md-4 pb-0 pb-md-4 p-md-3 p-3" >
                         <h2 className="description-titleD text-center">
-                          ALL LOCATIONS
+                        TANZANIA
                         </h2>
                         <div className="description-content">
                           <p className="description-content">
-                            Africa is immense and the diversity incredible. You
-                            can encounter savannahs rich with big game, timeless
-                            cultures unchanged by the modern world and timeless
-                            history, equatorial forests and mighty snow-capped
-                            mountains, pristine beaches and coral reef, searing
-                            deserts and cool highland retreats and endless
-                            opportunities for adventure, discovery and
-                            relaxation.
+                          Tanzania is home to some of Africa’s most alluring destinations. 
+                The Serengeti’s wildebeest migration along an infinite savanna; 
+                the incongruous snow of Mt Kilimanjaro – Africa’s tallest mountain at 5,895m (19,341ft); 
+                the crater bottom of Ngorongoro National Park teaming with wildlife; 
+                the Swahili coast and pristine beaches along the spice islands of Zanzibar where fishermen 
+                still plough the turquoise waters in traditional wooden sailboats; 
+                Selous – Africa’s largest protected area and larger than Switzerland; 
+                Ruaha and Katavi – insider tips for serious safari-goers; Mahale and Gombe – 
+                prime destinations for seeing chimpanzees in the wild.
                           </p>
-                          <strong className="destinations-h4">
-                            Why travel with us - We’ve been where you want to
-                            go!!
-                          </strong>
-                          <p></p>
+                          
                           <p className="description-content">
-                            Our luxury safaris explore East Africa from Kenya’s
-                            snow-capped Mt Kenya down to pristine beaches,
-                            Tanzania’s vast Serengeti to the magical Spice
-                            Island of Zanzibar, the lush tropical climate and
-                            fertile land of Uganda that is perfect habitat for
-                            the gorillas & chimps and the Mountain Gorilla and
-                            wide range of bird species in the forests of Rwanda
-                            and Amazing history of Ethiopia. We are constantly
-                            discovering new destinations that will take you away
-                            from the crowds and off the beaten track allowing
-                            you to enjoy beauty and quiet of Africa.
+                          Throughout, Tanzania offers travelers an array of options, 
+                set against the backdrop of a cultural mosaic. Tanzania’s coastline was a favored stop on 
+                ancient trading routes between the Indian sub-continent and the Middle-East. Spices, 
+                jewels and slaves once passed through, bringing with them a melange of cultural riches 
+                that remain today. The language of Swahili was born here, and old mosques, 
+                coral palaces and pearly-white beaches still remain. While most visitors head straight for 
+                the famed northern wildlife-watching circuit, followed by time relaxing on Zanzibar’s beaches, 
+                Tanzania has much more to offer anyone with the time and inclination to head off the beaten path.
                           </p>
                         </div>
                         <div className="row justify-content-center mt-4 p-3">
@@ -848,7 +842,7 @@ const AboutUs = () => {
               <div className="col-xl-6 m-auto text-center"></div>
             </div>
           </footer>
-</div>
+{/* </div> */}
 </div>
         </div>
     
