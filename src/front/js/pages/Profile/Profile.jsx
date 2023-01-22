@@ -209,7 +209,75 @@ const Profile = () => {
 
 
 
+                  <div className="col-xl-8 order-xl-1">
+                <div className="card bg-secondary shadow">
+                  <div className="card-header bg-white border-0">
+                    <div className="row align-items-center">
+                      <div className="col-8">
+                        <h3 className="mb-0">My comments</h3>
+                      </div>
+                      <div className="col-4 text-right">
+                        <a href="#!" className="btn btn-sm btn-primary">
+                          Settings
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                 
+                  <div className="card-body">
 
+{store.commentdList?.length > 0 ? (
+  store.commentsList?.map((item) => (
+    <div key={item.id}>
+      <div className="pl-lg-4">
+        <div className="row">
+          <div className="col-lg-2">
+            <img
+              src={item.url}
+              className="img-fluid"
+              alt="..."
+              style={{
+                maxHeight: "250px",
+                maxWidth: "150px",
+                borderColor: "#b2a97e",
+              }}
+            />
+          </div>
+          <div className="col-lg-9">
+            <div className="form-group focused">
+              <h3 className="package-detail-title mt-4">
+                {item?.name}
+              </h3>
+            </div>
+          </div>
+          <div className="col-lg-1">
+            <div className="form-group focused">
+              <div className=" justify-content-end">
+                <span
+                  className="btn btn-outline-light mt-3"
+                  onClick={() =>
+                    actions.deleteComments(item.id)
+                  }
+                  style={{ color: "#d2ae6d" }}
+                >
+                  <b>X</b>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr className="my-4" />
+    </div>
+  ))
+) : (
+  <p>No favorite comment</p>
+)}
+
+</div>
+</div>
+                  </div>
+                
 
 
 
@@ -315,6 +383,7 @@ const Profile = () => {
 )}
 
     </div>
+    
   )
 }
 
