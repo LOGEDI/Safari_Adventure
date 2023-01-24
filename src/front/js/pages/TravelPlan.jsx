@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-import destinationsHero from "../../img/packages-hero.jpg";
+import packagesHero from "../../img/packages-hero.jpg";
 import activity from "../../img/activity-icon.png";
 import destinationsicon from "../../img/destination-icon.png";
 import tripdays from "../../img/trip-days.png";
@@ -20,129 +20,215 @@ const TravelPlan = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <div className="main-content">
-          {/* -----------------------------------Header---------------------------------------------------------------- */}
+   
 
-          {/*---------------------------------------------------- Profile content--------------------------------------------------- */}
+    <div className="main-content pagesBackground ">
+      <div
+              className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+              style={{
+                
+                backgroundImage: `url(${packagesHero})`,
 
-          <div className="container-fluid">
-            <div className="row pageDescriptionContainerCenter">
-
-<div className="col-xl-5 order-xl-1 p-0">
-                <div className="card bg-secondary shadow">
-                  <div className="card-bodyPackage">
-                    <div
-                      className="header d-flex align-items-center"
-                      style={{
-                        minHeight: "400px",
-                        backgroundImage: `url(${destinationsHero})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center ",
-                      }}
-                    ></div>
-                  </div>
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="container-fluid d-flex align-items-center">
+                <div className="text-on-image">
+                  <h2 className="page-title">EXPERIENCE</h2>
+                  <span className="page-subtitle">
+                    We offer a variety of activities
+                  </span>
                 </div>
               </div>
-
-              <div className="col-xl-7 order-xl-2 mb-5 mb-xl-0 p-0">
-                <div className="card card-profile shadow">
-                  {/* <div className="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                    <div className="d-flex justify-content-between">
-                      <a href="#" className="btn btn-sm btn-info mr-4">
-                        Connect
-                      </a>
-                      <a
-                        href="#"
-                        className="btn btn-sm btn-default float-right"
-                      >
-                        Message
-                      </a>
-                    </div>
-                  </div> */}
-                  <div className="card-body pt-0 pt-md-4">
-                    <div className="row">
-                      <div className="">
-                        <div className="card-profile-stats d-flex justify-content-center">
-                          <div className="pb-0 col">
-                          <img className="iconsdestinations" src={tripdays}></img>
-                            <p className="desticontitle">TOUR DURATION</p>
-                            <p className="desticoncontent">15 days</p>
-                          </div>
-                          <div className="pb-0 col">
-                          <img className="iconsdestinations" src={destinationsicon}></img>
-                            <p className="desticontitle">DESTINATIONS INCLUDED</p>
-                            <p className="desticoncontent">15 days</p>
-                          </div>
-                          <div className="pb-0 col">
-                          <img className="iconsdestinations" src={activity}></img>
-                            <p className="desticontitle">ACTIVITIES</p>
-                            <p className="desticoncontent">15 days</p>
-                          </div>
-                          <div className="pb-0 col">
-                          <img className="iconsdestinations" src={transport}></img>
-                            <p className="desticontitle">TRANSPORT MODE</p>
-                            <p className="desticoncontent">15 days</p>
-                          </div>
-                          <div className="pb-0 col">
-                          <img className="iconsdestinations" src={lodging}></img>
-                            <p className="desticontitle">LODGING</p>
-                            <p className="desticoncontent">15 days</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <h2></h2>
-                      <img className='separator' src={separator}></img>
-                      <h3>
-                        <span className="font-weight-light"></span>
-                        
-                      </h3>
-                      <div className="h5 font-weight-300">
-                        <i className="ni location_pin mr-2" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/*---------------------------- Favorites content-----------------*/}
-              <div className="container">
-              <div className="row">
-                <div className="col" style={{backgroundColor: "red"}}>
-                  colum
-                </div>
-                <div className="col" style={{backgroundColor: "blue"}}>
-                  colum
-                </div>
-                <div className="col" style={{backgroundColor: "green"}}>
-                  colum
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-5" style={{backgroundColor: "violet"}}>
-                  <h1> hola feo</h1>
-                  <p>lfdgkjghdfslghslghskdljhgdkfslghsdjhglksfdh</p>
-                </div>
-                <div className="col-7" style={{backgroundColor: "yellow"}}>
-                  <h1> hola feo</h1>
-                  <p>lfdgkjghdfslghslghskdljhgdkfslghsdjhglksfdh</p>
-                </div>
-                </div>
             </div>
-
-
+      {store.package.map((item) => (
+        <div key={item.id}>
+          {item.id % 2 == 0 ? (
+          <div className="container-fluid mt-3" >
+            <div className="row mb-3 packagescards" >
+              <div
+                className="col col-xl-5 picpackage ml-5"
+                style={{
+                  height: "400px",
+                  maxWidth: "888px",
+                  backgroundImage: `url(${item.url})`,
+                }}
+              >
+                <div className="row align-items-end" style={{height: "380px"}}>
+                  <div className="col">
+                  <h3 className="post_title">{item.name}</h3>
+                  <p className="post_subtitle">{item.category}</p>
+                  </div>
+                </div>
+                  
+               
+              </div>
+              <div
+                className="col-xl-7"
+                style={{
+                  
+                  backgroundImage: `url(${item.url1})`,
+                }}
+              >
+                <div className="row text-center pt-5">
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={tripdays}></img>
+                    <p className="desticontitle">TOUR DURATION</p>
+                    <p className="desticoncontent">{item.tour_duration}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img
+                      className="iconsdestinations"
+                      src={destinationsicon}
+                    ></img>
+                    <p className="desticontitle">DESTINATIONS INCLUDED</p>
+                    <p className="desticoncontent">{item.destinations}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={activity}></img>
+                    <p className="desticontitle">ACTIVITIES</p>
+                    <p className="desticoncontent">{item.activities}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={transport}></img>
+                    <p className="desticontitle">TRANSPORT MODE</p>
+                    <p className="desticoncontent">{item.transport}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={lodging}></img>
+                    <p className="desticontitle">LODGING</p>
+                    <p className="desticoncontent">{item.lodging}</p>
+                  </div>
+                </div>
+                <div className="row text-center justify-content-center">
+                  <img
+                    className="separator mb-5"
+                    src={separator}
+                    style={{ maxWidth: "150px", maxHeight: "150px" }}
+                  ></img>
+                </div>
+                <div className="row text-center justify-content-center">
+                  <p className="post_description mb-4">{item.description}</p>
+                </div>
+                <div className="row text-center justify-content-center">
+                   <Link to={"/PackagesDetails/" + item.id}>
+                 <button className="btn btn-creamD justify mb-3">
+                   Learn More
+                 </button>
+               </Link>
+                </div>
+                
+              
+              </div>
             </div>
           </div>
+          ) :
+          null}{" "}
         </div>
-        <footer className="footer">
-          <div className="row align-items-center justify-content-xl-between">
-            <div className="col-xl-6 m-auto text-center"></div>
+      ))}
+
+
+
+{store.package.map((item) => (
+        <div key={item.id}>
+          {item.id % 2 == 1 ? (
+          <div className="container-fluid mt-3" >
+            <div className="row mb-3 packagescards" >
+
+<div
+                className="col-xl-7"
+                style={{
+                  
+                  backgroundImage: `url(${item.url1})`,
+                }}
+              >
+                <div className="row text-center pt-5">
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={tripdays}></img>
+                    <p className="desticontitle">TOUR DURATION</p>
+                    <p className="desticoncontent">{item.tour_duration}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img
+                      className="iconsdestinations"
+                      src={destinationsicon}
+                    ></img>
+                    <p className="desticontitle">DESTINATIONS INCLUDED</p>
+                    <p className="desticoncontent">{item.destinations}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={activity}></img>
+                    <p className="desticontitle">ACTIVITIES</p>
+                    <p className="desticoncontent">{item.activities}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={transport}></img>
+                    <p className="desticontitle">TRANSPORT MODE</p>
+                    <p className="desticoncontent">{item.transport}</p>
+                  </div>
+                  <div className="pb-0 col">
+                    <img className="iconsdestinations" src={lodging}></img>
+                    <p className="desticontitle">LODGING</p>
+                    <p className="desticoncontent">{item.lodging}</p>
+                  </div>
+                </div>
+                <div className="row text-center justify-content-center">
+                  <img
+                    className="separator mb-5"
+                    src={separator}
+                    style={{ maxWidth: "150px", maxHeight: "150px" }}
+                  ></img>
+                </div>
+                <div className="row text-center justify-content-center">
+                  <p className="post_description mb-4">{item.description}</p>
+                </div>
+                <div className="row text-center justify-content-center">
+                   <Link to={"/PackagesDetails/" + item.id}>
+                 <button className="btn btn-creamD justify mb-3">
+                   Learn More
+                 </button>
+               </Link>
+                </div>                             
+              </div>
+
+              <div
+                className="col col-xl-5 picpackage ml-5"
+                style={{
+                  height: "400px",
+                  maxWidth: "888px",
+                  backgroundImage: `url(${item.url})`,
+                }}
+              >
+                <div className="row align-items-end justify-content-end " style={{height: "380px", color:"white"}}>
+                  <div className="col">
+                  <h3 className="post2_title">{item.name}</h3>
+                  <p className="post2_subtitle">{item.category}</p>
+                  </div>
+                </div>               
+              </div>
+
+
+
+              
+
+
+            </div>
           </div>
-        </footer>
-      </div>
+          ) :
+          null}{" "}
+        </div>
+      ))}
+
+
+
+
+
+      <footer className="footer">
+        <div className="row align-items-center justify-content-xl-between">
+          <div className="col-xl-6 m-auto text-center"></div>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -728,6 +728,13 @@ figure.snip0016:hover figcaption::before {
 
 /*-------------------------------------------PACKAGES--------------------------------------*/
 
+.packagescards{
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+
 .post {
   font-family: "Saira", sans-serif;
   max-width: 80%;
@@ -807,56 +814,44 @@ figure.snip0016:hover figcaption::before {
 .post_title {
   
   color: #d2ae6d;
-  line-height: 1;
-  position: relative;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 35px;
   line-height: 36px;
-  text-align: left;
-  right: 65%;
-  top: 80%;
+  margin-bottom: 0px;
+  
+  
 }
 
 .post2_title {
   
   color: #d2ae6d;
-  line-height: 1;
-  position: relative;
+ 
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 35px;
   line-height: 36px;
-  text-align: left;
-  left: 108%;
-  top: 80%;
+  text-align: right;
+  margin-bottom: 0px;
 }
 
-.post_subtitle {
-  
-  color: white;
-  margin-bottom: -3em;
-  position: relative;
+.post_subtitle { 
+  color: white;  
   font-family: 'Lato', sans-serif;
   font-style: italic;
   font-size: 20px;
   line-height: 36px;
-  text-align: left;
-  right: 65%;
-  top: 74%;
+  
+  
 
 }
 
-.post2_subtitle {
-  
-  color: white;
-  margin-bottom: -3em;
-  position: relative;
+.post2_subtitle {  
+  color: white; 
   font-family: 'Lato', sans-serif;
   font-style: italic;
   font-size: 20px;
   line-height: 36px;
-  text-align: left;
-  left: 108%;
-  top: 74%;
+  text-align: right;
+  
 
 }
 
@@ -890,7 +885,7 @@ figure.snip0016:hover figcaption::before {
   margin-left: 60px;
   margin-right: 60px;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bolder;
   color: #2f503e;
   font-family: Lato, sans-serif;

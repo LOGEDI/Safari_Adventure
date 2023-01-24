@@ -9,12 +9,14 @@ import tripdays from "../../../img/trip-days.png";
 import lodging from "../../../img/lodging-icon.png";
 import transport from "../../../img/transport-icon.png";
 import separator from "../../../img/heading-separator.png";
+import { useNavigate } from "react-router-dom";
 
 import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 
 const PackagesDetails = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  let navigate = useNavigate();
 
   useEffect(() => {
     actions.getPackageDetail(params.id);

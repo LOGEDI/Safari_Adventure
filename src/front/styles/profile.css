@@ -1065,6 +1065,33 @@
     }
   }
 
+  @media (min-width: 960px) {
+    .picpackage {
+      padding: 10px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (max-width: 760px) {
+    .packagescards {
+      padding: 10px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .packagescards {
+      max-width: 1900px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
   @media (min-width: 1456px) {
     .experiencePagePicLinks {
       max-width: 1550px;
