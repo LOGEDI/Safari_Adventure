@@ -16,8 +16,11 @@ const Profile = () => {
     actions.userProfile();
     if (store.userId != null) {
       actions.getFavorites();
+      actions.getComments();
     }
   }, [store.userId]);
+
+  
 
 
   // useEffect(() => {
@@ -226,27 +229,18 @@ const Profile = () => {
                  
                   <div className="card-body">
 
-{store.commentdList?.length > 0 ? (
-  store.commentsList?.map((item) => (
+{store.comments.length > 0 ? (
+  store.comments?.map((item) => (
     <div key={item.id}>
       <div className="pl-lg-4">
         <div className="row">
           <div className="col-lg-2">
-            <img
-              src={item.url}
-              className="img-fluid"
-              alt="..."
-              style={{
-                maxHeight: "250px",
-                maxWidth: "150px",
-                borderColor: "#b2a97e",
-              }}
-            />
+           
           </div>
           <div className="col-lg-9">
             <div className="form-group focused">
               <h3 className="package-detail-title mt-4">
-                {item?.name}
+                {item?.comment}
               </h3>
             </div>
           </div>

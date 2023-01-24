@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
+
 import balloonHero from "../../img/ngorongoro.jpg";
 import addis from "../../img/addiscity_thumb.jpg";
 import amboseli from "../../img/amboseli_thumb.jpg";

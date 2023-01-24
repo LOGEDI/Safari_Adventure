@@ -18,8 +18,8 @@ const GMaps = ({ placeName }) => {
   
     const createGoogleMap = (coordinates) => {
       googleMap = new window.google.maps.Map(googleMapRef.current, {
-        zoom: 10,
-        center: { lat: 43.2, lng: -79.9 
+        zoom: 6,
+        center: { lat: -0.332270, lng: 36.430980  
 
         },
         disableDefaultUI: true,
@@ -33,10 +33,10 @@ const GMaps = ({ placeName }) => {
           if (status === window.google.maps.GeocoderStatus.OK) {
             placeId = results[0].place_id;
             createGoogleMap(results[0].geometry.location);
-            lat = results[0].geometry.location.lat(-0.141096);
-            lng = results[0].geometry.location.lng(51.506234);
+            lat = results[0].geometry.location.lat(-0.362270);
+            lng = results[0].geometry.location.lng(37.430980);
             new window.google.maps.Marker({
-              position: { lat, lng },
+              position: {lat: -0.332270, lng: 36.430980  },
               map: googleMap,
               animation: window.google.maps.Animation.DROP,
               title: `${placeName}`,
@@ -53,7 +53,7 @@ const GMaps = ({ placeName }) => {
       <div
         id="google-map"
         ref={googleMapRef}
-        style={{ width: "800px", height: "600px" }}
+        style={{ width: "200px", height: "200px" }}
       />
     );
   };

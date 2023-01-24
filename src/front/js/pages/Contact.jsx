@@ -1,4 +1,5 @@
 import React from 'react'
+import GMaps from "../component/GMAPS"
 
 const Contact = () => {
   return (
@@ -31,6 +32,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <GMaps/>
     </div>
   )
 }

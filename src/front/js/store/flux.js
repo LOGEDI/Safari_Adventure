@@ -1092,6 +1092,57 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+//-----------------------------------------------------------------------------------------------------------------------------
+      //											 GET COMMENTS  
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+
+      getComments: async (id) => {
+        let store = getStore();
+        try {
+          const response = await fetch(
+            process.env.BACKEND_URL + "/api/comments"
+          );
+          const data = await response.json();
+       
+          setStore({
+            comments: data.map((item) => item),
+          });
+          return store.comments;
+        } catch (error) {
+          
+          console.log(error);
+        }
+      },
+
+ //-----------------------------------------------------------------------------------------------------------------------------
+      //											 COMMENT DELETE
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      deleteComments: async (package_id) => {
+        // Se llama store
+        let store = getStore();
+        let user_id = store.userId;
+        try {
+          const response = await axios.delete(
+            process.env.BACKEND_URL + "/api/comments",
+            {
+              data: {
+                id_packages: package_id,
+                id_user: user_id,
+              },
+            }
+          );
+          // Sweet alert
+          Swal.fire({ text: response.data.msg, confirmButtonColor: "#000000" });
+          getActions().getComments();
+          getActions().comparingFavorites();
+          return response;
+        } catch (error) {
+          console.log(error);
+        }
+      },
+
 
     },
   };
