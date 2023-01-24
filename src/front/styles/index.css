@@ -571,6 +571,7 @@ figure.snip0016:hover figcaption::before {
 
 .hover-card:hover{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  transform: translateY(-10px);
 }
 
 
@@ -715,6 +716,7 @@ figure.snip0016:hover figcaption::before {
   line-height: 18px;
   margin-top: -11px;
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 .destinationanimation *[data-ix="fadeinup"]{

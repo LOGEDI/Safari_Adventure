@@ -65,6 +65,33 @@ const AboutUs = () => {
 
         <div className="container-fluid mt-3">
           <div className="row">
+            <div className="col-xl-6 order-xl-1 mb-5 mb-xl-0">
+              <div className="card card-profile ">
+                <div className="pageDescriptionContainerLeft  pt-md-4 pb-0 pb-md-4">
+                  <h2 className="description-title">FLOAT OVER THE MARA</h2>
+                  <div className="description-content">
+                    <p className="description-content">
+                      A once-in-a-lifetime magical experience that will be
+                      permanently etched in your travel memories. Give yourself
+                      a treat and feel the immensity of the Mara at its best
+                      while smoothly flying above the Savannah and its wildlife.
+                    </p>
+                    <p className="description-content">
+                      Float in the sky, drifting with the breeze of the wind,
+                      overlooking the plains, just in time to experience a
+                      breathtaking sunrise and see the reserve from a bird’s eye
+                      view.
+                    </p>
+                  </div>
+                  <div className="row justify-content-center mt-4 p-3">
+                    <button type="button" className="btn btn-cream text-center">
+                      BOOK WITH US
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
               <div className="card card-profile ">
                 <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">
@@ -92,9 +119,10 @@ const AboutUs = () => {
               </div>
             </div>
 
+
             {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
 
-            <div className="col-xl-6 order-xl-1">
+            {/* <div className="col-xl-5 order-xl-1">
               <div className="card ">
                 <div className="">
                   <div className=" border-0   pb-0 ">
@@ -158,7 +186,7 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

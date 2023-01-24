@@ -584,6 +584,10 @@
     padding: 1.5rem;
     flex: 1 1 auto;
   }
+
+  .card-bodyPackage {
+    flex: 1 1 auto;
+  }
   
   .card-header {
     margin-bottom: 0;
@@ -996,8 +1000,6 @@
   
   
   
-  
-  
   @media (min-width: 768px) {
     .main-content .container-fluid {
       padding-right: 39px !important;
@@ -1048,6 +1050,15 @@
   @media (min-width: 1456px) {
     .pageDescriptionContainerCenter {
       max-width: 1400px;
+      justify-content: center;
+      margin: auto;
+      
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pageDescriptionContainerCenter {
+      padding: 10px;
       justify-content: center;
       margin: auto;
       
