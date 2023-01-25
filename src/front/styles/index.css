@@ -34,6 +34,10 @@
   min-height: max-content;
 }
 /*--------------------------------------------------GENERA STYLING---------------------------------------------------------------------------*/
+body{
+  background-image: url("../img/generic-background.jpg");
+}
+
 
 .btn-cream {
   color: #fff;
@@ -48,24 +52,10 @@
   background-color: #d2ae6d;
 }
 
-.btn-cream:focus {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
-}
-
 .btn-cream:disabled {
   color: #fff;
   border-color: #5e72e4;
   background-color: #5e72e4;
-}
-
-.btn-cream:not(:disabled):not(.disabled):active {
-  color: #fff;
-  border-color: #5e72e4;
-  background-color: #324cdd;
-}
-
-.btn-cream:not(:disabled):not(.disabled):active:focus {
-  box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
 }
 
 .btn-green {
@@ -81,24 +71,10 @@
   background-color: #5e72e4;
 }
 
-.btn-green:focus {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
-}
-
 .btn-green:disabled {
   color: #fff;
   border-color: #5e72e4;
   background-color: #5e72e4;
-}
-
-.btn-green:not(:disabled):not(.disabled):active {
-  color: #fff;
-  border-color: #5e72e4;
-  background-color: #324cdd;
-}
-
-.btn-green:not(:disabled):not(.disabled):active:focus {
-  box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
 }
 
 .btn-creamD {
@@ -115,24 +91,11 @@
   background-color: #d1a147;
 }
 
-.btn-creamD:focus {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
-}
 
 .btn-creamD:disabled {
   color: #fff;
   border-color: #5e72e4;
   background-color: #5e72e4;
-}
-
-.btn-creamD:not(:disabled):not(.disabled):active {
-  color: #fff;
-  border-color: #5e72e4;
-  background-color: #324cdd;
-}
-
-.btn-creamD:not(:disabled):not(.disabled):active:focus {
-  box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
 }
 
 .btn-greenD {
@@ -149,9 +112,7 @@
   background-color: rgb(78, 110, 93);
 }
 
-.btn-greenD:focus {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
-}
+
 
 .btn-greenD:disabled {
   color: #fff;
@@ -159,15 +120,6 @@
   background-color: #5e72e4;
 }
 
-.btn-greenD:not(:disabled):not(.disabled):active {
-  color: #fff;
-  border-color: #5e72e4;
-  background-color: #324cdd;
-}
-
-.btn-greenD:not(:disabled):not(.disabled):active:focus {
-  box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
-}
 
 .container-page{
   max-width: 80%;  
@@ -190,20 +142,20 @@
 /*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
 
 /* Dropdown Button */
-.dropbtn {
+/* .dropbtn {
   background-color: transparent;
   color: black;
   padding: 16px;
   font-size: 16px;
   border: none;
   
-}
+} */
 
 /* The container <div> - needed to position the dropdown content */
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
-}
+} */
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -306,13 +258,29 @@
 }
 
 .text-on-image {
-  color: white;
-  
+  color: white;  
   position: absolute;
   left: 05%;
   bottom: 65%;
 }
 
+.text-on-imageProfile {
+  color: white;  
+  position: absolute;
+  bottom: 20%;
+}
+
+.page-titleProfile {
+  font-size: 60px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: bolder;
+}
+
+.page-subtitleProfile{
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+}
 
 /*---------------------------------------------------PAGE DESCRIPTION SETTINGS---------------------------------------------------------------------------*/
 .pagesBackground {
@@ -730,7 +698,14 @@ figure.snip0016:hover figcaption::before {
 
 .packagescards{
   border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.packagesPost{
+  margin: 2em auto;
+  max-width: 85%; 
+  
 }
 
 
@@ -952,14 +927,7 @@ figure.snip0016:hover figcaption::before {
   margin-left: -5px;
 }
 
-.details-overview-title {
-  border: 2px solid;
-  border-color: #d2ae6d;
-  border-bottom: 0;
-  border-top: 0;
-  border-left: 0;
-  
-}
+
 
 .overview-title {
   color: #d2ae6d;
@@ -987,6 +955,16 @@ figure.snip0016:hover figcaption::before {
   line-height: 24px;
   padding-left: 10px;
 
+  
+}
+
+.details-overview-descriptionP {
+  border: 2px solid;
+  border-color: #d2ae6d;
+  border-bottom: 0;
+  border-top: 0;
+  border-right: 0;
+  
 }
 
 /*---------------------------------ADMIN------------------------------------------*/
@@ -997,11 +975,13 @@ figure.snip0016:hover figcaption::before {
   /* max-height: 300px; */
   min-height: 400px;
   text-align: center;
-  
+  box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
 .admin-pack-img-top{
   min-width: 300px;
   min-height: 300px;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
+

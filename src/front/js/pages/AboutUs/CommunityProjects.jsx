@@ -2,6 +2,8 @@ import React from 'react'
 
 const CommunityProjects = () => {
   return (
+
+    <div className="pagesBackground">
   <div className="container">
 
     <div className="page-header">
@@ -275,8 +277,10 @@ const CommunityProjects = () => {
             </div>
           </div>
         </div>
+        {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+        <footer className="footerDestinations"> </footer>
         </div>
-    
+    </div>
   </div>       
   )
 }

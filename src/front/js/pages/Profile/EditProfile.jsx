@@ -1,9 +1,9 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import userProfileIcon from "../../../img/user-profile-icon.jpg"
+import userProfileIcon from "../../../img/user-profile-icon.jpg";
 import "../../../styles/profile.css";
-
+import profileHero from "../../../img/Maasai_Mara_National_Reserve_Kenya.jpg";
 import { Context } from "../../store/appContext";
 
 const EditProfile = () => {
@@ -27,7 +27,6 @@ const EditProfile = () => {
     setCountry("");
     setPassword("");
     setUser_url("");
-
   };
 
   const handleSweetAlert = () => {
@@ -66,38 +65,35 @@ const EditProfile = () => {
     );
     const file = await res.json();
     // console.log(res);
-    
+
     setUser_url(file.secure_url);
     // console.log(file.secure_url);
     setLoading(false);
   };
 
   return (
-    <div>
-      
+    <div className="pagesBackground">
       {auth ? (
         <div>
           <div>
-           
             <div className="main-content">
+              {/* -----------------------------------Header---------------------------------------------------------------- */}
               <div
                 className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
                 style={{
                   minHeight: "600px",
-                  backgroundImage:
-                    "url(https://upload.wikimedia.org/wikipedia/commons/5/57/Maasai_Mara_National_Reserve_Kenya.jpg)",
+                  backgroundImage: `url(${profileHero})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center top",
                 }}
               >
-                <span className="mask bg-gradient-default opacity-8" />
                 <div className="container-fluid d-flex align-items-center">
                   <div className="row">
-                    <div className="col-lg-7 col-md-10">
-                      <h1 className="display-2 text-white">
+                    <div className="col-lg-7 col-md-10 text-on-imageProfile">
+                      <h1 className="page-titleProfile">
                         Hello {profile.username}
                       </h1>
-                      <p className="text-white mt-0 mb-5">
+                      <p className="page-subtitleProfile mt-0 mb-4">
                         This is your profile page. You can see the progress
                         you've made with your work and manage your projects or
                         assigned tasks
@@ -112,10 +108,10 @@ const EditProfile = () => {
 
               {/*---------------------------------------------------- Profile content--------------------------------------------------- */}
 
-              <div className="container-fluid mt--7">
+              <div className="container-fluid destinationsCards mt--7">
                 <div className="row">
-                  <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
-                    <div className="card card-profile shadow">
+                  <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 cardProfile shadow">
+                    <div className=" ">
                       <div className="row justify-content-center">
                         <div className="col-lg-3 order-lg-2">
                           <div className="card-profile-image">
@@ -132,7 +128,7 @@ const EditProfile = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                      <div className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         <div className="d-flex justify-content-between">
                           <a href="#" className="btn btn-sm btn-info mr-4">
                             Connect
@@ -167,8 +163,7 @@ const EditProfile = () => {
                         <div className="text-center">
                           <h2>{profile.username}</h2>
                           <h3>
-                            {profile.name}{" "}
-                            {profile.lastname}
+                            {profile.name} {profile.lastname}
                             <span className="font-weight-light"></span>
                           </h3>
                           <div className="h5 font-weight-300">
@@ -291,7 +286,7 @@ const EditProfile = () => {
                             </div>
 
                             <div className="row">
-                            <div className="col-lg-6">
+                              <div className="col-lg-6">
                                 <div className="form-group focused">
                                   <label
                                     className="form-control-label"
@@ -299,7 +294,7 @@ const EditProfile = () => {
                                   >
                                     Profile Picture
                                   </label>
-                                  <input                                   
+                                  <input
                                     id="input-user_url"
                                     name="user_url"
                                     type="file"
@@ -308,76 +303,63 @@ const EditProfile = () => {
                                     onChange={(e) => {
                                       uploadImage(e);
                                       setUser_url(e.target.value);
-                                    }}                                    
+                                    }}
                                   />
                                 </div>
                               </div>
-
-                              <div className="col-lg-6 text-center">
-                                <br/>
-                                <br/>
-                                <button                                  
-                                  type="submit"                                  
-                                  className="btn btn-primary col-4"
-                                  >
-                                    SAVE CHANGES
+                            </div>
+                            <div className="row">
+                              <div className="text-center">
+                                <button
+                                  type="submit"
+                                  className="btn btn-primary col"
+                                >
+                                  SAVE CHANGES
                                 </button>
-                                <Link to="/Profile" className="btn btn-primary col-3">
-                                  CANCEL                                  
+                                <Link
+                                  to="/Profile"
+                                  className="btn btn-primary col"
+                                >
+                                  CANCEL
                                 </Link>
                                 <button
-                                  className="btn btn-danger col-4 text-center justify-content-center"                            
-                                  type="button"                                                      
+                                  className="btn btn-danger col text-center justify-content-center"
+                                  type="button"
                                   onClick={() => handleSweetAlert()}
                                 >
                                   DELETE ACCOUNT
                                 </button>
                               </div>
-                          
                             </div>
                           </div>
                           <hr className="my-4" />
-
-                          
-
-                          {/* <hr className="my-4" />
-                      <h6 className="heading-small text-muted mb-4">
-                        About me
-                      </h6>
-                      <div className="pl-lg-4">
-                        <div className="form-group focused">
-                          <label>About Me</label>
-                          <textarea
-                            rows={4}
-                            className="form-control form-control-alternative"
-                            placeholder="A few words about you ..."
-                            defaultValue={
-                              "A beautiful Dashboard for Bootstrap 4. It is Free and Open Source."
-                            }
-                          />
-                        </div>
-                      </div> */}
                         </form>
-
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <footer className="footer">
-              <div className="row align-items-center justify-content-xl-between">
-                <div className="col-xl-6 m-auto text-center"></div>
-              </div>
-            </footer>
+
+            {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+
+            <footer className="footer"></footer>
           </div>
         </div>
       ) : (
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
           <div>
-            <h1  className="package-detail-title mt-5"
-              style={{ color: "black" }}>Not logged in...</h1>
-            <Link className="package-detail-subtitle" style={{ color: "#d2ae6d" }} to="/login">
+            <h1
+              className="package-detail-title mt-5"
+              style={{ color: "black" }}
+            >
+              Not logged in...
+            </h1>
+            <Link
+              className="package-detail-subtitle"
+              style={{ color: "#d2ae6d" }}
+              to="/login"
+            >
               Go to login
             </Link>
           </div>

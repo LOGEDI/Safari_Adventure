@@ -23,12 +23,12 @@ const getState = ({ getStore, getActions, setStore }) => {
       packageDetail: {},
       packageId: null,
       packagesIds: [],
-      packages: [],  
+      packages: [],
       user: [],
-      userDetail: {}, 
-      userId: null,   
+      userDetail: {},
+      userId: null,
       admin: false,
-      premium: false,      
+      premium: false,
       userId: null,
       auth: false,
       registered: false,
@@ -37,7 +37,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       favoritesList: [],
       favoriteHeart: false,
       comments: [],
-
     },
     actions: {
       //-----------------------------------------------------------------------------------------------------------------------------
@@ -121,7 +120,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             {
               //   email: email,
               //   username: username,
-              
+
               name: name,
               lastname: lastname,
               country: country,
@@ -174,9 +173,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getUsers: async () => {
         try {
-          const response = await fetch(
-            process.env.BACKEND_URL + "/api/user"
-          ); // search
+          const response = await fetch(process.env.BACKEND_URL + "/api/user"); // search
           const data = await response.json();
           // set store with the bringed data
           setStore({
@@ -189,13 +186,20 @@ const getState = ({ getStore, getActions, setStore }) => {
         // details fetch
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
-//											PUT EDIT USERS ADMIN
-//-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
+      //											PUT EDIT USERS ADMIN
+      //-----------------------------------------------------------------------------------------------------------------------------
 
       adminUser: async (
-        name, lastname, country, password, user_url, admin, premium, userId) => {
-             
+        name,
+        lastname,
+        country,
+        password,
+        user_url,
+        admin,
+        premium,
+        userId
+      ) => {
         try {
           const response = await axios.put(
             process.env.BACKEND_URL + "/api/user/" + userId,
@@ -218,7 +222,6 @@ const getState = ({ getStore, getActions, setStore }) => {
             timer: 1500,
           });
           console.log(response);
-          
         } catch (error) {
           // Log de error
           console.log(error);
@@ -233,7 +236,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-       //-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											 GET USERS DETAILS
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -255,8 +258,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         } catch (err) {
           console.log(err);
         }
-      }, 
-      
+      },
+
       //-----------------------------------------------------------------------------------------------------------------------------
       //											USER DELETE
       //-----------------------------------------------------------------------------------------------------------------------------
@@ -285,7 +288,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //									ADMIN	USER DELETE
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -336,7 +339,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-       //-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											 TOKEN GET
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -380,7 +383,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											 LOGIN POST
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -458,7 +461,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         return false;
       },
 
-        //-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											 PASSWORD CHANGE POST
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -495,7 +498,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             package: data,
           }); //promise
         } catch (err) {
-           // standar error log
+          // standar error log
           console.log(err);
         }
         // details fetch
@@ -525,7 +528,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //										PACKAGES POST
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -602,7 +605,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         url12,
         url13,
         url14,
-        url15,
+        url15
       ) => {
         try {
           const response = await axios.post(
@@ -688,7 +691,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											PUT EDIT PACKAGES
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -868,7 +871,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //											 PACKAGE DELETE
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -890,7 +893,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-       //-----------------------------------------------------------------------------------------------------------------------------
+      //-----------------------------------------------------------------------------------------------------------------------------
       //						              	 PACKAGES BY ID
       //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -925,7 +928,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           //   console.log(response);
           getActions().getPackage();
           getActions().mapfavorites();
-          getActions().comparingFavorites();
+          getActions().markFavorites();
           return response;
         } catch (error) {
           // console.log(error);
@@ -966,7 +969,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       //-----------------------------------------------------------------------------------------------------------------------------
 
       // this mark the heart icon when selected
-      comparingFavorites: async (packageId) => {
+      markFavorites: async (packageId) => {
         let store = getStore();
         await getActions().mapfavorites(); // store.favoriteItem
         await getActions().mapPackageId(); // store.packagesIds
@@ -1010,7 +1013,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           // Sweet alert
           Swal.fire({ text: response.data.msg, confirmButtonColor: "#000000" });
           getActions().getFavorites();
-          getActions().comparingFavorites();
+          getActions().markFavorites();
           return response;
         } catch (error) {
           console.log(error);
@@ -1039,14 +1042,13 @@ const getState = ({ getStore, getActions, setStore }) => {
             });
           }
         }
-      }, 
+      },
 
-    //  -----------------------------------------------------------------------------------------------------------------------------
+      //  -----------------------------------------------------------------------------------------------------------------------------
       //											 COMMENT POST
       //-----------------------------------------------------------------------------------------------------------------------------
 
       createComment: async (comment, package_id) => {
-       
         let store = getStore();
         let user_id = store.userId;
         // this change into integer the package id.
@@ -1058,21 +1060,18 @@ const getState = ({ getStore, getActions, setStore }) => {
               id_packages: package_id,
               id_user: user_id,
               comment: comment,
-          
             }
           );
 
           return response;
         } catch (error) {
-        
           console.log(error);
         }
       },
 
-//-----------------------------------------------------------------------------------------------------------------------------
-      //											 GET COMMENTS  
       //-----------------------------------------------------------------------------------------------------------------------------
-
+      //											 GET COMMENTS
+      //-----------------------------------------------------------------------------------------------------------------------------
 
       getProductComments: async (id) => {
         let store = getStore();
@@ -1081,18 +1080,15 @@ const getState = ({ getStore, getActions, setStore }) => {
             process.env.BACKEND_URL + "/api/package/" + id + "/comments"
           );
           const data = await response.json();
-       
+
           setStore({
             comments: data.map((item) => item),
           });
           return store.comments;
         } catch (error) {
-          
           console.log(error);
         }
       },
-
-
     },
   };
 };

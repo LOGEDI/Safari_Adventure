@@ -7,15 +7,14 @@ import Swal from "sweetalert2";
 import destinationBackground from "../../../img/destinations_background.jpg";
 import plusIcon from "../../../img/plus-icon.png";
 const AdminPackages = () => {
-    const { store, actions } = useContext(Context);
-    const params = useParams();
+  const { store, actions } = useContext(Context);
+  const params = useParams();
 
   useEffect(() => {
     actions.getPackage(params.id);
   }, []);
 
   const handleSweetAlert = (id) => {
-    
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -51,9 +50,9 @@ const AdminPackages = () => {
           <Link to="/Admin">
             <button className="btn btn-primary">BACK TO ADMIN</button>
           </Link>
-          <div className="row row-cols-3  justify-content-center">
+          <div className="row justify-content-center">
             {store.package.map((item) => (
-              <div key={item.id} className="col-4">
+              <div key={item.id} className="col-xl-4 col-12">
                 <div className="admin-pack-card card m-3 border-light">
                   <img
                     src={item.url}
@@ -62,7 +61,7 @@ const AdminPackages = () => {
                   />
                   <div className="admin-pack-card-body">
                     <h3 className="admin-pack-card-title mt-3">{item.name}</h3>
-                    <div className="d-flex justify-content-between">
+                    <div className="d-flex justify-content-between m-2">
                       <Link to={"/PackagesDetails/" + item.id}>
                         <button href="#" className="btn btn-primary">
                           DETAILS
@@ -86,7 +85,7 @@ const AdminPackages = () => {
               </div>
             ))}
 
-            <div className="col-4">
+            <div className="col-xl-4 col-12">
               <div className="admin-pack-card card m-3 border-light">
                 <img src={plusIcon} className="admin-pack-img-top" alt="..." />
                 <div className="admin-pack-card-body">

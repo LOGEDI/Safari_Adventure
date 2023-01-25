@@ -108,7 +108,7 @@ const Login = () => {
                           // disabled={isSubmitting}
                           className="btn btn-cream btn-lg mx-2 px-5"
                           
-                          color="white"
+                          
                         >
                           Login
                         </button>
@@ -132,6 +132,10 @@ const Login = () => {
             </Form>
           )}
         </Formik>
+
+{/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+
+        <footer className="footerDestinations"> </footer>
       </div>
     </div>
   );

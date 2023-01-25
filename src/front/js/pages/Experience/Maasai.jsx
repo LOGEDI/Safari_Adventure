@@ -13,7 +13,7 @@ const Maasai = () => {
           <div className="main-content">
             <div
               className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
-              style={{                
+              style={{
                 backgroundImage: `url(${maasaiHero})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -140,12 +140,8 @@ const Maasai = () => {
               </div>
             </div>
           </div>
-
-          <footer className="footer">
-            <div className="row align-items-center justify-content-xl-between">
-              <div className="col-xl-6 m-auto text-center"></div>
-            </div>
-          </footer>
+          {/* ----------------------------------------------Aditional footer for spacing----------------------------------------- */}
+          <footer className="footer"></footer>
         </div>
       </div>
     </div>

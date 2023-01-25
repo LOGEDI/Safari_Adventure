@@ -148,12 +148,8 @@ const PhotoSafari = () => {
               </div>
             </div>
           </div>
-          
-          <footer className="footer">
-            <div className="row align-items-center justify-content-xl-between">
-              <div className="col-xl-6 m-auto text-center"></div>
-            </div>
-          </footer>
+          {/* ----------------------------------------------Aditional footer for spacing----------------------------------------- */}
+          <footer className="footer"> </footer>
         </div>
       </div>
     </div>

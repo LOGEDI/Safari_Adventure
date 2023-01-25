@@ -32,7 +32,7 @@ const Uganda = () => {
           </div>
         </div>
 
-        {/*---------------------------------------------------- Description--------------------------------------------------- */}
+        {/*---------------------------------------------------- Description-title-------------------------------------------------- */}
 
         <div
           className="destinationsBackground pt-3"
@@ -54,7 +54,7 @@ const Uganda = () => {
                 </div>
               </div>
 
-              {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
+              {/*---------------------------------------------------- Links--------------------------------------------------- */}
 
               <div className="col-xl-7 order-xl-2">
                 <div className="row col-xl-12  p-0 destinationButons">
@@ -92,6 +92,8 @@ const Uganda = () => {
               </div>
             </div>
           </div>
+
+          {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
           <div className="container-fluid mt-3">
             <div className="row">
@@ -134,14 +136,11 @@ const Uganda = () => {
                       rafting on the River Nile.
                     </p>
                   </div>
-                  {/* <div className="row justify-content-center mt-4 p-3">
-                    <button type="button" className="btn btn-cream text-center">
-                      BOOK WITH US
-                    </button>
-                  </div> */}
 
-                  <div className="row row-cols-5 justify-content-center text-center mt-4">
-                    <div className="">
+                  {/*---------------------------------------------------- Icons--------------------------------------------------- */}
+
+                  <div className="row justify-content-center text-center mt-4">
+                    <div className="col">
                       <img
                         className="iconsdestinations"
                         src={destinationsicon}
@@ -149,14 +148,14 @@ const Uganda = () => {
                       <p className="desticontitle">PLACES TO VISIT</p>
                       <p className="desticoncontent">3 Locations</p>
                     </div>
-                    <div className="">
+                    <div className="col">
                       <img className="iconsdestinations" src={activity}></img>
                       <p className="desticontitle">EXPERIENCES</p>
                       <p className="desticoncontent">
                         City Tour, Trekking, Animal Tracking, Cultural Visits
                       </p>
                     </div>
-                    <div className="">
+                    <div className="col">
                       <img className="iconsdestinations" src={tripdays}></img>
                       <p className="desticontitle">INCLUDED IN:</p>
                       <p className="desticoncontent">EAST AFRICAN SAFARI</p>
@@ -166,6 +165,8 @@ const Uganda = () => {
               </div>
             </div>
           </div>
+
+          {/*---------------------------------------------------- Cards--------------------------------------------------- */}
 
           <div className="destinationsCards container-fluid">
             <div className="row g-3 justify-content-center">
@@ -223,11 +224,9 @@ const Uganda = () => {
             </div>
           </div>
 
-          <footer className="footerDestinations">
-            <div className="row align-items-center justify-content-xl-between">
-              <div className="col-xl-6 m-auto text-center"></div>
-            </div>
-          </footer>
+          {/*---------------------------------------------------- Footer for spacing--------------------------------------------------- */}
+
+          <footer className="footerDestinations"></footer>
         </div>
       </div>
     </div>

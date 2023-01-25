@@ -13,7 +13,7 @@ const UsersDetails = () => {
   useEffect(() => {
     actions.getUserDetail(params.id);
     window.scrollTo(0, 0);
-    actions.comparingFavorites();
+    actions.markFavorites();
   }, [params.id, store.userId]);
 
   if (store.packageDetail) {
@@ -24,9 +24,7 @@ const UsersDetails = () => {
             <div className="row">
               <div className="card bg-secondary shadow mb-2">
                 <div className="card-body">
-                  <h6 className="package-detail-subtitle mb-4">
-                    USER DETAILS
-                  </h6>
+                  <h6 className="package-detail-subtitle mb-4">USER DETAILS</h6>
                   <div className="pl-lg-4">
                     <div className="row">
                       <div className="col-lg-4">
@@ -43,7 +41,10 @@ const UsersDetails = () => {
 
                       <div className="col-lg-4">
                         <div className="form-group focused">
-                          <h3 className="package-detail-subtitle"> Username </h3>
+                          <h3 className="package-detail-subtitle">
+                            {" "}
+                            Username{" "}
+                          </h3>
                           <h3 className="package-detail-title">
                             {store.userDetail.username}
                           </h3>
@@ -55,7 +56,9 @@ const UsersDetails = () => {
                           </h3>
                         </div>
                         <div className="form-group">
-                          <h3 className="package-detail-subtitle">User type </h3>
+                          <h3 className="package-detail-subtitle">
+                            User type{" "}
+                          </h3>
                           {store.userDetail.admin ? (
                             <h2 className="text-danger">ADMIN</h2>
                           ) : null}{" "}
@@ -67,13 +70,18 @@ const UsersDetails = () => {
 
                       <div className="col-lg-4">
                         <div className="form-group focused">
-                          <h3 className="package-detail-subtitle"> First name </h3>
+                          <h3 className="package-detail-subtitle">
+                            {" "}
+                            First name{" "}
+                          </h3>
                           <h3 className="package-detail-title">
                             {store.userDetail.name}
                           </h3>
                         </div>
                         <div className="form-group">
-                          <h3 className="package-detail-subtitle">Last name </h3>
+                          <h3 className="package-detail-subtitle">
+                            Last name{" "}
+                          </h3>
                           <h3 className="package-detail-title">
                             {store.userDetail.lastname}
                           </h3>
@@ -100,19 +108,15 @@ const UsersDetails = () => {
               </div>
             </div>
 
-{/* ------------------------------------Comments Section------------------------------------------ */}
+            {/* ------------------------------------Comments Section------------------------------------------ */}
 
             <div className="row">
               <div className="card bg-secondary shadow mb-2">
                 <div className="card-body">
-                  <h6 className="package-detail-subtitle mb-4">
-                    COMMENTS
-                  </h6>
+                  <h6 className="package-detail-subtitle mb-4">COMMENTS</h6>
                   <div className="pl-lg-4">
                     <div className="row">
-                      <div className="col-lg-12">
-                        coments come here
-                      </div>
+                      <div className="col-lg-12">coments come here</div>
                     </div>
 
                     <div className="row justify-content-end">
@@ -127,7 +131,7 @@ const UsersDetails = () => {
                 </div>
               </div>
             </div>
-          </div>         
+          </div>
         </div>
         <Favorites />
         <footer className="footer">

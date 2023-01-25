@@ -562,6 +562,18 @@
     background-color: rgb(255, 254, 243);
     background-clip: border-box;
   }
+
+  .cardProfile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    word-wrap: break-word;
+    border: none;
+    border-radius: .375rem;
+    background-color: white;
+    background-clip: border-box;
+  }
   
   .cardDestinations {
     position: relative;
@@ -768,10 +780,42 @@
     margin: auto !important;
   }
   
+  @media (max-width: 576px) {
+  
+    .mt-sm-5 {
+      margin-top: 3rem !important;
+    }
+
+    .mb-sm-5 {
+      margin-bottom: 3rem !important;
+    }
+
+    .mt-sm-4 {
+      margin-top: 2.5rem !important;
+    }
+
+    .mb-sm-4 {
+      margin-bottom: 2.5rem !important;
+    }
+  
+    .pt-sm-4 {
+      padding-top: 1.5rem !important;
+    }
+  
+    .pb-sm-4 {
+      padding-bottom: 1.5rem !important;
+    }
+  }
+
+
   @media (min-width: 768px) {
   
     .mt-md-5 {
       margin-top: 3rem !important;
+    }
+
+    .mb-md-5 {
+      margin-bottom: 3rem !important;
     }
   
     .pt-md-4 {
@@ -813,7 +857,7 @@
     color: #8898aa !important;
   }
   
-  @media print {
+  /* @media print {
   
     *,
     *::before,
@@ -845,7 +889,7 @@
     .navbar {
       display: none;
     }
-  }
+  } */
   
   
   
@@ -1076,7 +1120,7 @@
 
   @media (max-width: 760px) {
     .packagescards {
-      padding: 10px;
+      /* padding: 10px; */
       justify-content: center;
       margin: auto;
       
@@ -1085,7 +1129,7 @@
 
   @media (min-width: 1456px) {
     .packagescards {
-      max-width: 1900px;
+      max-width: 1750px;
       justify-content: center;
       margin: auto;
       
@@ -1132,7 +1176,7 @@
 
   @media (min-width: 1456px) {
     .destinationsCards {
-      max-width:1550px;
+      max-width:1750px;
       justify-content: center;
       margin: auto;
       
@@ -1143,6 +1187,7 @@
     .destinationsCardsIndividual {
       max-width: 500px;
       justify-content: center;
+      
       margin: auto;
       
     }

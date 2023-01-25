@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Safari = () => {
 
   return (
+    <div className="pagesBackground">
      <div className="container">
      <div className="page-header">
         <div className="head-image">
@@ -133,9 +134,11 @@ const Safari = () => {
             </div>
           </div>
         </div>
+        {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+        <footer className="footerDestinations"> </footer>
       </div>
    </div>
-     
+     </div>
 
   )
 }

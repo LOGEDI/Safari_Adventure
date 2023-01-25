@@ -77,9 +77,9 @@ const EditUsers = () => {
 
   return (
     <div>
-      <div className="main-content">
-        <div className="container-fluid">
-          <div className="row">
+      <div className="main-content pagesBackground">
+        <div className="container-fluid ">
+          <div className="row mb-3 packagescards">
             <div className="card bg-secondary shadow">
               <div className="card-body">
                 <form

@@ -18,7 +18,6 @@ const Experience = () => {
             <div
               className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
               style={{
-                
                 backgroundImage: `url(${experienceHero})`,
 
                 backgroundSize: "cover",
@@ -84,7 +83,6 @@ const Experience = () => {
                               <div className=" carouselContent2">
                                 <div className="carousel-item active">
                                   <img
-                                
                                     src={carousel1}
                                     className="d-block w-100"
                                     alt="..."
@@ -92,7 +90,6 @@ const Experience = () => {
                                 </div>
                                 <div className="carousel-item">
                                   <img
-                                    
                                     src={carousel2}
                                     className="d-block w-100"
                                     alt="..."
@@ -100,7 +97,6 @@ const Experience = () => {
                                 </div>
                                 <div className="carousel-item">
                                   <img
-                                    
                                     src={carousel3}
                                     className="d-block w-100"
                                     alt="..."
@@ -144,13 +140,13 @@ const Experience = () => {
             </div>
           </div>
 
-{/*---------------------------------------------------- Picture links--------------------------------------------------- */}
+          {/*---------------------------------------------------- Picture links--------------------------------------------------- */}
 
           <div className="experiencePagePicLinks container-fluid">
             <div className="row g-3 mt-5">
               <div className="col-xl-3 col-md-6 order-xl-1 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
-                  <br/>
+                  <br />
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     MAASAI CULTURAL VISITS
                   </h4>
@@ -169,7 +165,7 @@ const Experience = () => {
 
               <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
-                  <br/>
+                  <br />
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     SUNDOWNERS
                   </h4>
@@ -206,7 +202,7 @@ const Experience = () => {
 
               <div className="col-xl-3 col-md-6 order-xl-4 mb-5 mb-xl-0">
                 <div className="experiencePagePicLinksIndividual ">
-                  <br/>
+                  <br />
                   <h4 className="experiencePagePicLinksTextTitle text-center">
                     BALLOON
                   </h4>
@@ -224,12 +220,8 @@ const Experience = () => {
               </div>
             </div>
           </div>
-
-          <footer className="footer">
-            <div className="row align-items-center justify-content-xl-between">
-              <div className="col-xl-6 m-auto text-center"></div>
-            </div>
-          </footer>
+          {/* ----------------------------------------------Aditional footer for spacing----------------------------------------- */}
+          <footer className="footer"></footer>
         </div>
       </div>
     </div>

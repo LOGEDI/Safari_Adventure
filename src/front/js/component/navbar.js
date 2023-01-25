@@ -51,7 +51,7 @@ export const NavbarMain = () => {
 
   {/*------------------------------------------------------- SECOND NAV --------------------------------------------------------------*/}        
 
-  <div className="navBar2">
+  <div className="navBar2 pagesBackground">
         <nav className="navbar">
           <div className="container-fluid  d-flex justify-content-center">
             {/*------------------------------------------------------- SAFARI TAB --------------------------------------------------------------*/}
@@ -120,7 +120,33 @@ export const NavbarMain = () => {
                 </a>
               </div>
             </div>
-            {/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
+           
+            {/*----------------------------------------------------TRAVEL PLANNING DROPDOWN TAB --------------------------------------------------*/}
+            <div className="dropdown">
+              <button className="nav2Button">
+                <Link to="/TravelPlan" className="nav2Button">
+                  TRAVEL PLANNING
+                </Link>
+              </button>
+
+              <div className="dropdown-content">
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/Destinations">
+                    DESTINATIONS
+                  </Link>
+                </a>
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/Packages">
+                    PACKAGES
+                  </Link>
+                </a>
+
+                
+                
+              </div>
+            </div>
+
+ {/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
             <div className="dropdown">
               <button className="nav2Button">
                 <Link to="/AboutUs" className="nav2Button">
@@ -140,27 +166,7 @@ export const NavbarMain = () => {
                 </a>
               </div>
             </div>
-            {/*----------------------------------------------------TRAVEL PLANNING DROPDOWN TAB --------------------------------------------------*/}
-            <div className="dropdown">
-              <button className="nav2Button">
-                <Link to="/TravelPlan" className="nav2Button">
-                  TRAVEL PLANNING
-                </Link>
-              </button>
-              <div className="dropdown-content">
-                <a className="dropdown-item">
-                  <Link className="linkToView" to="/Packages">
-                    PACKAGES
-                  </Link>
-                </a>
-                <a className="dropdown-item">
-                  <Link className="linkToView" to="/Destinations">
-                    DESTINATIONS
-                  </Link>
-                </a>
-              </div>
-            </div>
-
+            
             {/*-----------------------------------------------------------CONTACT TAB -------------------------------------------------------------*/}
 
             <button className="nav2Button me-3 nav-item  ">

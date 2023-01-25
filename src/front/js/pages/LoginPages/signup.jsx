@@ -147,6 +147,8 @@ const SignUp = () => {
             </Form>
           )}
         </Formik>
+        {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+        <footer className="footerDestinations"> </footer>
       </div>
     </div>
   );

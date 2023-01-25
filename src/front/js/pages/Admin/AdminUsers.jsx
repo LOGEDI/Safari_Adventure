@@ -44,8 +44,8 @@ const AdminUsers = () => {
       {store.user.map((item) => (
         <div key={item.id} className="col-12">
           <div className="main-content">
-            <div className="container-fluid">
-              <div className="row">
+            <div className="container-fluid packagesPost">
+              <div className="row packagescards">
                 <div className="card mb-3 bg-secondary shadow">
                   <div className="card-body ">                    
                     <div>

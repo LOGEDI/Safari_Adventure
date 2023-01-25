@@ -46,7 +46,7 @@ const Destinations = () => {
           </div>
         </div>
 
-        {/*---------------------------------------------------- Description--------------------------------------------------- */}
+        {/*---------------------------------------------------- Description-title-------------------------------------------------- */}
 
         <div
           className="destinationsBackground pt-3"
@@ -68,7 +68,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
+              {/*---------------------------------------------------- Links--------------------------------------------------- */}
 
               <div className="col-xl-7 order-xl-2">
                 <div className="row col-xl-12  p-0 destinationButons">
@@ -106,6 +106,7 @@ const Destinations = () => {
               </div>
             </div>
           </div>
+          {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
           <div className="container-fluid mt-3">
             <div className="row">
@@ -151,9 +152,11 @@ const Destinations = () => {
             </div>
           </div>
 
+          {/*---------------------------------------------------- Cards--------------------------------------------------- */}
+
           <div className="destinationsCards container-fluid ">
             <div className="row g-3 justify-content-center">
-              <div className="col-xl-3 col-md-6  mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6  mb-5 mb-xl-0 text-center">
                 <div className="destinationsCardsIndividual ">
                   <div className="destination__card transition hover-card ">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -164,7 +167,7 @@ const Destinations = () => {
                           alt="Addis Ababa"
                         ></img>
 
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Addis Ababa
                           </h4>
@@ -182,7 +185,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Kenya" style={{ textDecoration: "none" }}>
@@ -192,7 +195,7 @@ const Destinations = () => {
                           src={amboseli}
                           alt="Amboseli"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Amboseli National Park
                           </h4>
@@ -210,7 +213,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -220,7 +223,7 @@ const Destinations = () => {
                           src={axum}
                           alt="Axum"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">Axum</h4>
                           <h5 className="destinations-card-text">
                             <img
@@ -236,7 +239,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -246,7 +249,7 @@ const Destinations = () => {
                           src={bahir}
                           alt="Bahir Dar"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">Bahir Dar</h4>
                           <h5 className="destinations-card-text">
                             <img
@@ -262,7 +265,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Uganda" style={{ textDecoration: "none" }}>
@@ -272,7 +275,7 @@ const Destinations = () => {
                           src={batwa}
                           alt="Batwa "
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Batwa Trival Lands
                           </h4>
@@ -290,7 +293,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -300,7 +303,7 @@ const Destinations = () => {
                           src={gondar}
                           alt="Gondar"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">Gondar</h4>
                           <h5 className="destinations-card-text">
                             <img
@@ -316,7 +319,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Uganda" style={{ textDecoration: "none" }}>
@@ -326,7 +329,7 @@ const Destinations = () => {
                           src={bwindi}
                           alt="Bwindi"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Gorilla Forest, Bwindi
                           </h4>
@@ -344,7 +347,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -354,7 +357,7 @@ const Destinations = () => {
                           src={hawzen}
                           alt="Hawzen"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">Hawzen</h4>
                           <h5 className="destinations-card-text">
                             <img
@@ -370,7 +373,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Rwanda" style={{ textDecoration: "none" }}>
@@ -380,7 +383,7 @@ const Destinations = () => {
                           src={iby}
                           alt="Iby Iwaku"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Iby Iwacu Cultural Village
                           </h4>
@@ -398,7 +401,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Rwanda" style={{ textDecoration: "none" }}>
@@ -408,7 +411,7 @@ const Destinations = () => {
                           src={kigali}
                           alt="Kigali"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Kigali City
                           </h4>
@@ -426,7 +429,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -436,7 +439,7 @@ const Destinations = () => {
                           src={lalibela}
                           alt="Lalibella"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">Lalibela</h4>
                           <h5 className="destinations-card-text">
                             <img
@@ -452,7 +455,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Kenya" style={{ textDecoration: "none" }}>
@@ -462,7 +465,7 @@ const Destinations = () => {
                           src={maasai}
                           alt="Maasai Mara"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Maasai Mara
                           </h4>
@@ -480,7 +483,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Kenya" style={{ textDecoration: "none" }}>
@@ -490,7 +493,7 @@ const Destinations = () => {
                           src={nairobi}
                           alt="Nairobi"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Nairobi City
                           </h4>
@@ -508,7 +511,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Kenya" style={{ textDecoration: "none" }}>
@@ -518,7 +521,7 @@ const Destinations = () => {
                           src={nakuru}
                           alt="Nakuru"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Nakuru National Park
                           </h4>
@@ -536,7 +539,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Tanzania" style={{ textDecoration: "none" }}>
@@ -546,7 +549,7 @@ const Destinations = () => {
                           src={ngorongoro}
                           alt="ngorongoro"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Ngorongoro Crater
                           </h4>
@@ -564,7 +567,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Kenya" style={{ textDecoration: "none" }}>
@@ -574,7 +577,7 @@ const Destinations = () => {
                           src={samburu}
                           alt="Card image cap"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Samburu Game Reserve
                           </h4>
@@ -592,7 +595,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Tanzania" style={{ textDecoration: "none" }}>
@@ -602,7 +605,7 @@ const Destinations = () => {
                           src={serengeti}
                           alt="Card image cap"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Serengeti National Park
                           </h4>
@@ -620,7 +623,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Tanzania" style={{ textDecoration: "none" }}>
@@ -630,7 +633,7 @@ const Destinations = () => {
                           src={tarangire}
                           alt="Card image cap"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Tarangire National Park
                           </h4>
@@ -648,7 +651,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Rwanda" style={{ textDecoration: "none" }}>
@@ -658,7 +661,7 @@ const Destinations = () => {
                           src={rwanda}
                           alt="Card image cap"
                         ></img>
-                        <div className="destinations-card-body">
+                        <div className="destinations-card-body text-start">
                           <h4 className="destinations-card-title">
                             Volcanoes National Park
                           </h4>
@@ -676,7 +679,7 @@ const Destinations = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              {/* <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <Link to="/Ethiopia" style={{ textDecoration: "none" }}>
@@ -702,51 +705,11 @@ const Destinations = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
-
-              {/* <div className="col-xl-3 col-md-6 order-xl-3 mb-5 mb-xl-0">
-                <div className="experiencePagePicLinksIndividual ">
-                  <h4 className="experiencePagePicLinksTextTitle text-center">
-                    PHOTOGRAPHIC SAFARI
-                  </h4>
-                  <Link to="/PhotoSafari">
-                    <img
-                      className="col-12"
-                      src="https://www.enkewa.com/wp-content/uploads/2021/11/safari-23424.jpg"
-                      alt="example"
-                    />
-                  </Link>
-                  <p className="experiencePagePicLinksTextSubtitle text-center">
-                    Capture the moment
-                  </p>
-                </div>
-              </div> */}
-
-              {/* <div className="col-xl-3 col-md-6 order-xl-4 mb-5 mb-xl-0">
-                <div className="experiencePagePicLinksIndividual ">
-                  <h4 className="experiencePagePicLinksTextTitle text-center">
-                    BALLOON
-                  </h4>
-                  <Link to="/BalloonSafari">
-                    <img
-                      className="col-12"
-                      src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_6931-scaled.jpg"
-                      alt="example"
-                    />
-                  </Link>
-                  <p className="experiencePagePicLinksTextSubtitle text-center">
-                    Get the best view
-                  </p>
-                </div>
               </div> */}
             </div>
           </div>
-
-          <footer className="footerDestinations">
-            <div className="row align-items-center justify-content-xl-between">
-              <div className="col-xl-6 m-auto text-center"></div>
-            </div>
-          </footer>
+          {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+          <footer className="footerDestinations"> </footer>
         </div>
       </div>
     </div>

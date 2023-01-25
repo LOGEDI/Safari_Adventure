@@ -36,7 +36,7 @@ const Ethiopia = () => {
           </div>
         </div>
 
-        {/*---------------------------------------------------- Description--------------------------------------------------- */}
+        {/*---------------------------------------------------- Description-title-------------------------------------------------- */}
 
         <div
           className="destinationsBackground pt-3"
@@ -58,7 +58,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
+              {/*---------------------------------------------------- Links--------------------------------------------------- */}
 
               <div className="col-xl-7 order-xl-2">
                 <div className="row col-xl-12  p-0 destinationButons">
@@ -96,6 +96,7 @@ const Ethiopia = () => {
               </div>
             </div>
           </div>
+          {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
           <div className="container-fluid mt-3">
             <div className="row">
@@ -129,14 +130,10 @@ const Ethiopia = () => {
                       European Council on Tourism and Trade.
                     </p>
                   </div>
-                  {/* <div className="row justify-content-center mt-4 p-3">
-                    <button type="button" className="btn btn-cream text-center">
-                      BOOK WITH US
-                    </button>
-                  </div> */}
+                  {/*---------------------------------------------------- Icons--------------------------------------------------- */}
 
-                  <div className="row row-cols-5 justify-content-center text-center mt-4">
-                    <div className="">
+                  <div className="row  justify-content-center text-center mt-4">
+                    <div className="col">
                       <img
                         className="iconsdestinations"
                         src={destinationsicon}
@@ -144,12 +141,12 @@ const Ethiopia = () => {
                       <p className="desticontitle">PLACES TO VISIT</p>
                       <p className="desticoncontent">6 Locations</p>
                     </div>
-                    <div className="">
+                    <div className="col">
                       <img className="iconsdestinations" src={activity}></img>
                       <p className="desticontitle">EXPERIENCES</p>
                       <p className="desticoncontent">City Tour, Site Visits</p>
                     </div>
-                    <div className="">
+                    <div className="col">
                       <img className="iconsdestinations" src={tripdays}></img>
                       <p className="desticontitle">INCLUDED IN:</p>
                       <p className="desticoncontent">ETHIOPIAN TOUR</p>
@@ -160,9 +157,11 @@ const Ethiopia = () => {
             </div>
           </div>
 
+          {/*---------------------------------------------------- Cards--------------------------------------------------- */}
+
           <div className="destinationsCards container-fluid">
             <div className="row g-3 justify-content-center">
-              <div className="col-xl-3 col-md-6  mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6  mb-5 mb-xl-0 text-center">
                 <div className="destinationsCardsIndividual ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -172,7 +171,7 @@ const Ethiopia = () => {
                         alt="Addis Ababa"
                       ></img>
 
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Addis Ababa</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -187,7 +186,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinationsborder-2">
@@ -196,7 +195,7 @@ const Ethiopia = () => {
                         src={axum}
                         alt="Axum"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Axum</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -211,7 +210,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2 ">
@@ -220,7 +219,7 @@ const Ethiopia = () => {
                         src={bahir}
                         alt="Bahir Dar"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Bahir Dar</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -235,7 +234,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -244,7 +243,7 @@ const Ethiopia = () => {
                         src={gondar}
                         alt="Gondar"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Gondar</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -259,7 +258,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -268,7 +267,7 @@ const Ethiopia = () => {
                         src={hawzen}
                         alt="Hawzen"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Hawzen</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -283,7 +282,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -292,7 +291,7 @@ const Ethiopia = () => {
                         src={lalibela}
                         alt="Lalibella"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Lalibela</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -307,7 +306,7 @@ const Ethiopia = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              {/* <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -316,7 +315,7 @@ const Ethiopia = () => {
                         src={addis}
                         alt="Addis Ababa"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Addis Ababa</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -329,15 +328,11 @@ const Ethiopia = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
-
-          <footer className="footerDestinations">
-            <div className="row align-items-center justify-content-xl-between">
-              <div className="col-xl-6 m-auto text-center"></div>
-            </div>
-          </footer>
+          {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+          <footer className="footerDestinations"> </footer>
         </div>
       </div>
     </div>
