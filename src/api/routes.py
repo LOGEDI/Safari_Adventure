@@ -710,7 +710,7 @@ def create_comment():
 #---------------------------------------------------------------------------------------------------
 
 @api.route('/comments/<int:id_user>/<int:id_comment>', methods=['DELETE'])
-def delete_comment(id_user, id_comment,id_packages):
+def delete_comment(id_user, id_comment):
     # Filters by user id and comment id
     comment_query= Comment.query.filter_by(id_user=id_user).filter_by(id=id_comment).first()
     print(comment_query)

@@ -250,7 +250,7 @@ const Profile = () => {
                 <span
                   className="btn btn-outline-light mt-3"
                   onClick={() =>
-                    actions.deleteComments(item.id)
+                    actions.deleteComments(item.id_comment)
                   }
                   style={{ color: "#d2ae6d" }}
                 >

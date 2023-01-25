@@ -1119,19 +1119,15 @@ const getState = ({ getStore, getActions, setStore }) => {
       //											 COMMENT DELETE
       //-----------------------------------------------------------------------------------------------------------------------------
 
-      deleteComments: async (package_id) => {
-        // Se llama store
+      deleteComments: async (comment_id) => {
+
+
         let store = getStore();
         let user_id = store.userId;
         try {
           const response = await axios.delete(
-            process.env.BACKEND_URL + "/api/comments",
-            {
-              data: {
-                id_packages: package_id,
-                id_user: user_id,
-              },
-            }
+            process.env.BACKEND_URL + "/api/comments/" + user_id + "/" + comment_id,
+          
           );
           // Sweet alert
           Swal.fire({ text: response.data.msg, confirmButtonColor: "#000000" });
