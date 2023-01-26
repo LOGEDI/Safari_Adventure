@@ -168,7 +168,7 @@ const Rwanda = () => {
 
           <div className="destinationsCards container-fluid">
             <div className="row g-3 justify-content-center">
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -177,7 +177,7 @@ const Rwanda = () => {
                         src={iby}
                         alt="Iby Iwaku"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Iby Iwacu Cultural Village
                         </h4>
@@ -194,7 +194,7 @@ const Rwanda = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -203,7 +203,7 @@ const Rwanda = () => {
                         src={kigali}
                         alt="Kigali"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Kigali City</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -218,7 +218,7 @@ const Rwanda = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -227,7 +227,7 @@ const Rwanda = () => {
                         src={rwanda}
                         alt="Card image cap"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Volcanoes National Park
                         </h4>
