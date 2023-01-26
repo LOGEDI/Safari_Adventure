@@ -166,7 +166,7 @@ const Tanzania = () => {
 
           <div className="destinationsCards container-fluid">
             <div className="row g-3 justify-content-center">
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -175,7 +175,7 @@ const Tanzania = () => {
                         src={ngorongoro}
                         alt="ngorongoro"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Ngorongoro Crater
                         </h4>
@@ -192,7 +192,7 @@ const Tanzania = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -201,7 +201,7 @@ const Tanzania = () => {
                         src={serengeti}
                         alt="Card image cap"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Serengeti National Park
                         </h4>
@@ -218,7 +218,7 @@ const Tanzania = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -227,7 +227,7 @@ const Tanzania = () => {
                         src={tarangire}
                         alt="Card image cap"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Tarangire National Park
                         </h4>

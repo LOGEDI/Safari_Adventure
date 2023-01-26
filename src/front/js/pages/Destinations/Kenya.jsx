@@ -164,7 +164,7 @@ const Kenya = () => {
 
           <div className="destinationsCards container-fluid">
             <div className="row g-3 justify-content-center">
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinationsborder-2">
@@ -173,7 +173,7 @@ const Kenya = () => {
                         src={amboseli}
                         alt="Amboseli"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Amboseli National Park
                         </h4>
@@ -190,7 +190,7 @@ const Kenya = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -199,7 +199,7 @@ const Kenya = () => {
                         src={maasai}
                         alt="Maasai Mara"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">Maasai Mara</h4>
                         <h5 className="destinations-card-text">
                           <img
@@ -214,7 +214,7 @@ const Kenya = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -223,7 +223,7 @@ const Kenya = () => {
                         src={nairobi}
                         alt="Nairobi"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Nairobi City
                         </h4>
@@ -240,7 +240,7 @@ const Kenya = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -249,7 +249,7 @@ const Kenya = () => {
                         src={nakuru}
                         alt="Nakuru"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Nakuru National Park
                         </h4>
@@ -266,7 +266,7 @@ const Kenya = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -275,7 +275,7 @@ const Kenya = () => {
                         src={samburu}
                         alt="Card image cap"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Samburu Game Reserve
                         </h4>

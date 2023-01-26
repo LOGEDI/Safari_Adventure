@@ -74,6 +74,9 @@ const Experience = () => {
                     <div className="">
                       <div className=" border-0   pb-0 ">
                         <div className="carouselContainerLeft">
+
+
+                          
                           <div
                             id="carouselExampleFade"
                             className=" carousel slide carousel-fade"
@@ -131,6 +134,9 @@ const Experience = () => {
                               </button>
                             </div>
                           </div>
+
+
+
                         </div>
                       </div>
                     </div>

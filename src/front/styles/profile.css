@@ -1053,7 +1053,7 @@
 
 
 
-  @media (min-width: 1456px) {
+  /* @media (min-width: 1456px) {
     .carouselContainerLeft {
       max-width: 665px;
       justify-content: end;
@@ -1071,7 +1071,7 @@
       
     }
 
-  }
+  } */
 
   @media (min-width: 1456px) {
     .pageDescriptionContainerLeft {

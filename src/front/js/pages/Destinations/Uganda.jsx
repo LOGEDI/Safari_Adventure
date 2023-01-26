@@ -170,7 +170,7 @@ const Uganda = () => {
 
           <div className="destinationsCards container-fluid">
             <div className="row g-3 justify-content-center">
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -179,7 +179,7 @@ const Uganda = () => {
                         src={batwa}
                         alt="Batwa "
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Batwa Trival Lands
                         </h4>
@@ -196,7 +196,7 @@ const Uganda = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0">
+              <div className="col-xl-3 col-md-6 order-xl-2 mb-5 mb-xl-0 text-center">
                 <div className="destinationsCards ">
                   <div className="destination__card transition hover-card">
                     <div className="destinationthumb cardDestinations border-2">
@@ -205,7 +205,7 @@ const Uganda = () => {
                         src={bwindi}
                         alt="Bwindi"
                       ></img>
-                      <div className="destinations-card-body">
+                      <div className="destinations-card-body text-start">
                         <h4 className="destinations-card-title">
                           Gorilla Forest, Bwindi
                         </h4>
