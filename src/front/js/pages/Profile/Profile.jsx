@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
 
-import "../../../styles/profile.css"
+import "../../../styles/profile.css";
 import userProfileIcon from "../../../img/user-profile-icon.jpg";
 import profileHero from "../../../img/Maasai_Mara_National_Reserve_Kenya.jpg";
 
@@ -16,14 +16,9 @@ const Profile = () => {
     actions.userProfile();
     if (store.userId != null) {
       actions.getFavorites();
+      actions.getComments();
     }
   }, [store.userId]);
-
-  // useEffect(() => {
-  //   if (store.userId != null) {
-  //     actions.getFavorites();
-  //   }
-  // }, [store.userId]);
 
   return (
     <div className="pagesBackground">
@@ -36,8 +31,7 @@ const Profile = () => {
               className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
               style={{
                 minHeight: "600px",
-                backgroundImage:
-                `url(${profileHero})`,
+                backgroundImage: `url(${profileHero})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center top",
               }}
@@ -89,7 +83,7 @@ const Profile = () => {
                     </div>
                     <div className=" text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                       <div className="d-flex justify-content-between">
-                        <a href="#" className="btn btn-sm btn-info mr-4">
+                        {/* <a href="#" className="btn btn-sm btn-info mr-4">
                           Connect
                         </a>
                         <a
@@ -97,7 +91,7 @@ const Profile = () => {
                           className="btn btn-sm btn-default float-right"
                         >
                           Message
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                     <div className="card-body pt-0 pt-md-4">
@@ -142,13 +136,9 @@ const Profile = () => {
                     <div className="card-header bg-white border-0">
                       <div className="row align-items-center">
                         <div className="col-8">
-                          <h3 className="mb-0 page-subtitle">My favorites</h3>
+                          <h3 className="mb-0 ">My favorites</h3>
                         </div>
-                        <div className="col-4 text-right">
-                          <a href="#!" className="btn btn-sm btn-primary">
-                            Settings
-                          </a>
-                        </div>
+                        
                       </div>
                     </div>
 
@@ -201,19 +191,71 @@ const Profile = () => {
                         <p>No favorite package</p>
                       )}
                     </div>
+ </div>
+{/*---------------------------- comments content-----------------*/}
 
-          
-                  </div>
+                    <div className="">
+                      <div className="card bg-secondary shadow mt-3">
+                        <div className="card-header bg-white border-0">
+                          <div className="row align-items-center">
+                            <div className="">
+                              <h3 className="mb-0">My comments</h3>
+                            </div>
+                            
+                          </div>
+                        </div>
+
+                        <div className="card-body">
+                          {store.comments.length > 0 ? (
+                            store.comments?.map((item) => (
+                              <div key={item.id}>
+                                <div className="pl-lg-4">
+                                  <div className="row">
+                                    <div className="col-lg-2"></div>
+                                    <div className="col-lg-9">
+                                      <div className="form-group focused">
+                                        <h3 className="package-detail-title mt-4">
+                                          {item?.comment}
+                                        </h3>
+                                      </div>
+                                    </div>
+                                    <div className="col-lg-1">
+                                      <div className="form-group focused">
+                                        <div className=" justify-content-end">
+                                          <span
+                                            className="btn btn-outline-light mt-3"
+                                            onClick={() =>
+                                              actions.deleteComments(
+                                                item.id_comment
+                                              )
+                                            }
+                                            style={{ color: "#d2ae6d" }}
+                                          >
+                                            <b>X</b>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <hr className="my-4" />
+                              </div>
+                            ))
+                          ) : (
+                            <p>No favorite comment</p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                 
                 </div>
               </div>
             </div>
           </div>
 
-{/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
+          {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
 
           <footer className="footer"></footer>
-            
-          
         </div>
       ) : (
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">

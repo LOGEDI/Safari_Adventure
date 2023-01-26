@@ -140,6 +140,11 @@ export const NavbarMain = () => {
                     PACKAGES
                   </Link>
                 </a>
+                <a className="dropdown-item">
+                  <Link className="linkToView" to="/FAQ">
+                    FAQ
+                  </Link>
+                </a>
 
                 
                 

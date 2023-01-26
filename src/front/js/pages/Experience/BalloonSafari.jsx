@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import balloonHero from "../../../img/balloon-hero.jpg";
 import carousel1 from "../../../img/carousel1-balloon-pic1.jpg";
@@ -65,61 +66,29 @@ const BalloonSafari = () => {
                 <div className="">
                   <div className=" border-0   pb-0 ">
                     <div className="carouselContainerLeft">
-                      <div
-                        id="carouselExampleFade"
-                        className=" carousel slide carousel-fade"
-                        data-bs-ride="carousel"
-                      >
-                        <div className=" carousel-inner">
-                          <div className=" carouselContent2">
-                            <div className="carousel-item active">
-                              <img
-                                src={carousel1}
-                                className="d-block w-100"
-                                alt="..."
-                              />
-                            </div>
-                            <div className="carousel-item">
-                              <img
-                                src={carousel2}
-                                className="d-block w-100"
-                                alt="..."
-                              />
-                            </div>
-                            <div className="carousel-item">
-                              <img
-                                src={carousel3}
-                                className="d-block w-100"
-                                alt="..."
-                              />
-                            </div>
-                          </div>
-                          <button
-                            className="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#carouselExampleFade"
-                            data-bs-slide="prev"
-                          >
-                            <span
-                              className="carousel-control-prev-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span className="visually-hidden">Previous</span>
-                          </button>
-                          <button
-                            className="carousel-control-next"
-                            type="button"
-                            data-bs-target="#carouselExampleFade"
-                            data-bs-slide="next"
-                          >
-                            <span
-                              className="carousel-control-next-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span className="visually-hidden">Next</span>
-                          </button>
-                        </div>
-                      </div>
+                      <Carousel>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel1}
+                            alt="First slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel2}
+                            alt="Second slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel3}
+                            alt="Third slide"
+                          />
+                        </Carousel.Item>
+                      </Carousel>
                     </div>
                   </div>
                 </div>

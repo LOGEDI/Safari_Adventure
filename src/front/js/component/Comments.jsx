@@ -10,7 +10,6 @@ const Comments = () => {
     const params = useParams();
     const navigate = useNavigate();
     
-
     const handleComments = async (e) => {
         e.preventDefault();
         let onComment = await actions.createComment(comment, params.id);

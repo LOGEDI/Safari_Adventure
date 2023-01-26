@@ -22,6 +22,7 @@ import CommunityProjects from "./pages/AboutUs/CommunityProjects.jsx";
 import PhotoGallery from "./pages/AboutUs/PhotoGallery.jsx";
 import Packages from "./pages/TravelPlaning/Packages.jsx";
 import PackagesDetails from "./pages/TravelPlaning/PackagesDetails.jsx";
+import FAQ from "./pages/TravelPlaning/FAQ.jsx";
 
 import Destinations from "./pages/Destinations/Destinations.jsx";
 import Kenya from "./pages/Destinations/Kenya.jsx";
@@ -89,6 +90,7 @@ const Layout = () => {
             <Route element={<TravelPlan />} path="/TravelPlan" />
             <Route element={<Packages />} path="/Packages" />
             <Route element={<PackagesDetails />} path="/PackagesDetails/:id" />
+            <Route element={<FAQ />} path="/FAQ" />
             <Route element={<AddPackages />} path="/AddPackages" />
             <Route element={<Destinations />} path="/Destinations" />
             <Route element={<Kenya />} path="/Kenya" />

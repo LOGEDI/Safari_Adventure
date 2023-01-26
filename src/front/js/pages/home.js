@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import { Link } from "react-router-dom";
+import Carousel from "react-bootstrap/Carousel";
+
 import "../../styles/index.css";
 
 export const Home = () => {
@@ -12,7 +13,53 @@ export const Home = () => {
       <div className="container ">
         {/* ----------------------------PAGE TITLE CAROUSEL TYPE 2------------------------------------------------- */}
 
-        <div className="carousel2">
+
+
+        <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/40.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h2>First slide label</h2>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/75/ab/39.jpg"
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h2>Second slide label</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://media.istockphoto.com/id/636870490/photo/kilimanjaro-with-elephants.jpg?s=612x612&w=0&k=20&c=XLMQxWXqcBRmwx1GhsjUzF9Ex3IqWgUcyiYb2rzLdcw="
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h2 >Third slide label</h2>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+
+
+
+
+        {/* <div className="carousel2">
           <link
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
             rel="stylesheet"
@@ -68,7 +115,7 @@ export const Home = () => {
                     className="animated bounceInRight"
                     style={{ animationDelay: "3s" }}
                   >
-                    {/* <a className="carousel2CaptionA" href="#">Learn More</a> */}
+                    
                   </p>
                 </div>
               </div>
@@ -95,7 +142,7 @@ export const Home = () => {
                     className="animated bounceInRight"
                     style={{ animationDelay: "3s" }}
                   >
-                    {/* <a className="carousel2CaptionA" href="#">Learn More</a> */}
+                    
                   </p>
                 </div>
               </div>
@@ -122,7 +169,7 @@ export const Home = () => {
                     className="animated bounceInRight"
                     style={{ animationDelay: "3s" }}
                   >
-                    {/* <a className="carousel2CaptionA" href="#">Learn More</a> */}
+                  
                   </p>
                 </div>
               </div>
@@ -146,7 +193,7 @@ export const Home = () => {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* -----------------------------------PICTURE LINKS ----------------------------------------------- */}
 
@@ -307,7 +354,7 @@ export const Home = () => {
                   Our privileged location inside the National Reserve together
                   with our philosophy of tracking and searching for our own
                   wildlife sightings far from the transited areas, makes the
-                  Enkewa safari experience amongst the best in the Masai Mara.
+                  Safari Adventure experience amongst the best in the Masai Mara.
                   We are located in superb big5 country with access to 4
                   different lion prides within minutes from camp as well as the
                   best leopard territory inside the reserve. The Black rhino

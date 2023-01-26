@@ -222,7 +222,7 @@ class Comment(db.Model):
 
     def serialize(self):
         return {
-            # "id": self.id,
+            "id_comment": self.id,
             "id_user": self.id_user,
             "id_packages": self.id_packages,
             "comment": self.comment
