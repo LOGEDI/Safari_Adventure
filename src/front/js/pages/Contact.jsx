@@ -1,6 +1,8 @@
 import React from 'react'
+import Contact from "../../img/ContactMain.jpg";
 
-const Contact = () => {
+
+const OtherServices = () => {
   return (
     <div className="container">
 <div className="page-header">
@@ -35,4 +37,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default OtherServices

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CampMain from "../../img/CampMain.jpeg";
-import Camp1 from "../../img/Camp1.png";
+import Camp1 from "../../img/Camp1.webp";
 import Camp2 from "../../img/Camp2.jpeg";
 import Camp3 from "../../img/Camp3.png";
 
@@ -139,7 +139,6 @@ const Camp = () => {
               <div className="row g-3 mt-5">
                 <div className="col-xl-3 order-xl-1 mb-5 mb-xl-0">
                   <div className="experiencePagePicLinksIndividual ">
-                    <br/>
                     <h4 className="experiencePagePicLinksTextTitle text-center">
                       Sleep
                     </h4>
@@ -158,7 +157,6 @@ const Camp = () => {
   
                 <div className="col-xl-3 order-xl-2 mb-5 mb-xl-0">
                   <div className="experiencePagePicLinksIndividual ">
-                    <br/>
                     <h4 className="experiencePagePicLinksTextTitle text-center">
                       Eat
                     </h4>
@@ -193,9 +191,8 @@ const Camp = () => {
                   </div>
                 </div>
   
-                <div className="col-xl-3 order-xl-4 mb-5 mb-xl-0">
+                <div className="col-xl-3 order-xl-3 mb-5 mb-xl-0">
                   <div className="experiencePagePicLinksIndividual ">
-                    <br/>
                     <h4 className="experiencePagePicLinksTextTitle text-center">
                       Other Services
                     </h4>
