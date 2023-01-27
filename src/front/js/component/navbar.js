@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-
 export const NavbarMain = () => {
   const { store, actions } = useContext(Context);
 
   let navigate = useNavigate();
-  
+
   // Calls flux logout
   const doLogout = () => {
     //false
@@ -22,36 +21,41 @@ export const NavbarMain = () => {
   };
 
   return (
-
-      <div>
-        <nav className="navbar" style={{ backgroundColor: "#29362f" }}>
-          <div className="container">
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <div className="navbar__logo mb-0 ">Safari Adventure</div>
-            </Link>
-            <div className="ml-auto">
-                {!store.auth ? (
-                  <Link to="/login">
-                    <button className="btn btn-cream m-2">Login</button>
-                  </Link>
-                ) : null}{" "}
-                {store.auth ? (
-                  <Link to="/">
-                    <button className="btn btn-cream m-2" type="button" onClick={doLogout} >Log out</button>
-                  </Link>
-                ) : null}
-                {!store.auth ? (
-                  <Link to="/signup" >
-                    <button className="btn btn-cream m-2">Sign Up</button>
-                  </Link>
-                ) : null}{" "}
-            </div>
+    <div>
+      <nav className="navbar" style={{ backgroundColor: "#29362f" }}>
+        <div className="container">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className="navbar__logo mb-0 ">Safari Adventure</div>
+          </Link>
+          <div className="ml-auto">
+            {!store.auth ? (
+              <Link to="/login">
+                <button className="btn btn-cream m-2">Login</button>
+              </Link>
+            ) : null}{" "}
+            {store.auth ? (
+              <Link to="/">
+                <button
+                  className="btn btn-cream m-2"
+                  type="button"
+                  onClick={doLogout}
+                >
+                  Log out
+                </button>
+              </Link>
+            ) : null}
+            {!store.auth ? (
+              <Link to="/signup">
+                <button className="btn btn-cream m-2">Sign Up</button>
+              </Link>
+            ) : null}{" "}
           </div>
-        </nav>
+        </div>
+      </nav>
 
-  {/*------------------------------------------------------- SECOND NAV --------------------------------------------------------------*/}        
+      {/*------------------------------------------------------- SECOND NAV --------------------------------------------------------------*/}
 
-  <div className="navBar2 pagesBackground">
+      <div className="navBar2 pagesBackground">
         <nav className="navbar">
           <div className="container-fluid  d-flex justify-content-center">
             {/*------------------------------------------------------- SAFARI TAB --------------------------------------------------------------*/}
@@ -63,7 +67,7 @@ export const NavbarMain = () => {
             {/*--------------------------------------------------- CAMP DROPDOWN TAB --------------------------------------------------------------*/}
             <div className="dropdown">
               <button className="nav2Button">
-                <Link to="/Camp" className="nav2Button" >
+                <Link to="/Camp" className="nav2Button">
                   THE CAMP
                 </Link>
               </button>
@@ -120,7 +124,6 @@ export const NavbarMain = () => {
                 </a>
               </div>
             </div>
-           
             {/*----------------------------------------------------TRAVEL PLANNING DROPDOWN TAB --------------------------------------------------*/}
             <div className="dropdown">
               <button className="nav2Button">
@@ -145,13 +148,9 @@ export const NavbarMain = () => {
                     FAQ
                   </Link>
                 </a>
-
-                
-                
               </div>
             </div>
-
- {/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
+            {/*----------------------------------------------------ABOUT US DROPDOWN TAB ---------------------------------------------------------*/}
             <div className="dropdown">
               <button className="nav2Button">
                 <Link to="/AboutUs" className="nav2Button">
@@ -171,17 +170,13 @@ export const NavbarMain = () => {
                 </a>
               </div>
             </div>
-            
             {/*-----------------------------------------------------------CONTACT TAB -------------------------------------------------------------*/}
-
             <button className="nav2Button me-3 nav-item  ">
               <Link to="/Contact" className="nav2Button">
                 CONTACT
               </Link>
             </button>
-
-{/*-----------------------------------------------------------PROFILE HIDE TAB -------------------------------------------------------------*/}
-
+            {/*-----------------------------------------------------------PROFILE HIDE TAB -------------------------------------------------------------*/}
             {store.auth ? (
               <button className="nav2Button me-3 nav-item  ">
                 <Link to="/Profile" className="nav2Button">
@@ -189,46 +184,42 @@ export const NavbarMain = () => {
                 </Link>
               </button>
             ) : null}{" "}
+            {/*-----------------------------------------------------------ADMIN HIDE TAB -------------------------------------------------------------*/}
+            {/* ---admin uth ---- */}
+            {store.auth ? (
+              <div>
+                {store.admin ? (
+                  <div className="dropdown">
+                    <button className="nav2Button">
+                      <Link to="/Admin" className="nav2Button">
+                        ADMIN
+                      </Link>
+                    </button>
+                    <div className="dropdown-content">
+                      <a className="dropdown-item">
+                        <Link className="linkToView" to="/AdminPackages">
+                          EDIT PACKAGES
+                        </Link>
+                      </a>
+                      <a className="dropdown-item">
+                        <Link className="linkToView" to="/AdminUsers">
+                          EDIT USERS
+                        </Link>
+                      </a>
 
- {/*-----------------------------------------------------------ADMIN HIDE TAB -------------------------------------------------------------*/}
-
-  {/* {store.admin ? ( */}  
-
-{/* ---admin uth ---- */}
-
-            <div className="dropdown">
-              <button className="nav2Button">
-                <Link to="/Admin" className="nav2Button">
-                  ADMIN
-                </Link>
-              </button>
-              <div className="dropdown-content">
-                <a className="dropdown-item">
-                  <Link className="linkToView" to="/AdminPackages">
-                    EDIT PACKAGES
-                  </Link>
-                </a>
-                <a className="dropdown-item">
-                  <Link className="linkToView" to="/AdminUsers">
-                    EDIT USERS
-                  </Link>
-                </a>
-
-                <a className="dropdown-item">
-                  <Link className="linkToView" to="/Admin">
-                    EDIT COMMENTS
-                  </Link>
-                </a>              
+                      <a className="dropdown-item">
+                        <Link className="linkToView" to="/Admin">
+                          EDIT COMMENTS
+                        </Link>
+                      </a>
+                    </div>
+                  </div>
+                ) : null}{" "}
               </div>
-            </div>
-
-  {/* ) : null}{" "} */}
-
+            ) : null}{" "}
           </div>
         </nav>
       </div>
-
-
-      </div>
+    </div>
   );
 };

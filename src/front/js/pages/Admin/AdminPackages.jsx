@@ -39,6 +39,7 @@ const AdminPackages = () => {
 
   return (
     <div>
+       {store.admin ? (
       <div
         className="destinationsBackground"
         style={{
@@ -101,6 +102,21 @@ const AdminPackages = () => {
           </div>
         </div>
       </div>
+       ) : (
+        <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
+                <div>
+                  <h1 className="package-detail-title mt-5"
+                      style={{ color: "black" }}>Not logged in...</h1>
+                  <Nav.Link
+                    className="package-detail-subtitle"
+                    style={{ color: "#d2ae6d" }}
+                    href="/login"
+                  >
+                    Go to login
+                  </Nav.Link>
+                </div>
+              </div>
+        )}{" "}
     </div>
   );
 };

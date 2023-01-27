@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import userProfileIcon from "../../../img/user-profile-icon.jpg";
 
 import Favorites from "../../component/Favorites.jsx";
+import Comments from "../../component/Comments.jsx";
 
 const UsersDetails = () => {
   const { store, actions } = useContext(Context);
@@ -16,8 +17,9 @@ const UsersDetails = () => {
     actions.markFavorites();
   }, [params.id, store.userId]);
 
-  if (store.packageDetail) {
+  
     return (
+      
       <div>
         <div className="main-content">
           <div className="container-fluid">
@@ -110,7 +112,7 @@ const UsersDetails = () => {
 
             {/* ------------------------------------Comments Section------------------------------------------ */}
 
-            <div className="row">
+            {/* <div className="row">
               <div className="card bg-secondary shadow mb-2">
                 <div className="card-body">
                   <h6 className="package-detail-subtitle mb-4">COMMENTS</h6>
@@ -130,22 +132,25 @@ const UsersDetails = () => {
                   <hr className="my-4" />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <Favorites />
-        <footer className="footer">
-          <div className="row align-items-center justify-content-xl-between">
-            <div className="col-xl-6 m-auto text-center"></div>
-          </div>
-        </footer>
+            <Comments />
+        <div>
+           <Favorites />
+        </div>
+       
+
+
+
+
+       
+        <footer className="footer"></footer> 
+        
+               
       </div>
+
     );
-  } else {
-    return (
-      <div className="text-dark text-center mt-5">Loading please wait...</div>
-    );
-  }
 };
 
 export default UsersDetails;

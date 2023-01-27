@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-
+import anything from "../../img/user-profile-icon.jpg";
 import "../../styles/index.css";
 
 export const Home = () => {

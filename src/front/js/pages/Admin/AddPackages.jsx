@@ -608,833 +608,841 @@ const AddPackages = () => {
   };
   return (
     <div>
-    <div
-      className="destinationsBackground"
-      style={{
-        backgroundImage: `url(${destinationBackground})`,
-      }}
-    >
-    {/* {store.auth ? ( */}
-    <h1 className="text-center package-detail-title">PACKAGES CREATOR</h1>
-    <div className="container ">
-    <Link to="/AdminPackages">
-        <button className="btn btn-primary">BACK TO PACKAGES</button>
-        </Link>
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="row row-cols-2 mt-5 mb-5">
-          <label for="packages-main">CARD MAIN</label>
-          <label for="packages-second">CARD BACKGROUND</label>
-          <input
-            id="packages-main"
-            type="file"
-            className=""
-            placeholder="Packages main"
-            onChange={(e) => {
-              uploadImage(e);
-              setUrl(e.target.value);
-            }}
-          ></input>
-          <input
-            id="packages-second"
-            type="file"
-            className=""
-            placeholder="Packages second"
-            onChange={(e) => {
-              uploadImage1(e);
-              setUrl1(e.target.value);
-            }}
-          ></input>
-        </div>
-
-        <div className="row row-cols-2 mt-5 mb-5">
-          <label for="packages-hero">HERO IMG</label>
-          <input
-            className="package-description"
-            type="text"
-            placeholder="CARD DESCRIPT"
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
-          ></input>
-          <input
-            id="packages-hero"
-            type="file"
-            className=""
-            placeholder="Packages Hero"
-            onChange={(e) => {
-              uploadImage2(e);
-              setUrl2(e.target.value);
-            }}
-          ></input>
-
-          <input
-            className="package-detail-title"
-            type="text"
-            placeholder="TITLE"
-            onChange={(e) => setTitle(e.target.value)}
-            value={title}
-          ></input>
-        </div>
-
-        <div>
-          ------------------------------------------------------------------------------BODY-------------------------------------------------------------------------
-          <div className="row row-cols-2 g-3 mt-5">
-            <div className="col-7">
+      {store.admin ? ( 
+      <div
+        className="destinationsBackground"
+        style={{
+          backgroundImage: `url(${destinationBackground})`,
+        }}
+      >
+         
+        <h1 className="text-center package-detail-title">PACKAGES CREATOR</h1>
+        <div className="container ">
+          <Link to="/AdminPackages">
+            <button className="btn btn-primary">BACK TO PACKAGES</button>
+          </Link>
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="row row-cols-2 mt-5 mb-5">
+              <label for="packages-main">CARD MAIN</label>
+              <label for="packages-second">CARD BACKGROUND</label>
               <input
-                className="package-detail-title"
-                type="text"
-                placeholder="NAME"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
+                id="packages-main"
+                type="file"
+                className=""
+                placeholder="Packages main"
+                onChange={(e) => {
+                  uploadImage(e);
+                  setUrl(e.target.value);
+                }}
               ></input>
-              <br />
-              <br />
               <input
-                className="package-detail-title"
-                type="text"
-                placeholder="CATEGORY"
-                onChange={(e) => setCategory(e.target.value)}
-                value={category}
+                id="packages-second"
+                type="file"
+                className=""
+                placeholder="Packages second"
+                onChange={(e) => {
+                  uploadImage1(e);
+                  setUrl1(e.target.value);
+                }}
               ></input>
-              <br />
-              <img className="separator mr-3" src={separator}></img>
             </div>
-            <div className="col-5">
-              <div className="row row-cols-5 justify-content-center">
-                <div className="col-2">
-                  <button className="btn-alert btn-l"> all</button>
+
+            <div className="row row-cols-2 mt-5 mb-5">
+              <label for="packages-hero">HERO IMG</label>
+              <input
+                className="package-description"
+                type="text"
+                placeholder="CARD DESCRIPT"
+                onChange={(e) => setDescription(e.target.value)}
+                value={description}
+              ></input>
+              <input
+                id="packages-hero"
+                type="file"
+                className=""
+                placeholder="Packages Hero"
+                onChange={(e) => {
+                  uploadImage2(e);
+                  setUrl2(e.target.value);
+                }}
+              ></input>
+
+              <input
+                className="package-detail-title"
+                type="text"
+                placeholder="TITLE"
+                onChange={(e) => setTitle(e.target.value)}
+                value={title}
+              ></input>
+            </div>
+
+            <div>
+              ------------------------------------------------------------------------------BODY-------------------------------------------------------------------------
+              <div className="row row-cols-2 g-3 mt-5">
+                <div className="col-7">
+                  <input
+                    className="package-detail-title"
+                    type="text"
+                    placeholder="NAME"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                  ></input>
+                  <br />
+                  <br />
+                  <input
+                    className="package-detail-title"
+                    type="text"
+                    placeholder="CATEGORY"
+                    onChange={(e) => setCategory(e.target.value)}
+                    value={category}
+                  ></input>
+                  <br />
+                  <img className="separator mr-3" src={separator}></img>
                 </div>
-                <div className="col-2">
-                  <button className="btn-alert btn-l">all</button>
-                </div>
-                <div className="col-2">
-                  <button className="btn-alert btn-l">all</button>
-                </div>
-                <div className="col-2">
-                  <button className="btn-alert btn-l">all</button>
+                <div className="col-5">
+                  <div className="row row-cols-5 justify-content-center">
+                    <div className="col-2">
+                      <button className="btn-alert btn-l"> all</button>
+                    </div>
+                    <div className="col-2">
+                      <button className="btn-alert btn-l">all</button>
+                    </div>
+                    <div className="col-2">
+                      <button className="btn-alert btn-l">all</button>
+                    </div>
+                    <div className="col-2">
+                      <button className="btn-alert btn-l">all</button>
+                    </div>
+                  </div>
+                  <div className="row row-cols-1 mt-5 mb-5">
+                    <label for="packages-background">BACKGROUND IMG</label>
+                    <input
+                      id="packages-background"
+                      type="file"
+                      className=""
+                      placeholder="background-img"
+                      onChange={(e) => {
+                        uploadImage3(e);
+                        setUrl3(e.target.value);
+                      }}
+                      // value={}
+                    ></input>
+                  </div>
                 </div>
               </div>
-              <div className="row row-cols-1 mt-5 mb-5">
-                <label for="packages-background">BACKGROUND IMG</label>
+              <div className=" row row-cols-6 mt-5 ml-5 mr-5 justify-content-center text-center">
+                <div className="">
+                  <img className="iconsdestinations" src={tripdays}></img>
+                  <label className="">TOUR DURATION</label>
+                  <input
+                    id="tour-duration"
+                    type="text"
+                    className=""
+                    placeholder="TOUR DURATION"
+                    onChange={(e) => setTour_duration(e.target.value)}
+                    value={tour_duration}
+                  ></input>
+                </div>
+
+                <div className="">
+                  <img
+                    className="iconsdestinations"
+                    src={destinationsicon}
+                  ></img>
+                  <label className="">DESTINATIONS inclu</label>
+                  <input
+                    id="destinations"
+                    type="text"
+                    className=""
+                    placeholder="DESTINATIONS"
+                    onChange={(e) => setDestinations(e.target.value)}
+                    value={destinations}
+                  ></input>
+                </div>
+
+                <div className="">
+                  <img className="iconsdestinations" src={activity}></img>
+                  <label className="">-----ACTIVITIES----</label>
+                  <input
+                    id="activities"
+                    type="text"
+                    className=""
+                    placeholder="ACTIVITIES"
+                    onChange={(e) => setActivities(e.target.value)}
+                    value={activities}
+                  ></input>
+                </div>
+
+                <div className="">
+                  <img className="iconsdestinations" src={transporticon}></img>
+                  <label className="">TRANSPORT MODE</label>
+                  <input
+                    id="transport"
+                    type="text"
+                    className=""
+                    placeholder="TRANSPORT"
+                    onChange={(e) => setTransport(e.target.value)}
+                    value={transport}
+                  ></input>
+                </div>
+
+                <div className="">
+                  <img className="iconsdestinations" src={lodgingicon}></img>
+                  <label className="">-----LODGING-----</label>
+                  <input
+                    id="lodging"
+                    type="text"
+                    className=""
+                    placeholder="LODGING"
+                    onChange={(e) => setLodging(e.target.value)}
+                    value={lodging}
+                  ></input>
+                </div>
+              </div>
+              <div>
+                <br />
+                <h3 className="ov-title">OVERVIEW</h3>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE"
+                    onChange={(e) => setOverview_title(e.target.value)}
+                    value={overview_title}
+                  ></input>
+                  <input
+                    id="overview-acomodoation"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM."
+                    onChange={(e) => setOverview_acomodation(e.target.value)}
+                    value={overview_acomodation}
+                  ></input>
+                </div>
                 <input
-                  id="packages-background"
-                  type="file"
-                  className=""
-                  placeholder="background-img"
-                  onChange={(e) => {
-                    uploadImage3(e);
-                    setUrl3(e.target.value);
-                  }}
-                  // value={}
+                  id="overview-description"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION"
+                  onChange={(e) => setOverview_description(e.target.value)}
+                  value={overview_description}
                 ></input>
               </div>
-            </div>
-          </div>
-          <div className=" row row-cols-6 mt-5 ml-5 mr-5 justify-content-center text-center">
-            <div className="">
-              <img className="iconsdestinations" src={tripdays}></img>
-              <label className="">TOUR DURATION</label>
-              <input
-                id="tour-duration"
-                type="text"
-                className=""
-                placeholder="TOUR DURATION"
-                onChange={(e) => setTour_duration(e.target.value)}
-                value={tour_duration}
-              ></input>
-            </div>
+              <div className="row row-cols-2 mt-5 mb-5">
+                <label for="packages-img5">IMG 4</label>
+                <label for="packages-img">IMG 5</label>
+                <input
+                  id="packages-img4"
+                  type="file"
+                  className=""
+                  placeholder="Packages img4"
+                  onChange={(e) => {
+                    uploadImage4(e);
+                    setUrl4(e.target.value);
+                  }}
+                ></input>
 
-            <div className="">
-              <img className="iconsdestinations" src={destinationsicon}></img>
-              <label className="">DESTINATIONS inclu</label>
-              <input
-                id="destinations"
-                type="text"
-                className=""
-                placeholder="DESTINATIONS"
-                onChange={(e) => setDestinations(e.target.value)}
-                value={destinations}
-              ></input>
-            </div>
+                <input
+                  id="packages-img5"
+                  type="file"
+                  className=""
+                  placeholder="Packages img5"
+                  onChange={(e) => {
+                    uploadImage5(e);
+                    setUrl5(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title1"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE 1"
+                    onChange={(e) => setOverview_title1(e.target.value)}
+                    value={overview_title1}
+                  ></input>
+                  <input
+                    id="overview-acomodoation1"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.1"
+                    onChange={(e) => setOverview_acomodation1(e.target.value)}
+                    value={overview_acomodation1}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description1"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION1"
+                  onChange={(e) => setOverview_description1(e.target.value)}
+                  value={overview_description1}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title2"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE 2"
+                    onChange={(e) => setOverview_title2(e.target.value)}
+                    value={overview_title2}
+                  ></input>
+                  <input
+                    id="overview-acomodoation2"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.2"
+                    onChange={(e) => setOverview_acomodation2(e.target.value)}
+                    value={overview_acomodation2}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description2"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION2"
+                  onChange={(e) => setOverview_description2(e.target.value)}
+                  value={overview_description2}
+                ></input>
+              </div>
+              <div className="row row-cols-1 mt-5 mb-5">
+                <label for="packages-img">IMG 6</label>
+                <input
+                  id="packages-img6"
+                  type="file"
+                  className=""
+                  placeholder="Packages img6"
+                  onChange={(e) => {
+                    uploadImage6(e);
+                    setUrl6(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title3"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE3"
+                    onChange={(e) => setOverview_title3(e.target.value)}
+                    value={overview_title3}
+                  ></input>
+                  <input
+                    id="overview-acomodoation3"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.3"
+                    onChange={(e) => setOverview_acomodation3(e.target.value)}
+                    value={overview_acomodation3}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description3"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION3"
+                  onChange={(e) => setOverview_description3(e.target.value)}
+                  value={overview_description3}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title4"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE4"
+                    onChange={(e) => setOverview_title4(e.target.value)}
+                    value={overview_title4}
+                  ></input>
+                  <input
+                    id="overview-acomodoation4"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.4"
+                    onChange={(e) => setOverview_acomodation4(e.target.value)}
+                    value={overview_acomodation4}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description4"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION4"
+                  onChange={(e) => setOverview_description4(e.target.value)}
+                  value={overview_description4}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title5"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE5"
+                    onChange={(e) => setOverview_title5(e.target.value)}
+                    value={overview_title5}
+                  ></input>
+                  <input
+                    id="overview-acomodoation5"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.5"
+                    onChange={(e) => setOverview_acomodation5(e.target.value)}
+                    value={overview_acomodation5}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description5"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION5"
+                  onChange={(e) => setOverview_description5(e.target.value)}
+                  value={overview_description5}
+                ></input>
+              </div>
+              <div className="row row-cols-3 mt-5 mb-5">
+                <label for="packages-img">IMG 7</label>
+                <label for="packages-img">IMG 8</label>
+                <label for="packages-img">IMG 9</label>
+                <input
+                  id="packages-img7"
+                  type="file"
+                  className=""
+                  placeholder="Packages img7"
+                  onChange={(e) => {
+                    uploadImage7(e);
+                    setUrl7(e.target.value);
+                  }}
+                ></input>
+                <input
+                  id="packages-img8"
+                  type="file"
+                  className=""
+                  placeholder="Packages img8"
+                  onChange={(e) => {
+                    uploadImage8(e);
+                    setUrl8(e.target.value);
+                  }}
+                ></input>
+                <input
+                  id="packages-img9"
+                  type="file"
+                  className=""
+                  placeholder="Packages img9"
+                  onChange={(e) => {
+                    uploadImage9(e);
+                    setUrl9(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title6"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE6"
+                    onChange={(e) => setOverview_title6(e.target.value)}
+                    value={overview_title6}
+                  ></input>
+                  <input
+                    id="overview-acomodoation6"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.6"
+                    onChange={(e) => setOverview_acomodation6(e.target.value)}
+                    value={overview_acomodation6}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description6"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION6"
+                  onChange={(e) => setOverview_description6(e.target.value)}
+                  value={overview_description6}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title7"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE7"
+                    onChange={(e) => setOverview_title7(e.target.value)}
+                    value={overview_title7}
+                  ></input>
+                  <input
+                    id="overview-acomodoation7"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.7"
+                    onChange={(e) => setOverview_acomodation7(e.target.value)}
+                    value={overview_acomodation7}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description7"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION7"
+                  onChange={(e) => setOverview_description7(e.target.value)}
+                  value={overview_description7}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title8"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE8"
+                    onChange={(e) => setOverview_title8(e.target.value)}
+                    value={overview_title8}
+                  ></input>
+                  <input
+                    id="overview-acomodoation8"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.8"
+                    onChange={(e) => setOverview_acomodation8(e.target.value)}
+                    value={overview_acomodation8}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description8"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION8"
+                  onChange={(e) => setOverview_description8(e.target.value)}
+                  value={overview_description8}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title9"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE9"
+                    onChange={(e) => setOverview_title9(e.target.value)}
+                    value={overview_title9}
+                  ></input>
+                  <input
+                    id="overview-acomodoation9"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.9"
+                    onChange={(e) => setOverview_acomodation9(e.target.value)}
+                    value={overview_acomodation9}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description9"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION9"
+                  onChange={(e) => setOverview_description9(e.target.value)}
+                  value={overview_description9}
+                ></input>
+              </div>
+              <div className="row row-cols-1 mt-5 mb-5">
+                <label for="packages-img">IMG 10</label>
+                <input
+                  id="packages-img10"
+                  type="file"
+                  className=""
+                  placeholder="Packages img10"
+                  onChange={(e) => {
+                    uploadImage10(e);
+                    setUrl10(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title10"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE10"
+                    onChange={(e) => setOverview_title10(e.target.value)}
+                    value={overview_title10}
+                  ></input>
+                  <input
+                    id="overview-acomodoation10"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.10"
+                    onChange={(e) => setOverview_acomodation10(e.target.value)}
+                    value={overview_acomodation10}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description10"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION10"
+                  onChange={(e) => setOverview_description10(e.target.value)}
+                  value={overview_description10}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title11"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE11"
+                    onChange={(e) => setOverview_title11(e.target.value)}
+                    value={overview_title11}
+                  ></input>
+                  <input
+                    id="overview-acomodoation11"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.11"
+                    onChange={(e) => setOverview_acomodation11(e.target.value)}
+                    value={overview_acomodation11}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description11"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION11"
+                  onChange={(e) => setOverview_description11(e.target.value)}
+                  value={overview_description11}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title12"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE12"
+                    onChange={(e) => setOverview_title12(e.target.value)}
+                    value={overview_title12}
+                  ></input>
+                  <input
+                    id="overview-acomodoation12"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.12"
+                    onChange={(e) => setOverview_acomodation12(e.target.value)}
+                    value={overview_acomodation12}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description12"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION12"
+                  onChange={(e) => setOverview_description12(e.target.value)}
+                  value={overview_description12}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title13"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE13"
+                    onChange={(e) => setOverview_title13(e.target.value)}
+                    value={overview_title13}
+                  ></input>
+                  <input
+                    id="overview-acomodoation13"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.13"
+                    onChange={(e) => setOverview_acomodation13(e.target.value)}
+                    value={overview_acomodation13}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description13"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION13"
+                  onChange={(e) => setOverview_description13(e.target.value)}
+                  value={overview_description13}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title14"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE14"
+                    onChange={(e) => setOverview_title14(e.target.value)}
+                    value={overview_title14}
+                  ></input>
+                  <input
+                    id="overview-acomodoation14"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.14"
+                    onChange={(e) => setOverview_acomodation14(e.target.value)}
+                    value={overview_acomodation14}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description14"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION14"
+                  onChange={(e) => setOverview_description14(e.target.value)}
+                  value={overview_description14}
+                ></input>
+              </div>
+              <div className="row row-cols-2 mt-5 mb-5">
+                <label for="packages-img">IMG 11</label>
+                <label for="packages-img">IMG 12</label>
+                <input
+                  id="packages-img11"
+                  type="file"
+                  className=""
+                  placeholder="Packages img11"
+                  onChange={(e) => {
+                    uploadImage11(e);
+                    setUrl11(e.target.value);
+                  }}
+                ></input>
 
-            <div className="">
-              <img className="iconsdestinations" src={activity}></img>
-              <label className="">-----ACTIVITIES----</label>
-              <input
-                id="activities"
-                type="text"
-                className=""
-                placeholder="ACTIVITIES"
-                onChange={(e) => setActivities(e.target.value)}
-                value={activities}
-              ></input>
-            </div>
+                <input
+                  id="packages-img12"
+                  type="file"
+                  className=""
+                  placeholder="Packages img12"
+                  onChange={(e) => {
+                    uploadImage12(e);
+                    setUrl12(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title15"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE15"
+                    onChange={(e) => setOverview_title15(e.target.value)}
+                    value={overview_title15}
+                  ></input>
+                  <input
+                    id="overview-acomodoation15"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.15"
+                    onChange={(e) => setOverview_acomodation15(e.target.value)}
+                    value={overview_acomodation15}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description15"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION15"
+                  onChange={(e) => setOverview_description15(e.target.value)}
+                  value={overview_description15}
+                ></input>
+              </div>
+              <div className="details-overview row row-cols-2">
+                <div className="details-overview-title col-2">
+                  <input
+                    id="overview-title16"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW TITLE16"
+                    // onChange={(e) => setOverview_title16(e.target.value)}
+                    // value={overview_title16}
+                  ></input>
+                  <input
+                    id="overview-acomodoation16"
+                    type="text"
+                    className=""
+                    placeholder="OVERVIEW ACOM.16"
+                    // onChange={(e) => setOverview_acomodation16(e.target.value)}
+                    // value={overview_acomodation16}
+                  ></input>
+                </div>
+                <input
+                  id="overview-description16"
+                  type="text"
+                  className="details-overview-description col-10"
+                  placeholder="OVERVIEW DESCRIPTION16 NOT IMPLEMENTED"
+                  // onChange={(e) => setOverview_description(e.target.value)}
+                  // value={overview_description}
+                ></input>
+              </div>
+              <div className="row row-cols-3 mt-5 mb-5">
+                <label for="packages-img">IMG 13</label>
+                <label for="packages-img">IMG 14 </label>
+                <label for="packages-img">IMG 15 map</label>
+                <input
+                  id="packages-img13"
+                  type="file"
+                  className=""
+                  placeholder="Packages img13"
+                  onChange={(e) => {
+                    uploadImage13(e);
+                    setUrl13(e.target.value);
+                  }}
+                ></input>
 
-            <div className="">
-              <img className="iconsdestinations" src={transporticon}></img>
-              <label className="">TRANSPORT MODE</label>
-              <input
-                id="transport"
-                type="text"
-                className=""
-                placeholder="TRANSPORT"
-                onChange={(e) => setTransport(e.target.value)}
-                value={transport}
-              ></input>
-            </div>
+                <input
+                  id="packages-img14"
+                  type="file"
+                  className=""
+                  placeholder="Packages img14"
+                  onChange={(e) => {
+                    uploadImage14(e);
+                    setUrl14(e.target.value);
+                  }}
+                ></input>
 
-            <div className="">
-              <img className="iconsdestinations" src={lodgingicon}></img>
-              <label className="">-----LODGING-----</label>
-              <input
-                id="lodging"
-                type="text"
-                className=""
-                placeholder="LODGING"
-                onChange={(e) => setLodging(e.target.value)}
-                value={lodging}
-              ></input>
+                <input
+                  id="packages-img15"
+                  type="file"
+                  className=""
+                  placeholder="Packages img15"
+                  onChange={(e) => {
+                    uploadImage15(e);
+                    setUrl15(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div className="row row-cols-1 mt-5 mb-5 text-center justify-content-center">
+                <button
+                  className="btn btn-primary btn-lg mx-2 px-5 mt-4"
+                  type="submit"
+                >
+                  SUBMIT
+                </button>
+              </div>
             </div>
-          </div>
-          <div>
-            <br />
-            <h3 className="ov-title">OVERVIEW</h3>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE"
-                onChange={(e) => setOverview_title(e.target.value)}
-                value={overview_title}
-              ></input>
-              <input
-                id="overview-acomodoation"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM."
-                onChange={(e) => setOverview_acomodation(e.target.value)}
-                value={overview_acomodation}
-              ></input>
-            </div>
-            <input
-              id="overview-description"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION"
-              onChange={(e) => setOverview_description(e.target.value)}
-              value={overview_description}
-            ></input>
-          </div>
-          <div className="row row-cols-2 mt-5 mb-5">
-            <label for="packages-img5">IMG 4</label>
-            <label for="packages-img">IMG 5</label>
-            <input
-              id="packages-img4"
-              type="file"
-              className=""
-              placeholder="Packages img4"
-              onChange={(e) => {
-                uploadImage4(e);
-                setUrl4(e.target.value);
-              }}
-            ></input>
-
-            <input
-              id="packages-img5"
-              type="file"
-              className=""
-              placeholder="Packages img5"
-              onChange={(e) => {
-                uploadImage5(e);
-                setUrl5(e.target.value);
-              }}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title1"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE 1"
-                onChange={(e) => setOverview_title1(e.target.value)}
-                value={overview_title1}
-              ></input>
-              <input
-                id="overview-acomodoation1"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.1"
-                onChange={(e) => setOverview_acomodation1(e.target.value)}
-                value={overview_acomodation1}
-              ></input>
-            </div>
-            <input
-              id="overview-description1"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION1"
-              onChange={(e) => setOverview_description1(e.target.value)}
-              value={overview_description1}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title2"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE 2"
-                onChange={(e) => setOverview_title2(e.target.value)}
-                value={overview_title2}
-              ></input>
-              <input
-                id="overview-acomodoation2"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.2"
-                onChange={(e) => setOverview_acomodation2(e.target.value)}
-                value={overview_acomodation2}
-              ></input>
-            </div>
-            <input
-              id="overview-description2"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION2"
-              onChange={(e) => setOverview_description2(e.target.value)}
-              value={overview_description2}
-            ></input>
-          </div>
-          <div className="row row-cols-1 mt-5 mb-5">
-            <label for="packages-img">IMG 6</label>
-            <input
-              id="packages-img6"
-              type="file"
-              className=""
-              placeholder="Packages img6"
-              onChange={(e) => {
-                uploadImage6(e);
-                setUrl6(e.target.value);
-              }}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title3"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE3"
-                onChange={(e) => setOverview_title3(e.target.value)}
-                value={overview_title3}
-              ></input>
-              <input
-                id="overview-acomodoation3"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.3"
-                onChange={(e) => setOverview_acomodation3(e.target.value)}
-                value={overview_acomodation3}
-              ></input>
-            </div>
-            <input
-              id="overview-description3"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION3"
-              onChange={(e) => setOverview_description3(e.target.value)}
-              value={overview_description3}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title4"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE4"
-                onChange={(e) => setOverview_title4(e.target.value)}
-                value={overview_title4}
-              ></input>
-              <input
-                id="overview-acomodoation4"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.4"
-                onChange={(e) => setOverview_acomodation4(e.target.value)}
-                value={overview_acomodation4}
-              ></input>
-            </div>
-            <input
-              id="overview-description4"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION4"
-              onChange={(e) => setOverview_description4(e.target.value)}
-              value={overview_description4}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title5"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE5"
-                onChange={(e) => setOverview_title5(e.target.value)}
-                value={overview_title5}
-              ></input>
-              <input
-                id="overview-acomodoation5"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.5"
-                onChange={(e) => setOverview_acomodation5(e.target.value)}
-                value={overview_acomodation5}
-              ></input>
-            </div>
-            <input
-              id="overview-description5"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION5"
-              onChange={(e) => setOverview_description5(e.target.value)}
-              value={overview_description5}
-            ></input>
-          </div>
-          <div className="row row-cols-3 mt-5 mb-5">
-            <label for="packages-img">IMG 7</label>
-            <label for="packages-img">IMG 8</label>
-            <label for="packages-img">IMG 9</label>
-            <input
-              id="packages-img7"
-              type="file"
-              className=""
-              placeholder="Packages img7"
-              onChange={(e) => {
-                uploadImage7(e);
-                setUrl7(e.target.value);
-              }}
-            ></input>
-            <input
-              id="packages-img8"
-              type="file"
-              className=""
-              placeholder="Packages img8"
-              onChange={(e) => {
-                uploadImage8(e);
-                setUrl8(e.target.value);
-              }}
-            ></input>
-            <input
-              id="packages-img9"
-              type="file"
-              className=""
-              placeholder="Packages img9"
-              onChange={(e) => {
-                uploadImage9(e);
-                setUrl9(e.target.value);
-              }}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title6"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE6"
-                onChange={(e) => setOverview_title6(e.target.value)}
-                value={overview_title6}
-              ></input>
-              <input
-                id="overview-acomodoation6"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.6"
-                onChange={(e) => setOverview_acomodation6(e.target.value)}
-                value={overview_acomodation6}
-              ></input>
-            </div>
-            <input
-              id="overview-description6"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION6"
-              onChange={(e) => setOverview_description6(e.target.value)}
-              value={overview_description6}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title7"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE7"
-                onChange={(e) => setOverview_title7(e.target.value)}
-                value={overview_title7}
-              ></input>
-              <input
-                id="overview-acomodoation7"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.7"
-                onChange={(e) => setOverview_acomodation7(e.target.value)}
-                value={overview_acomodation7}
-              ></input>
-            </div>
-            <input
-              id="overview-description7"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION7"
-              onChange={(e) => setOverview_description7(e.target.value)}
-              value={overview_description7}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title8"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE8"
-                onChange={(e) => setOverview_title8(e.target.value)}
-                value={overview_title8}
-              ></input>
-              <input
-                id="overview-acomodoation8"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.8"
-                onChange={(e) => setOverview_acomodation8(e.target.value)}
-                value={overview_acomodation8}
-              ></input>
-            </div>
-            <input
-              id="overview-description8"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION8"
-              onChange={(e) => setOverview_description8(e.target.value)}
-              value={overview_description8}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title9"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE9"
-                onChange={(e) => setOverview_title9(e.target.value)}
-                value={overview_title9}
-              ></input>
-              <input
-                id="overview-acomodoation9"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.9"
-                onChange={(e) => setOverview_acomodation9(e.target.value)}
-                value={overview_acomodation9}
-              ></input>
-            </div>
-            <input
-              id="overview-description9"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION9"
-              onChange={(e) => setOverview_description9(e.target.value)}
-              value={overview_description9}
-            ></input>
-          </div>
-          <div className="row row-cols-1 mt-5 mb-5">
-            <label for="packages-img">IMG 10</label>
-            <input
-              id="packages-img10"
-              type="file"
-              className=""
-              placeholder="Packages img10"
-              onChange={(e) => {
-                uploadImage10(e);
-                setUrl10(e.target.value);
-              }}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title10"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE10"
-                onChange={(e) => setOverview_title10(e.target.value)}
-                value={overview_title10}
-              ></input>
-              <input
-                id="overview-acomodoation10"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.10"
-                onChange={(e) => setOverview_acomodation10(e.target.value)}
-                value={overview_acomodation10}
-              ></input>
-            </div>
-            <input
-              id="overview-description10"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION10"
-              onChange={(e) => setOverview_description10(e.target.value)}
-              value={overview_description10}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title11"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE11"
-                onChange={(e) => setOverview_title11(e.target.value)}
-                value={overview_title11}
-              ></input>
-              <input
-                id="overview-acomodoation11"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.11"
-                onChange={(e) => setOverview_acomodation11(e.target.value)}
-                value={overview_acomodation11}
-              ></input>
-            </div>
-            <input
-              id="overview-description11"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION11"
-              onChange={(e) => setOverview_description11(e.target.value)}
-              value={overview_description11}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title12"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE12"
-                onChange={(e) => setOverview_title12(e.target.value)}
-                value={overview_title12}
-              ></input>
-              <input
-                id="overview-acomodoation12"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.12"
-                onChange={(e) => setOverview_acomodation12(e.target.value)}
-                value={overview_acomodation12}
-              ></input>
-            </div>
-            <input
-              id="overview-description12"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION12"
-              onChange={(e) => setOverview_description12(e.target.value)}
-              value={overview_description12}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title13"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE13"
-                onChange={(e) => setOverview_title13(e.target.value)}
-                value={overview_title13}
-              ></input>
-              <input
-                id="overview-acomodoation13"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.13"
-                onChange={(e) => setOverview_acomodation13(e.target.value)}
-                value={overview_acomodation13}
-              ></input>
-            </div>
-            <input
-              id="overview-description13"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION13"
-              onChange={(e) => setOverview_description13(e.target.value)}
-              value={overview_description13}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title14"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE14"
-                onChange={(e) => setOverview_title14(e.target.value)}
-                value={overview_title14}
-              ></input>
-              <input
-                id="overview-acomodoation14"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.14"
-                onChange={(e) => setOverview_acomodation14(e.target.value)}
-                value={overview_acomodation14}
-              ></input>
-            </div>
-            <input
-              id="overview-description14"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION14"
-              onChange={(e) => setOverview_description14(e.target.value)}
-              value={overview_description14}
-            ></input>
-          </div>
-          <div className="row row-cols-2 mt-5 mb-5">
-            <label for="packages-img">IMG 11</label>
-            <label for="packages-img">IMG 12</label>
-            <input
-              id="packages-img11"
-              type="file"
-              className=""
-              placeholder="Packages img11"
-              onChange={(e) => {
-                uploadImage11(e);
-                setUrl11(e.target.value);
-              }}
-            ></input>
-
-            <input
-              id="packages-img12"
-              type="file"
-              className=""
-              placeholder="Packages img12"
-              onChange={(e) => {
-                uploadImage12(e);
-                setUrl12(e.target.value);
-              }}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title15"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE15"
-                onChange={(e) => setOverview_title15(e.target.value)}
-                value={overview_title15}
-              ></input>
-              <input
-                id="overview-acomodoation15"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.15"
-                onChange={(e) => setOverview_acomodation15(e.target.value)}
-                value={overview_acomodation15}
-              ></input>
-            </div>
-            <input
-              id="overview-description15"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION15"
-              onChange={(e) => setOverview_description15(e.target.value)}
-              value={overview_description15}
-            ></input>
-          </div>
-          <div className="details-overview row row-cols-2">
-            <div className="details-overview-title col-2">
-              <input
-                id="overview-title16"
-                type="text"
-                className=""
-                placeholder="OVERVIEW TITLE16"
-                // onChange={(e) => setOverview_title16(e.target.value)}
-                // value={overview_title16}
-              ></input>
-              <input
-                id="overview-acomodoation16"
-                type="text"
-                className=""
-                placeholder="OVERVIEW ACOM.16"
-                // onChange={(e) => setOverview_acomodation16(e.target.value)}
-                // value={overview_acomodation16}
-              ></input>
-            </div>
-            <input
-              id="overview-description16"
-              type="text"
-              className="details-overview-description col-10"
-              placeholder="OVERVIEW DESCRIPTION16 NOT IMPLEMENTED"
-              // onChange={(e) => setOverview_description(e.target.value)}
-              // value={overview_description}
-            ></input>
-          </div>
-          <div className="row row-cols-3 mt-5 mb-5">
-            <label for="packages-img">IMG 13</label>
-            <label for="packages-img">IMG 14 </label>
-            <label for="packages-img">IMG 15 map</label>
-            <input
-              id="packages-img13"
-              type="file"
-              className=""
-              placeholder="Packages img13"
-              onChange={(e) => {
-                uploadImage13(e);
-                setUrl13(e.target.value);
-              }}
-            ></input>
-
-            <input
-              id="packages-img14"
-              type="file"
-              className=""
-              placeholder="Packages img14"
-              onChange={(e) => {
-                uploadImage14(e);
-                setUrl14(e.target.value);
-              }}
-            ></input>
-
-            <input
-              id="packages-img15"
-              type="file"
-              className=""
-              placeholder="Packages img15"
-              onChange={(e) => {
-                uploadImage15(e);
-                setUrl15(e.target.value);
-              }}
-            ></input>
-          </div>
-          <div className="row row-cols-1 mt-5 mb-5 text-center justify-content-center">
-            <button
-              className="btn btn-primary btn-lg mx-2 px-5 mt-4"
-              type="submit"
-            >
-              SUBMIT
-            </button>
-          </div>
+          </form>
         </div>
-      </form>
-    </div>
-    {/* ) : (
+        
+      </div>
+
+
+) : (
       <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
         <div>
           <h1 className="package-detail-title mt-5"
@@ -1448,9 +1456,9 @@ const AddPackages = () => {
           </Nav.Link>
         </div>
       </div>
-    )} */}
+    )}
+
     </div>
-  </div>
   );
 };
 
