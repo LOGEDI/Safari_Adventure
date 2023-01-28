@@ -55,7 +55,7 @@ const PackagesDetails = () => {
         >
           <div className="container-page">
             <div className="row  g-3">
-              <div className="col-xs-12 col-md-7">
+              <div className="col-xl-5">
                 <h3 className="package-detail-title mt-5">
                   {store.packageDetail.name}
                 </h3>
@@ -65,9 +65,9 @@ const PackagesDetails = () => {
                 <img className="separator mr-3" src={separator}></img>
               </div>
 
-              <div className="col-xs-12 col-md-4">
-                <div className="row justify-content-end mt-5">
-                  <div className="col-md-2 col-xs-6">
+              <div className="col-xl-7 justify-content-end text-end">
+                <div className="row col-xl-12 p-0  justify-content-end text-end mt-5">
+                  <div className="col-xl-2 col-md-4 col-sm-6">
                   {store.auth ? (
                     <button
                       className="btn btnFav"
@@ -85,15 +85,12 @@ const PackagesDetails = () => {
                   ) : null}{" "}
                   </div>
 
-                  <div className="col-2 col-sm-4">
-                    <button className="btn btn-primary btn-l">Back</button>
+                  <div className="col-xl-2 col-md-4 col-sm-6 p-1 justify-content-end ">
+                  <Link to="/Packages">
+                          <button className="btn btn-creamD ">Back</button>
+                        </Link>
                   </div>
-                  <div className="col-2 col-sm-4">
-                    <button className="btn btn-primary btn-l">all</button>
-                  </div>
-                  <div className="col-2">
-                    <button className="btn btn-primary btn-l">all</button>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -453,13 +450,10 @@ const PackagesDetails = () => {
 
         {store.auth ? <Comments /> : null}
 
-        <div className="row ">
-          <div className="col-sm-12 col-md-7 ">
+        <div className="row mb-5">
+          <div className="col-sm-12 col-md-8 ">
             <div>
-              <h3
-                className="text-center mt-3"
-                style={{ fontFamily: "Roboto, sans-serif" }}
-              >
+              <h3 className="text-center mt-3">                
                 COMMENTS:
               </h3>
               <div className="scrolleable col-10 m-auto">
@@ -481,31 +475,30 @@ const PackagesDetails = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="mt-5">
-                      <hr style={{ borderTop: "2px #bdb284" }} />
+                    <div className="">
+                      <hr style={{ borderTop: "2px #d2ae6d" }} />
                       <p className="text-muted text-center ">
                         No comments for this package
                       </p>
-                      <hr style={{ borderTop: "2px #bdb284" }} />
+                      <hr style={{ borderTop: "2px #d2ae6d" }} />
                     </div>
                   )}
                 </ul>
               </div>
             </div>
           </div>
-          <div className="col-sm-12 col-md-5 ">
-            <h3 className="t my-4" style={{ textAlign: "center" }}>
-              Related packagess:
+          <div className="col-sm-12 col-md-4 justify-content-center text-center">
+            <h3 className="text-center mt-5 mb-4">RELATED PACKAGE:
             </h3>
             <img
               src={store.packageDetail.url}
-              className="img-fluid rounded-start img-fluid"
+              className="img-fluid rounded-start img-fluid justify-content-center text-center"
               alt="..."
               style={{
                 border: "1px solid #ddd",
                 bordeRadius: "4px",
                 padding: "20px",
-                margin: "10px",
+                borderColor: "#d2ae6d",
                 width: "100%",
                 maxWidth: "400px",
               }}
