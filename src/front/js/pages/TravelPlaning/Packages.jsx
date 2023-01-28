@@ -117,6 +117,13 @@ const Packages = () => {
                       Learn More
                     </button>
                   </Link>
+
+                  <Link to={"/PackagesMap/" + item.id}>
+                    <button className="btn btn-creamD justify mb-3">
+                      test
+                    </button>
+                  </Link>
+
                 </div>
               </div>
             </div>
@@ -178,6 +185,7 @@ const Packages = () => {
                       Learn More
                     </button>
                   </Link>
+                  
                 </div>
               </div>
 

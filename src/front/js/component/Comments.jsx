@@ -15,11 +15,11 @@ const Comments = () => {
         let onComment = await actions.createComment(comment, params.id);
         Swal.fire(onComment.data.msg);
         setComment("");
-        navigate("/PackagesDetails/" + params.id);
+        navigate("/PackagesMap/" + params.id);
       };
 
   return (
-    <div>Comments
+    <div>
 
 
 <form onSubmit={handleComments} className="">

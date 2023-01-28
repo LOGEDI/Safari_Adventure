@@ -55,7 +55,7 @@ const PackagesDetails = () => {
         >
           <div className="container-page">
             <div className="row  g-3">
-              <div className="col-xs-12 col-md-7">
+              <div className="col-xl-5">
                 <h3 className="package-detail-title mt-5">
                   {store.packageDetail.name}
                 </h3>
@@ -65,9 +65,9 @@ const PackagesDetails = () => {
                 <img className="separator mr-3" src={separator}></img>
               </div>
 
-              <div className="col-xs-12 col-md-4">
-                <div className="row justify-content-end mt-5">
-                  <div className="col-md-2 col-xs-6">
+              <div className="col-xl-7 justify-content-end text-end">
+                <div className="row col-xl-12  p-0 destinationButons justify-content-end text-end mt-5">
+                  {/* <div className="col-md-2 col-xs-6">
                     <button
                       className="btn btn-light"
                       type="button"
@@ -81,23 +81,31 @@ const PackagesDetails = () => {
                         <BsHeart />
                       )}
                     </button>
-                  </div>
+                  </div> */}
 
-                  <div className="col-2 col-sm-4">
-                    <Link to="/Packages">
-                      <button className="btn btn-creamD btn-l">Back</button>
+                  {store.package.map((item,index) => (
+      <div key={item.id}>
+
+                  <div className="col-xl-3 col-md-4 col-sm-6 p-1 text-center ">
+                    <Link to={"/PackagesMap/" + item.id}>
+                      <button className="btn btn-creamD ">Back</button>
                     </Link>
                   </div>
-                  <div className="col-2 col-sm-4">
+
+                  </div>
+    ))}
+
+                  {/* <div className="col-2 col-sm-4">
                     <Link to="/PackagesMap">
                       <button className="btn btn-creamD btn-l">
                         Itinerary
                       </button>
-                    </Link>
-                  </div>
-                  <div className="col-2">
+                    </Link>                   
+                  </div> */}
+
+                  {/* <div className="col-2">
                     <button className="btn btn-creamD btn-l">all</button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -528,6 +536,8 @@ const PackagesDetails = () => {
             />
           </div>
         </div>
+
+
       </div>
     );
   } else {
