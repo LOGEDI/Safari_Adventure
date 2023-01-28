@@ -67,7 +67,9 @@ const PackagesDetails = () => {
 
               <div className="col-xl-7 justify-content-end text-end">
                 <div className="row col-xl-12 p-0  justify-content-end text-end mt-5">
-                  {/* <div className="col-md-2 col-xs-6">
+                  <div className="col-md-2 col-xs-6">
+
+                  {store.auth ? (
                     <button
                       className="btn btn-light"
                       type="button"
@@ -81,7 +83,9 @@ const PackagesDetails = () => {
                         <BsHeart />
                       )}
                     </button>
-                  </div> */}
+ ) : null}{" "}
+
+                  </div>
 
                   {store.package.map((item,index) => (
       <div key={item.id}>

@@ -2,6 +2,9 @@ import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
+import { useNavigate } from "react-router-dom";
+import { BsHeart, BsFillHeartFill } from "react-icons/bs";
+
 import Comments from "../../component/Comments.jsx";
 import packagesHero from "../../../img/packages-hero.jpg";
 import activity from "../../../img/activity-icon.png";
@@ -10,17 +13,20 @@ import tripdays from "../../../img/trip-days.png";
 import lodging from "../../../img/lodging-icon.png";
 import transport from "../../../img/transport-icon.png";
 import separator from "../../../img/heading-separator.png";
+import userProfileIcon from "../../../img/user-profile-icon.jpg";
 
-import { BsHeart, BsFillHeartFill } from "react-icons/bs";
 const PackagesMap = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
   let profile = store.profile;
+  let navigate = useNavigate();
 
   useEffect(() => {
     actions.getPackage(params.id);
     actions.getProductComments(params.id);
     actions.userProfile();
+    actions.markFavorites();
+    window.scrollTo(0, 0);
   }, []);
 
   let handleAddFavorites = async (id) => {
@@ -31,7 +37,6 @@ const PackagesMap = () => {
       navigate("/login");
     }
   };
-
 
   return (
     <div>
@@ -64,20 +69,24 @@ const PackagesMap = () => {
 
                   <div className="col-xl-7 justify-content-end text-end">
                     <div className="row col-xl-12 p-0  justify-content-end text-end mt-5">
-                      <div className="col-xl-1 col-md-4 col-sm-6 p-1  ">
-                        <button
-                          className="btn btn-light"
-                          type="button"
-                          onClick={() => {
-                            handleAddFavorites(item.id);
-                          }}
-                        >
-                          {store.favoriteItem?.includes(parseInt(params.id)) ? (
-                            <BsFillHeartFill />
-                          ) : (
-                            <BsHeart />
-                          )}
-                        </button>
+                      <div className="col-xl-2 col-md-4 col-sm-6   ">
+                        {store.auth ? (
+                          <button
+                            className="btn btnFav"
+                            type="button"
+                            onClick={() => {
+                              handleAddFavorites(item.id);
+                            }}
+                          >
+                            {store.favoriteItem?.includes(
+                              parseInt(params.id)
+                            ) ? (
+                              <BsFillHeartFill className="favoIcon" />
+                            ) : (
+                              <BsHeart className="favoIcon" />
+                            )}
+                          </button>
+                        ) : null}{" "}
                       </div>
 
                       <div className="col-xl-2 col-md-4 col-sm-6 p-1 justify-content-end ">
@@ -145,7 +154,7 @@ const PackagesMap = () => {
                 <div className="row mb-5">
                   <div className="col-sm-12 col-md-8 ">
                     <div>
-                      <h3 className="text-center mt-3">COMMENTS:</h3>
+                      <h3 className="text-center mt-5">COMMENTS:</h3>
                       <div className="scrolleable col-10 m-auto">
                         <ul className="list-group">
                           {store.comments.length > 0 ? (
@@ -161,6 +170,21 @@ const PackagesMap = () => {
                                     }
                                     className="m-2"
                                   />
+
+                                  {/* {store.user.map((item) => (
+                                      <div key={item.id}>
+                                  <img
+                                    style={{ width: "2rem", height: "2rem" }}
+                                    src={
+                                      item.user_url
+                                    ? item.user_url
+                                    : userProfileIcon
+                                    }
+                                    className="m-2"
+                                  />
+                                    </div>
+                                    ))} */}
+
                                   {item.comment}
                                 </li>
                                 <hr style={{ borderTop: "2px #bdb284" }} />
@@ -168,11 +192,11 @@ const PackagesMap = () => {
                             ))
                           ) : (
                             <div className="">
-                              <hr style={{ borderTop: "2px #bdb284" }} />
+                              <hr style={{ borderTop: "2px #d2ae6d" }} />
                               <p className="text-muted text-center ">
                                 No comments for this package
                               </p>
-                              <hr style={{ borderTop: "2px #bdb284" }} />
+                              <hr style={{ borderTop: "2px #d2ae6d" }} />
                             </div>
                           )}
                         </ul>
@@ -180,7 +204,7 @@ const PackagesMap = () => {
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-4 justify-content-center text-center">
-                    <h3 className="text-center mt-3mb-4">RELATED PACKAGES:</h3>
+                    <h3 className="text-center mt-5 mb-4">RELATED PACKAGE:</h3>
                     <img
                       src={item.url}
                       className="img-fluid rounded-start img-fluid justify-content-center text-center"
@@ -189,7 +213,7 @@ const PackagesMap = () => {
                         border: "1px solid #ddd",
                         bordeRadius: "4px",
                         padding: "10px",
-
+                        borderColor: "#d2ae6d",
                         width: "100%",
                         maxWidth: "400px",
                       }}
