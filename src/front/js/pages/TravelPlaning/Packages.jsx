@@ -57,7 +57,7 @@ const Packages = () => {
               >
                 <div
                   className="row align-items-end"
-                  style={{ height: "380px" }}
+                  style={{ height: "450px" }}
                 >
                   <div className="col">
                     <h3 className="post_title">{item.name}</h3>
@@ -191,7 +191,7 @@ const Packages = () => {
               >
                 <div
                   className="row align-items-end justify-content-end "
-                  style={{ height: "380px", color: "white" }}
+                  style={{ height: "450px", color: "white" }}
                 >
                   <div className="col">
                     <h3 className="post2_title">{item.name}</h3>
