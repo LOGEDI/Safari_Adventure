@@ -66,7 +66,7 @@ const PackagesDetails = () => {
               </div>
 
               <div className="col-xl-7 justify-content-end text-end">
-                <div className="row col-xl-12  p-0 destinationButons justify-content-end text-end mt-5">
+                <div className="row col-xl-12 p-0  justify-content-end text-end mt-5">
                   {/* <div className="col-md-2 col-xs-6">
                     <button
                       className="btn btn-light"
@@ -86,7 +86,7 @@ const PackagesDetails = () => {
                   {store.package.map((item,index) => (
       <div key={item.id}>
 
-                  <div className="col-xl-3 col-md-4 col-sm-6 p-1 text-center ">
+                  <div className="col-xl-12 col-md-4 col-sm-6 p-1 justify-content-end ">
                     <Link to={"/PackagesMap/" + item.id}>
                       <button className="btn btn-creamD ">Back</button>
                     </Link>
@@ -475,7 +475,7 @@ const PackagesDetails = () => {
           </div>
         </div>
 
-        {store.auth ? <Comments /> : null}
+        {/* {store.auth ? <Comments /> : null}
 
         <div className="row ">
           <div className="col-sm-12 col-md-7 ">
@@ -535,7 +535,7 @@ const PackagesDetails = () => {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
 
       </div>

@@ -68,7 +68,7 @@ const Profile = () => {
                     <div className="row justify-content-center">
                       <div className="col-lg-3 order-lg-2">
                         <div className="card-profile-image">
-                          <a href="#">
+                          
                             <img
                               src={
                                 profile.user_url
@@ -77,7 +77,7 @@ const Profile = () => {
                               }
                               className="rounded-circle"
                             />
-                          </a>
+                          
                         </div>
                       </div>
                     </div>

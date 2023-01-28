@@ -112,15 +112,15 @@ const Packages = () => {
                   <p className="post_description mb-4">{item.description}</p>
                 </div>
                 <div className="row text-center justify-content-center">
-                  <Link to={"/PackagesDetails/" + item.id}>
+                  {/* <Link to={"/PackagesDetails/" + item.id}>
                     <button className="btn btn-creamD justify mb-3">
                       Learn More
                     </button>
-                  </Link>
+                  </Link> */}
 
                   <Link to={"/PackagesMap/" + item.id}>
                     <button className="btn btn-creamD justify mb-3">
-                      test
+                      LEARN MORE
                     </button>
                   </Link>
 
@@ -180,7 +180,7 @@ const Packages = () => {
                   <p className="post_description mb-4">{item.description}</p>
                 </div>
                 <div className="row text-center justify-content-center">
-                  <Link to={"/PackagesDetails/" + item.id}>
+                  <Link to={"/PackagesMap/" + item.id}>
                     <button className="btn btn-creamD justify mb-3">
                       Learn More
                     </button>
