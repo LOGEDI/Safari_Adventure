@@ -141,75 +141,9 @@ body{
 
 /*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
 
-/* .acordionheader {
-  color: darkolivegreen;
-  background-color: white;
-  font-family: 'Alegreya Sans SC', sans-serif;
-} */
 
 
 
-/* This change the accordion background color when is not pressed */
-.accordion-button.collapsed {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-  color: darkolivegreen;
-  background: hsl(60deg 56% 91% / 100%);
-}
-
-/* This change the border color when hover */
-.accordion-button:hover {
-  z-index: 3;
-  border-color: #d2ae6d;
-  outline: 0!important;
-  /* I changed the color on this line */
-  /* If you do not want any color, just delete */
-  box-shadow: 0 0 0 0.25rem #d2ae6d;
-}
-
-.accordion-button:focus {
-  z-index: 3;
-  border-color: hsl(60deg 56% 91% / 100%);
-  outline: 0!important;
-  /* I changed the color on this line */
-  /* If you do not want any color, just delete */
-  box-shadow: 0 0 0 0.25rem #d2ae6d;
-}
-
-.accordion-button:not(.collapsed) {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-  color: white;
-  background: #d2ae6d;
-}
-
-.accordion-body{
-  font-family: 'Lato', sans-serif;
-  color: #29362f;
-  font-size: 17px;
-}
-
-.FAQHeader{
-  padding-right: 15px;
-}
-
-.FAQHeaderP{
-  padding-left: 10px;
-}
-
-.FAQ{
-  font-size: 23px;
-}
-
-/* .accordion-button:after {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-} */
-
-
-/* this change the color of the arrow when is not pressed*/
-/* .accordion-button::after {background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); } */
 
 
 
@@ -929,10 +863,10 @@ figure.snip0016:hover figcaption::before {
 }
 
 .post_description {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 15%;
+  margin-right: 15%;
   text-align: center;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: bolder;
   color: #2f503e;
   font-family: Lato, sans-serif;
@@ -1057,3 +991,86 @@ figure.snip0016:hover figcaption::before {
   border-top-right-radius: 5px;
 }
 
+/*---------------------------------FAQ------------------------------------------*/
+
+
+/* This change the accordion background color when is not pressed */
+.accordion-button.collapsed {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  color: #556b2f;
+  background: hsl(60deg 56% 91% / 100%);
+}
+
+/* This change the border color when hover */
+.accordion-button:hover {
+  z-index: 3;
+  border-color: #d2ae6d;
+  outline: 0!important;
+  /* I changed the color on this line */
+  /* If you do not want any color, just delete */
+  box-shadow: 0 0 0 0.25rem #d2ae6d;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: hsl(60deg 56% 91% / 100%);
+  outline: 0!important;
+  /* I changed the color on this line */
+  /* If you do not want any color, just delete */
+  box-shadow: 0 0 0 0.25rem #d2ae6d;
+}
+
+.accordion-button:not(.collapsed) {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  color: white;
+  background: #d2ae6d;
+}
+
+.accordion-body{
+  font-family: 'Lato', sans-serif;
+  color: #29362f;
+  font-size: 17px;
+}
+
+.FAQHeader{
+  padding-right: 15px;
+}
+
+.FAQHeaderP{
+  padding-left: 10px;
+}
+
+.FAQ{
+  font-size: 23px;
+}
+
+.accordion-button:after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23556b2f'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+
+/* this change the color of the arrow when is not pressed*/
+/* .accordion-button::after {background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); } */
+
+
+/* .FAQ-accordion {
+  
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+} */
+
+.transition{
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hover-card:hover{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  transform: translateY(-10px);
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 import { Context } from "../../store/appContext";
 import Swal from "sweetalert2";
 
@@ -670,7 +671,7 @@ const AddPackages = () => {
               <input
                 className="package-detail-title"
                 type="text"
-                placeholder="TITLE"
+                placeholder="If premium package text premium"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
               ></input>

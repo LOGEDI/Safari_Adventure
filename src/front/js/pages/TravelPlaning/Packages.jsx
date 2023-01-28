@@ -50,14 +50,14 @@ const Packages = () => {
               <div
                 className="col col-xl-5 picpackage ml-5"
                 style={{
-                  height: "400px",
+                 
                   maxWidth: "888px",
                   backgroundImage: `url(${item.url})`,
                 }}
               >
                 <div
                   className="row align-items-end"
-                  style={{ height: "380px" }}
+                  style={{ height: "450px" }}
                 >
                   <div className="col">
                     <h3 className="post_title">{item.name}</h3>

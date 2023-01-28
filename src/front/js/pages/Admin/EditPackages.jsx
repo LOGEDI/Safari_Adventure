@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../../store/appContext";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import Nav from "react-bootstrap/Nav";
 
 import activity from "../../../img/activity-icon.png";
 import destinationsicon from "../../../img/destination-icon.png";
@@ -678,7 +679,7 @@ const EditPackages = () => {
                 <input
                   className="package-detail-title"
                   type="text"
-                  placeholder="TITLE"
+                  placeholder="If premium package text premium"
                   onChange={(e) => setTitle(e.target.value)}
                   value={title}
                 ></input>

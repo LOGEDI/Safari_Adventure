@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
+import Nav from "react-bootstrap/Nav";
 import Swal from "sweetalert2";
 
 import destinationBackground from "../../../img/destinations_background.jpg";
@@ -89,11 +90,11 @@ const AdminPackages = () => {
             <div className="col-xl-4 col-12">
               <div className="admin-pack-card card m-3 border-light">
                 <img src={plusIcon} className="admin-pack-img-top" alt="..." />
-                <div className="admin-pack-card-body">
+                <div className="admin-pack-card-body1">
                   <h3 className="admin-pack-card-title mt-3">CREATE PACKAGE</h3>
                   <div className="d-flex justify-content-center">
                     <Link to="/AddPackages">
-                      <button className="btn btn-primary">CREATE</button>
+                      <button className="btn btn-primary mb-2">CREATE</button>
                     </Link>
                   </div>
                 </div>

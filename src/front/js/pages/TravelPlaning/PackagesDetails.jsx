@@ -84,13 +84,19 @@ const PackagesDetails = () => {
                   </div>
 
                   <div className="col-2 col-sm-4">
-                    <button className="btn btn-primary btn-l">Back</button>
+                    <Link to="/Packages">
+                      <button className="btn btn-creamD btn-l">Back</button>
+                    </Link>
                   </div>
                   <div className="col-2 col-sm-4">
-                    <button className="btn btn-primary btn-l">all</button>
+                    <Link to="/PackagesMap">
+                      <button className="btn btn-creamD btn-l">
+                        Itinerary
+                      </button>
+                    </Link>
                   </div>
                   <div className="col-2">
-                    <button className="btn btn-primary btn-l">all</button>
+                    <button className="btn btn-creamD btn-l">all</button>
                   </div>
                 </div>
               </div>
@@ -141,7 +147,6 @@ const PackagesDetails = () => {
             </div>
 
             <div className="details-overview row">
-
               <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                 <h4 className="overview-title">
                   {store.packageDetail.overview_title}
@@ -159,12 +164,16 @@ const PackagesDetails = () => {
             </div>
 
             <div className="row m-2">
-              <div >
-                <img className="mt-2 mb-3 p-1 col-xl-6 col-12" src={store.packageDetail.url4}></img>
-                <img className="mt-2 mb-3 p-1 col-xl-6 col-12" src={store.packageDetail.url5}></img>
+              <div>
+                <img
+                  className="mt-2 mb-3 p-1 col-xl-6 col-12"
+                  src={store.packageDetail.url4}
+                ></img>
+                <img
+                  className="mt-2 mb-3 p-1 col-xl-6 col-12"
+                  src={store.packageDetail.url5}
+                ></img>
               </div>
-              
-              
             </div>
 
             <div className="details-overview row">
@@ -252,9 +261,18 @@ const PackagesDetails = () => {
             </div>
 
             <div className="row m-2">
-              <img className="mt-2 mb-3 p-1 col-xl-4 col-12" src={store.packageDetail.url7}></img>
-              <img className="mt-2 mb-3 p-1 col-xl-4 col-12" src={store.packageDetail.url8}></img>
-              <img className="mt-2 mb-3 p-1 col-xl-4 col-12" src={store.packageDetail.url9}></img>
+              <img
+                className="mt-2 mb-3 p-1 col-xl-4 col-12"
+                src={store.packageDetail.url7}
+              ></img>
+              <img
+                className="mt-2 mb-3 p-1 col-xl-4 col-12"
+                src={store.packageDetail.url8}
+              ></img>
+              <img
+                className="mt-2 mb-3 p-1 col-xl-4 col-12"
+                src={store.packageDetail.url9}
+              ></img>
             </div>
 
             <div className="details-overview row ">

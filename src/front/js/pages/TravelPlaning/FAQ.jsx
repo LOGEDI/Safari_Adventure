@@ -1,15 +1,34 @@
 import React, { useContext } from "react";
-
+import FAQhero from "../../../img/FAQ-hero.jpg";
 const FAQ = () => {
   return (
     <div className="pagesBackground">
       <div className="main-content">
+
+      <div
+          className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+          style={{
+            backgroundImage: `url(${FAQhero})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="container-fluid d-flex align-items-center">
+            <div className="text-on-image">
+              <h2 className="page-title">USEFULL INFO</h2>
+              <span className="page-subtitle">
+                Get ready for the Adventure
+              </span>
+            </div>
+          </div>
+        </div>
+
         <div className="container-fluid">
           <div className="row">
             <div className="">
               <div className="pageDescriptionContainerCenter  pt-md-4 pb-0 pb-md-4 p-md-3 p-3">
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
+                <div class="accordion " id="accordionExample">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingOne">
                       <button
                         class="accordion-button"
@@ -49,7 +68,7 @@ const FAQ = () => {
                   </div>
                   <br />
 
-                  <div class="accordion-item">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingTwo">
                       <button
                         class="accordion-button collapsed"
@@ -88,7 +107,7 @@ const FAQ = () => {
                   </div>
                   <br />
 
-                  <div class="accordion-item">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingThree">
                       <button
                         class="accordion-button collapsed"
@@ -130,7 +149,7 @@ const FAQ = () => {
                   </div>
                   <br />
 
-                  <div class="accordion-item">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingFour">
                       <button
                         class="accordion-button collapsed"
@@ -192,7 +211,7 @@ const FAQ = () => {
                   </div>
                   <br />
 
-                  <div class="accordion-item">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingFive">
                       <button
                         class="accordion-button collapsed"
@@ -226,7 +245,7 @@ const FAQ = () => {
                   </div>
                   <br />
 
-                  <div class="accordion-item">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingSix">
                       <button
                         class="accordion-button collapsed"
@@ -283,7 +302,7 @@ const FAQ = () => {
                   </div>
                   <br />
 
-                  <div class="accordion-item">
+                  <div class="accordion-item transition hover-card">
                     <h2 class="accordion-header" id="headingSeven">
                       <button
                         class="accordion-button collapsed"
