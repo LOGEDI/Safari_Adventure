@@ -1008,3 +1008,14 @@ figure.snip0016:hover figcaption::before {
   min-height: 300px;
 
 }
+
+.GMAPS{
+  position: absolute;
+  bottom: 7%;
+  top: 80%;
+  right: 5%;
+  left: 55%;
+  
+  
+
+}

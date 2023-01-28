@@ -53,7 +53,7 @@ const GMaps = ({ placeName }) => {
       <div
         id="google-map"
         ref={googleMapRef}
-        style={{ width: "200px", height: "200px" }}
+        style={{ width: "550px", height: "300px" }}
       />
     );
   };
