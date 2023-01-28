@@ -68,19 +68,21 @@ const PackagesDetails = () => {
               <div className="col-xs-12 col-md-4">
                 <div className="row justify-content-end mt-5">
                   <div className="col-md-2 col-xs-6">
+                  {store.auth ? (
                     <button
-                      className="btn btn-light"
+                      className="btn btnFav"
                       type="button"
                       onClick={() => {
                         handleAddFavorites(store.packageDetail.id);
                       }}
                     >
                       {store.favoriteItem?.includes(parseInt(params.id)) ? (
-                        <BsFillHeartFill />
+                        <BsFillHeartFill className="favoIcon"/>
                       ) : (
-                        <BsHeart />
+                        <BsHeart className="favoIcon"/>
                       )}
                     </button>
+                  ) : null}{" "}
                   </div>
 
                   <div className="col-2 col-sm-4">

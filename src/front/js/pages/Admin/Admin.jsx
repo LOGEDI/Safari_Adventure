@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
+import Nav from "react-bootstrap/Nav";
 
 const Admin = () => {
   const { store, actions } = useContext(Context);

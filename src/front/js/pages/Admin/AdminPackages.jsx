@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
 import Swal from "sweetalert2";
+import Nav from "react-bootstrap/Nav";
 
 import destinationBackground from "../../../img/destinations_background.jpg";
 import plusIcon from "../../../img/plus-icon.png";

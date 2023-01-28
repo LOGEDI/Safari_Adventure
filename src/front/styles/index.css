@@ -932,7 +932,7 @@ figure.snip0016:hover figcaption::before {
   margin-left: 60px;
   margin-right: 60px;
   text-align: center;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: bolder;
   color: #2f503e;
   font-family: Lato, sans-serif;
@@ -1036,6 +1036,18 @@ figure.snip0016:hover figcaption::before {
   border-bottom: 0;
   border-top: 0;
   border-right: 0;
+  
+}
+
+.btnFav {
+  background-color: transparent;
+  
+}
+.favoIcon {
+  width: 50px;
+  height: 50px;
+  color: #d2ae6d;
+  margin-top: -8px;
   
 }
 
