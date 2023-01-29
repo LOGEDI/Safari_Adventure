@@ -37,6 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       favoritesList: [],
       favoriteHeart: false,
       comments: [],
+      commentsListK: [],
     },
     actions: {
       //-----------------------------------------------------------------------------------------------------------------------------
@@ -1089,6 +1090,31 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log(error);
         }
       },
+
+
+      getCommentsK: async () => {
+        let store = getStore();
+        let user_id = store.userId;
+
+        try {
+          const response = await axios.get(
+            process.env.BACKEND_URL + "/api/user/" + user_id + "/comments"
+          );
+          setStore({
+            commentsListK: response.data.results,
+          });
+        } catch (error) {
+          if (error.response.status === 404) {
+            setStore({
+              commentsListK: [],
+            });
+          }
+        }
+      },
+
+
+
+
 
       //-----------------------------------------------------------------------------------------------------------------------------
       //											 GET COMMENTS  

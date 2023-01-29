@@ -679,7 +679,7 @@ const EditPackages = () => {
                 <input
                   className="package-detail-title"
                   type="text"
-                  placeholder="If premium package text premium"
+                  placeholder="p for premium, normal for normal"
                   onChange={(e) => setTitle(e.target.value)}
                   value={title}
                 ></input>

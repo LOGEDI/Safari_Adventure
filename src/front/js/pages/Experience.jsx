@@ -36,7 +36,7 @@ const Experience = () => {
         {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
         <div className="container-fluid mt-3">
-          <div className="row">
+          <div className="row ">
             <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
               <div className="card card-profile ">
                 <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">

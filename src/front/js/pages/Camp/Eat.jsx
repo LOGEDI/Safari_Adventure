@@ -13,87 +13,98 @@ import carousel3 from "../../../img/Eat3.webp";
 const Eat = () => {
   return (
     <div className="pagesBackground">
-    <div>
       <div>
-        <div className="main-content">
-          <div
-            className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
-            style={{
-              // minHeight: "500px",
-              backgroundImage: `url(${EatMain})`,
-              backgroundSize: "cover",
-              backgroundPosition: "top",
-            }}
-          >
-            <div className="container-fluid d-flex align-items-center">
-              <div className="text-on-image">
-                <h2 className="page-title">EAT </h2>
-                <span className="page-subtitle">
-                Homemade menus prepared with organic packages
-                </span>
+        <div>
+          <div className="main-content">
+            <div
+              className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+              style={{
+                // minHeight: "500px",
+                backgroundImage: `url(${EatMain})`,
+                backgroundSize: "cover",
+                backgroundPosition: "top",
+              }}
+            >
+              <div className="container-fluid d-flex align-items-center">
+                <div className="text-on-image">
+                  <h2 className="page-title">EAT </h2>
+                  <span className="page-subtitle">
+                    Homemade menus prepared with organic packages
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/*---------------------------------------------------- Description--------------------------------------------------- */}
+            {/*---------------------------------------------------- Description--------------------------------------------------- */}
 
-          <div className="container-fluid mt-3">
-            <div className="row">
-              <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
-                <div className="card card-profile ">
-                  <div className="pageDescriptionContainer  pt-md-4 pb-0 pb-md-4">
-                    <h2 className="description-title">
-                     EAT ORGANIC DELECICACIES
-                    </h2>
-                    <div className="description-content">
-                      <p className="description-content">
-                      An unforgettable safari experience also requires great food. Our chefs are the ones that will make your culinary experience remarkable. Homemade menus prepared with organic packages according to any diet requirements that our guests might have. No buffet is served.
-                      </p>
-                      <p className="description-content">
-                      Our delicious picnic bush breakfasts and lunches in carefully selected sites will be part of your unforgettable safari memories.
-                      </p>                       
-                    </div>
-                    <div className="row justify-content-center mt-4 p-3">
-                    <button type="button" className="btn btn-cream text-center">
-                      BOOK WITH US
-                    </button>
+            <div className="container-fluid mt-3">
+              <div className="row">
+                <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
+                  <div className="card card-profile ">
+                    <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">
+                      <h2 className="description-title">
+                        EAT ORGANIC DELECICACIES
+                      </h2>
+                      <div className="description-content">
+                        <p className="description-content">
+                          An unforgettable safari experience also requires great
+                          food. Our chefs are the ones that will make your
+                          culinary experience remarkable. Homemade menus
+                          prepared with organic packages according to any diet
+                          requirements that our guests might have. No buffet is
+                          served.
+                        </p>
+                        <p className="description-content">
+                          Our delicious picnic bush breakfasts and lunches in
+                          carefully selected sites will be part of your
+                          unforgettable safari memories.
+                        </p>
+                      </div>
+                      <div className="row justify-content-center mt-4 p-3">
+                        <Link to="/Contact">
+                          <button
+                            type="button"
+                            className="btn btn-cream col-12 "
+                          >
+                            BOOK WITH US
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
+                {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
 
-              <div className="col-xl-6 order-xl-1">
-                <div className="card ">
-                  <div className="">
-                    <div className=" border-0   pb-0 ">
-                      <div className="carouselContainerLeft">
-
-                      <Carousel>
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={carousel1}
-                            alt="First slide"
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={carousel2}
-                            alt="Second slide"
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <img
-                            className="d-block w-100"
-                            src={carousel3}
-                            alt="Third slide"
-                          />
-                        </Carousel.Item>
-                      </Carousel>
-
+                <div className="col-xl-6 order-xl-1">
+                  <div className="card ">
+                    <div className="">
+                      <div className=" border-0   pb-0 ">
+                        <div className="carouselContainerLeft">
+                          <Carousel>
+                            <Carousel.Item>
+                              <img
+                                className="d-block w-100"
+                                src={carousel1}
+                                alt="First slide"
+                              />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                              <img
+                                className="d-block w-100"
+                                src={carousel2}
+                                alt="Second slide"
+                              />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                              <img
+                                className="d-block w-100"
+                                src={carousel3}
+                                alt="Third slide"
+                              />
+                            </Carousel.Item>
+                          </Carousel>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -101,9 +112,8 @@ const Eat = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* <div className="experiencePagePicLinks container-fluid">
+          {/* <div className="experiencePagePicLinks container-fluid">
           <div className="row g-3 mt-5">
             <div className="col-xl-3 order-xl-1 mb-5 mb-xl-0">
               <div className="experiencePagePicLinksIndividual ">
@@ -182,14 +192,14 @@ const Eat = () => {
           </div>
         </div> */}
 
-        <footer className="footer">
-          <div className="row align-items-center justify-content-xl-between">
-            <div className="col-xl-6 m-auto text-center"></div>
-          </div>
-        </footer>
+          <footer className="footer">
+            <div className="row align-items-center justify-content-xl-between">
+              <div className="col-xl-6 m-auto text-center"></div>
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

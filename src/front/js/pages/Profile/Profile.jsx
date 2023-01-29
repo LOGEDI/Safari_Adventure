@@ -16,7 +16,7 @@ const Profile = () => {
     actions.userProfile();
     if (store.userId != null) {
       actions.getFavorites();
-      actions.getComments();
+      actions.getCommentsK();
     }
   }, [store.userId]);
 
@@ -206,8 +206,8 @@ const Profile = () => {
                         </div>
 
                         <div className="card-body">
-                          {store.comments.length > 0 ? (
-                            store.comments?.map((item) => (
+                          {store.commentsListK?.length > 0 ? (
+                            store.commentsListK?.map((item) => (
                               <div key={item.id}>
                                 <div className="pl-lg-4">
                                   <div className="row">

@@ -48,9 +48,14 @@ const Sundowners = () => {
                     </p>
                   </div>
                   <div className="row justify-content-center mt-4 p-3">
-                    <button type="button" className="btn btn-cream text-center">
-                      BOOK WITH US
-                    </button>
+                  <Link to="/Contact">
+                          <button
+                            type="button"
+                            className="btn btn-cream col-12 "
+                          >
+                            BOOK WITH US
+                          </button>
+                        </Link>
                   </div>
                 </div>
               </div>
