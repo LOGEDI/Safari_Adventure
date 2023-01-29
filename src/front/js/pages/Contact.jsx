@@ -4,6 +4,7 @@ import "../../styles/index.css";
 
 const Contact = () => {
   return (
+    <div className='pagesBackground'>
     <div className="container">
 <div className="page-header">
             <div className="head-image">
@@ -51,6 +52,7 @@ const Contact = () => {
                 <div className="GMAPS">
         <GMaps/>
         </div> 
+        </div>
         
     </div>
     
