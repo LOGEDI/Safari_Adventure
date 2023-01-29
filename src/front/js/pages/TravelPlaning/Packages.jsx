@@ -206,8 +206,8 @@ const Packages = () => {
     ))}
 
 
-
-
+{store.auth ? (
+<div>
 
 {store.premium && item.title === premium ? (
 
@@ -398,8 +398,8 @@ const Packages = () => {
 
     ) : null}{" "}
 
-
-
+</div>
+) : null}{" "}
     {/* ----------------------------------------------Aditional footer for spacing----------------------------------------- */}
     <footer className="footer"></footer>
   </div>
