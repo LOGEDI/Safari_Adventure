@@ -1,61 +1,31 @@
 import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+import Carousel from "react-bootstrap/Carousel";
 
-import balloonHero from "../../img/ngorongoro.jpg";
-import addis from "../../img/addiscity_thumb.jpg";
-import amboseli from "../../img/amboseli_thumb.jpg";
-import axum from "../../img/axum_thumb.jpg";
-import bahir from "../../img/bahirdar_thumb.jpg";
-import batwa from "../../img/batwatribe_thumb.jpg";
-import gondar from "../../img/gondar_thumb.jpg";
-import bwindi from "../../img/uganda_thumb.jpg";
-import hawzen from "../../img/hawzen_thumb.jpg";
-import iby from "../../img/iby-iwacu_thumb.jpg";
-import kigali from "../../img/kigali_thumb.jpg";
-import lalibela from "../../img/Lalibela_thumb.jpg";
-import maasai from "../../img/maasaimara_thumb.jpg";
-import nairobi from "../../img/nairobi_thumb.jpg";
-import nakuru from "../../img/lakenakuru_thumb.jpg";
-import ngorongoro from "../../img/ngorongoro_thumb.jpg";
-import samburu from "../../img/samburu_thumb.jpg";
-import serengeti from "../../img/serengeti_thumb.jpg";
-import tarangire from "../../img/tarangire_thumb.jpg";
-import rwanda from "../../img/rwanda_thumb.jpg";
-import destinationBackground from "../../img/destinations_background.jpg";
-import locationicon from "../../img/location-icon.png";
-import separator from "../../img/heading-separator.png";
+import aboutusHero from "../../img/aboutus-hero.jpg";
 
-import carousel1 from "../../img/carousel1-balloon-pic1.jpg";
-import carousel2 from "../../img/carousel1-balloon-pic2.jpg";
-import carousel3 from "../../img/carousel1-balloon-pic3.jpg";
+import carousel1 from "../../img/Aboutus-1.jpg";
+import carousel2 from "../../img/aboutus-2.jpg";
+import carousel3 from "../../img/aboutus-3.jpg";
 
 const AboutUs = () => {
-  const { store, actions } = useContext(Context);
-  const params = useParams();
-
-  useEffect(() => {
-    actions.getPackage(params.id);
-  }, []);
-
-
   return (
     <div className="pagesBackground">
       <div className="main-content">
         <div
           className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
           style={{
-            backgroundImage: `url(${balloonHero})`,
+            backgroundImage: `url(${aboutusHero})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className="container-fluid d-flex align-items-center">
             <div className="text-on-image">
-              <h2 className="page-title">BALLOON SAFARI</h2>
+              <h2 className="page-title">ABOUT US</h2>
               <span className="page-subtitle">
-                A once-in-a-lifetime magical experience
+                Eager to share our authentic safari experience
               </span>
             </div>
           </div>
@@ -68,125 +38,73 @@ const AboutUs = () => {
             <div className="col-xl-6 order-xl-1 mb-5 mb-xl-0">
               <div className="card card-profile ">
                 <div className="pageDescriptionContainerLeft  pt-md-4 pb-0 pb-md-4">
-                  <h2 className="description-title">FLOAT OVER THE MARA</h2>
+                  <h2 className="description-title">ABOUT US</h2>
                   <div className="description-content">
                     <p className="description-content">
-                      A once-in-a-lifetime magical experience that will be
-                      permanently etched in your travel memories. Give yourself
-                      a treat and feel the immensity of the Mara at its best
-                      while smoothly flying above the Savannah and its wildlife.
+                      Our main goal is to preserve and maintain the essence of
+                      Maasai Mara as it has been for generations. That is why
+                      our mission is to make our clients experience a unique
+                      safari in which the main characteristic is authenticity,
+                      always under the respect and care of the ecosystem.
                     </p>
                     <p className="description-content">
-                      Float in the sky, drifting with the breeze of the wind,
-                      overlooking the plains, just in time to experience a
-                      breathtaking sunrise and see the reserve from a bird’s eye
-                      view.
+                      With an eco luxury Camp and its privileged location within
+                      the reserve and away from the crowds, together with the
+                      experience of our incredible guides and observers, it
+                      guarantees the most incredible sightings in almost
+                      absolute privacy in the best Big5 territory of all the
+                      Maasai Mara.
                     </p>
                   </div>
                   <div className="row justify-content-center mt-4 p-3">
-                    <button type="button" className="btn btn-cream text-center">
-                      BOOK WITH US
+                    <button
+                      type="button"
+                      className="btn btn-creamD text-center"
+                    >
+                      <Link to="/Contact" style={{ color: "white", textDecoration: 'none'}}>
+                        BOOK WITH US
+                      </Link>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="col-xl-6 order-xl-2 mb-5 mb-xl-0">
-              <div className="card card-profile ">
-                <div className="pageDescriptionContainerRigth  pt-md-4 pb-0 pb-md-4">
-                  <h2 className="description-title">FLOAT OVER THE MARA</h2>
-                  <div className="description-content">
-                    <p className="description-content">
-                      A once-in-a-lifetime magical experience that will be
-                      permanently etched in your travel memories. Give yourself
-                      a treat and feel the immensity of the Mara at its best
-                      while smoothly flying above the Savannah and its wildlife.
-                    </p>
-                    <p className="description-content">
-                      Float in the sky, drifting with the breeze of the wind,
-                      overlooking the plains, just in time to experience a
-                      breathtaking sunrise and see the reserve from a bird’s eye
-                      view.
-                    </p>
-                  </div>
-                  <div className="row justify-content-center mt-4 p-3">
-                    <button type="button" className="btn btn-cream text-center">
-                      BOOK WITH US
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
 
             {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
 
-            {/* <div className="col-xl-5 order-xl-1">
+            <div className="col-xl-6 order-xl-2">
               <div className="card ">
                 <div className="">
                   <div className=" border-0   pb-0 ">
-                    <div className="carouselContainerLeft">
-                      <div
-                        id="carouselExampleFade"
-                        className=" carousel slide carousel-fade"
-                        data-bs-ride="carousel"
-                      >
-                        <div className=" carousel-inner">
-                          <div className=" carouselContent2">
-                            <div className="carousel-item active">
-                              <img
-                                src={carousel1}
-                                className="d-block w-100"
-                                alt="..."
-                              />
-                            </div>
-                            <div className="carousel-item">
-                              <img
-                                src={carousel2}
-                                className="d-block w-100"
-                                alt="..."
-                              />
-                            </div>
-                            <div className="carousel-item">
-                              <img
-                                src={carousel3}
-                                className="d-block w-100"
-                                alt="..."
-                              />
-                            </div>
-                          </div>
-                          <button
-                            className="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#carouselExampleFade"
-                            data-bs-slide="prev"
-                          >
-                            <span
-                              className="carousel-control-prev-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span className="visually-hidden">Previous</span>
-                          </button>
-                          <button
-                            className="carousel-control-next"
-                            type="button"
-                            data-bs-target="#carouselExampleFade"
-                            data-bs-slide="next"
-                          >
-                            <span
-                              className="carousel-control-next-icon"
-                              aria-hidden="true"
-                            ></span>
-                            <span className="visually-hidden">Next</span>
-                          </button>
-                        </div>
-                      </div>
+                    <div className="carouselContainerRigth">
+                      <Carousel>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel1}
+                            alt="First slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel2}
+                            alt="Second slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel3}
+                            alt="Third slide"
+                          />
+                        </Carousel.Item>
+                      </Carousel>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

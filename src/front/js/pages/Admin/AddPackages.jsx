@@ -671,7 +671,7 @@ const AddPackages = () => {
               <input
                 className="package-detail-title"
                 type="text"
-                placeholder="TITLE"
+                placeholder="If premium package text premium"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
               ></input>
@@ -701,7 +701,7 @@ const AddPackages = () => {
                   <img className="separator mr-3" src={separator}></img>
                 </div>
                 <div className="col-5">
-                  <div className="row row-cols-5 justify-content-center">
+                  {/* <div className="row row-cols-5 justify-content-center">
                     <div className="col-2">
                       <button className="btn-alert btn-l"> all</button>
                     </div>
@@ -714,7 +714,7 @@ const AddPackages = () => {
                     <div className="col-2">
                       <button className="btn-alert btn-l">all</button>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="row row-cols-1 mt-5 mb-5">
                     <label for="packages-background">BACKGROUND IMG</label>
                     <input

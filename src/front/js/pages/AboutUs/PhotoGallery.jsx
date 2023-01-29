@@ -1,179 +1,151 @@
 import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
+import sundownersHero from "../../../img/photogallery-hero1.jpg";
+import carousel1 from "../../../img/photogallery-1.jpg";
+import carousel2 from "../../../img/photogallery-2.jpg";
+import carousel3 from "../../../img/photogallery-3.jpg";
+import carousel4 from "../../../img/photogallery-4.jpg";
+import carousel5 from "../../../img/photogallery-5.jpg";
+import carousel6 from "../../../img/photogallery-6.jpg";
+import carousel7 from "../../../img/photogallery-7.jpg";
 
 const PhotoGallery = () => {
   return (
     <div className="pagesBackground">
-    <div className="container">
-      <div className="page-header">
-        <div className="head-image">
-          <img
-            className="col-12 m-0 black-rock"
-            src="https://media-01.imu.nl/storage/ourplanetinmylens.com/6902/travel-photography-tips-from-award-winning-travel-photographer-kim-paffen-2560x1100-1.jpg"
-            alt=""
-          />
+    <div className="main-content">
+
+     <div
+          className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+          style={{
+            backgroundImage: `url(${sundownersHero})`,
+            backgroundSize: "cover",
+            backgroundPosition: "top",
+          }}
+        >
+          <div className="container-fluid d-flex align-items-center">
+            <div className="text-on-image">
+              <h2 className="page-title">PHOTO GALLERY</h2>
+              <span className="page-subtitle"> Worthy photos from our best photographers!</span>
+            </div>
+          </div>
         </div>
-        <div className="text-on-image">
-          <h2 className="page-title">PHOTO GALLERY</h2>
-          <span className="page-subtitle">
-            Worthy photos from our best photographers!
-          </span>
-        </div>
-      </div>
 
       <div className="col-12 justify-content-center">
         <div className="card m-3 border-light">
-          <div className="carouselContainer container-fluid home">
-            <div
-              id="carouselExampleFade"
-              className=" carousel slide carousel-fade"
-              data-bs-ride="carousel"
-            >
-              <div className=" carousel-inner">
-                <div className="container-fluid carouselContent3">
-                  <div className="carousel-item active">
-                    <img
-                      width="1050px"
-                      height="700px"
-                      src="https://wallpaperaccess.com/full/1286211.jpg"
-                      className="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      width="1050px"
-                      height="700px"
-                      src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FmYXJpfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-                      className="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      width="1050px"
-                      height="700px"
-                      src="https://digwallpapers.com/wallpapers/full/b/7/b/119379-2880x1500-safari-wallpaper-desktop-hd.jpg"
-                      className="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <button
-                  className="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleFade"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                  className="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleFade"
-                  data-bs-slide="next"
-                >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
+          <div className="pageDescriptionContainerCenter container-fluid home">
+          <Carousel>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel1}
+                            alt="First slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel2}
+                            alt="Second slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel3}
+                            alt="Third slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel4}
+                            alt="Third slide"
+                          />
+                        </Carousel.Item>
+                      </Carousel>
           </div>
         </div>
       </div>
 
-      <div className="row row-cols-2 g-3 mt-5">
-        <div className="col-6">
-          <div className="card m-3 border-light">
-            <h2 className="description-title">BOOK AN EXPERIENCE</h2>
-            <div className="description-content">
-              <p>
-                The Safary Adventure's invites you to participate in an
+ {/*---------------------------------------------------- Description--------------------------------------------------- */}
+
+ <div className="container-fluid mt-3">
+          <div className="row">
+            <div className="col-xl-6 order-xl-1 mb-5 mb-xl-0">
+              <div className="card card-profile ">
+                <div className="pageDescriptionContainerLeft  pt-md-4 pb-0 pb-md-4">
+                  <h2 className="description-title">BOOK AN EXPERIENCE</h2>
+                  <div className="description-content">
+                    <p className="description-content">
+                    The Safary Adventure's invites you to participate in an
                 unforgettable experience. Book now with one of our photographers
                 and take home the best memories of our safary.
-              </p>
-              <p>
-                <strong>Booking Contact:</strong> xxx-xxx-xxxx
-              </p>
+                    </p>
+                    <p className="description-content">
+                     
+                    </p>
+                  </div>
+                  <div className="row justify-content-center mt-4 p-3">
+                  <button
+                      type="button"
+                      className="btn btn-creamD text-center"
+                    >
+                      <Link to="/Contact" style={{ color: "white", textDecoration: 'none' }}>
+                        BOOK WITH US
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="col-6 justify-content-center">
-          <div className="card m-3 border-light">
-            <div className="carouselContainer container-fluid home">
-              <div
-                id="carouselExampleFade"
-                className=" carousel slide carousel-fade"
-                data-bs-ride="carousel"
-              >
-                <div className=" carousel-inner">
-                  <div className="container-fluid carouselContent2">
-                    <div className="carousel-item active">
-                      <img
-                        width="525px"
-                        height="350px"
-                        src="https://safariguideafrica.com/wp-content/uploads/2014/06/Private-Reserve1.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        width="525px"
-                        height="350px"
-                        src="https://safari.co.uk/assets/media/designs/uploads/posts/postrelation/1200x728/family-game-drive-two-elephants-chem-chem-concession-23504.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        width="525px"
-                        height="350px"
-                        src="https://res.cloudinary.com/enchanting/q_70,f_auto,w_2821,h_1881,c_fit/exodus-web/2021/12/cheetah-on-car-safari.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
+
+            {/*---------------------------------------------------- Carousel--------------------------------------------------- */}
+
+            <div className="col-xl-6 order-xl-2">
+              <div className="card ">
+                <div className="">
+                  <div className=" border-0   pb-0 ">
+                    <div className="carouselContainerRigth">
+                      <Carousel>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel5}
+                            alt="First slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel6}
+                            alt="Second slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carousel7}
+                            alt="Third slide"
+                          />
+                        </Carousel.Item>
+                      </Carousel>
                     </div>
                   </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
+
+
+      
+        
         {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
         <footer className="footerDestinations"> </footer>
-      </div>
+      
     </div>
     </div>
   );
