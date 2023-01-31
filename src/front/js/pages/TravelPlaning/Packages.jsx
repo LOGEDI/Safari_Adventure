@@ -53,7 +53,7 @@ const Packages = () => {
                         <div
                           className="col col-xl-5 picpackage ml-5"
                           style={{
-                            height: "400px",
+                            
                             maxWidth: "888px",
                             backgroundImage: `url(${item.url})`,
                           }}
@@ -233,7 +233,7 @@ const Packages = () => {
                         <div
                           className="col col-xl-5 picpackage ml-5"
                           style={{
-                            height: "400px",
+                            
                             maxWidth: "888px",
                             backgroundImage: `url(${item.url})`,
                           }}
@@ -279,7 +279,7 @@ const Packages = () => {
                                 <div
                                   className="col col-xl-5 picpackage ml-5"
                                   style={{
-                                    height: "400px",
+                                    height: "450px",
                                     maxWidth: "888px",
                                     backgroundImage: `url(${item.url})`,
                                   }}
@@ -485,7 +485,7 @@ const Packages = () => {
                                 <div
                                   className="col col-xl-5 picpackage ml-5"
                                   style={{
-                                    height: "400px",
+                                    height: "450px",
                                     maxWidth: "888px",
                                     backgroundImage: `url(${item.url})`,
                                   }}

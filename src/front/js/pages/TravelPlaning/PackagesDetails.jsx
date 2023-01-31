@@ -404,9 +404,9 @@ const PackagesDetails = () => {
               </div>
             </div>
 
-            <div className="row  mt-2 mb-3">
-              <img src={store.packageDetail.url11}></img>
-              <img src={store.packageDetail.url12}></img>
+            <div className="row  mt-2 mb-3" style={{maxEight: "300px", eight: "300px",}}>
+              <img  className="mt-2 mb-3 p-1 col-xl-6 col-12" style={{maxEight: "300px", eight: "300px",}} src={store.packageDetail.url11}></img>
+              <img  className="mt-2 mb-3 p-1 col-xl-6 col-12" style={{maxEight: "300px", eight: "300px",}} src={store.packageDetail.url12}></img>
             </div>
 
             <div className="details-overview row ">
@@ -453,12 +453,12 @@ const PackagesDetails = () => {
         <div className="row mb-5">
           <div className="col-sm-12 col-md-8 ">
             <div>
-              <h3 className="text-center mt-3">                
+              <h3 className="text-center mt-3 package-detail-title">                
                 COMMENTS:
               </h3>
               <div className="scrolleable col-10 m-auto">
                 <ul className="list-group">
-                  {" "}
+                 
                   {store.comments.length > 0 ? (
                     store.comments.map((item, index) => (
                       <div key={index}>
@@ -488,7 +488,7 @@ const PackagesDetails = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-4 justify-content-center text-center">
-            <h3 className="text-center mt-5 mb-4">RELATED PACKAGE:
+            <h3 className="text-center mt-5 mb-4 ov-title">RELATED PACKAGE:
             </h3>
             <img
               src={store.packageDetail.url}
@@ -497,7 +497,7 @@ const PackagesDetails = () => {
               style={{
                 border: "1px solid #ddd",
                 bordeRadius: "4px",
-                padding: "20px",
+                padding: "10px",
                 borderColor: "#d2ae6d",
                 width: "100%",
                 maxWidth: "400px",

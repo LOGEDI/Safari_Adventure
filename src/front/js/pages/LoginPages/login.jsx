@@ -58,7 +58,7 @@ const Login = () => {
                   <div col="12">
                     <div
                       className="bg-ligth  my-5 mx-auto"
-                      style={{ borderRadius: "1rem", maxWidth: "400px" }}
+                      style={{ maxWidth: "600px"}}
                     >
                       <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
                         <h2
@@ -67,7 +67,7 @@ const Login = () => {
                         >
                           Login
                         </h2>
-                        <p className="text-black-50">
+                        <p className="" style={{color:"darkolivegreen"}}>
                           Please enter your login and password
                         </p>
                         <div className="col-12 ">

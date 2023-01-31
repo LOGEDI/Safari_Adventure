@@ -207,11 +207,11 @@ export const NavbarMain = () => {
                         </Link>
                       </a>
 
-                      <a className="dropdown-item">
+                      {/* <a className="dropdown-item">
                         <Link className="linkToView" to="/Admin">
                           EDIT COMMENTS
                         </Link>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 ) : null}{" "}

@@ -212,12 +212,13 @@
     height: calc(2.75rem + 2px);
     padding: .625rem .75rem;
     transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
-    color: #8898aa;
-    border: 1px solid #cad1d7;
+    color: darkolivegreen;
+    border: 1px solid #d2ae6d;
     border-radius: .375rem;
-    background-color: #fff;
+    background-color: hsl(60deg 56% 91% / 100%);
     background-clip: padding-box;
     box-shadow: none;
+    
   }
   
   @media screen and (prefers-reduced-motion: reduce) {
@@ -232,10 +233,10 @@
   }
   
   .form-control:focus {
-    color: #8898aa;
-    border-color: rgba(50, 151, 211, .25);
-    outline: 0;
-    background-color: #fff;
+    color: darkolivegreen;
+    border-color: #d1a147;
+    outline: none ! important;
+    background-color: hsl(60deg 56% 91% / 100%);
     box-shadow: none, none;
   }
   
@@ -262,10 +263,12 @@
   
   textarea.form-control {
     height: auto;
+    outline: none ! important;
   }
   
   .form-group {
     margin-bottom: 1.5rem;
+    outline: none ! important;
   }
   
   .form-inline {
@@ -288,6 +291,7 @@
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
+      outline: none ! important;
     }
   
     .form-inline .form-control {
@@ -559,7 +563,7 @@
     word-wrap: break-word;
     border: none;
     border-radius: .375rem;
-    background-color: rgb(255, 254, 243);
+    background-color: rgb(252, 250, 229);
     background-clip: border-box;
   }
 
@@ -571,8 +575,9 @@
     word-wrap: break-word;
     border: none;
     border-radius: .375rem;
-    background-color: white;
+    background-color: rgb(255, 255, 242);
     background-clip: border-box;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.30);
   }
   
   .cardDestinations {
@@ -595,6 +600,7 @@
   .card-body {
     padding: 1.5rem;
     flex: 1 1 auto;
+   
   }
 
   .card-bodyPackage {
@@ -1039,7 +1045,7 @@
   
   .card-profile-stats>div .description {
     font-size: .875rem;
-    color: #adb5bd;
+    color: darkolivegreen;
   }
   
   
@@ -1243,14 +1249,14 @@
     background:  transparent;
   }
   .form-control-label {
-    font-size: .875rem;
+    font-size: .975rem;
     font-weight: 600;
-    color: #525f7f;
+    color: darkolivegreen;
   }
   
   .form-control-alternative {
     transition: box-shadow .15s ease;
-    border: 0;
+    border: 1px solid #d2ae6d;
     box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
   }
   
@@ -1276,11 +1282,12 @@
   }
    
   .heading-small {
-    font-size: .75rem;
+    font-size: 1rem;
     padding-top: .25rem;
     padding-bottom: .25rem;
     letter-spacing: .04em;
     text-transform: uppercase;
+    color: darkolivegreen;
   }
   
   
