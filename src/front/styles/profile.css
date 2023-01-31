@@ -994,9 +994,28 @@
   
   
   
+  .btn1 {
+    font-size: .875rem;
+    position: relative;
+    transition: all .15s ease;
+    letter-spacing: .025em;
+    text-transform: none;
+    will-change: transform;
+    border: none;
+  }
   
+  .btn1:hover {
+    transform: translateY(-2px);
+   
+  }
   
+  .btn1:not(:last-child) {
+    margin-right: .5rem;
+  }
   
+  [class*='btn1-outline-'] {
+    border-width: 1px;
+  }
   
   .btn-sm {
     font-size: .75rem;

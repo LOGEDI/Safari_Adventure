@@ -19,18 +19,18 @@ const Comments = () => {
       };
 
   return (
-    <div>Comments
+    <div >
 
 
 <form onSubmit={handleComments} className="">
-      <h4 style={{textAlign: "center" }}>Comment Adventure</h4>
+      <h4 className="package-detail-title" style={{textAlign: "center" }}>Comment Adventure</h4>
       <div className="container d-xl-inline-flex d-lg-inline-flex justify-content-between ">
         
-        <div className="col-sm-12 col-md-12 col-md-4 col-lg-8" id="divTextarea">
+        <div className="col-sm-12 col-md-8 col-lg-8" id="divTextarea">
           <textarea
             name="comments"
             id="comments"
-            cols="50"
+            cols="80"
             rows="2"
             onChange={(e) => setComment(e.target.value)}
             value={comment}
@@ -42,7 +42,7 @@ const Comments = () => {
           id="buttonSubmit"
         >
           <button
-            className="btn btn-primary"
+            className="btn btn-creamD"
             type="submit"
             // onClick={() => {
              

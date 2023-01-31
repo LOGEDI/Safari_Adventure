@@ -70,7 +70,7 @@ const PackagesDetails = () => {
                   <div className="col-xl-2 col-md-4 col-sm-6">
                   {store.auth ? (
                     <button
-                      className="btn btnFav"
+                      className="btn1 btnFav"
                       type="button"
                       onClick={() => {
                         handleAddFavorites(store.packageDetail.id);
@@ -446,7 +446,7 @@ const PackagesDetails = () => {
               <img src={store.packageDetail.url14}></img>
             </div>
           </div>
-        </div>
+        
 
         {store.auth ? <Comments /> : null}
 
@@ -462,7 +462,7 @@ const PackagesDetails = () => {
                   {store.comments.length > 0 ? (
                     store.comments.map((item, index) => (
                       <div key={index}>
-                        <li className="my-3">
+                        <li className="package-detail-title my-3">
                           <img
                             style={{ width: "2rem", height: "2rem" }}
                             src="https://thumbs.dreamstime.com/z/male-tourist-glasses-hat-icon-simple-flat-design-illustration-74079657.jpg"
@@ -506,7 +506,10 @@ const PackagesDetails = () => {
           </div>
         </div>
       </div>
+       </div>
     );
+
+   
   } else {
     return <div className="text-center mt-5">Loading please wait...</div>;
   }

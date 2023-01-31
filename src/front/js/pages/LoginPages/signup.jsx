@@ -75,19 +75,19 @@ const SignUp = () => {
                         >
                           Register
                         </h2>
-                        <p className="mt-3 mb-3" style={{ color: "#d2ae6d" }}>
+                        <p className="overview-title mt-3 mb-3" style={{ color: "#d2ae6d" }}>
                           Already registered?{" "}
                           <Link to="/login" className="text-black-50 fw-bold">
                             Login
                           </Link>
                         </p>
 
-                        <div className="col-12 ">
+                        <div className="error col-12 ">
                           <Field
                             type="text"
                             name="username"
                             placeholder="Username"
-                            className="form-control"
+                            className="form-controlP"
                           />
                           {errors.username &&
                             touched.username &&
@@ -97,12 +97,12 @@ const SignUp = () => {
                             for="form1Example2"
                           ></label>
                         </div>
-                        <div className="col-12 ">
+                        <div className="error col-12 ">
                           <Field
                             type="email"
                             name="email"
                             placeholder="Email Address"
-                            className="form-control"
+                            className="form-controlP"
                           />
                           {errors.email && touched.email && errors.email}
                           <label
@@ -110,11 +110,11 @@ const SignUp = () => {
                             for="form1Example2"
                           ></label>
                         </div>
-                        <div className="col-12 ">
+                        <div className="error col-12 ">
                           <Field
                             type="password"
                             name="password"
-                            className="form-control"
+                            className="form-controlP"
                             placeholder="Password"
                           />
                           {errors.password &&
@@ -124,7 +124,7 @@ const SignUp = () => {
                         <p className="small mb-3 pb-lg-2">
                           <br />
                           <Link
-                            className="text-black-50"
+                            className="overview-title"
                             to={"/ChangePassword"}
                           >
                             Forgot password?

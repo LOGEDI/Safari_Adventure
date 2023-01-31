@@ -112,7 +112,19 @@ body{
   background-color: rgb(78, 110, 93);
 }
 
+.btn-greenD1 {
+  color: #fff;
+  
+  border-color: #29362f;
+  background-color: #29362f;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
 
+.btn-greenD1:hover {
+  color: #fff;
+  border-color: rgb(41, 54, 47);
+  background-color: rgb(78, 110, 93);
+}
 
 .btn-greenD:disabled {
   color: #fff;
@@ -499,8 +511,7 @@ input[type=file]::file-selector-button:hover {
   background-color: hsl(60deg 56% 91% / 100%);
   background-clip: padding-box;
   box-shadow: none;
- 
- 
+  
 }
 
 
@@ -542,6 +553,12 @@ input[type=file]::file-selector-button:hover {
 .hrp {
   color: darkolivegreen;
 }
+
+.error {
+  font-size: 20px;
+  color: red;
+   margin-top: 0.25rem;
+ }
 
 label{
 margin-top: 1rem;

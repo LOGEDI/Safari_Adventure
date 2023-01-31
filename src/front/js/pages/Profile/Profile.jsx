@@ -63,7 +63,7 @@ const Profile = () => {
 
             <div className="container-fluid destinationsCards mt--7">
               <div className="row">
-                <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 cardProfile shadow">
+                <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 cardProfile">
                   <div className="">
                     <div className="row justify-content-center">
                       <div className="col-lg-3 order-lg-2">
@@ -99,7 +99,9 @@ const Profile = () => {
                         <div className="col">
                           <div className="card-profile-stats d-flex justify-content-center mt-md-5">
                             <div>
-                              <span className="heading">{store.favoritesList.length}</span>
+                              <span className="heading">
+                                {store.favoritesList.length}
+                              </span>
                               <span className="description">Favorites</span>
                             </div>
                             {/* <div>
@@ -107,7 +109,9 @@ const Profile = () => {
                               <span className="description">Photos</span>
                             </div> */}
                             <div>
-                              <span className="heading">{store.comments.length}</span>
+                              <span className="heading">
+                                {store.comments.length}
+                              </span>
                               <span className="description">Comments</span>
                             </div>
                           </div>
@@ -138,7 +142,6 @@ const Profile = () => {
                         <div className="col-8">
                           <h3 className="mb-0 ">My favorites</h3>
                         </div>
-                        
                       </div>
                     </div>
 
@@ -167,11 +170,11 @@ const Profile = () => {
                                     </h3>
                                   </div>
                                 </div>
-                                <div className="col col-xl-1">
+                                <div className="col-lg-1">
                                   <div className="form-group focused">
                                     <div className=" justify-content-end">
                                       <span
-                                        className="btn btn-outline-light mt-3"
+                                        className="btn btn-greenD1 mt-3"
                                         onClick={() =>
                                           actions.deleteFavorites(item.id)
                                         }
@@ -191,63 +194,61 @@ const Profile = () => {
                         <p>No favorite package</p>
                       )}
                     </div>
- </div>
-{/*---------------------------- comments content-----------------*/}
+                  </div>
+                  {/*---------------------------- comments content-----------------*/}
 
-                    <div className="">
-                      <div className="cardP  mt-3">
-                        <div className="card-headerP  border-0">
-                          <div className="row align-items-center">
-                            <div className="">
-                              <h3 className="mb-0">My comments</h3>
-                            </div>
-                            
+                  <div className="">
+                    <div className="cardP  mt-3">
+                      <div className="card-headerP  border-0">
+                        <div className="row align-items-center">
+                          <div className="">
+                            <h3 className="mb-0">My comments</h3>
                           </div>
                         </div>
+                      </div>
 
-                        <div className="card-body">
-                          {store.commentsListK?.length > 0 ? (
-                            store.commentsListK?.map((item) => (
-                              <div key={item.id}>
-                                <div className="pl-lg-4">
-                                  <div className="row">
-                                    <div className="col-lg-2"></div>
-                                    <div className="col-lg-9">
-                                      <div className="form-group focused">
-                                        <h3 className="package-detail-title mt-4">
-                                          {item?.comment}
-                                        </h3>
-                                      </div>
+                      <div className="card-body">
+                        {store.commentsListK?.length > 0 ? (
+                          store.commentsListK?.map((item) => (
+                            <div key={item.id}>
+                              <div className="pl-lg-4">
+                                <div className="row">
+                                  <div className="col-lg-2"></div>
+                                  <div className="col-lg-9">
+                                    <div className="form-group focused">
+                                      <h3 className="package-detail-title mt-4">
+                                        {item?.comment}
+                                      </h3>
                                     </div>
-                                    <div className="col-lg-1">
-                                      <div className="form-group focused">
-                                        <div className=" justify-content-end">
-                                          <span
-                                            className="btn btn-outline-light mt-3"
-                                            onClick={() =>
-                                              actions.deleteComments(
-                                                item.id_comment
-                                              )
-                                            }
-                                            style={{ color: "#d2ae6d" }}
-                                          >
-                                            <b>X</b>
-                                          </span>
-                                        </div>
+                                  </div>
+                                  <div className="col-lg-1">
+                                    <div className="form-group focused">
+                                      <div className=" justify-content-end">
+                                        <span
+                                          className="btn btn-greenD1 mt-3"
+                                          onClick={() =>
+                                            actions.deleteComments(
+                                              item.id_comment
+                                            )
+                                          }
+                                          style={{ color: "#d2ae6d" }}
+                                        >
+                                          <b>X</b>
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                                <hr className="my-4" />
                               </div>
-                            ))
-                          ) : (
-                            <p>No favorite comment</p>
-                          )}
-                        </div>
+                              <hr className="my-4" />
+                            </div>
+                          ))
+                        ) : (
+                          <p>No favorite comment</p>
+                        )}
                       </div>
                     </div>
-                 
+                  </div>
                 </div>
               </div>
             </div>

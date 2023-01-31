@@ -26,7 +26,7 @@ const Login = () => {
   });
 
   return (
-    <div className="">
+    <div className="pagesBackground">
       <div
         className="destinationsBackground"
         style={{
@@ -67,15 +67,15 @@ const Login = () => {
                         >
                           Login
                         </h2>
-                        <p className="" style={{color:"darkolivegreen"}}>
+                        <p className="overview-title mt-3 mb-3" style={{color:"#d2ae6d"}}>
                           Please enter your login and password
                         </p>
-                        <div className="col-12 ">
+                        <div className="error col-12 ">
                           <Field
                             type="email"
                             name="email"
                             placeholder="Email Address"
-                            className="form-control"
+                            className="form-controlP"
                           />
                           {errors.email && touched.email && errors.email}
                           <label
@@ -83,11 +83,11 @@ const Login = () => {
                             for="form1Example2"
                           ></label>
                         </div>
-                        <div className="col-12 ">
+                        <div className="error col-12 ">
                           <Field
                             name="password"
                             type="password"
-                            className="form-control"
+                            className="form-controlP"
                             placeholder="Password"
                           />
                           {errors.password &&
@@ -97,7 +97,7 @@ const Login = () => {
                         <p className="small mb-3 pb-lg-2">
                           <br />
                           <Link
-                            className="text-black-50"
+                            className="overview-title"
                             to={"/ChangePassword"}
                           >
                             Forgot password?
@@ -114,7 +114,7 @@ const Login = () => {
                         </button>
                         <div className="d-flex flex-row mt-3 mb-5"></div>
                         <div>
-                          <p className="mb-0" style={{ color: "#d2ae6d" }}>
+                          <p className="mb-0 overview-title" style={{ color: "#d2ae6d" }}>
                             Don't have an account?{" "}
                             <Link
                               to="/signup"
