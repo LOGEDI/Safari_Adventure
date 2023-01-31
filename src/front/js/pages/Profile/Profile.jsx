@@ -132,8 +132,8 @@ const Profile = () => {
                 {/*---------------------------- Favorites content-----------------*/}
 
                 <div className="col-xl-8 order-xl-1">
-                  <div className="card bg-secondary shadow">
-                    <div className="card-header bg-white border-0">
+                  <div className="cardP">
+                    <div className="card-headerP  border-0">
                       <div className="row align-items-center">
                         <div className="col-8">
                           <h3 className="mb-0 ">My favorites</h3>
@@ -184,7 +184,7 @@ const Profile = () => {
                                 </div>
                               </div>
                             </div>
-                            <hr className="my-4" />
+                            <hr className="hrp my-4" />
                           </div>
                         ))
                       ) : (
@@ -195,8 +195,8 @@ const Profile = () => {
 {/*---------------------------- comments content-----------------*/}
 
                     <div className="">
-                      <div className="card bg-secondary shadow mt-3">
-                        <div className="card-header bg-white border-0">
+                      <div className="cardP  mt-3">
+                        <div className="card-headerP  border-0">
                           <div className="row align-items-center">
                             <div className="">
                               <h3 className="mb-0">My comments</h3>
