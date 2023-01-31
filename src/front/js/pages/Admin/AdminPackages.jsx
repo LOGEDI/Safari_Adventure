@@ -39,18 +39,15 @@ const AdminPackages = () => {
   };
 
   return (
-    <div>
+    <div className="pagesBackground">
        {store.admin ? (
       <div
-        className="destinationsBackground"
-        style={{
-          backgroundImage: `url(${destinationBackground})`,
-        }}
+        
       >
         <div className="container ">
           <h1 className="text-center">PACKAGES</h1>
           <Link to="/Admin">
-            <button className="btn btn-primary">BACK TO ADMIN</button>
+            <button className="btn btn-creamD">BACK TO ADMIN</button>
           </Link>
           <div className="row justify-content-center">
             {store.package.map((item) => (
@@ -65,18 +62,18 @@ const AdminPackages = () => {
                     <h3 className="admin-pack-card-title mt-3">{item.name}</h3>
                     <div className="d-flex justify-content-between m-2">
                       <Link to={"/PackagesDetails/" + item.id}>
-                        <button href="#" className="btn btn-primary">
+                        <button href="#" className="btn btn-creamD">
                           DETAILS
                         </button>
                       </Link>
                       <Link to={"/EditPackages/" + item.id}>
-                        <button href="#" className="btn btn-warning">
+                        <button href="#" className="btn btn-greenD">
                           EDIT
                         </button>
                       </Link>
 
                       <span
-                        className="btn btn-danger d-flex justify-content-end"
+                        className="btn btn-dangerD d-flex justify-content-end"
                         onClick={() => handleSweetAlert(item.id)}
                       >
                         <b>DELETE</b>
@@ -92,9 +89,9 @@ const AdminPackages = () => {
                 <img src={plusIcon} className="admin-pack-img-top" alt="..." />
                 <div className="admin-pack-card-body">
                   <h3 className="admin-pack-card-title mt-3">CREATE PACKAGE</h3>
-                  <div className="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center pb-3">
                     <Link to="/AddPackages">
-                      <button className="btn btn-primary">CREATE</button>
+                      <button className="btn btn-creamD ">CREATE</button>
                     </Link>
                   </div>
                 </div>
@@ -118,6 +115,7 @@ const AdminPackages = () => {
                 </div>
               </div>
         )}{" "}
+          <footer className="footer"></footer>
     </div>
   );
 };

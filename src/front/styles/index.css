@@ -132,6 +132,19 @@ body{
   background-color: #5e72e4;
 }
 
+.btn-dangerD {
+  color: #fff;
+  min-width: 100px;
+  border-color: red;
+  background-color: red;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn-dangerD:hover {
+  color: #fff;
+  border-color: #d2ae6d;
+  background-color: darkred;
+}
 
 .container-page{
   max-width: 80%;  

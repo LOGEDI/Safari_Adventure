@@ -39,15 +39,15 @@ const AdminUsers = () => {
   };
 
   return (
-    <div>
+    <div className="pagesBackground">
       {store.admin ? (
         <div>
           {store.user.map((item) => (
             <div key={item.id} className="col-12">
               <div className="main-content">
-                <div className="container-fluid packagesPost">
+                <div className="container-fluid p-3">
                   <div className="row packagescards">
-                    <div className="card mb-3 bg-secondary shadow">
+                    <div className="cardP shadow">
                       <div className="card-body ">
                         <div>
                           <div className="row">
@@ -103,7 +103,7 @@ const AdminUsers = () => {
                             <div className="col-2 text-end">
                               <div className="pb-2">
                                 <Link to={"/UsersDetails/" + item.id}>
-                                  <button href="#" className="btn btn-primary">
+                                  <button href="#" className="btn btn-creamD">
                                     DETAILS
                                   </button>
                                 </Link>
@@ -111,7 +111,7 @@ const AdminUsers = () => {
 
                               <div className="pb-2">
                                 <Link to={"/EditUsers/" + item.id}>
-                                  <button className="btn btn-warning">
+                                  <button className="btn btn-greenD">
                                     EDIT
                                   </button>
                                 </Link>
@@ -119,7 +119,7 @@ const AdminUsers = () => {
 
                               <div className="form-group">
                                 <span
-                                  className="btn btn-danger"
+                                  className="btn btn-dangerD"
                                   onClick={() => handleSweetAlert(item.id)}
                                 >
                                   <b>DELETE</b>
@@ -155,6 +155,7 @@ const AdminUsers = () => {
           </div>
         </div>
       )}{" "}
+        <footer className="footer"></footer>
     </div>
   );
 };
