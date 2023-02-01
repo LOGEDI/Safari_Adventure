@@ -76,12 +76,12 @@ const EditUsers = () => {
   };
 
   return (
-    <div>
+    <div className="pagesBackground">
       {store.admin ? (
-        <div className="main-content pagesBackground">
+        <div className="main-content ">
           <div className="container-fluid ">
             <div className="row mb-3 packagescards">
-              <div className="card bg-secondary shadow">
+              <div className="cardP">
                 <div className="card-body">
                   <form
                     onSubmit={() => {
@@ -127,14 +127,14 @@ const EditUsers = () => {
                     <div className="pl-lg-4">
                       <div className="row">
                         <div className="col-lg-6">
-                          <div className="form-group focused">
+                          <div className="">
                             <label className="package-detail-subtitle">
                               First name
                             </label>
                             <input
                               type="text"
                               id="input-name"
-                              className="form-control form-control-alternative"
+                              className="form-controlP form-control-alternative"
                               placeholder="First name"
                               onChange={(e) => setName(e.target.value)}
                               value={name}
@@ -149,7 +149,7 @@ const EditUsers = () => {
                             <input
                               type="text"
                               id="input-lastname"
-                              className="form-control form-control-alternative"
+                              className="form-controlP form-control-alternative"
                               placeholder="Last name"
                               onChange={(e) => setLastname(e.target.value)}
                               value={lastname}
@@ -166,7 +166,7 @@ const EditUsers = () => {
                             <input
                               type="text"
                               id="input-country"
-                              className="form-control form-control-alternative"
+                              className="form-controlP form-control-alternative"
                               placeholder="Country"
                               onChange={(e) => setCountry(e.target.value)}
                               value={country}
@@ -181,7 +181,7 @@ const EditUsers = () => {
                             <input
                               type="password"
                               id="input-password"
-                              className="form-control form-control-alternative"
+                              className="form-controlP form-control-alternative"
                               placeholder="Password"
                               onChange={(e) => setPassword(e.target.value)}
                               value={password}
@@ -199,7 +199,7 @@ const EditUsers = () => {
                             <input
                               id="input-user_url"
                               type="file"
-                              className="form-control form-control-alternative"
+                              className="form-controlP1 form-control-alternative"
                               placeholder="Profile Picture"
                               onChange={(e) => {
                                 uploadImage(e);
@@ -214,13 +214,13 @@ const EditUsers = () => {
                           <br />
                           <button
                             type="submit"
-                            className="btn btn-secondary col-4"
+                            className="btn btn-creamD col-4"
                           >
                             SAVE CHANGES
                           </button>
                           <Link
                             to="/AdminUsers"
-                            className="btn btn-primary col-3"
+                            className="btn btn-greenD col-3"
                           >
                             CANCEL
                           </Link>
@@ -239,7 +239,7 @@ const EditUsers = () => {
           <div>
             <h1
               className="package-detail-title mt-5"
-              style={{ color: "black" }}
+              style={{ color: "darkolivegreen" }}
             >
               Not logged in...
             </h1>

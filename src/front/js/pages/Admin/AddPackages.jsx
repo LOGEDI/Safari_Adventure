@@ -617,10 +617,10 @@ const AddPackages = () => {
         }}
       >
          
-        <h1 className="text-center package-detail-title">PACKAGES CREATOR</h1>
+        <h1 className="text-center pt-3 package-detail-title">PACKAGES CREATOR</h1>
         <div className="container ">
           <Link to="/AdminPackages">
-            <button className="btn btn-primary">BACK TO PACKAGES</button>
+            <button className="btn btn-creamD">BACK TO PACKAGES</button>
           </Link>
           <form className="form" onSubmit={handleSubmit}>
             <div className="row row-cols-2 mt-5 mb-5">
@@ -679,7 +679,7 @@ const AddPackages = () => {
 
             <div>
               ------------------------------------------------------------------------------BODY-------------------------------------------------------------------------
-              <div className="row row-cols-2 g-3 mt-5">
+              <div className="row g-3 mt-5">
                 <div className="col-7">
                   <input
                     className="package-detail-title"
@@ -715,7 +715,7 @@ const AddPackages = () => {
                       <button className="btn-alert btn-l">all</button>
                     </div>
                   </div> */}
-                  <div className="row row-cols-1 mt-5 mb-5">
+                  <div className="row mt-5 mb-5">
                     <label for="packages-background">BACKGROUND IMG</label>
                     <input
                       id="packages-background"
@@ -731,21 +731,21 @@ const AddPackages = () => {
                   </div>
                 </div>
               </div>
-              <div className=" row row-cols-6 mt-5 ml-5 mr-5 justify-content-center text-center">
-                <div className="">
+              <div className="packages-details-icons row  mt-5 ml-5 mr-5 justify-content-center text-center">
+                <div className="col">
                   <img className="iconsdestinations" src={tripdays}></img>
-                  <label className="">TOUR DURATION</label>
+                  <label className="desticontitle">TOUR DURATION</label>
                   <input
                     id="tour-duration"
                     type="text"
-                    className=""
+                    className="desticoncontent"
                     placeholder="TOUR DURATION"
                     onChange={(e) => setTour_duration(e.target.value)}
                     value={tour_duration}
                   ></input>
                 </div>
 
-                <div className="">
+                <div className="col">
                   <img
                     className="iconsdestinations"
                     src={destinationsicon}
@@ -754,14 +754,14 @@ const AddPackages = () => {
                   <input
                     id="destinations"
                     type="text"
-                    className=""
+                    className="desticontitle"
                     placeholder="DESTINATIONS"
                     onChange={(e) => setDestinations(e.target.value)}
                     value={destinations}
                   ></input>
                 </div>
 
-                <div className="">
+                <div className="col">
                   <img className="iconsdestinations" src={activity}></img>
                   <label className="">-----ACTIVITIES----</label>
                   <input
@@ -774,7 +774,7 @@ const AddPackages = () => {
                   ></input>
                 </div>
 
-                <div className="">
+                <div className="col">
                   <img className="iconsdestinations" src={transporticon}></img>
                   <label className="">TRANSPORT MODE</label>
                   <input
@@ -787,7 +787,7 @@ const AddPackages = () => {
                   ></input>
                 </div>
 
-                <div className="">
+                <div className="col">
                   <img className="iconsdestinations" src={lodgingicon}></img>
                   <label className="">-----LODGING-----</label>
                   <input
@@ -804,8 +804,8 @@ const AddPackages = () => {
                 <br />
                 <h3 className="ov-title">OVERVIEW</h3>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title"
                     type="text"
@@ -826,15 +826,15 @@ const AddPackages = () => {
                 <input
                   id="overview-description"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION"
                   onChange={(e) => setOverview_description(e.target.value)}
                   value={overview_description}
                 ></input>
               </div>
-              <div className="row row-cols-2 mt-5 mb-5">
-                <label for="packages-img5">IMG 4</label>
-                <label for="packages-img">IMG 5</label>
+              <div className="row row-cols-2 m-4">
+                <label for="mt-2 mb-3 p-1 col-xl-6 col-12 packages-img5">IMG 4</label>
+                <label for="mt-2 mb-3 p-1 col-xl-6 col-12 packages-img">IMG 5</label>
                 <input
                   id="packages-img4"
                   type="file"
@@ -857,12 +857,12 @@ const AddPackages = () => {
                   }}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title1"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE 1"
                     onChange={(e) => setOverview_title1(e.target.value)}
                     value={overview_title1}
@@ -870,7 +870,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation1"
                     type="text"
-                    className=""
+                    className="overview-acomodation mb-3"
                     placeholder="OVERVIEW ACOM.1"
                     onChange={(e) => setOverview_acomodation1(e.target.value)}
                     value={overview_acomodation1}
@@ -879,18 +879,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description1"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION1"
                   onChange={(e) => setOverview_description1(e.target.value)}
                   value={overview_description1}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title2"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE 2"
                     onChange={(e) => setOverview_title2(e.target.value)}
                     value={overview_title2}
@@ -898,7 +898,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation2"
                     type="text"
-                    className=""
+                    className="overview-acomodation mb-3"
                     placeholder="OVERVIEW ACOM.2"
                     onChange={(e) => setOverview_acomodation2(e.target.value)}
                     value={overview_acomodation2}
@@ -907,13 +907,13 @@ const AddPackages = () => {
                 <input
                   id="overview-description2"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION2"
                   onChange={(e) => setOverview_description2(e.target.value)}
                   value={overview_description2}
                 ></input>
               </div>
-              <div className="row row-cols-1 mt-5 mb-5">
+              <div className="row row-cols-1 mt-2 mb-5">
                 <label for="packages-img">IMG 6</label>
                 <input
                   id="packages-img6"
@@ -926,12 +926,12 @@ const AddPackages = () => {
                   }}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title3"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE3"
                     onChange={(e) => setOverview_title3(e.target.value)}
                     value={overview_title3}
@@ -939,7 +939,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation3"
                     type="text"
-                    className=""
+                    className="overview-acomodation mb-3"
                     placeholder="OVERVIEW ACOM.3"
                     onChange={(e) => setOverview_acomodation3(e.target.value)}
                     value={overview_acomodation3}
@@ -948,18 +948,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description3"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION3"
                   onChange={(e) => setOverview_description3(e.target.value)}
                   value={overview_description3}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title4"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE4"
                     onChange={(e) => setOverview_title4(e.target.value)}
                     value={overview_title4}
@@ -967,7 +967,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation4"
                     type="text"
-                    className=""
+                    className="overview-acomodation mb-3"
                     placeholder="OVERVIEW ACOM.4"
                     onChange={(e) => setOverview_acomodation4(e.target.value)}
                     value={overview_acomodation4}
@@ -976,18 +976,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description4"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION4"
                   onChange={(e) => setOverview_description4(e.target.value)}
                   value={overview_description4}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title5"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE5"
                     onChange={(e) => setOverview_title5(e.target.value)}
                     value={overview_title5}
@@ -995,7 +995,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation5"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.5"
                     onChange={(e) => setOverview_acomodation5(e.target.value)}
                     value={overview_acomodation5}
@@ -1004,16 +1004,16 @@ const AddPackages = () => {
                 <input
                   id="overview-description5"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION5"
                   onChange={(e) => setOverview_description5(e.target.value)}
                   value={overview_description5}
                 ></input>
               </div>
-              <div className="row row-cols-3 mt-5 mb-5">
-                <label for="packages-img">IMG 7</label>
-                <label for="packages-img">IMG 8</label>
-                <label for="packages-img">IMG 9</label>
+              <div className="row row-cols-3 m-4">
+                <label for="mt-2 mb-3 p-1 col-xl-4 col-12 packages-img">IMG 7</label>
+                <label for="mt-2 mb-3 p-1 col-xl-4 col-12 packages-img">IMG 8</label>
+                <label for="mt-2 mb-3 p-1 col-xl-4 col-12 packages-img">IMG 9</label>
                 <input
                   id="packages-img7"
                   type="file"
@@ -1045,12 +1045,12 @@ const AddPackages = () => {
                   }}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row ">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title6"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE6"
                     onChange={(e) => setOverview_title6(e.target.value)}
                     value={overview_title6}
@@ -1058,7 +1058,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation6"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.6"
                     onChange={(e) => setOverview_acomodation6(e.target.value)}
                     value={overview_acomodation6}
@@ -1067,18 +1067,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description6"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION6"
                   onChange={(e) => setOverview_description6(e.target.value)}
                   value={overview_description6}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title7"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE7"
                     onChange={(e) => setOverview_title7(e.target.value)}
                     value={overview_title7}
@@ -1086,7 +1086,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation7"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.7"
                     onChange={(e) => setOverview_acomodation7(e.target.value)}
                     value={overview_acomodation7}
@@ -1095,18 +1095,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description7"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION7"
                   onChange={(e) => setOverview_description7(e.target.value)}
                   value={overview_description7}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title8"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE8"
                     onChange={(e) => setOverview_title8(e.target.value)}
                     value={overview_title8}
@@ -1114,7 +1114,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation8"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.8"
                     onChange={(e) => setOverview_acomodation8(e.target.value)}
                     value={overview_acomodation8}
@@ -1123,18 +1123,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description8"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION8"
                   onChange={(e) => setOverview_description8(e.target.value)}
                   value={overview_description8}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title9"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE9"
                     onChange={(e) => setOverview_title9(e.target.value)}
                     value={overview_title9}
@@ -1142,7 +1142,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation9"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.9"
                     onChange={(e) => setOverview_acomodation9(e.target.value)}
                     value={overview_acomodation9}
@@ -1151,13 +1151,13 @@ const AddPackages = () => {
                 <input
                   id="overview-description9"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION9"
                   onChange={(e) => setOverview_description9(e.target.value)}
                   value={overview_description9}
                 ></input>
               </div>
-              <div className="row row-cols-1 mt-5 mb-5">
+              <div className="row mt-5 mb-5">
                 <label for="packages-img">IMG 10</label>
                 <input
                   id="packages-img10"
@@ -1170,12 +1170,12 @@ const AddPackages = () => {
                   }}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row ">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title10"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE10"
                     onChange={(e) => setOverview_title10(e.target.value)}
                     value={overview_title10}
@@ -1183,7 +1183,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation10"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.10"
                     onChange={(e) => setOverview_acomodation10(e.target.value)}
                     value={overview_acomodation10}
@@ -1192,18 +1192,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description10"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-descriptionP col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION10"
                   onChange={(e) => setOverview_description10(e.target.value)}
                   value={overview_description10}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title11"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE11"
                     onChange={(e) => setOverview_title11(e.target.value)}
                     value={overview_title11}
@@ -1211,7 +1211,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation11"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.11"
                     onChange={(e) => setOverview_acomodation11(e.target.value)}
                     value={overview_acomodation11}
@@ -1220,18 +1220,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description11"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-description col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION11"
                   onChange={(e) => setOverview_description11(e.target.value)}
                   value={overview_description11}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title12"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE12"
                     onChange={(e) => setOverview_title12(e.target.value)}
                     value={overview_title12}
@@ -1239,7 +1239,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation12"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.12"
                     onChange={(e) => setOverview_acomodation12(e.target.value)}
                     value={overview_acomodation12}
@@ -1248,18 +1248,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description12"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-description col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION12"
                   onChange={(e) => setOverview_description12(e.target.value)}
                   value={overview_description12}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title13"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE13"
                     onChange={(e) => setOverview_title13(e.target.value)}
                     value={overview_title13}
@@ -1267,7 +1267,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation13"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.13"
                     onChange={(e) => setOverview_acomodation13(e.target.value)}
                     value={overview_acomodation13}
@@ -1276,18 +1276,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description13"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-description col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION13"
                   onChange={(e) => setOverview_description13(e.target.value)}
                   value={overview_description13}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title14"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE14"
                     onChange={(e) => setOverview_title14(e.target.value)}
                     value={overview_title14}
@@ -1295,7 +1295,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation14"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.14"
                     onChange={(e) => setOverview_acomodation14(e.target.value)}
                     value={overview_acomodation14}
@@ -1304,14 +1304,14 @@ const AddPackages = () => {
                 <input
                   id="overview-description14"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-description col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION14"
                   onChange={(e) => setOverview_description14(e.target.value)}
                   value={overview_description14}
                 ></input>
               </div>
-              <div className="row row-cols-2 mt-5 mb-5">
-                <label for="packages-img">IMG 11</label>
+              <div className="row row-cols-2  m-5">
+                <label for="mt-2 mb-3 p-1 col-xl-6 col-12 packages-img">IMG 11</label>
                 <label for="packages-img">IMG 12</label>
                 <input
                   id="packages-img11"
@@ -1327,7 +1327,7 @@ const AddPackages = () => {
                 <input
                   id="packages-img12"
                   type="file"
-                  className=""
+                  className="mt-2 mb-3 p-1 col-xl-6 col-12"
                   placeholder="Packages img12"
                   onChange={(e) => {
                     uploadImage12(e);
@@ -1335,12 +1335,12 @@ const AddPackages = () => {
                   }}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title15"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE15"
                     onChange={(e) => setOverview_title15(e.target.value)}
                     value={overview_title15}
@@ -1348,7 +1348,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation15"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.15"
                     onChange={(e) => setOverview_acomodation15(e.target.value)}
                     value={overview_acomodation15}
@@ -1357,18 +1357,18 @@ const AddPackages = () => {
                 <input
                   id="overview-description15"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-description col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION15"
                   onChange={(e) => setOverview_description15(e.target.value)}
                   value={overview_description15}
                 ></input>
               </div>
-              <div className="details-overview row row-cols-2">
-                <div className="details-overview-title col-2">
+              <div className="details-overview row">
+                <div className="details-overview-title col-xl-3 col-sm-12 pb-sm-4">
                   <input
                     id="overview-title16"
                     type="text"
-                    className=""
+                    className="overview-title"
                     placeholder="OVERVIEW TITLE16"
                     // onChange={(e) => setOverview_title16(e.target.value)}
                     // value={overview_title16}
@@ -1376,7 +1376,7 @@ const AddPackages = () => {
                   <input
                     id="overview-acomodoation16"
                     type="text"
-                    className=""
+                    className="overview-acomodation"
                     placeholder="OVERVIEW ACOM.16"
                     // onChange={(e) => setOverview_acomodation16(e.target.value)}
                     // value={overview_acomodation16}
@@ -1385,16 +1385,16 @@ const AddPackages = () => {
                 <input
                   id="overview-description16"
                   type="text"
-                  className="details-overview-description col-10"
+                  className="details-overview-description col-xl-9 col-sm-12"
                   placeholder="OVERVIEW DESCRIPTION16 NOT IMPLEMENTED"
                   // onChange={(e) => setOverview_description(e.target.value)}
                   // value={overview_description}
                 ></input>
               </div>
-              <div className="row row-cols-3 mt-5 mb-5">
-                <label for="packages-img">IMG 13</label>
-                <label for="packages-img">IMG 14 </label>
-                <label for="packages-img">IMG 15 map</label>
+              <div className="row row-cols-3 m-4">
+                <label for="mt-2 mb-3 p-1 col-xl-4 col-12 packages-img">IMG 13</label>
+                <label for="mt-2 mb-3 p-1 col-xl-4 col-12 packages-img">IMG 14 </label>
+                <label for="mt-2 mb-3 p-1 col-xl-4 col-12 packages-img">IMG 15 map</label>
                 <input
                   id="packages-img13"
                   type="file"
@@ -1428,9 +1428,9 @@ const AddPackages = () => {
                   }}
                 ></input>
               </div>
-              <div className="row row-cols-1 mt-5 mb-5 text-center justify-content-center">
+              <div className="row mt-5 mb-5 text-center justify-content-center">
                 <button
-                  className="btn btn-primary btn-lg mx-2 px-5 mt-4"
+                  className="btn btn-creamD btn-lg mx-2 px-5 mt-4"
                   type="submit"
                 >
                   SUBMIT
@@ -1447,7 +1447,7 @@ const AddPackages = () => {
       <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
         <div>
           <h1 className="package-detail-title mt-5"
-              style={{ color: "black" }}>Not logged in...</h1>
+              style={{ color: "darkolivegreen" }}>Not logged in...</h1>
           <Nav.Link
             className="package-detail-subtitle"
             style={{ color: "#d2ae6d" }}

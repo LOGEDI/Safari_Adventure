@@ -21,7 +21,7 @@ const Admin = () => {
 <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
         <div>
           <h1 className="package-detail-title mt-5"
-              style={{ color: "black" }}>Not logged in...</h1>
+              style={{ color: "darkolivegreen" }}>Not logged in...</h1>
           <Nav.Link
             className="package-detail-subtitle"
             style={{ color: "#d2ae6d" }}

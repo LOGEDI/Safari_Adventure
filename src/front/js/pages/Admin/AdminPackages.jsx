@@ -45,7 +45,7 @@ const AdminPackages = () => {
         
       >
         <div className="container ">
-          <h1 className="text-center">PACKAGES</h1>
+          <h1 className="text-center pt-3 package-detail-title">PACKAGES</h1>
           <Link to="/Admin">
             <button className="btn btn-creamD">BACK TO ADMIN</button>
           </Link>
@@ -104,7 +104,7 @@ const AdminPackages = () => {
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
                 <div>
                   <h1 className="package-detail-title mt-5"
-                      style={{ color: "black" }}>Not logged in...</h1>
+                      style={{ color: "darkolivegreen" }}>Not logged in...</h1>
                   <Nav.Link
                     className="package-detail-subtitle"
                     style={{ color: "#d2ae6d" }}

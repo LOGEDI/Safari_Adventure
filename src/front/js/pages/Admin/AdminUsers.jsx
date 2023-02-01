@@ -42,10 +42,16 @@ const AdminUsers = () => {
     <div className="pagesBackground">
       {store.admin ? (
         <div>
-          {store.user.map((item) => (
-            <div key={item.id} className="col-12">
-              <div className="main-content">
-                <div className="container-fluid p-3">
+          <h1 className="text-center pt-3 package-detail-title">USERS</h1>
+
+          <div className="main-content">
+            <div className="container-fluid ">
+              <Link to="/Admin">
+                <button className="btn btn-creamD ml-2">BACK TO ADMIN</button>
+              </Link>
+
+              {store.user.map((item) => (
+                <div key={item.id} className="col-12 p-3">
                   <div className="row packagescards">
                     <div className="cardP shadow">
                       <div className="card-body ">
@@ -132,16 +138,16 @@ const AdminUsers = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       ) : (
         <div className="d-flex vh-auto vh-100 text-center justify-content-center ">
           <div>
             <h1
               className="package-detail-title mt-5"
-              style={{ color: "black" }}
+              style={{ color: "darkolivegreen" }}
             >
               Not logged in...
             </h1>
@@ -155,7 +161,7 @@ const AdminUsers = () => {
           </div>
         </div>
       )}{" "}
-        <footer className="footer"></footer>
+      <footer className="footer"></footer>
     </div>
   );
 };

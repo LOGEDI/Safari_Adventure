@@ -14,22 +14,33 @@ const UsersDetails = () => {
   useEffect(() => {
     actions.getUserDetail(params.id);
     window.scrollTo(0, 0);
-    actions.markFavorites();
+    actions.getFavorites();
+    actions.getCommentsK();
   }, [params.id, store.userId]);
 
   
     return (
       
-      <div>
+      <div className="pagesBackground">
+        <div className="col-2 align-self-end">
+                        
+                      </div>
+
+
+        
+            
+        
+       
         <div className="main-content">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="card bg-secondary shadow mb-2">
-                <div className="card-body">
-                  <h6 className="package-detail-subtitle mb-4">USER DETAILS</h6>
-                  <div className="pl-lg-4">
-                    <div className="row">
-                      <div className="col-lg-4">
+                <div className="container-fluid p-3">
+                
+                  <div className=" packagescards">
+                    <div className="cardP shadow">
+                      <div className="card-body ">
+                        <div>
+                          <div className="row">
+                           
+                          <div className="col-lg-4">
                         <img
                           src={
                             store.userDetail.user_url
@@ -68,6 +79,7 @@ const UsersDetails = () => {
                             <h2 className="text-success">PREMIUM</h2>
                           ) : null}{" "}
                         </div>
+                        
                       </div>
 
                       <div className="col-lg-4">
@@ -76,11 +88,11 @@ const UsersDetails = () => {
                             {" "}
                             First name{" "}
                           </h3>
-                          <h3 className="package-detail-title">
+                          <h3 className=" package-detail-title">
                             {store.userDetail.name}
                           </h3>
                         </div>
-                        <div className="form-group">
+                        <div className=" form-group">
                           <h3 className="package-detail-subtitle">
                             Last name{" "}
                           </h3>
@@ -94,53 +106,152 @@ const UsersDetails = () => {
                             {store.userDetail.country}
                           </h3>
                         </div>
+                        <div className="d-flex align-items-end justify-content-end mt-auto">
+                           <Link to="/AdminUsers" className=" btn btn-creamD"
+                       >
+                          Back
+                        </Link>
+                        </div>
+
+                      
+                      </div>
+                            
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div className="main-content">
+                <div className="container-fluid p-3">
+                
+                  <div className="packagescards">
+                    <div className="cardP ">
+
+                    <div className="card-headerP  border-0">
+                      <div className="row align-items-center">
+                        <div className="col">
+                          <h3 className="mb-0 "> Favorites</h3>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="row justify-content-end">
-                      <div className="col-2 align-self-end">
-                        <Link to="/AdminUsers" className=" btn btn-primary">
-                          Back
-                        </Link>
+                    <div className="card-body">
+                      {store.favoritesList?.length > 0 ? (
+                        store.favoritesList?.map((item) => (
+                          <div key={item.id}>
+                            <div className="pl-lg-4">
+                              <div className="row">
+                                <div className="col col-xl-3">
+                                  <img
+                                    src={item.url}
+                                    className="img-fluid"
+                                    alt="..."
+                                    style={{
+                                      maxHeight: "250px",
+                                      maxWidth: "150px",
+                                      borderColor: "#b2a97e",
+                                    }}
+                                  />
+                                </div>
+                                <div className="col col-xl-8">
+                                  <div className="form-group focused">
+                                    <h3 className="package-detail-title mt-4">
+                                      {item?.name}
+                                    </h3>
+                                  </div>
+                                </div>
+                                <div className="col-lg-1">
+                                  <div className="form-group focused">
+                                    <div className=" justify-content-end">
+                                      <span
+                                        className="btn btn-greenD1 mt-3"
+                                        onClick={() =>
+                                          actions.deleteFavorites(item.id)
+                                        }
+                                        style={{ color: "#d2ae6d" }}
+                                      >
+                                        <b>X</b>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <hr className="hrp my-4" />
+                          </div>
+                        ))
+                      ) : (
+                        <p>No favorite package</p>
+                      )}
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="main-content">
+                <div className="container-fluid p-3">
+                
+                  <div className=" packagescards">
+                    <div className="cardP shadow">
+                    <div className="card-headerP  border-0">
+                        <div className="row align-items-center">
+                          <div className="">
+                            <h3 className="mb-0"> Comments</h3>
+                          </div>
+                        </div>
+                      </div>
+                    <div className="card-body">
+                        {store.commentsListK?.length > 0 ? (
+                          store.commentsListK?.map((item) => (
+                            <div key={item.id}>
+                              <div className="pl-lg-4">
+                                <div className="row">
+                                  
+                                  <div className="col-lg-11">
+                                    <div className="form-group focused">
+                                      <h3 className="package-detail-title mt-4">
+                                        {item?.comment}
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div className="col-lg-1">
+                                    <div className="form-group focused">
+                                      <div className=" justify-content-end">
+                                        <span
+                                          className="btn btn-greenD1 mt-3"
+                                          onClick={() =>
+                                            actions.deleteComments(
+                                              item.id_comment
+                                            )
+                                          }
+                                          style={{ color: "#d2ae6d" }}
+                                        >
+                                          <b>X</b>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr className="my-4" />
+                            </div>
+                          ))
+                        ) : (
+                          <p>No favorite comment</p>
+                        )}
                       </div>
                     </div>
                   </div>
-                  {/* <hr className="my-4" /> */}
                 </div>
               </div>
-            </div>
-
-            {/* ------------------------------------Comments Section------------------------------------------ */}
-
-            {/* <div className="row">
-              <div className="card bg-secondary shadow mb-2">
-                <div className="card-body">
-                  <h6 className="package-detail-subtitle mb-4">COMMENTS</h6>
-                  <div className="pl-lg-4">
-                    <div className="row">
-                      <div className="col-lg-12">coments come here</div>
-                    </div>
-
-                    <div className="row justify-content-end">
-                      <div className="col-2 align-self-end">
-                        <Link to="/AdminUsers" className=" btn btn-primary">
-                          Back
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <hr className="my-4" />
-                </div>
-              </div>
-            </div> */}
-          </div>
-        </div>
-            <Comments />
-        <div>
-           <Favorites />
-        </div>
-       
-
 
 
 

@@ -263,7 +263,7 @@ const Profile = () => {
           <div>
             <h1
               className="package-detail-title mt-5"
-              style={{ color: "black" }}
+              style={{ color: "darkolivegreen" }}
             >
               Not logged in...
             </h1>
