@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 
 import CampMain from "../../img/CampMain.jpeg";
-import carousel1 from "../../img/Camp1.png";
+import carousel1 from "../../img/Camp1.webp";
 import carousel2 from "../../img/Camp2.jpeg";
 import carousel3 from "../../img/Camp3.png";
 

@@ -1,67 +1,112 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Contact from "../../../img/ContactMain.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 // need to make text go over image this will be done when it is merged
 // need to add footer
 
-
 const OtherServices = () => {
+  
   return (
-    <div className="font">
-      <ul><i class="fas fa-wifi"></i>   Wifi</ul>
-<ul><i class="fas fa-plane"></i>   Airport</ul>
-<ul><i class="fas fa-concierge-bell"></i>   Room Service</ul>
-<ul><i class="fas fa-child"></i>   Activities</ul>
-<ul><i class="fas fa-car"></i>    Private Chauffeur</ul>
-<ul></ul>
+    <div className="page-header">
+      <div className="pagesBackground">
+        <div>
+          <div>
+            <div className="main-content">
+              <div
+                className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+                style={{
+                  backgroundImage: `url(${Contact})`,
 
-</div>
- );
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="container-fluid d-flex align-items-center">
+                  <div className="text-on-image">
+                    <h2 className="page-title">OTHER SERVICES & AMENITIES</h2>
+                    <span className="page-subtitle">Safari Adventures</span>
+                  </div>
+                </div>
+              </div>
+
+                {/*---------------------------------------------------- Left--------------------------------------------------- */}
+
+              <div className="container-fluid ">
+                <div className="row mt-5 justify-content-center">
+                  <div>
+                    <div className="container-fluid ">
+                      <div className="row pageDescriptionContainerCenter">
+                        <div className="col-xl-6 order-xl-1 mb-5 mb-xl-0 col-12">
+                          <div className="row col-xl-12  p-0 ">
+                            <div className="row text-center col-xl-2 col-2">
+                              <i className="mb-3 OthServIcon fas fa-wifi"> </i>
+                              <i className="mb-3 OthServIcon fa fa-puzzle-piece"></i>
+                              <i className="mb-3 OthServIcon fa fa-plane"></i>
+                              <i className="  mb-3 OthServIcon fa fa-beer"></i>
+                              <i className="  mb-3 OthServIcon fa fa-utensils"></i>
+                              <i className="  mb-3 OthServIcon fa fa-lemon"></i>
+                            </div>
+                            <div className="row col-xl-10 col-10">
+                              <i className=" OthServText">FREE INTERNET</i>
+                              <i class="OthServText">BOARD GAMES / PUZZLES</i>
+                              <i className="OthServText">
+                                AIRPORT TRANSPORTATION
+                              </i>
+                              <i className="OthServText"> BAR / LOUNGE</i>
+                              <i className="OthServText">RESTAURANT</i>
+                              <i className="OthServText">SPECIAL DIET MENUS</i>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/*---------------------------------------------------- Rigth--------------------------------------------------- */}
+
+                        <div className="col-xl-6 order-xl-2 col-12">
+                          <div className="row col-xl-12  p-0 ">
+                            <div className="row text-center col-xl-2 col-2">
+                              <i className=" mb-3  OthServIcon fa fa-child">
+                                {" "}
+                              </i>
+                              <i className="  mb-3 OthServIcon fa fa-fire"></i>
+                              <i className="  mb-3 OthServIcon fa fa-briefcase">
+                                {" "}
+                              </i>
+                              <i className="  mb-3 OthServIcon fa fa-bed"></i>
+                              <i className="  mb-3 OthServIcon fa fa-bed"></i>
+                              <i className="  mb-3 OthServIcon fa fa-bed"></i>
+                            </div>
+                            <div className="row col-xl-10 col-10">
+                              <i className="OthServText  pl-5">
+                                CHILDREN ACTIVITIES (KID, FAMILY, FRIENDLY)
+                              </i>
+                              <i className="OthServText">OUTDOOR FIREPLACE</i>
+                              <i className="OthServText">
+                                PRIVATE CHEK-IN / CHECK-OUT
+                              </i>
+                              <i class="OthServText">
+                                {" "}
+                                WAKE-UP SERVICE / ALARM CLOCK{" "}
+                              </i>
+                              <i className="OthServText">FAMILY ROOM</i>
+                              <i className="OthServText">SUITE</i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer className="footerDestinations"> </footer>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default OtherServices;
 
-{/* <div className="container">
-{}
-<footer className="bg-light text-center text-lg-start">
-<div className="text-center p-3" >
-  © Copyright Safari Advendures:
-  <a className="text-dark" href="https://mdbootstrap.com/"></a>
-</div>
-</footer>
-</div> */}
-
-
-// <footer class="bg-dark text-center text-white">
-// <div class="container p-4 pb-0">
-//   <section class="mb-4">
-//     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-//       ><i class="fab fa-facebook-f"></i
-//     ></a>
-
-//     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-//       ><i class="fab fa-twitter"></i
-//     ></a>
-
-//     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-//       ><i class="fab fa-google"></i
-//     ></a>
-
-//     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-//       ><i class="fab fa-instagram"></i
-//     ></a>
-
-//     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-//       ><i class="fab fa-linkedin-in"></i
-//     ></a>
-
-//     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-//       ><i class="fab fa-github"></i
-//     ></a>
-//   </section>
-// </div>
-
-// <div class="text-center p-3" >
-//   © Copyright Safari Adventures
-//   <a class="text-white" href="https://mdbootstrap.com/"></a>
-// </div>
-// </footer>
