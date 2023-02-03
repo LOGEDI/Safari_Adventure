@@ -34,6 +34,10 @@ const PackagesDetails = () => {
     }
   };
 
+  const handleClick = () => {
+    window.history.back();
+  }
+
   if (store.packageDetail) {
     return (
       <div>
@@ -68,7 +72,7 @@ const PackagesDetails = () => {
               <div className="col-xl-7 justify-content-end text-end">
                 <div className="row col-xl-12 p-0  justify-content-end text-end mt-5">
                   <div className="col-xl-2 col-md-4 col-sm-6">
-                  {store.auth ? (
+                  {/* {store.auth ? (
                     <button
                       className="btn1 btnFav"
                       type="button"
@@ -82,14 +86,22 @@ const PackagesDetails = () => {
                         <BsHeart className="favoIcon"/>
                       )}
                     </button>
-                  ) : null}{" "}
+                  ) : null}{" "} */}
                   </div>
 
                   <div className="col-xl-2 col-md-4 col-sm-6 p-1 justify-content-end ">
                   <Link to="/Packages">
-                          <button className="btn btn-creamD ">Back</button>
+                          <button className="btn btn-creamD ">Packages</button>
                         </Link>
+
+                       
+
                   </div>
+                  <div className="col-xl-1 col-md-4 col-sm-6 p-1 justify-content-end ">
+                        
+                           <button className="btn btn-creamD " onClick={handleClick}>Route Map</button>
+                        
+                      </div>
                   
                 </div>
               </div>
@@ -448,7 +460,7 @@ const PackagesDetails = () => {
           </div>
         
 
-        {store.auth ? <Comments /> : null}
+        {/* {store.auth ? <Comments /> : null}
 
         <div className="row mb-5">
           <div className="col-sm-12 col-md-8 ">
@@ -504,7 +516,7 @@ const PackagesDetails = () => {
               }}
             />
           </div>
-        </div>
+        </div> */}
       </div>
        </div>
     );
