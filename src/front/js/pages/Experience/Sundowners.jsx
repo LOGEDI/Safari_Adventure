@@ -5,6 +5,7 @@ import sundownersHero from "../../../img/sundowners-hero2.jpg";
 import carousel1 from "../../../img/carousel1-sundowners-pic1.jpg";
 import carousel2 from "../../../img/carousel1-sundowners-pic2.jpg";
 import carousel3 from "../../../img/carousel1-sundowners-pic3.jpg";
+import separator from "../../../img/heading-separator.png";
 
 const Sundowners = () => {
   return (
@@ -18,10 +19,11 @@ const Sundowners = () => {
             backgroundPosition: "top",
           }}
         >
-          <div className="container-fluid d-flex align-items-center">
-            <div className="text-on-image">
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">SUNDOWNERS</h2>
-              <span className="page-subtitle">A Safari tradition</span>
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">A Safari tradition</h3>
             </div>
           </div>
         </div>

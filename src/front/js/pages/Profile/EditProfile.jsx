@@ -91,12 +91,10 @@ const EditProfile = () => {
                   <div className="row">
                     <div className="col-lg-7 col-md-10 text-on-imageProfile">
                       <h1 className="page-titleProfile">
-                        Hello {profile.username}
+                        hello {profile.username}
                       </h1>
                       <p className="page-subtitleProfile mt-0 mb-4">
-                        This is your profile page. You can see the progress
-                        you've made with your work and manage your projects or
-                        assigned tasks
+                        This is your edit profile page. Here you can manage you profile data.
                       </p>
                       <Link to="/Profile">
                         <button className="btn btn-creamD m-2">Back</button>

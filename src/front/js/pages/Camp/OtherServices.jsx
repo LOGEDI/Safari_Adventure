@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Contact from "../../../img/ContactMain.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import separator from "../../../img/heading-separator.png";
 // need to make text go over image this will be done when it is merged
 // need to add footer
 
@@ -23,10 +24,11 @@ const OtherServices = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="container-fluid d-flex align-items-center">
-                  <div className="text-on-image">
+                <div className="container">
+                  <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
                     <h2 className="page-title">OTHER SERVICES & AMENITIES</h2>
-                    <span className="page-subtitle">Safari Adventures</span>
+                    <img className="separator1 " src={separator}></img>
+                    <h3 className="page-subtitle">Safari Adventures</h3>
                   </div>
                 </div>
               </div>

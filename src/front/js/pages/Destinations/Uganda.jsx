@@ -22,12 +22,13 @@ const Uganda = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="container-fluid d-flex align-items-center">
-            <div className="text-on-image">
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">Destinations</h2>
-              <span className="page-subtitle">
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">
                 Enjoy the beauty and quiet of Africa
-              </span>
+              </h3>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import carousel4 from "../../../img/photogallery-4.jpg";
 import carousel5 from "../../../img/photogallery-5.jpg";
 import carousel6 from "../../../img/photogallery-6.jpg";
 import carousel7 from "../../../img/photogallery-7.jpg";
+import separator from "../../../img/heading-separator.png";
 
 const PhotoGallery = () => {
   return (
@@ -23,10 +24,11 @@ const PhotoGallery = () => {
             backgroundPosition: "top",
           }}
         >
-          <div className="container-fluid d-flex align-items-center">
-            <div className="text-on-image">
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">PHOTO GALLERY</h2>
-              <span className="page-subtitle"> Worthy photos from our best photographers!</span>
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle"> Worthy photos from our best photographers!</h3>
             </div>
           </div>
         </div>

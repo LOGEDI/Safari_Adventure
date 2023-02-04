@@ -5,6 +5,7 @@ import maasaiHero from "../../../img/maasai-hero2.jpg";
 import carousel1 from "../../../img/carousel1-Maasai-pic1.jpg";
 import carousel2 from "../../../img/carousel1-Maasai-pic2.jpg";
 import carousel3 from "../../../img/carousel1-Maasai-pic3.jpg";
+import separator from "../../../img/heading-separator.png";
 
 const Maasai = () => {
   return (
@@ -18,12 +19,13 @@ const Maasai = () => {
             backgroundPosition: "top",
           }}
         >
-          <div className="container-fluid d-flex align-items-center">
-            <div className="text-on-image">
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">MAASAI CULTURAL VISITS</h2>
-              <span className="page-subtitle">
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">
                 Traditions, ceremonies and ancient knowledge
-              </span>
+              </h3>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import SafariMain from "../../img/SafariMain.jpeg";
 import carousel1 from "../../img/Safari1.jpeg";
 import carousel2 from "../../img/Safari2.jpeg";
 import carousel3 from "../../img/Safari3.jpeg";
+import separator from "../../img/heading-separator.png";
 
 const Safari = () => {
 
@@ -23,12 +24,13 @@ const Safari = () => {
               backgroundPosition: "top",
             }}
           >
-            <div className="container-fluid d-flex align-items-center">
-              <div className="text-on-image">
+            <div className="container">
+              <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
                 <h2 className="page-title">SAFARI</h2>
-                <span className="page-subtitle">
+                <img className="separator1 " src={separator}></img>
+                <h3 className="page-subtitle">
                 In the most private location away from the crowds inside the Masai Mara
-                                </span>
+                                </h3>
               </div>
             </div>
           </div>

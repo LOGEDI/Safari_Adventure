@@ -159,7 +159,7 @@ const PackagesMap = () => {
                           {store.comments.length > 0 ? (
                             store.comments.map((item, index) => (
                               <div key={index}>
-                                <li className="package-detail-title my-3">
+                                <li className="package-detail-titleC my-3">
                                   <img
                                     style={{ width: "2rem", height: "2rem" }}
                                     src={

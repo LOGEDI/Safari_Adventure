@@ -254,25 +254,41 @@ body{
   font-size: 50px;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: bolder;
+  margin-bottom: 0;
+  
 }
 
 .page-subtitle{
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   font-style: italic;
+  
+}
+
+.separator1{
+  
+
 }
 
 .text-on-image {
   color: white;  
   position: absolute;
   left: 05%;
-  bottom: 65%;
+  bottom: 60%;
+   /* background-color: rgba(0, 0, 0, 0.459); */
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.559) , transparent);
+   padding: 10px;
+   
+   
 }
 
 .text-on-imageProfile {
   color: white;  
   position: absolute;
   bottom: 20%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.559) , transparent);
+  padding: 10px;
+ 
 }
 
 .page-titleProfile {
@@ -1113,6 +1129,15 @@ figure.snip0016:hover figcaption::before {
 
 .package-detail-title{
   color: #d2ae6d;
+  line-height: 1;
+  position: relative;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 35px;
+  line-height: 36px;
+}
+
+.package-detail-titleC{
+  color: darkolivegreen;
   line-height: 1;
   position: relative;
   font-family: 'Alegreya Sans SC', sans-serif;

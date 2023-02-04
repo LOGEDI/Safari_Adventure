@@ -1,4 +1,5 @@
 import React from 'react'
+import separator from "../../../img/heading-separator.png";
 
 const CommunityProjects = () => {
   return (
@@ -14,11 +15,12 @@ const CommunityProjects = () => {
                 alt=""
               />
             </div>
-            <div className="text-on-image">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">COMMUNITY PROJECTS</h2>
-              <span className="page-subtitle">
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">
                  Help us grow our community!
-              </span>
+              </h3>
             </div>
       </div>
     

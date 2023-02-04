@@ -6,6 +6,7 @@ import carousel1 from "../../../img/carousel1-photosafari-pic1.jpg";
 import carousel2 from "../../../img/carousel1-photosafari-pic2.jpg";
 import carousel3 from "../../../img/carousel1-photosafari-pic3.jpg";
 import carousel4 from "../../../img/carousel1-photosafari-pic4.jpg";
+import separator from "../../../img/heading-separator.png";
 
 const PhotoSafari = () => {
   return (
@@ -19,10 +20,11 @@ const PhotoSafari = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="container-fluid d-flex align-items-center">
-            <div className="text-on-image">
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">PROFESSIONAL PHOTOGRAPHY SAFARI</h2>
-              <span className="page-subtitle">Capture de moment</span>
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">Capture de moment</h3>
             </div>
           </div>
         </div>

@@ -8,6 +8,8 @@ import carousel3 from "../../img/travel-plan4.jpg";
 import travelplanLink1 from "../../img/travelplan4.jpg";
 import travelplanLink2 from "../../img/travelplan5.jpg";
 import travelplanLink3 from "../../img/travelplan6.jpg";
+import separator from "../../img/heading-separator.png";
+
 const TravelPlan = () => {
   return (
     <div className="pagesBackground">
@@ -21,12 +23,13 @@ const TravelPlan = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="container-fluid d-flex align-items-center">
-            <div className="text-on-image">
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
               <h2 className="page-title">PLAN YOUR TRIP</h2>
-              <span className="page-subtitle">
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">
                 Contact us for a taylor made itinerary
-              </span>
+              </h3>
             </div>
           </div>
         </div>

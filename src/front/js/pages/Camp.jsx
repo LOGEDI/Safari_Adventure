@@ -6,6 +6,7 @@ import CampMain from "../../img/CampMain.jpeg";
 import carousel1 from "../../img/Camp1.webp";
 import carousel2 from "../../img/Camp2.jpeg";
 import carousel3 from "../../img/Camp3.png";
+import separator from "../../img/heading-separator.png";
 
 const Camp = () => {
   return (
@@ -23,12 +24,13 @@ const Camp = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="container-fluid d-flex align-items-center">
-              <div className="text-on-image">
+            <div className="container">
+              <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
                 <h2 className="page-title">THE CAMP</h2>
-                <span className="page-subtitle">
+                <img className="separator1 " src={separator}></img>
+                <h3 className="page-subtitle">
                 Safari Adventure, an owner-run eco camp
-                </span>
+                </h3>
               </div>
             </div>
           </div>
