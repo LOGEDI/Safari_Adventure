@@ -36,6 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       favoriteItem: [], //have the id of the favorites packages
       favoritesList: [],
       favoriteHeart: false,
+      favoritesTotal: [],
       comments: [],
       commentsListK: [],
     },
@@ -1042,6 +1043,28 @@ const getState = ({ getStore, getActions, setStore }) => {
               favoritesList: [],
             });
           }
+        }
+      },
+
+ //-----------------------------------------------------------------------------------------------------------------------------
+      //										GET USER FAVORITES
+      //-----------------------------------------------------------------------------------------------------------------------------
+
+      getTotalFavorites: async (id) => {
+        let store = getStore();
+        try {
+          const response = await fetch(
+            process.env.BACKEND_URL + "/api/favorites"
+          );
+          const data = await response.json();
+       
+          setStore({
+            favoritesTotal: data.map((item) => item),
+          });
+          return store.favoritesTotal;
+        } catch (error) {
+          
+          console.log(error);
         }
       },
 

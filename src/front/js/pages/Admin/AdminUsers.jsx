@@ -7,6 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import destinationBackground from "../../../img/destinations_background.jpg";
 import userProfileIcon from "../../../img/user-profile-icon.jpg";
 
+
 const AdminUsers = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();

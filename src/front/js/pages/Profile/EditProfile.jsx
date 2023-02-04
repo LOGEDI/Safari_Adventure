@@ -152,7 +152,7 @@ const EditProfile = () => {
                                 <span className="description">Photos</span>
                               </div> */}
                               <div>
-                                <span className="heading">{store.comments.length}</span>
+                                <span className="heading">{store.commentsListK.length}</span>
                                 <span className="description">Comments</span>
                               </div>
                             </div>

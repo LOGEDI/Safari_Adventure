@@ -110,7 +110,7 @@ const Profile = () => {
                             </div> */}
                             <div>
                               <span className="heading">
-                                {store.comments.length}
+                                {store.commentsListK.length}
                               </span>
                               <span className="description">Comments</span>
                             </div>
