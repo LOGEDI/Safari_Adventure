@@ -63,7 +63,7 @@ const Packages = () => {
                             className="row align-items-end"
                             style={{ height: "450px" }}
                           >
-                            <div className="col">
+                            <div className="col text-on-imagePl ">
                               <h3 className="post_title">{item.name}</h3>
                               <p className="post_subtitle">{item.category}</p>
                             </div>
@@ -257,8 +257,9 @@ const Packages = () => {
                             className="row align-items-end justify-content-end "
                             style={{ height: "450px", color: "white" }}
                           >
-                            <div className="col">
+                            <div className="col text-on-imagePr">
                               <h3 className="post2_title">{item.name}</h3>
+                              
                               <p className="post2_subtitle">{item.category}</p>
                             </div>
                           </div>

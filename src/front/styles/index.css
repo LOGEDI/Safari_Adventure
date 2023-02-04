@@ -1006,6 +1006,16 @@ figure.snip0016:hover figcaption::before {
   z-index: 0;
 }
 
+.text-on-imagePl{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.659) , transparent);
+  padding: 10px;
+}
+
+.text-on-imagePr{
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.659) , transparent);
+  padding: 10px;
+}
+
 .post_text {
   z-index: 1;
   background-size: cover;
@@ -1015,19 +1025,17 @@ figure.snip0016:hover figcaption::before {
 
 .post_title {
   
-  color: #d2ae6d;
+  color: white;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 35px;
   line-height: 36px;
   margin-bottom: 0px;
-  
-  
+   
 }
 
 .post2_title {
   
-  color: #d2ae6d;
- 
+  color: #ffffff; 
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 35px;
   line-height: 36px;
