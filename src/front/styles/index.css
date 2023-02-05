@@ -170,7 +170,7 @@ body{
   display: none;
   position: absolute;
   justify-content: center;
-  background-color: hsl(60deg 56% 91% / 100%);
+  background-color: #f5f5db;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -643,25 +643,35 @@ margin-top: 1rem;
 
 /*---------------------------------------NEW CAROUSEL-Version 2------------------------------------------------------------------------*/
 
-/* .carousel2Item {
-	height: 650px;
-	min-height: 300px;
+.carousel2Item {
+	height: 500px;
+	min-height: 400px;
 }
 .carousel2Caption {
-	bottom: 20px;
+	
+  background: radial-gradient(circle at center, black 0%, transparent 100%);
+
 }
 .carousel2CaptionH5 {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
 	font-size: 55px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-top: 15px;
+  margin-bottom: 0;
+	
 }
+
+.homeHero{
+  max-height: 500px;
+}
+
 .carousel2CaptionP {
+  font-family: 'Lato', sans-serif;
 	width: 60%;
 	margin: auto;
 	font-size: 18px;
 	line-height: 1.9;
+  
 }
 .carousel2CaptionA {
 	text-transform: uppercase;
@@ -671,8 +681,24 @@ margin-top: 1rem;
 	display: inline-block;
 	color: #000;
 	margin-top: 15px;
-} */
+}
 
+.carouselH1{
+  padding-top: 40px;
+  font-size: 40px;
+  color: #d2ae6d;
+}
+
+.carouselH3 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 25px;
+  color: darkolivegreen;
+}
+
+.carouselComents{
+  min-height: 450px;
+  background: radial-gradient(circle at center, #f8f8c3 0%, transparent 75%);
+}
 /*-------------------------------HOME PAGE PICTURE BUTTONS-------------------------------------*/
 
 figure.snip0016 {
