@@ -2,7 +2,7 @@
 import React, {useRef, useEffect} from "react";
       
 const MAP_KEY = process.env.MAP_KEY; 
-console.log(MAP_KEY)
+// console.log(MAP_KEY)
 const GMaps = ({ placeName }) => {
     const googleMapRef = useRef();
     const myLatLng = { lat: -1.643129, lng: 35.283141 };
