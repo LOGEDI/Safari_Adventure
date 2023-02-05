@@ -5,6 +5,7 @@ const MAP_KEY = process.env.MAP_KEY;
 console.log(MAP_KEY)
 const GMaps = ({ placeName }) => {
     const googleMapRef = useRef();
+    const myLatLng = { lat: -1.643129, lng: 35.283141 };
     let googleMap;
     useEffect(() => {
       const googleMapScript = document.createElement("script");
@@ -19,7 +20,7 @@ const GMaps = ({ placeName }) => {
     const createGoogleMap = (coordinates) => {
       googleMap = new window.google.maps.Map(googleMapRef.current, {
         zoom: 10,
-        center: { lat: 43.2, lng: -79.9 
+        center: { lat: -1.643129, lng: 35.283141 
 
         },
         disableDefaultUI: true,
@@ -36,7 +37,7 @@ const GMaps = ({ placeName }) => {
             lat = results[0].geometry.location.lat(-0.141096);
             lng = results[0].geometry.location.lng(51.506234);
             new window.google.maps.Marker({
-              position: { lat, lng },
+              position: myLatLng,
               map: googleMap,
               animation: window.google.maps.Animation.DROP,
               title: `${placeName}`,
@@ -53,7 +54,7 @@ const GMaps = ({ placeName }) => {
       <div
         id="google-map"
         ref={googleMapRef}
-        style={{ width: "800px", height: "600px" }}
+        style={{ width: "100%", height: "240px" }}
       />
     );
   };

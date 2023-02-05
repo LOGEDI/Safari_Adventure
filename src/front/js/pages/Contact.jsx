@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import EmailSub from "../component/EmailSub.jsx";
 import contactHero from "../../img/header-contact.jpg";
 import separator from "../../img/heading-separator.png";
+import GMaps from "../component/GMAPS.js";
 
 const Contact = () => {
   return (
@@ -55,6 +56,7 @@ const Contact = () => {
                       <h3>
                         <strong>General inquiries:</strong> xxx-xxx-xxxx
                       </h3>
+                       <GMaps />
                     </div>
                   </div>
                 </div>
@@ -65,6 +67,7 @@ const Contact = () => {
 
             <div className="col-xl-8 order-xl-1">
               <EmailSub />
+             
             </div>
           </div>
         </div>
