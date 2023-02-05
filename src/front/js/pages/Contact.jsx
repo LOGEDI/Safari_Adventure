@@ -1,53 +1,74 @@
-import React from "react";
+import React, { useRef } from "react";
+import EmailSub from "../component/EmailSub.jsx";
+import contactHero from "../../img/header-contact.jpg";
+import separator from "../../img/heading-separator.png";
 
 const Contact = () => {
   return (
     <div className="pagesBackground">
-    <div className="container">
-      <div className="page-header">
-        <div className="head-image">
-          <img
-            className="col-12 m-0 black-rock"
-            src="https://www.strathfield.nsw.gov.au/wp-content/uploads/2020/04/header-contact.jpg"
-            alt=""
-          />
+      <div className="main-content">
+      <div
+          className="page-hero pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+          style={{
+            backgroundImage: `url(${contactHero})`,
+
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="container">
+            <div className="text-on-image col-xl-6 col-md-8 col-sm-11 col-11">
+              <h2 className=" page-title">CONTACT US</h2>
+              <img className="separator1 " src={separator}></img>
+              <h3 className="page-subtitle">
+                Keep in touch with Safary Adventure
+              </h3>
+            </div>
+          </div>
         </div>
-        <div className="text-on-image">
-          <h2 className="page-title">CONTACT US</h2>
-        </div>
-      </div>
 
-      <div className="col-12">
-        <div className="card m-3 border-light">
-          <h2 className="description-title">OUR CONTACTS</h2>
-          <div className="description-content">
-            <h4>
-              <strong>
-                Safary Adventure welcomes your comments, suggestions, and
-                questions!
-              </strong>
-            </h4>
-            <p>
-              We are experiencing an unusually high volume of correspondence at
-              this time. Our current response time can be 3 or more business
-              days from the date of your submission.
-            </p>
-            <p>
-              <strong>To contact us by phone:</strong>
-            </p>
+        <div className="container-fluid destinationsCards mt-5">
+          <div className="row">
+           
+ {/* -------------desacription--------------------           */}
 
-            <p>
-              <strong>Membership inquiries:</strong> xxx-xxx-xxxx
-            </p>
-            <p>
-              <strong>General inquiries:</strong> xxx-xxx-xxxx
-            </p>
+            <div className="col-xl-4 order-xl-1 mb-5 mb-xl-0 cardProfileC">
+              <div className="">
+                <div className="col-12">
+                  <div className="card m-3 border-light">
+                    <h2 className="description-title">OUR CONTACTS</h2>
+                    <div className="description-contentC">
+                      <h2>
+                        <strong>
+                          Safary Adventure welcomes your comments, suggestions,
+                          and questions!
+                        </strong>
+                      </h2>
 
-            <p>You can also contact us from our links bellow</p>
+                      <h3 className="mt-4">
+                        <strong>To contact us by phone:</strong>
+                      </h3>
+
+                      <h3>
+                        <strong>Membership inquiries:</strong> xxx-xxx-xxxx
+                      </h3>
+                      <h3>
+                        <strong>General inquiries:</strong> xxx-xxx-xxxx
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+{/* ------------form------------------------ */}
+
+            <div className="col-xl-8 order-xl-1">
+              <EmailSub />
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

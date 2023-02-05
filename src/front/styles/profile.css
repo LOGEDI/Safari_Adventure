@@ -579,6 +579,19 @@
     background-clip: border-box;
     box-shadow: 0 10px 10px rgba(0,0,0,0.30);
   }
+
+  .cardProfileC {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height:582px;
+    word-wrap: break-word;
+    border: none;
+    border-radius: .375rem;
+    background-color: rgb(255, 255, 242);
+    background-clip: border-box;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.30);
+  }
   
   .cardDestinations {
     position: relative;

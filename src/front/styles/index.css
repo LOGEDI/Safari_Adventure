@@ -329,6 +329,14 @@ color: #d2ae6d;
   line-height: 28px;
 }
 
+.description-contentC{
+  font-family: 'Lato', sans-serif;
+  font-size: 29px;
+  font-weight: 500;
+  color: #2f503e;
+  line-height: 28px;
+}
+
 .experiencePagePicLinks { 
   justify-content: center;
 }
@@ -367,6 +375,7 @@ form {
 
 input[type="name"],
 input[type="text"],
+input[type="tele"],
 input[type="last_name"],
 input[type="country"],
 input[type="email"],
@@ -385,6 +394,7 @@ padding-left: 10px;
 
 input:hover[type="name"],
 input:focus[type="text"],
+input[type="tele"],
 input:hover[type="last_name"],
 input:hover[type="country"],
 input:hover[type="email"],
@@ -403,6 +413,7 @@ padding-left: 10px;
 
 input:focus[type="name"],
 input:focus[type="text"],
+input[type="tele"],
 input:focus[type="last_name"],
 input:focus[type="country"],
 input:focus[type="email"],
@@ -488,6 +499,42 @@ input[type=file]::file-selector-button:hover {
  
  
 }
+
+.form-controlC {
+  
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  
+  padding: .4rem .4rem;
+  transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
+  color: darkolivegreen;
+  border: 1px solid #d2ae6d;
+  border-radius: .375rem;
+  background-color: hsl(60deg 56% 91% / 100%);
+  background-clip: padding-box;
+  box-shadow: none;
+}
+
+.form-controlC:focus {
+  
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  
+  padding: .4rem .4rem;
+  transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
+  color: darkolivegreen;
+  border: 3px solid #d2ae6d;
+  border-radius: .375rem;
+  background-color: hsl(60deg 56% 91% / 100%);
+  background-clip: padding-box;
+  box-shadow: none;
+  
+  box-shadow: 0 10px 10px rgba(0,0,0,0.30), 0 10px 7px rgba(0,0,0,0.22);
+ 
+}
+
 
 .form-controlP1 {
   font-size: 1rem;
