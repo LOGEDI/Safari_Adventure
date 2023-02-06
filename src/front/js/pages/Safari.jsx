@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from "react-bootstrap/Carousel";
 
-import SafariMain from "../../img/SafariMain.jpeg";
+import SafariMain from "../../img/safariMain.webp";
 import carousel1 from "../../img/Safari1.jpeg";
 import carousel2 from "../../img/Safari2.jpeg";
 import carousel3 from "../../img/Safari3.jpeg";
