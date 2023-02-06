@@ -2,13 +2,28 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-import hero1 from "../../img/balloon-hero.jpg";
-import hero2 from "../../img/Experience-hero.jpg";
-import hero3 from "../../img/maasai-hero2.jpg";
-import carousel1 from "../../img/experience-1.jpg";
-import carousel2 from "../../img/experience-2.jpg";
-import carousel3 from "../../img/experience-3.jpg";
+import EmailSubHome from "../component/EmailSubHome.jsx";
+
+import hero1 from "../../img/homeHero1.jpg";
+import hero2 from "../../img/homeHero2.jpg";
+import hero3 from "../../img/homeHero3.png";
+import hero4 from "../../img/homeHero4.jpg";
+import hero5 from "../../img/homeHero6.jpg";
+import hero6 from "../../img/homeHero5.jpg";
+
+import carouselHome1 from "../../img/carouselHome1.jpg";
+import carouselHome2 from "../../img/carouselHome2.jpg";
+import carouselHome3 from "../../img/carouselHome3.jpg";
+import carouselHome4 from "../../img/carouselHome4.jpg";
+import carouselHome5 from "../../img/carouselHome5.jpeg";
+import carouselHome6 from "../../img/carouselHome6.jpg";
+import carouselHome7 from "../../img/carouselHome7.jpg";
+import homeLinks1 from "../../img/homeLink1.jpg"; 
+import homeLinks2 from "../../img/homeLink2.jpg"; 
+import homeLinks3 from "../../img/homeLink3.jpg"; 
+import homeLinks4 from "../../img/homeLink4.jpg"; 
 import "../../styles/index.css";
+
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -16,7 +31,7 @@ export const Home = () => {
   return (
     <div className="pagesBackground">
       <div className="main-content">
-        <div className="container ">
+        <div className="experiencePagePicLinks container-fluid">
           {/* ----------------------------PAGE TITLE CAROUSEL TYPE 2------------------------------------------------- */}
 
           <Carousel slide={false}>
@@ -25,7 +40,7 @@ export const Home = () => {
               <Carousel.Caption className="carousel2Caption">
                 <h5 className="carousel2CaptionH5">SAFARI ADVENTURE</h5>
                 <p className="carousel2CaptionP d-none d-md-block">
-                  The Ultimate African Safari Experience
+                  The Ultimate African Safari Experience.
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -35,17 +50,48 @@ export const Home = () => {
               <Carousel.Caption className="carousel2Caption">
                 <h5 className="carousel2CaptionH5">SAFARI ADVENTURE</h5>
                 <p className="carousel2CaptionP  d-none d-md-block">
-                  We offer a variety of activities.
+                  Feel the nature like never before.
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
               <img className="d-block w-100" src={hero3} alt="Third slide" />
 
               <Carousel.Caption className="carousel2Caption">
                 <h5 className="carousel2CaptionH5">SAFARI ADVENTURE</h5>
                 <p className="carousel2CaptionP  d-none d-md-block">
+                  Enjoy the Safari with all confort.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={hero4} alt="Third slide" />
+
+              <Carousel.Caption className="carousel2Caption">
+                <h5 className="carousel2CaptionH5">SAFARI ADVENTURE</h5>
+                <p className="carousel2CaptionP  d-none d-md-block">
+                We offer a variety of activities.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={hero5} alt="Third slide" />
+
+              <Carousel.Caption className="carousel2Caption">
+                <h5 className="carousel2CaptionH5">SAFARI ADVENTURE</h5>
+                <p className="carousel2CaptionP  d-none d-md-block">
                   Guided by the best professional Maasai guides and spotters.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img className="d-block w-100" src={hero6} alt="Third slide" />
+
+              <Carousel.Caption className="carousel2Caption">
+                <h5 className="carousel2CaptionH5">SAFARI ADVENTURE</h5>
+                <p className="carousel2CaptionP  d-none d-md-block">
+                  Relax in our incredible locations.
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -57,10 +103,10 @@ export const Home = () => {
           <div >
             <div className="row g-3 mt-3 justify-content-center">
               <div className="col-xl-3 col-md-6 col-10 order-xl-1 mb-5 mb-xl-0">
-                <Link to="/Experience">
+                <Link to="/Camp">
                   <figure className="snip0016">
                     <img
-                      src="https://www.enkewa.com/wp-content/uploads/2022/01/An%CC%83adir-en-Cultura-Masai.jpg"
+                      src={homeLinks1}
                       alt="sample41"
                     />
                     <figcaption>
@@ -77,8 +123,7 @@ export const Home = () => {
               <Link to="/Safari">
                 <figure className="snip0016">
                   <img
-                    src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_8654-web-scaled.jpg"
-                    alt="sample41"
+                    src={homeLinks2}
                   />
                   <figcaption>
                     <h2>
@@ -94,7 +139,7 @@ export const Home = () => {
               <Link to="/Camp">
                 <figure className="snip0016">
                   <img
-                    src="https://www.enkewa.com/wp-content/uploads/2021/11/safari-23424.jpg"
+                    src={homeLinks3}
                     alt="sample41"
                   />
                   <figcaption>
@@ -111,7 +156,7 @@ export const Home = () => {
               <Link to="/TravelPlan">
                 <figure className="snip0016">
                   <img
-                    src="https://www.enkewa.com/wp-content/uploads/2022/01/DSC_8654-web-scaled.jpg"
+                    src={homeLinks4}
                     alt="sample41"
                   />
                   <figcaption>
@@ -170,21 +215,28 @@ export const Home = () => {
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src={carousel1}
+                            src={carouselHome1}
                             alt="First slide"
                           />
                         </Carousel.Item>
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src={carousel2}
+                            src={carouselHome2}
                             alt="Second slide"
                           />
                         </Carousel.Item>
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src={carousel3}
+                            src={carouselHome3}
+                            alt="Third slide"
+                          />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                          <img
+                            className="d-block w-100"
+                            src={carouselHome4}
                             alt="Third slide"
                           />
                         </Carousel.Item>
@@ -196,6 +248,11 @@ export const Home = () => {
             </div>
           </div>
         </div>
+
+        <div className="col-xl-12 ">
+              <EmailSubHome />
+             
+            </div>
 
         <div className="container-fluid mt-3">
           <div className="row">
@@ -259,21 +316,21 @@ export const Home = () => {
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src={carousel1}
+                            src={carouselHome5}
                             alt="First slide"
                           />
                         </Carousel.Item>
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src={carousel2}
+                            src={carouselHome6}
                             alt="Second slide"
                           />
                         </Carousel.Item>
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src={carousel3}
+                            src={carouselHome7}
                             alt="Third slide"
                           />
                         </Carousel.Item>

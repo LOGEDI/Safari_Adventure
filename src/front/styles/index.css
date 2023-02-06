@@ -150,6 +150,27 @@ body{
   max-width: 80%;  
   margin: auto;
 }
+
+.btn-creamL {
+  color: darkolivegreen;
+  min-width: 100px;
+  border-color: hsl(60deg 56% 91% / 100%);
+  background-color: hsl(60deg 56% 91% / 100%);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.btn-creamL:hover {
+  color: rgb(31, 39, 18);
+  border-color: hsl(60deg 56% 91% / 100%);
+  background-color: hsl(60deg 56% 91% / 100%);
+}
+
+
+.btn-creamL:disabled {
+  color: #fff;
+  border-color: #5e72e4;
+  background-color: #5e72e4;
+}
 /*--------------------------------------------------NAVBAR---------------------------------------------------------------------------*/
 
 .navbar__logo{
@@ -327,6 +348,7 @@ color: #d2ae6d;
   font-weight: 500;
   color: #2f503e;
   line-height: 28px;
+  
 }
 
 .description-contentC{
@@ -443,6 +465,26 @@ input[type=file]::file-selector-button {
 input[type=file]::file-selector-button:hover {
   background-color: #d1a147;
   border: 2px solid #d1a147;
+}
+
+.homeEM{
+  background-color:#d2ae6d;
+}
+
+.form-controlH {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  height: calc(2.75rem + 2px);
+  padding: .4rem .4rem;
+  transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
+  color: darkolivegreen;
+  border: 1px solid #d2ae6d;
+  border-radius: .375rem;
+  background-color: #d2ae6d;
+  background-clip: padding-box;
+  box-shadow: none;
 }
 
 .form-controlP {
@@ -590,6 +632,18 @@ input[type=file]::file-selector-button:hover {
   
 }
 
+.cardH {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: none;
+  border-radius: .375rem;
+  background-color: #d2ae6d;
+  background-clip: border-box;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.30);
+}
 
 .cardP {
   position: relative;
@@ -638,6 +692,20 @@ input[type=file]::file-selector-button:hover {
 
 label{
 margin-top: 1rem;
+}
+
+.homeMail1 {
+  color: white;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.homeMail2{
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 
 
@@ -697,7 +765,11 @@ margin-top: 1rem;
 
 .carouselComents{
   min-height: 450px;
-  background: radial-gradient(circle at center, #f8f8c3 0%, transparent 75%);
+  background: radial-gradient(circle at center, #f8f8c3 0%, transparent 65%);
+}
+
+.pageDescriptionContainerRigth {
+  /* background: radial-gradient(circle at center, #f8f8c3 0%, transparent 65%); */
 }
 /*-------------------------------HOME PAGE PICTURE BUTTONS-------------------------------------*/
 
