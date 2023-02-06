@@ -49,6 +49,7 @@ const OtherServices = () => {
                               <i className="  mb-3 OthServIcon fa fa-beer"></i>
                               <i className="  mb-3 OthServIcon fa fa-utensils"></i>
                               <i className="  mb-3 OthServIcon fa fa-lemon"></i>
+                              <i className="  mb-3 OthServIcon fa fa-award"></i>
                             </div>
                             <div className="row col-xl-10 col-10">
                               <i className=" OthServText">FREE INTERNET</i>

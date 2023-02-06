@@ -1464,6 +1464,12 @@ figure.snip0016:hover figcaption::before {
   font-size: 30px;
 }
 
+.OthServIconPremium {
+  color: #d2ae6d;
+  
+  font-size: 35px;
+}
+
 .OthServText{
   margin-left: 25px;
   color: darkolivegreen;

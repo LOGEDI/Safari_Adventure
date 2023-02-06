@@ -27,7 +27,9 @@ export const NavbarMain = () => {
           <Link to="/" style={{ textDecoration: "none" }}>
             <div className="navbar__logo mb-0 ">Safari Adventure</div>
           </Link>
+          
           <div className="ml-auto">
+
             {!store.auth ? (
               <Link to="/login">
                 <button className="btn btn-cream m-2">Login</button>
@@ -217,6 +219,15 @@ export const NavbarMain = () => {
                 ) : null}{" "}
               </div>
             ) : null}{" "}
+
+            
+          {!store.premium ? (
+              
+              <i className="OthServIconPremium bt-5 fa fa-award"></i>
+              
+              
+            ) : null}{" "}
+
           </div>
         </nav>
       </div>
