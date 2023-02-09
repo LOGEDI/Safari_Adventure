@@ -221,7 +221,7 @@ export const NavbarMain = () => {
             ) : null}{" "}
 
             
-          {!store.premium ? (
+          {store.premium ? (
               
               <i className="OthServIconPremium bt-5 fa fa-award"></i>
               
