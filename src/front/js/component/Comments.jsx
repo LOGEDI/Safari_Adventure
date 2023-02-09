@@ -26,11 +26,12 @@ const Comments = () => {
       <h4 className="package-detail-title" style={{textAlign: "center" }}>Comment Adventure</h4>
       <div className="container d-xl-inline-flex d-lg-inline-flex justify-content-between ">
         
-        <div className="col-sm-12 col-md-8 col-lg-8" id="divTextarea">
+        <div className="col-sm-12 col-md-10 col-lg-10 col-xl-10" id="divTextarea">
           <textarea
+            className="col-sm-12 col-md-12 col-12 col-lg-10 col-xl-11"
             name="comments"
             id="comments"
-            cols="80"
+            cols=""
             rows="2"
             onChange={(e) => setComment(e.target.value)}
             value={comment}
