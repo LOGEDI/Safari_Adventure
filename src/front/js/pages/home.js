@@ -249,7 +249,7 @@ export const Home = () => {
           </div>
         </div>
 
-        <div className="col-xl-12 ">
+        <div className="col-xl-12 mt-3 mb-5">
               <EmailSubHome />
              
             </div>
