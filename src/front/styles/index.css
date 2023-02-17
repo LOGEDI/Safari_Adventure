@@ -38,6 +38,10 @@ body{
   background-image: url("../img/generic-background.jpg");
 }
 
+.main-contentAdmin{
+  height: 70.1vh;
+  height: 70.1svh;
+}
 
 .btn-cream {
   color: #fff;

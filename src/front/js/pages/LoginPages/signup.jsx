@@ -94,7 +94,7 @@ const SignUp = () => {
                             errors.username}
                           <label
                             className="form-label"
-                            for="form1Example2"
+                            // for="form1Example2"
                           ></label>
                         </div>
                         <div className="error col-12 ">
@@ -107,7 +107,7 @@ const SignUp = () => {
                           {errors.email && touched.email && errors.email}
                           <label
                             className="form-label"
-                            for="form1Example2"
+                            // for="form1Example2"
                           ></label>
                         </div>
                         <div className="error col-12 ">

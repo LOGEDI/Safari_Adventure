@@ -21,7 +21,7 @@ const Admin = () => {
   return (
     <div className="pagesBackground">
       {store.admin ? (
-        <div className="main-content pt-5">
+        <div className="main-contentAdmin pt-5">
           <div className="container-fluid destinationsCards">
             <div className="row justify-content-center">
               {/* -------------------USER CARD--------------------- */}
