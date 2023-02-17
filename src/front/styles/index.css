@@ -43,6 +43,16 @@ body{
   height: 70.1svh;
 }
 
+.main-contentLogin{
+  height: 73vh;
+  height: 76.426svh;
+}
+
+.main-contentSingin{
+  height: 70.1vh;
+  height: 76.426svh;
+}
+
 .btn-cream {
   color: #fff;
   border-color: #d2ae6d;
@@ -190,6 +200,12 @@ body{
 
 
 /*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
+
+
+
+
+
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;

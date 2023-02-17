@@ -26,11 +26,12 @@ const Login = () => {
   });
 
   return (
-    <div className="pagesBackground">
+    <div className="pagesBackground main-contentLogin">
       <div
         className="destinationsBackground"
         style={{
           backgroundImage: `url(${destinationBackground})`,
+          height: "76.426svh",
         }}
       >
         <Formik
@@ -135,7 +136,7 @@ const Login = () => {
 
 {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
 
-        <footer className="footerDestinations"> </footer>
+        
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ const SignUp = () => {
   return (
     <div>
       <div
-        className="destinationsBackground"
+        className="destinationsBackground main-contentSingin"
         style={{
           backgroundImage: `url(${destinationBackground})`,
         }}
@@ -66,7 +66,7 @@ const SignUp = () => {
                   <div col="12">
                     <div
                       className="bg-ligth my-5 mx-auto"
-                      style={{ borderRadius: "1rem", maxWidth: "400px" }}
+                      style={{ borderRadius: "1rem", maxWidth: "600px" }}
                     >
                       <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
                         <h2
