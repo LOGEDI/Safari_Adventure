@@ -591,6 +591,7 @@
     background-color: rgb(255, 255, 242);
     background-clip: border-box;
     box-shadow: 0 10px 10px rgba(0,0,0,0.30);
+    
   }
   
   .cardDestinations {
@@ -1157,7 +1158,7 @@
   }
 
   @media (max-width: 760px) {
-    .packagescards {
+    .packagescards  {
       /* padding: 10px; */
       justify-content: center;
       margin: auto;
@@ -1173,6 +1174,25 @@
       
     }
   }
+
+  @media (max-width: 760px) {
+    .atest1  {
+      padding-left: 10px;
+      
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .atest1 {
+      max-width: 1790px;
+      
+      margin: auto;
+      
+    }
+  }
+
 
   @media (min-width: 1456px) {
     .experiencePagePicLinks {
@@ -1217,6 +1237,7 @@
       max-width:1750px;
       justify-content: center;
       margin: auto;
+      
       
     }
   }

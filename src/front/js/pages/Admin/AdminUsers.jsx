@@ -14,7 +14,8 @@ const AdminUsers = () => {
 
   useEffect(() => {
     actions.getUsers(params.id);
-  }, []);
+    actions.getCommentsK(params.id);
+  }, [store.userId]);
 
   const handleSweetAlert = (id) => {
     Swal.fire({
@@ -45,11 +46,16 @@ const AdminUsers = () => {
         <div>
           <h1 className="text-center pt-3 package-detail-title">USERS</h1>
 
+          
+              <div className="row atest1">
+                <Link to="/Admin" className="">
+                <button className="btn btn-creamD ml-2 atest">BACK TO ADMIN</button>
+              </Link>
+              </div>
+
           <div className="main-content">
             <div className="container-fluid ">
-              <Link to="/Admin">
-                <button className="btn btn-creamD ml-2">BACK TO ADMIN</button>
-              </Link>
+             
 
               {store.user.map((item) => (
                 <div key={item.id} className="col-12 p-3">
@@ -99,12 +105,20 @@ const AdminUsers = () => {
                                   <h2 className="text-success">PREMIUM</h2>
                                 ) : null}{" "}
                               </div>
-                              <div className="form-group">
+                              
+
+                              {/* <div className="form-group">
                                 <h3 className="package-detail-subtitle">
                                   Comments{" "}
                                 </h3>
+                                <h3 className="package-detail-title">
+                                {store.commentsListK?.length}
+                                </h3>
                                 <h3 className="package-detail-title"> </h3>
-                              </div>
+                              </div> */}
+
+
+
                             </div>
 
                             <div className="col-2 text-end">
