@@ -63,8 +63,8 @@ const Profile = () => {
 
             <div className="container-fluid destinationsCards mt--7">
               <div className="row">
-                <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 cardProfile">
-                  <div className="">
+                <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 ">
+                  <div className="cardP">
                     <div className="row justify-content-center">
                       <div className="col-lg-3 order-lg-2">
                         <div className="card-profile-image">
