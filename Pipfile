@@ -22,8 +22,7 @@ flask-jwt-extended = "*"
 shell = "*"
 flask-mail = "*"
 flask-bcrypt = "*"
-
-
+importlib-metadata = "*"
 
 [scripts]
 start="flask run -p 3001 -h 0.0.0.0"
