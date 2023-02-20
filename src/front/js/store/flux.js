@@ -3,6 +3,8 @@ import swal from "sweetalert";
 import Swal from "sweetalert2";
 
 const getState = ({ getStore, getActions, setStore }) => {
+  const SAFARIDEPLOY_URL = "https://sample-service-name-1v6u.onrender.com";
+
   return {
     store: {
       message: null,
@@ -53,7 +55,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       getMessage: async () => {
         try {
           // fetching data from the backend
-          const resp = await fetch(process.env.BACKEND_URL + "/api/hello");
+          const resp = await fetch(`${SAFARIDEPLOY_URL} /api/hello`);
           const data = await resp.json();
           setStore({ message: data.message });
           // don't forget to return something, that is how the async resolves
@@ -86,7 +88,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const userToken = localStorage.getItem("token");
         try {
           const response = await axios.get(
-            process.env.BACKEND_URL + "/api/profile",
+            `${SAFARIDEPLOY_URL}/api/profile`,
             {
               headers: {
                 Authorization: "Bearer " + userToken,
@@ -118,7 +120,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let user_id = store.userId;
         try {
           const response = await axios.put(
-            process.env.BACKEND_URL + "/api/user/" + user_id,
+            `${SAFARIDEPLOY_URL}/api/user/` + user_id,
             {
               //   email: email,
               //   username: username,
@@ -175,7 +177,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getUsers: async () => {
         try {
-          const response = await fetch(process.env.BACKEND_URL + "/api/user"); // search
+          const response = await fetch(`${SAFARIDEPLOY_URL}/api/user`); // search
           const data = await response.json();
           // set store with the bringed data
           setStore({
@@ -204,7 +206,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       ) => {
         try {
           const response = await axios.put(
-            process.env.BACKEND_URL + "/api/user/" + userId,
+            `${SAFARIDEPLOY_URL}/api/user/` + userId,
             {
               name: name,
               lastname: lastname,
@@ -246,7 +248,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await fetch(
-            process.env.BACKEND_URL + "/api/user/" + id
+            `${SAFARIDEPLOY_URL}/api/user/` + id
           );
           const data = await response.json();
           // console.log(data);
@@ -271,7 +273,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let user_id = store.userId;
         try {
           const response = await axios.delete(
-            process.env.BACKEND_URL + "/api/user/" + user_id,
+            `${SAFARIDEPLOY_URL}/api/user/` + user_id,
             {}
           );
           console.log(response.data.msg);
@@ -298,7 +300,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await axios.delete(
-            process.env.BACKEND_URL + "/api/user/" + user_id,
+            `${SAFARIDEPLOY_URL}/api/user/` + user_id,
             {
               data: {
                 id_user: user_id,
@@ -312,14 +314,14 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      //-----------------------------------------------------------------------------------------------------------------------------
+      //--------------------------------------------------------------------------------------------------------------------------------
       //											SIGNUP POST
       //-----------------------------------------------------------------------------------------------------------------------------
 
       signup: async (username, email, password) => {
         try {
           const response = await axios.post(
-            process.env.BACKEND_URL + "/api/user",
+            `${SAFARIDEPLOY_URL}/api/user`,
             {
               username: username,
               email: email,
@@ -349,7 +351,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let accessToken = localStorage.getItem("token");
         try {
           const response = await axios.get(
-            process.env.BACKEND_URL + "/api/valid-token",
+            `${SAFARIDEPLOY_URL}/api/valid-token`,
             {
               headers: {
                 Authorization: "Bearer " + accessToken,
@@ -392,7 +394,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       login: async (email, password) => {
         try {
           const response = await axios.post(
-            process.env.BACKEND_URL + "/api/login",
+            `${SAFARIDEPLOY_URL}/api/login`,
             {
               email: email,
               password: password,
@@ -470,7 +472,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       changePassword: async (email) => {
         try {
           const response = await axios.post(
-            process.env.BACKEND_URL + "/api/user/password",
+            `${SAFARIDEPLOY_URL}/api/user/password`,
             {
               email: email,
             }
@@ -492,7 +494,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       getPackage: async () => {
         try {
           const response = await fetch(
-            process.env.BACKEND_URL + "/api/package"
+            `${SAFARIDEPLOY_URL}/api/package`
           ); // search
           const data = await response.json();
           // set store with the bringed data
@@ -514,7 +516,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await fetch(
-            process.env.BACKEND_URL + "/api/package/" + id
+            `${SAFARIDEPLOY_URL}/api/package/` + id
           );
           const data = await response.json();
           // console.log(data);
@@ -611,7 +613,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       ) => {
         try {
           const response = await axios.post(
-            process.env.BACKEND_URL + "/api/package",
+            `${SAFARIDEPLOY_URL}/api/package`,
             {
               name: name,
               category: category,
@@ -776,7 +778,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await axios.put(
-            process.env.BACKEND_URL + "/api/package/" + packageId,
+            `${SAFARIDEPLOY_URL}/api/package/` + packageId,
             {
               name: name,
               category: category,
@@ -881,7 +883,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await axios.delete(
-            process.env.BACKEND_URL + "/api/package/" + package_id,
+            `${SAFARIDEPLOY_URL}/api/package/` + package_id,
             {
               data: {
                 id_packages: package_id,
@@ -921,7 +923,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         // console.log(user_id);
         try {
           const response = await axios.post(
-            process.env.BACKEND_URL + "/api/favorites",
+            `${SAFARIDEPLOY_URL}/api/favorites`,
             {
               id_packages: package_id,
               id_user: user_id,
@@ -1004,7 +1006,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let user_id = store.userId;
         try {
           const response = await axios.delete(
-            process.env.BACKEND_URL + "/api/favorites",
+            `${SAFARIDEPLOY_URL}/api/favorites`,
             {
               data: {
                 id_packages: package_id,
@@ -1032,7 +1034,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await axios.get(
-            process.env.BACKEND_URL + "/api/user/" + user_id + "/favorites"
+            `${SAFARIDEPLOY_URL}/api/user/` + user_id + "/favorites"
           );
           setStore({
             favoritesList: response.data.results,
@@ -1054,7 +1056,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await fetch(
-            process.env.BACKEND_URL + "/api/favorites"
+            `${SAFARIDEPLOY_URL}/api/favorites`
           );
           const data = await response.json();
        
@@ -1079,7 +1081,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         package_id = parseInt(package_id);
         try {
           const response = await axios.post(
-            process.env.BACKEND_URL + "/api/comment",
+            `${SAFARIDEPLOY_URL}/api/comment`,
             {
               id_packages: package_id,
               id_user: user_id,
@@ -1101,7 +1103,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await fetch(
-            process.env.BACKEND_URL + "/api/package/" + id + "/comments"
+            `${SAFARIDEPLOY_URL}/api/package/` + id + "/comments"
           );
           const data = await response.json();
 
@@ -1121,7 +1123,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await axios.get(
-            process.env.BACKEND_URL + "/api/user/" + user_id + "/comments"
+            `${SAFARIDEPLOY_URL}/api/user/` + user_id + "/comments"
           );
           setStore({
             commentsListK: response.data.results,
@@ -1148,7 +1150,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let store = getStore();
         try {
           const response = await fetch(
-            process.env.BACKEND_URL + "/api/comments"
+            `${SAFARIDEPLOY_URL}/api/comments`
           );
           const data = await response.json();
        
@@ -1171,7 +1173,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         let user_id = store.userId;
         try {
           const response = await axios.delete(
-            process.env.BACKEND_URL + "/api/comments/" + user_id + "/" + comment_id,          
+            `${SAFARIDEPLOY_URL}/api/comments/` + user_id + "/" + comment_id,          
           );
           // Sweet alert
           Swal.fire({ text: response.data.msg, confirmButtonColor: "#000000" });

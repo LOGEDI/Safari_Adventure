@@ -137,7 +137,7 @@ const UsersDetails = () => {
                     <div className="card-headerP  border-0">
                       <div className="row align-items-center">
                         <div className="col">
-                          <h3 className="mb-0 "> Favorites</h3>
+                          <h2 className="mb-0 "> Favorites {store.favoritesList?.length}</h2>
                         </div>
                       </div>
                     </div>
@@ -204,7 +204,8 @@ const UsersDetails = () => {
                     <div className="card-headerP  border-0">
                         <div className="row align-items-center">
                           <div className="">
-                            <h3 className="mb-0"> Comments</h3>
+                            <h2 className="mb-0"> Comments {store.commentsListK?.length}</h2>
+                            
                           </div>
                         </div>
                       </div>

@@ -396,7 +396,7 @@ const Packages = () => {
                                     </p>
                                   </div>
                                   <div className="row text-center justify-content-center">
-                                    <Link to={"/PackagesDetails/" + item.id}>
+                                    <Link to={"/PackagesMap/" + item.id}>
                                       <button className="btn btn-creamD justify mb-3">
                                         Learn More
                                       </button>
@@ -490,7 +490,7 @@ const Packages = () => {
                                     </p>
                                   </div>
                                   <div className="row text-center justify-content-center">
-                                    <Link to={"/PackagesDetails/" + item.id}>
+                                    <Link to={"/PackagesMap/" + item.id}>
                                       <button className="btn btn-creamD justify mb-3">
                                         Learn More
                                       </button>

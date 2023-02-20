@@ -9,6 +9,8 @@ export const NavbarMain = () => {
 
   let navigate = useNavigate();
 
+  
+
   // Calls flux logout
   const doLogout = () => {
     //false
@@ -57,7 +59,7 @@ export const NavbarMain = () => {
 
       {/*------------------------------------------------------- SECOND NAV --------------------------------------------------------------*/}
 
-      <div className="navBar2 pagesBackground">
+      <div id="navbar2" className="navBar2 pagesBackground">
         <nav className="navbar">
           <div className="container-fluid  d-flex justify-content-center">
             {/*------------------------------------------------------- SAFARI TAB --------------------------------------------------------------*/}

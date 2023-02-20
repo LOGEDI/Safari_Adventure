@@ -26,11 +26,12 @@ const Login = () => {
   });
 
   return (
-    <div className="pagesBackground">
+    <div className="pagesBackground main-contentLogin">
       <div
         className="destinationsBackground"
         style={{
           backgroundImage: `url(${destinationBackground})`,
+          height: "76.426svh",
         }}
       >
         <Formik
@@ -80,7 +81,7 @@ const Login = () => {
                           {errors.email && touched.email && errors.email}
                           <label
                             className="form-label"
-                            for="form1Example2"
+                            // for="form1Example2"
                           ></label>
                         </div>
                         <div className="error col-12 ">
@@ -135,7 +136,7 @@ const Login = () => {
 
 {/*---------------------------------------------------- footer for spacing--------------------------------------------------- */}
 
-        <footer className="footerDestinations"> </footer>
+        
       </div>
     </div>
   );

@@ -38,6 +38,20 @@ body{
   background-image: url("../img/generic-background.jpg");
 }
 
+.main-contentAdmin{
+  height: 70.1vh;
+  height: 70.1svh;
+}
+
+.main-contentLogin{
+  height: 73vh;
+  height: 76.426svh;
+}
+
+.main-contentSingin{
+  height: 70.1vh;
+  height: 76.426svh;
+}
 
 .btn-cream {
   color: #fff;
@@ -186,6 +200,12 @@ body{
 
 
 /*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
+
+
+
+
+
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -1079,6 +1099,9 @@ figure.snip0016:hover figcaption::before {
   box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
+
+
+
 
 .packagesPost{
   margin: 2em auto;

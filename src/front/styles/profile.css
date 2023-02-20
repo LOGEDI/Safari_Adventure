@@ -584,13 +584,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    max-height:582px;
+    max-height:581px;
     word-wrap: break-word;
     border: none;
     border-radius: .375rem;
     background-color: rgb(255, 255, 242);
     background-clip: border-box;
     box-shadow: 0 10px 10px rgba(0,0,0,0.30);
+    
   }
   
   .cardDestinations {
@@ -1083,7 +1084,7 @@
   
   
   @media (min-width: 768px) {
-    .main-content .container-fluid {
+    .main-content .main-contentAdmin .container-fluid {
       padding-right: 39px !important;
       padding-left: 39px !important;
     }
@@ -1157,7 +1158,7 @@
   }
 
   @media (max-width: 760px) {
-    .packagescards {
+    .packagescards  {
       /* padding: 10px; */
       justify-content: center;
       margin: auto;
@@ -1173,6 +1174,25 @@
       
     }
   }
+
+  @media (max-width: 760px) {
+    .atest1  {
+      padding-left: 10px;
+      
+      margin: auto;
+      
+    }
+  }
+
+  @media (min-width: 1456px) {
+    .atest1 {
+      max-width: 1790px;
+      
+      margin: auto;
+      
+    }
+  }
+
 
   @media (min-width: 1456px) {
     .experiencePagePicLinks {
@@ -1217,6 +1237,7 @@
       max-width:1750px;
       justify-content: center;
       margin: auto;
+      
       
     }
   }

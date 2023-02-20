@@ -28,14 +28,14 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="container-fluid destinationsCards mt-5">
+        <div className="container-fluid destinationsCards mt-5 ml-5">
           <div className="row">
            
  {/* -------------desacription--------------------           */}
 
-            <div className="col-xl-4 order-xl-1 mb-5 mb-xl-0 cardProfileC">
-              <div className="">
-                <div className="col-12">
+            <div className="col-xl-4 order-xl-1 mb-5 mb-xl-0  ">
+              <div className="cardProfileC pb-5">
+                <div className="col-12 ">
                   <div className="card m-3 border-light">
                     <h2 className="description-title">OUR CONTACTS</h2>
                     <div className="description-contentC">
