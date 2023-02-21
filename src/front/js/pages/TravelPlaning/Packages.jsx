@@ -40,7 +40,7 @@ const Packages = () => {
           </div>
         </div>
       </div>
-      {/* ---------------------------------------------------PACKAGE CARD-1----------------------------------------- */}
+      {/* ---------------------------------------------------PACKAGE CARD-Rigth---------------------------------------- */}
       <div>
         {store.package.map((item, index) => (
           <div key={item.id}>
@@ -63,8 +63,8 @@ const Packages = () => {
                             className="row align-items-end"
                             style={{ height: "450px" }}
                           >
-                            <div className="col text-on-imagePl ">
-                              <h3 className="post_title">{item.name}</h3>
+                            <div className="col text-on-imagePl ">                            
+                              <h3 className="post_title ">    {item.name}</h3>
                               <p className="post_subtitle">{item.category}</p>
                             </div>
                           </div>
@@ -146,17 +146,20 @@ const Packages = () => {
                               </button>
                             </Link> */}
 
-<Link to={"/PackagesMap/" + item.id}>
-                    <button className="btn btn-creamD justify mb-3">
-                      LEARN MORE
-                    </button>
-                  </Link>
+                            <Link to={"/PackagesMap/" + item.id}>
+                              <button className="btn btn-creamD justify mb-3">
+                                LEARN MORE
+                              </button>
+                            </Link>
 
                           </div>
                         </div>
                       </div>
                     </div>
                   ) : (
+
+
+                    
                     <div className="container-fluid mt-3 packagesPost">
                       <div className="row mb-3 packagescards">
                         <div
@@ -236,11 +239,11 @@ const Packages = () => {
                               </button>
                             </Link> */}
 
-<Link to={"/PackagesMap/" + item.id}>
-                    <button className="btn btn-creamD justify mb-3">
-                      Learn More
-                    </button>
-                  </Link>
+                            <Link to={"/PackagesMap/" + item.id}>
+                              <button className="btn btn-creamD justify mb-3">
+                                Learn More
+                              </button>
+                            </Link>
 
                           </div>
                         </div>
@@ -274,6 +277,7 @@ const Packages = () => {
         ))}
       </div>
 
+ {/* ---------------------------------------------------PACKAGE CARD PREMIUM---------------------------------------- */}
 
       {store.auth ? (
         <div>
@@ -295,7 +299,7 @@ const Packages = () => {
                                 <div
                                   className="col col-xl-5 picpackage ml-5"
                                   style={{
-                                    height: "450px",
+                                    
                                     maxWidth: "888px",
                                     backgroundImage: `url(${item.url})`,
                                   }}
@@ -304,8 +308,9 @@ const Packages = () => {
                                     className="row align-items-end"
                                     style={{ height: "450px" }}
                                   >
-                                    <div className="col">
+                                    <div className="col text-on-imagePl">
                                       <h3 className="post_title">
+                                      <i className="OthServIconPremium bt-5 fa fa-award"></i>{" "}
                                         {item.name}
                                       </h3>
                                       <p className="post_subtitle">
@@ -510,9 +515,10 @@ const Packages = () => {
                                     className="row align-items-end justify-content-end "
                                     style={{ height: "450px", color: "white" }}
                                   >
-                                    <div className="col">
+                                    <div className="col text-on-imagePr">
                                       <h3 className="post2_title">
-                                        {item.name}
+                                      
+                                        {item.name}{""}<i className="OthServIconPremium bt-5 fa fa-award"></i>
                                       </h3>
                                       <p className="post2_subtitle">
                                         {item.category}
