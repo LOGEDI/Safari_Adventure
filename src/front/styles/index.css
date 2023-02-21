@@ -1489,7 +1489,7 @@ figure.snip0016:hover figcaption::before {
 
 .OthServIconPremium {
   color: #d2ae6d;
-  
+  padding: 5px;
   font-size: 35px;
 }
 
