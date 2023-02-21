@@ -46340,7 +46340,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/hello"
+                                        "https://sample-service-name-1v6u.onrender.com/api/hello"
                                       )
                                     );
                                   case 3:
@@ -46392,7 +46392,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       Pn.get(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/profile",
+                                        "https://sample-service-name-1v6u.onrender.com/api/profile",
                                         {
                                           headers: {
                                             Authorization: "Bearer " + t,
@@ -46445,7 +46445,7 @@
                                       (e.prev = 2),
                                       (e.next = 5),
                                       Pn.put(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           l,
                                         {
                                           name: t,
@@ -46538,7 +46538,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user"
+                                        "https://sample-service-name-1v6u.onrender.com/api/user"
                                       )
                                     );
                                   case 3:
@@ -46577,7 +46577,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       Pn.put(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           s,
                                         {
                                           name: t,
@@ -46648,7 +46648,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           t
                                       )
                                     );
@@ -46693,7 +46693,7 @@
                                       (e.prev = 2),
                                       (e.next = 5),
                                       Pn.delete(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           n,
                                         {}
                                       )
@@ -46746,7 +46746,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       Pn.delete(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           t,
                                         { data: { id_user: t } }
                                       )
@@ -46786,7 +46786,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       Pn.post(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user",
+                                        "https://sample-service-name-1v6u.onrender.com/api/user",
                                         { username: t, email: n, password: a }
                                       )
                                     );
@@ -46839,7 +46839,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       Pn.get(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/valid-token",
+                                        "https://sample-service-name-1v6u.onrender.com/api/valid-token",
                                         {
                                           headers: {
                                             Authorization: "Bearer " + t,
@@ -46902,7 +46902,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       Pn.post(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/login",
+                                        "https://sample-service-name-1v6u.onrender.com/api/login",
                                         { email: t, password: n }
                                       )
                                     );
@@ -46994,7 +46994,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       Pn.post(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/password",
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/password",
                                         { email: t }
                                       )
                                     );
@@ -47038,7 +47038,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/package"
+                                        "https://sample-service-name-1v6u.onrender.com/api/package"
                                       )
                                     );
                                   case 3:
@@ -47080,7 +47080,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/package/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/package/" +
                                           t
                                       )
                                     );
@@ -47196,7 +47196,7 @@
                                       (e.prev = 0),
                                       (e.next = 3),
                                       Pn.post(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/package",
+                                        "https://sample-service-name-1v6u.onrender.com/api/package",
                                         {
                                           name: t,
                                           category: n,
@@ -47458,7 +47458,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       Pn.put(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/package/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/package/" +
                                           xe,
                                         {
                                           name: t,
@@ -47670,7 +47670,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       Pn.delete(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/package/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/package/" +
                                           t,
                                         { data: { id_packages: t } }
                                       )
@@ -47742,7 +47742,7 @@
                                       (e.prev = 3),
                                       (e.next = 6),
                                       Pn.post(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/favorites",
+                                        "https://sample-service-name-1v6u.onrender.com/api/favorites",
                                         { id_packages: t, id_user: a }
                                       )
                                     );
@@ -47878,7 +47878,7 @@
                                       (e.prev = 2),
                                       (e.next = 5),
                                       Pn.delete(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/favorites",
+                                        "https://sample-service-name-1v6u.onrender.com/api/favorites",
                                         { data: { id_packages: t, id_user: a } }
                                       )
                                     );
@@ -47926,7 +47926,7 @@
                                       (e.prev = 2),
                                       (e.next = 5),
                                       Pn.get(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           n +
                                           "/favorites"
                                       )
@@ -47969,7 +47969,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/favorites"
+                                        "https://sample-service-name-1v6u.onrender.com/api/favorites"
                                       )
                                     );
                                   case 4:
@@ -48018,7 +48018,7 @@
                                       (e.prev = 3),
                                       (e.next = 6),
                                       Pn.post(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/comment",
+                                        "https://sample-service-name-1v6u.onrender.com/api/comment",
                                         {
                                           id_packages: n,
                                           id_user: r,
@@ -48060,7 +48060,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/package/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/package/" +
                                           t +
                                           "/comments"
                                       )
@@ -48110,7 +48110,7 @@
                                       (e.prev = 2),
                                       (e.next = 5),
                                       Pn.get(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/user/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/user/" +
                                           n +
                                           "/comments"
                                       )
@@ -48153,7 +48153,7 @@
                                       (e.prev = 1),
                                       (e.next = 4),
                                       fetch(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/comments"
+                                        "https://sample-service-name-1v6u.onrender.com/api/comments"
                                       )
                                     );
                                   case 4:
@@ -48201,7 +48201,7 @@
                                       (e.prev = 2),
                                       (e.next = 5),
                                       Pn.delete(
-                                        "https://3001-logedi-safariadventure-iqroasd0nuw.ws-eu87.gitpod.io/api/comments/" +
+                                        "https://sample-service-name-1v6u.onrender.com/api/comments/" +
                                           a +
                                           "/" +
                                           t
