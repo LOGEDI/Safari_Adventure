@@ -9,10 +9,7 @@ const EmailSubHome = () => {
     
         emailjs
           .sendForm(
-            "service_tm7aywr",
-            "template_6v0ai6k",
-            form.current,
-            "-arsYQdZdYgmMqWjM"
+            'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
           )
           .then(
             (result) => {
