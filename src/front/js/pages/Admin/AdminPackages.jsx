@@ -7,6 +7,8 @@ import Nav from "react-bootstrap/Nav";
 
 import destinationBackground from "../../../img/destinations_background.jpg";
 import plusIcon from "../../../img/plus-icon.png";
+import packagesDefaultIcon from "../../../img/defaulPackageIcon.png"
+
 const AdminPackages = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
@@ -46,7 +48,7 @@ const AdminPackages = () => {
       >
         <div className="container ">
           <h1 className="text-center pt-3 package-detail-title">PACKAGES</h1>
-          <Link to="/Admin">
+          <Link to="/Admin" className="m-3">
             <button className="btn btn-creamD">BACK TO ADMIN</button>
           </Link>
           <div className="row justify-content-center">
@@ -54,7 +56,7 @@ const AdminPackages = () => {
               <div key={item.id} className="col-xl-4 col-12">
                 <div className="admin-pack-card card m-3 border-light">
                   <img
-                    src={item.url}
+                    src={item.url ? item.url : packagesDefaultIcon}
                     className="admin-pack-img-top"
                     alt="..."
                   />

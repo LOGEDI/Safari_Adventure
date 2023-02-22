@@ -103,7 +103,7 @@ const TravelPlan = () => {
             <div className="experiencePagePicLinksIndividual ">
               
               <h4 className="experiencePagePicLinksTextTitle text-center">
-                COAST
+              GORILLAS
               </h4>
               
                 <img
@@ -140,7 +140,7 @@ const TravelPlan = () => {
           <div className="col-xl-4 col-md-6 order-xl-3 mb-5 mb-xl-0">
             <div className="experiencePagePicLinksIndividual ">
               <h4 className="experiencePagePicLinksTextTitle text-center">
-              GORILLAS
+              COAST
               </h4>
               
                 <img

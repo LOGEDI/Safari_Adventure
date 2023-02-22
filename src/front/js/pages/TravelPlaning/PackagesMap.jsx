@@ -27,7 +27,7 @@ const PackagesMap = () => {
     actions.userProfile();
     actions.markFavorites();
     window.scrollTo(0, 0);
-  }, []);
+  }, [params.id, store.userId]);
 
   let handleAddFavorites = async (id) => {
     //this function prevent a user to add a favorite whitout been loged, is send the user to login page
@@ -74,7 +74,7 @@ const PackagesMap = () => {
                             className="btn btnFav"
                             type="button"
                             onClick={() => {
-                              handleAddFavorites(item.id);
+                              handleAddFavorites(store.packageDetail.id);
                             }}
                           >
                             {store.favoriteItem?.includes(

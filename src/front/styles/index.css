@@ -38,6 +38,20 @@ body{
   background-image: url("../img/generic-background.jpg");
 }
 
+.main-contentAdmin{
+  height: 70.1vh;
+  height: 70.1svh;
+}
+
+.main-contentLogin{
+  height: 73vh;
+  height: 76.426svh;
+}
+
+.main-contentSingin{
+  height: 70.1vh;
+  height: 76.426svh;
+}
 
 .btn-cream {
   color: #fff;
@@ -186,6 +200,12 @@ body{
 
 
 /*--------------------------------------------------NAVBAR2 DROPDOWNS---------------------------------------------------------------------------*/
+
+
+
+
+
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -1080,6 +1100,9 @@ figure.snip0016:hover figcaption::before {
   overflow: hidden;
 }
 
+
+
+
 .packagesPost{
   margin: 2em auto;
   max-width: 85%; 
@@ -1466,7 +1489,7 @@ figure.snip0016:hover figcaption::before {
 
 .OthServIconPremium {
   color: #d2ae6d;
-  
+  padding: 5px;
   font-size: 35px;
 }
 

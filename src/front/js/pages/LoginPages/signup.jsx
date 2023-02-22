@@ -32,7 +32,7 @@ const SignUp = () => {
   return (
     <div>
       <div
-        className="destinationsBackground"
+        className="destinationsBackground main-contentSingin"
         style={{
           backgroundImage: `url(${destinationBackground})`,
         }}
@@ -66,7 +66,7 @@ const SignUp = () => {
                   <div col="12">
                     <div
                       className="bg-ligth my-5 mx-auto"
-                      style={{ borderRadius: "1rem", maxWidth: "400px" }}
+                      style={{ borderRadius: "1rem", maxWidth: "600px" }}
                     >
                       <div className="p-5 d-flex flex-column align-items-center mx-auto w-100">
                         <h2
@@ -94,7 +94,7 @@ const SignUp = () => {
                             errors.username}
                           <label
                             className="form-label"
-                            for="form1Example2"
+                            // for="form1Example2"
                           ></label>
                         </div>
                         <div className="error col-12 ">
@@ -107,7 +107,7 @@ const SignUp = () => {
                           {errors.email && touched.email && errors.email}
                           <label
                             className="form-label"
-                            for="form1Example2"
+                            // for="form1Example2"
                           ></label>
                         </div>
                         <div className="error col-12 ">

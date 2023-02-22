@@ -21,13 +21,13 @@ const Admin = () => {
   return (
     <div className="pagesBackground">
       {store.admin ? (
-        <div className="main-content pt-5">
+        <div className="main-contentAdmin pt-5">
           <div className="container-fluid destinationsCards">
             <div className="row justify-content-center">
               {/* -------------------USER CARD--------------------- */}
 
-              <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 cardProfile m-3">
-                <div className="">
+              <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0  m-3">
+                <div className="cardProfile">
                   <div className="row justify-content-center">
                     <div className="col-lg-3 order-lg-2">
                       <div className="card-profile-image">
@@ -82,8 +82,8 @@ const Admin = () => {
 
               {/* ----------------------------PACKAGES CARD---------------- */}
 
-              <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0 cardProfile m-3">
-                <div className="">
+              <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0  m-3">
+                <div className="cardProfile">
                   <div className="row justify-content-center">
                     <div className="col-lg-3 order-lg-2">
                       <div className="card-profile-image">
